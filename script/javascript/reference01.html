@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reference</title>
+    <style>
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 300;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 700;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'NexonLv1Gothic';
+            line-height: 1.6;
+        }
+
+        body {
+            padding: 5%;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        hr {
+            margin: 5% 0;
+            border-style: dashed;
+            border-color: #e6e6e6;
+            border-width: 0px;
+            border-bottom-width: 1px;
+        }
+
+        h1 {
+            padding-bottom: 20px;
+            font-size: 50px;
+        }
+
+        .list1 li {
+            display: inline;
+        }
+
+        .list1 li a {
+            border: 1px solid #333;
+            padding: 8px 30px 5px 30px;
+            border-radius: 40px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .refer {
+            background: #000;
+            color: #fff;
+            padding: 2 10px 0 10px;
+            border-radius: 30px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            background-color: #000;
+            color: #fff;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-weight: 400;
+            padding: 3px 10px 0 10px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h1>변수란?</h1>
+    <p>변수(Variables)는 변하는 데이터(값)를 저장할 수 있는 메모리 공간입니다. 데이터를 담을 수 있는 그릇이라 할 수 있죠.<br>
+    변수에는 데이터가 오직 한 개만 저장됩니다. 그러다 보니 새로운 데이터가 들어오면 기존에 있던 데이터는 메모리 공간에서 지워지게 됩니다.<br>
+    변수에 저장할 수 있는 데이터의 종류로는 문자형(String), 숫자형(Number), 그리고 빈(Null) 데이터가 있습니다.</p>
+
+    <h2>변수 선언</h2>
+    <p>변수를 선언할 때에는 다음 기본형과 같이 var 키워드를 변수명 앞에 붙입니다.<br>
+    변수명에는 한글을 사용할 수 없으며, 영문과 숫자 그리고 일부 특수 문자(_,$)만 포함할 수 있습니다.<br>
+    변수명은 의미에 맞게 만드는 것이 좋습니다. 가령 수학 시험 점수를 저장하는 변수라면 'mathNum'이라고 이름 지으면 되겠죠.<br>
+    이때 변수명은 단어와 단어의 조합으로 지었고, 두 번째 단어의 첫 글자는 대문자로 표기했습니다. 이는 마치 낙타의 등과 같다고 해서<br>
+    낙타(Camel) 표기법이라 부릅니다.</p>
+
+    <h2>변수에 저장할 수 있는 자료형</h2>
+    <h3>문자형</h3>
+    <p>문자형(String) 데이터는 다음과 같이..</p>
+
+    <h3>숫자형</h3>
+    <p>숫자형은</p>
+
+    <h3>논리형</h3>
+    <p>논리형....</p>
+</body>
+
+</html>
