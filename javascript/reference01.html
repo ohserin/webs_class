@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +14,7 @@
     <!-- script -->
     <script src="/javascript/assets/js/prism.js"></script>
 </head>
+
 <body>
     <header id="header">
         <h1><a href="index.html">Javascript</a></h1>
@@ -24,16 +26,59 @@
             </ul>
         </nav>
     </header>
-    
+
     <main id="main">
         <div class="doc">
             <h2>자바스크립트 선언문</h2>
+            <p>
+                선언문은 자바스크립트 코드를 작성할 영역을 선언하는 것이라고 이해하면 됩니다.<strong>&lt;script&gt;</strong>태그로 선언문이 시작된 곳부터
+                <strong>&lt;/script&gt;</strong>태그로 종료된 곳까지를 스크립트 영역이라고 부릅니다.
+            </p>
+            <div class="code">
+                <pre><code>{
+    &lt;script&gt;
+        자바스크립트 코드;
+    &lt;/script&gt;
+}
+</pre></code>
+            </div><br>
+            <p>
+                선언문은 <strong>&lt;head&gt;</strong> 태그 영역 또는 <strong>&lt;body&gt;</strong> 태그 영역에 선언하면 됩니다.
+            </p>
+            <p>
+                <h3>선언문 작성 예제</h3>
+            </p>
+            <div class="code">
+                <pre><code>{
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="ko"&gt;  
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;document&lt;/title&gt;
+        &lt;script&gt;
+            document.write("환영합니다");
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+}
+                </pre></code>
+            </div>
+            <p>
+                <strong>docoment</strong>는 문서 객체이며 출력 메서드인 <strong>write()</strong>를 이용하여 데이터를 문서에 출력할 때 사용합니다.</p>
+
 
             <h2>자바스크립트 주석처리</h2>
+            <p>
+                자바스크립트 선언문 안에서 코드가 아닌 설명글을 넣고 싶을 때는 주석 처리를 하면 됩니다. 이때 한 줄 주석일 경우에는 '//한 줄 설명글'로 작성하고,<br>
+                여러 줄 주석일 경우에는 '/*여러 줄 설명글*/'로 작성하면 됩니다.
+            </p>
 
             <h2>코드 입력시 주의사항</h2>
 
         </div>
     </main>
 </body>
+
 </html>
