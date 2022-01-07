@@ -6,143 +6,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>reference</title>
-    <style>
-        @font-face {
-            font-family: 'NexonLv1Gothic';
-            font-weight: 300;
-            font-style: normal;
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot');
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot?#iefix') format('embedded-opentype'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff2') format('woff2'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff') format('woff'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
-            font-display: swap;
-        }
 
-        @font-face {
-            font-family: 'NexonLv1Gothic';
-            font-weight: 400;
-            font-style: normal;
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: 'NexonLv1Gothic';
-            font-weight: 700;
-            font-style: normal;
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot');
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot?#iefix') format('embedded-opentype'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff2') format('woff2'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff') format('woff'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.ttf') format("truetype");
-            font-display: swap;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'NexonLv1Gothic';
-            line-height: 1.6;
-        }
-
-        body {
-            padding: 5%;
-        }
-
-        li {
-            list-style: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        hr {
-            margin: 5% 0;
-            border-style: dashed;
-            border-color: #e6e6e6;
-            border-width: 0px;
-            border-bottom-width: 1px;
-        }
-
-        h1 {
-            padding-bottom: 20px;
-            font-size: 50px;
-        }
-
-        .list1 li {
-            display: inline;
-        }
-
-        .list1 li a {
-            border: 1px solid #333;
-            padding: 8px 30px 5px 30px;
-            border-radius: 40px;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-        .refer {
-            background: #000;
-            color: #fff;
-            padding: 2 10px 0 10px;
-            border-radius: 30px;
-        }
-
-        h2 {
-            margin-top: 40px;
-            background-color: #000;
-            color: #fff;
-            display: inline-block;
-            margin-bottom: 10px;
-            font-weight: 400;
-            padding: 3px 10px 0 10px;
-            font-size: 24px;
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/prism.css">
 </head>
 
 <body>
-    
-    <h1>자바스크립트 기초 문법</h1>
 
-    <h2>자바스크립트 선언문</h2>
-    <p>선언문은 자바스크립트 코드를 작성할 영역을 선언하는 것이라고 이해하면 됩니다. Sript라는 태그로 선언문이 시작된 곳부터
-        /Sript라는 태그로 종료된 곳까지를 스크립트 영역이라고 부릅니다.</p>
+    <div class="arrangement">
+        <h1>기초 문법</h1>
+
+        <hr>
+
+        <h2>자바스크립트 선언문</h2>
+        <p>선언문은 자바스크립트 코드를 작성할 영역을 선언하는 것이라고 이해하면 됩니다. Sript라는 태그로 선언문이 시작된 곳부터
+            &ltSript&gt라는 태그로 종료된 곳까지를 스크립트 영역이라고 부릅니다.</p>
         <p>
-            기본형↓<br>script<br>자바스크립트 코드;<br>/script
+            &lt;script&gt;
         </p>
-        <br><br>
-        <p>선언문은 head 태그 영역 또는 body 태그 영역에 선언하면 됩니다. 우리나라 개발자의 대부분은 head 태그 영역에 선언하고 있습니다.<br>
-            docunment는 문서 객체이며 문서 출력 메서드인 write()를 이용하여 데이터를 문서에 출력할때 사용합니다.</p>
-        
+        <div class="line">
 
-    <h2>자바스크립트 주석 처리</h2>
+            <pre><code>&lt;!DOCTYPE html&gt;
+                &lt;html lang="ko"&gt;  
+                &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;title&gt;document&lt;/title&gt;
+                &lt;script&gt;
+                document.write("환영합니다");
+                &lt;/script&gt;
+                &lt;head&gt;
+                ......
+                &lt;/html&gt;
+                </code></pre>
+        </div>
+        <h2>자바스크립트 주석 처리</h2>
+        <h2>내부 스크립트 외부로 분리하기</h2>
+        <h2>코드 입력 시 주의 사항</h2>
+    </div>
+
+    <p>
+        기본형↓<br>script<br>자바스크립트 코드;<br>/script
+    </p>
+    <br><br>
+    <p>선언문은 head 태그 영역 또는 body 태그 영역에 선언하면 됩니다. 우리나라 개발자의 대부분은 head 태그 영역에 선언하고 있습니다.<br>
+        docunment는 문서 객체이며 문서 출력 메서드인 write()를 이용하여 데이터를 문서에 출력할때 사용합니다.</p>
+
+
     <p>자바스크립트 선언문 안에서 코드가 아닌 설명글을 넣고 싶을 때는 주석 처리를 하면 됩니다. 이때 한 줄 주석일 경우에는 '//한 줄 설명글'로 작성하고,<br>
         여러 줄 주석일 경우에는 '/*여러 줄 설명글*/'로 작성하면 됩니다.</p><br>
-        <p>
-            기본형↓<br>//한 줄 설명글인 경우<br>/*설명글이 여러 줄인 경우 이렇게 처리합니다.<br>*/<br> !--HTML 소스의 설명글은 이렇게 처리합니다--
-        </p><br>
-    <h2>내부 스크립트 외부로 분리하기</h2>
+    <p>
+        기본형↓<br>//한 줄 설명글인 경우<br>/*설명글이 여러 줄인 경우 이렇게 처리합니다.<br>*/<br> !--HTML 소스의 설명글은 이렇게 처리합니다--
+    </p><br>
     <p>자바스크립트 마지막에는 외부로 분리하는 작업을 해야 합니다. 그렇게 하면 자바스크립트 소스 찾기도 쉬울 뿐만 아니라 누군가가 소스를 손상시킬 염려도 없습니다.<br>
-    즉, 외부로 분리하는 주된 목적은 프로젝트 관리를 원활하게 하기 위함입니다. 다음은 외부 자바스크립트 연동 코드로 파일을 연결하는 기본형입니다.<br><br>
-    script src="JS 파일 경로" /script</p><br>
+        즉, 외부로 분리하는 주된 목적은 프로젝트 관리를 원활하게 하기 위함입니다. 다음은 외부 자바스크립트 연동 코드로 파일을 연결하는 기본형입니다.<br><br>
+        script src="JS 파일 경로" /script</p><br>
     <p>내부 스크립트를 외부로 분리하려면 따로 파일을 만들어서 저장해야 합니다. 즉, HTML 파일과 JS(자바스크립트) 파일을 분리하여 HTNL 내에서 JS(자바스크립트) 파일을 연동하면 됩니다.</p>
-    <h2>코드 입력 시 주의 사항</h2>
     <p>자바스크립트를 작성할 때 주의해야 할 몇 가지 사항입니다.</p><br>
     <h3>자바스크립트는 대·소문자를 구분하여 작성합니다.</h3>
     <p>날짜 객체 생성: New date(); (X)<br>날짜 객체 생성: new date(); (O)</p><br>
     <h3>코드 한 줄을 작성한 후에는 세미콜론(;)을 쓰는 것이 좋습니다.</h3>
     <p>세미콜론을 쓰지 않으면 예시처럼 한 줄에 2개의 코드를 작성할 경우 오류가 발생합니다.<br>document.write("hi") document.weite("bye"); (X)<br>
         document.write("hi"); document.write("bye"); (O)<br>하지만 코드를 작성할 때는 한줄에 한 문장만 작성하는 것이 가독성을 위해 좋습니다.</p><br>
-        <h3>문자형 데이터를 작성할 때는 큰따옴표(" ")와 작은따옴표(' ')의 겹침 오류를 주의해야 합니다.</h3>
-        <p>큰따옴표의 겹침 오류↓<br>document.write("책에"자바스크립트는 대소문자를 구분해야 합니다"라고 나와 있다.");<br><br>
-        잘된 예↓<br>document.write('책에"자바스크립트는 대소문자를 구분해야 합니다"라고 나와 있다.');<br>document.write("책에＼자바스크립트는 대소문자를 구분해야 합니다＼라고 나와 있다.");</p>
+    <h3>문자형 데이터를 작성할 때는 큰따옴표(" ")와 작은따옴표(' ')의 겹침 오류를 주의해야 합니다.</h3>
+    <p>큰따옴표의 겹침 오류↓<br>document.write("책에"자바스크립트는 대소문자를 구분해야 합니다"라고 나와 있다.");<br><br>
+        잘된 예↓<br>document.write('책에"자바스크립트는 대소문자를 구분해야 합니다"라고 나와 있다.');<br>document.write("책에＼자바스크립트는 대소문자를 구분해야 합니다＼라고
+        나와 있다.");</p>
 
 
 </body>

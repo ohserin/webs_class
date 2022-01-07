@@ -113,3 +113,18 @@
             margin: 0 !important;
             border-radius: 0 0 5px 5px !important;
         }
+
+
+
+        /* 정리 페이지 CSS */
+        .arrangement h1 {
+            font-size: 50px;
+        }
+        .arrangement h2 {
+            font-size: 28px;
+            display: block;
+        }
+        .arrangement .line {
+            border: 1px solid#000;
+            padding: 20px;
+        }
