@@ -54,19 +54,21 @@ a {
 #header {
     padding: 30px;
 }
+
 #header h1 {
     margin-bottom: 30px;
     font-size: 40px;
-    border: 1px solid #000;
 }
-#header nav ui li {
+
+#header nav ul li {
     display: inline;
 }
-#header nav ui li a {
+
+#header nav ul li a {
     font-size: 20px;
     border: 1px solid #000;
     padding: 12px 30px 10px 30px;
     border-radius: 30px;
     display: inline-block;
-    margin: 10px;
+    margin-bottom: 10px;
 }
