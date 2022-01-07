@@ -4,7 +4,7 @@
 https://ohserin.github.io/webs_class/
 
 ## 자바스크립트
-https://ohserin.github.io/webs_class/assets/javascript01.html
+https://ohserin.github.io/webs_class/javascript/assets/index.html
 
 ## HTML 레퍼런스
 https://ohserin.github.io/webs_class/html/index.html
