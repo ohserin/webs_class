@@ -10,4 +10,4 @@ https://ohserin.github.io/webs_class/script/index.html
 https://ohserin.github.io/webs_class/html/index.html
 
 ## CSS 레퍼런스
-https://ohserin.github.io/webs_class//index.html
+https://ohserin.github.io/webs_class/css/index.html
