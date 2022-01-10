@@ -42,7 +42,7 @@
                 연산을 하기 위해서는 연산 대상 데이터가 반드시 2개 있어야 합니다.<br> 아래는 산술 연산자의 종류와
                 기본형을 정리한 표입니다.
             </p>
-            <table>
+            <table class="line">
                 <tr>
                     <td>종류 / 기본형 / 설명</td>
                 </tr>
@@ -67,6 +67,10 @@
                     <td>
                 </tr>
             </table>
+
+            <br>
+
+
             <div class="code">
                 <pre><code>{
 &lt;script&gt;
@@ -116,32 +120,34 @@ ex) "100" + 200 = "100200"; </pre></code>
             <p>대입 연산자(=)는 연산된 데이터를 변수에 저장할 때 사용합니다. 복합 대입 연산자(+=, -=, *=, /=, %=)는
                 산술 연산자와 대입 연산자가 복합적으로 적용된 것을 말합니다.<br>아래는 대입 연산자의 종류입니다.
             </p>
-            <table>
-                <tr>
-                    <td>종류</td>
-                    <td>풀이</td>
-                </tr>
-                <tr>
-                    <td>A = B</td>
-                    <td>A = B</td>
-                </tr>
-                <tr>
-                    <td>A +=B</td>
-                    <td>A =A+B</td>
-                </tr>
-                <tr>
-                    <td>A*=B</td>
-                    <td>A=A*B</td>
-                </tr>
-                <tr>
-                    <td>A/=B</td>
-                    <td>A=A/B</td>
-                </tr>
-                <tr>
-                    <td>A%=B</td>
-                    <td>A=A%B</td>
-                </tr>
-            </table>
+            <div class="line">
+                <table>
+                    <tr>
+                        <td>종류</td>
+                        <td>풀이</td>
+                    </tr>
+                    <tr>
+                        <td>A = B</td>
+                        <td>A = B</td>
+                    </tr>
+                    <tr>
+                        <td>A +=B</td>
+                        <td>A =A+B</td>
+                    </tr>
+                    <tr>
+                        <td>A*=B</td>
+                        <td>A=A*B</td>
+                    </tr>
+                    <tr>
+                        <td>A/=B</td>
+                        <td>A=A/B</td>
+                    </tr>
+                    <tr>
+                        <td>A%=B</td>
+                        <td>A=A%B</td>
+                    </tr>
+                </table>
+            </div>
             <P>아래 예제로 대입 연산자에 대해 알아보겠습니다.</P>
             <div class="code">
                 <pre><code>&lt;script&gt;
@@ -175,16 +181,195 @@ ex) "100" + 200 = "100200"; </pre></code>
     docoment.write(str);
 &lt;/script&gt;</pre></code>
             </div>
-            <p><strong>8~11행</strong>여러 개의 문자형 데이터가 하나의 문자로 결합되어 변수 str에 저장됩니다. 즉, 한 개의 문자형 데이터로 결합됩니다.
-                <br> 12행 str을 
-
-            </p>
+            <p>여러 개의 문자형 데이터가 하나의 문자로 결합되어 변수 str에 저장됩니다. 즉, 한 개의 문자형 데이터로 결합됩니다.
+                <br>str을 출력하면 문자가 아닌 태그로 인식 되어 표가 출력됩니다.
+            </p><br>
+            <div class="code">
+                <pre><code>var str = "문자1";
+str += "문자2";
+str += "문자3";
+//"문자1문자2문자3"</pre></code>
+            </div>
 
             <h3>증감 연산자</h3>
+            <p>증감 연산자에는 숫자형 데이터를 1씩 증가시키는 증가 연산자(++)와 반대로 1씩 감소시키는 감소 연산자(--)가 있습니다.
+                <br>증감 연산자는 피연산자가 한 개만 필요한 단항 연산자 입니다. 증감 연산자는 변수의 어느 위치에 오는가에 따라
+                결과값이 달라집니다.
+            </p>
+            <div class="line">
+                ① 변수의 값을 1만큼 감소시킵니다.<br>
+                변수--; 또는 --변수;<br><br>
+
+                ② 변수의 값을 1만큼 증가시킵니다.<br>
+                변수++; 또는 ++변수;
+            </div>
+            <br>
+
+            <div class="line">
+                ① 먼저 (B의 값을 1만큼 증가)가 실행되고, (증가된 B의 값을 A에 대입)가 실행됩니다.<br>
+                var A = ++B<br><br>
+
+                ② 먼저 (B의 값을 A에 대입)가 실행되고, (B의 값을 1만큼 증가)가 실행됩니다.<br>
+                var A = B++;
+            </div>
+
+            <p>증감 연산자를 사용해 변수에 저장된 숫자를 증가하거나 감소하여 문서에 출력하는 예제입니다.</p>
+            <div class="code">
+                <pre><code>&lt;script&gt;
+                    var num1 = 10;
+                    var num2 = 20;
+                    var result;
+
+                    num1--;       //9
+                    document.write(num1, "&lt;br&gt;");
+
+                    num1++;       //10
+                    document.write(num1, "&lt;br&gt;");
+
+                    result = num2++;
+                    document.write(result, "&lt;br&gt;");
+
+                    result = ++num2;   //result 22, num2: 22
+                    document.write(result, "&lt;br&gt;");
+&lt;/script&gt;</pre></code>
+            </div>
+            <p>변수 num1(10)의 값이 1만큼 감소되어 num1에 9가 저장됩니다.<br>
+                먼저 변수 num2(20)의 값이 변수 result에 저장되고, num2의 값이 1만큼 증가되어 num2에 21이 저장됩니다.<br>
+                먼저 변수 num2(21)의 값이 1만큼 증가되어 num2에 22가 저장되고, num2의 값이 변수 result에 저장됩니다.
+            </p>
 
             <h3>비교 연산자</h3>
+            <p>두 데이터를 '크다, 작다, 같다'와 같이 비교할 때 사용하는 연산자입니다. 연산된 결괏값은 true(참) 또는
+                false(거짓)로 논리형 데이터를 반환합니다. 다음은 비교 연산자의 종류입니다.
+            </p>
+            <p>비교 연산자의 종류</p>
+            <table class="line">
+                <tr>
+                    <td>종류</td>
+                    <td>설명</td>
+                    <td>비고</td>
+                </tr>
+                <tr>
+                    <td>A &gt; B</td>
+                    <td>A가 B보다 크다.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>A &gt; B</td>
+                    <td>A가 B보다 작다.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>A &gt;= B</td>
+                    <td>A가 B보다 크거나 작다.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>A &lt;= B</td>
+                    <td>A와 B는 같다.</td>
+                    <td>숫자를 비교할 경우 자료형(type)은 숫자형이든 문자형이든 상관하지 않고 표기된 숫차가 일치하면 true를 반환합니다.<br>
+                        가령, 숫자형 10과 문자형 "10"은 같은 것으로 인식되어 true를 반환합니다.</td>
+                </tr>
+                <tr>
+                    <td>A != B</td>
+                    <td>A와 B는 다르다.</td>
+                    <td>숫자를 비교할 경우 자료형은 숫자형이든 문자형이든 상관하지 않고 표기된 숫자만 다르면 true를 반환합니다.<br>
+                        가령 숫자형 10과 문자형 "10"은 같은 것으로 인식되어 A!=B에 대해 false를 반환합니다.</td>
+                </tr>
+                <tr>
+                    <td>A === B</td>
+                    <td>A와 B는 같다.</td>
+                    <td>숫자를 비교할 경우 반드시 표기된 숫자와 자료형도 일치해야만 true를 반환합니다.<br>
+                        10과 "10"을 비교했을 경우 표기된 숫자는 같지만 하나는 숫자형 10이고 하나는 문자형 "10"이므로 false을 반환합니다.</td>
+                </tr>
+                <tr>
+                    <td>A !== B</td>
+                    <td>A와 B는 다르다.</td>
+                    <td>숫자를 비교할 경우 반드시 표기된 숫자 또는 자료형이 일치하지 않을 때 true를 반환합니다.<br>
+                        가령 10과 "10"을 비교했을 경우 표기된 숫자는 같지만 하나는 숫자형 10이고 하나는 문자형 "10"이므로 이때는 true를 반환합니다.</td>
+                </tr>
+            </table><br>
+            <p>비교연산자 ==와 !=는 피연산자의 자료형(type)이 비교 연산자의 실행 결과에 영향을 미치지 않습니다. 다음 예제의 경우
+                변수 k에는 숫자형 데이터 10이 저장되었고,<br> 변수 m에는 문자형 데이터 "10"이 저장되었습니다. 그리고 두 변수 모두 숫자형 데이터 10과 같은지
+                비교하였고 결과는 둘 다 true를 반환합니다.
+            </p>
+
+            <div class="line">
+                var k=10, m="10";<br>
+                k == 10 //true<br>
+                m == 10 //true
+            </div>
+            <p>비교 연산자 중 ===과 !==는 피연산자 자료형에 따라 결괏값이 달라집니다. 다음 예제의 경우 변수 k에는 숫자형 데이터
+                10이 저장되었고,<br>k===10은 숫자형 데이터로 둘 다 일치하기 때문에 true를 반환합니다. 하지만 변수 m에는 문자형 데이터
+                "10"이 저장되었습니다. 문자형 데이터 "10"과 숫자형 데이터 10은 자료형이 다르므로 m===10은 false를 반환합니다.
+            </p>
+
+            <div class="line">
+                var k=10, m="10";<br>
+                k === 10 //true<br>
+                m === 10 //false
+            </div><br>
+
+            <p>a, b, c, d라는 변수에 값을 각각 지정하고 비교 연산자를 이용해 결괏값을 반환합니다.</p>
+            <div class="code">
+                <pre><code>&lt;script&gt;
+                    var a = 10;
+                    var b = 20;
+                    var c = 10;
+                    var f = 20;
+                    var result;
+                   
+                    result = a &gt; b; //false
+                    document.write(result "&lt;br&gt;");
+
+                    result = a &lt b; //true
+                    document.write(result "&lt;br&gt;");
+
+                    result = a &lt;= b; //true
+                    document.write(result "&lt;br&gt;");
+
+                    result = b == f; //true
+                    document.write(result "&lt;br&gt;");
+
+                    result = a != b; //true
+                    document.write(result "&lt;br&gt;");
+
+                    result = b === f; //false
+                    document.write(result "&lt;br&gt;");                   
+&lt;/script&gt;</pre></code>
+            </div>
+            <p>a(10)&gt;b(20)은 false가 반환됩니다.<br>
+            b(20) ==f("20")은 자료형과 상관없이 숫자만 비교하여 true가 반환됩니다.<br>
+            a(10) != b(20)은 데이터가 다르므로 true가 반환됩니다.<br>
+            b(20) ==f("20")은 숫자는 같지만 자료형이 다르므로 false가 반환됩니다.
+            </p>
 
             <h3>논리 연산자</h3>
+            <p>논리 연산자에는 ∥(or), &&(and), !(not)이 있으며, 논리 연산자는 피연산자가 논리형 데이터인 true 또는 false로 결괏값을 반환합니다.<br>
+                ∥(or) 연산자는 피연산자 중 하나만 true이면 true 라는 결괏값을 반환합니다. 하지만 &&(and) 연산자는 피연산자 중 하나만
+                false이면 false라는 결괏값을 반환합니다.<br>!(not)은 논리 부정 연산자로, 피연산자 true이면 false라는 반대의 결과값을 반환합니다.
+                        </p><br>
+
+                        <p>논리 연산자의 종류를 표로 정리하면 아래와 같습니다.</p>
+
+                        <table class="line">
+                            <tr>
+                                <td>종류</td>
+                                <td>설명</td>
+                            </tr>
+                            <tr>
+                                <td>∥</td>
+                                <td>or 연산자라 부르며, 피연산자 중 값이 하나라도 true가 존재하면 true로 결괏값을 반환합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>&&</td>
+                                <td>and 연산자라 부르며, 피연산자 중 값이 하나라도 false가 존재하면 false로 결괏값을 반환합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>!</td>
+                                <td>not 연산자라 부르며, 단항 연산자 입니다. 피연산자 값이 true이면 반대로 false로 결괏값을 반환합니다.</td>
+                            </tr>
+                        </table>
 
 
 
