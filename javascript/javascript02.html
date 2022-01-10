@@ -56,6 +56,7 @@
 
         <div class="note">
             <a href="reference04.html">for문</a>
+            <a href="reference04.html">연산자</a>
         </div>
         <!-- //note -->
         <div class="script">
@@ -229,11 +230,17 @@
         {
             const num = [100, 200, 300, 400, 500];
 
-            document.write(num[0]);
-            document.write(num[1]);
-            document.write(num[2]);
-            document.write(num[3]);
-            document.write(num[4]);
+            document.write(num[0])
+            document.write(num[1])
+            document.write(num[2])
+            document.write(num[3])
+            document.write(num[4])
+
+            //for문
+
+            for(let i = 0; i < num.length; i++) {
+                document.write(num[i], "<br>");
+            }
         }
     </script>
 </body>
