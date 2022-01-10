@@ -65,12 +65,12 @@
                 <h3>01. 변수 : 데이터 불러오기</h3>
                 <div class="code">
                     <pre class="line-numbers"><code class="language-js">{
-    let x = 100,
-        y = 200,
-        z = "javascript";
-    document.write(x);
-    document.write(y);
-    document.write(z);
+let x = 100,
+    y = 200,
+    z = "javascript";
+document.write(x);
+document.write(y);
+document.write(z);
 }</code></pre>
                 </div>
                 <div class="result">
@@ -84,12 +84,12 @@
                 <h3>02. 상수 : 데이터 불러오기</h3>
                 <div class="code">
                     <pre class="line-numbers"><code class="language-js">{
-    const x = 100,
-          y = 200,
-          z = "javascript";
-    document.write(x);
-    document.write(y);
-    document.write(z);
+const x = 100,
+        y = 200,
+        z = "javascript";
+document.write(x);
+document.write(y);
+document.write(z);
 }</code></pre>
                 </div>
                 <div class="result">
@@ -103,10 +103,10 @@
                 <h3>03. 배열 : 데이터 불러오기</h3>
                 <div class="code">
                     <pre class="line-numbers"><code class="language-js">{
-    const arr = [100, 200, "javascript"];
-    document.write(arr[0]);
-    document.write(arr[1]);
-    document.write(arr[2]);
+const arr = [100, 200, "javascript"];
+document.write(arr[0]);
+document.write(arr[1]);
+document.write(arr[2]);
 }</code></pre>
                 </div>
                 <div class="result">
@@ -120,12 +120,12 @@
                 <h3>04. 배열 : 데이터 불러오기 : 2차 배열</h3>
                 <div class="code">
                     <pre class="line-numbers"><code class="language-js">{
-    const arr = [100, 200, ["javascript", "jquery"]];
-    document.write(arr[0]);
-    document.write(arr[1]);
-    document.write(arr[2]);
-    document.write(arr[2][0]);
-    document.write(arr[2][1]);
+const arr = [100, 200, ["javascript", "jquery"]];
+document.write(arr[0]);
+document.write(arr[1]);
+document.write(arr[2]);
+document.write(arr[2][0]);
+document.write(arr[2][1]);
 }</code></pre>
                 </div>
                 <div class="result">
@@ -154,18 +154,18 @@
                 <h3>06. 배열 : 데이터 불러오기 : for()문</h3>
                 <div class="code">
                     <pre class="line-numbers"><code class="language-js">{
-    const arr = [100, 200, 300, 400, 500];
+const arr = [100, 200, 300, 400, 500];
 
-    // document.write(arr[0])
-    // document.write(arr[1])
-    // document.write(arr[2])
-    // document.write(arr[3])
-    // document.write(arr[4])
+// document.write(arr[0])
+// document.write(arr[1])
+// document.write(arr[2])
+// document.write(arr[3])
+// document.write(arr[4])
 
-    //for(초기값, 조건식, 증감식)
-    for( let i=0; i&lt;arr.length; i++ ){
-        document.write(arr[i], "&lt;br&gt;");
-    }
+//for(초기값, 조건식, 증감식)
+for( let i=0; i&lt;arr.length; i++ ){
+    document.write(arr[i], "&lt;br&gt;");
+}
 }</code></pre>
                 </div>
                 <div class="result">
@@ -174,6 +174,44 @@
                 </div>
             </div>
             <!-- //sample6 -->
+
+            <!-- sample7 -->
+            <div id="sample7" class="sample">
+                <h3>07. 배열 : 데이터 불러오기 : forEach()</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+const num = [100, 200, 300, 400, 500];
+
+document.write(num[0])
+document.write(num[1])
+document.write(num[2])
+document.write(num[3])
+document.write(num[4])
+
+//for문
+
+for(let i = 0; i &lt; num.length; i++) {
+    document.write(num[i], "&lt;br&gt;");
+}
+
+//forEach()
+num.forEach(function(el){
+    document.write(el, "&lt;br&gt;")
+});
+
+//forEach(element, index, array)
+num.forEach(function(element, index, array){
+    document.write(element);
+    document.write(index);
+    document.write(array);
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result07"></div>
+                </div>
+            </div>
+            <!-- //sample7 -->
         </div>
         <!-- //script -->
     </main>
@@ -230,17 +268,9 @@
         {
             const num = [100, 200, 300, 400, 500];
 
-            document.write(num[0])
-            document.write(num[1])
-            document.write(num[2])
-            document.write(num[3])
-            document.write(num[4])
-
-            //for문
-
-            for(let i = 0; i < num.length; i++) {
-                document.write(num[i], "<br>");
-            }
+            num.forEach(function (el) {
+                document.querySelector(".result07").innerHTML += el + "<br>";
+            });
         }
     </script>
 </body>

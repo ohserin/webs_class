@@ -32,29 +32,153 @@
     <main id="main">
         <div class="doc">
             <h2>연산자</h2>
-            <p>연산자...</p>
+            <p>자바스크립트 프로그래밍에서 사용하는 산술, 문자 결합, 대입(복합대입), 증감, 비교, 논리, 삼항 조건 연산자가 있습니다.
+                예를 들어 자신의 체중을 구할 때 빼고 곱하는 작업 등은 산술 연산자를 이용합니다.<br> 그리고 이렇게 빼기, 더하기, 곱하기, 나누기, 비교 등을
+                하는 일련의 작업을 연산 작업이라 합니다.
+            </p>
 
-            <h3>산술연산자</h3>
-            <p>산술연산자...</p>
+            <h3>산술 연산자</h3>
+            <p>산술 연산자에는 더하기(+), 빼기(-), 곱하기(*), 나누기(/), 나머지(%)가 있습니다. 산술 연산자로
+                연산을 하기 위해서는 연산 대상 데이터가 반드시 2개 있어야 합니다.<br> 아래는 산술 연산자의 종류와
+                기본형을 정리한 표입니다.
+            </p>
             <table>
                 <tr>
-                    <td>1</td>
+                    <td>종류 / 기본형 / 설명</td>
+                </tr>
+                <tr>
+                    <td>+ A+B 더하기
+                    <td>
+                </tr>
+                <tr>
+                    <td>- A-B 빼기
+                    <td>
+                </tr>
+                <tr>
+                    <td>* A*B 곱하기
+                    <td>
+                </tr>
+                <tr>
+                    <td>/ A/B 나누기
+                    <td>
+                </tr>
+                <tr>
+                    <td>% A%B 나머지
+                    <td>
                 </tr>
             </table>
             <div class="code">
                 <pre><code>{
-                    var x = 100;
-                    var z = "javascript";
-                
-                    document.write(typeof x); //number
-                    document.write(typeof z); //string
-                }
-                </pre></code>
+&lt;script&gt;
+    var num1 = 15;
+    var num2 = 2;
+    var result;
+    result = num1 + num2;
+    docoment.write(result, "&lt;br&gt;"); //17
+    result = num1 - num2;
+    docoment.write(result, "&lt;br&gt;"); //13
+    result = num1 * num2;
+    docoment.write(result, "&lt;br&gt;"); //30
+    result = num1 / num2;
+    docoment.write(result, "&lt;br&gt;"); //7.5
+    result = num1 % num2;
+    docoment.write(result, "&lt;br&gt;"); //1
+&lt;/script&gt;
+}</pre></code>
             </div>
 
             <h3>문자 결합 연산자</h3>
+            <p>문자 결합 연산자는 피연산자(연산 대상 데이터)가 문자형 데이터입니다. 여러개의 문자를 하나의 문자형 데이터로
+                결할할 때 사용합니다.<br>다음과 같이 더하기에 피연산자로 문자형 데이터가 한 개라도 포함되어 있으면 다른 피연산자의
+                데이터는 자동으로 문자형 데이터로 형 변환되고<br>문자 결합이 이루어져 하나의 문자형 데이터를 반환합니다.
+            </p>
+            <div class="code">
+                <pre><code>문자형 데이터 + 문자형 데이터 = 하나의 문자형 데이터
+ex) "do it" + "javascript"= "do it javascript";
 
+문자형 데이터 + 숫자형 데이터 = 하나의 문장형 데이터
+ex) "100" + 200 = "100200"; </pre></code>
+            </div>
+            <p>다음은 t1, t2, t3, t4라는 변수에 문자와 숫자 데이터를 각각 넣고 하나의 문자 데이터로 결합하는 예제입니다.</p>
+            <div class="code">
+                <pre><code>&lt;script&gt;
+    var t1 = "학교종이";
+    var t2 = "땡땡땡";
+    var t3 = "8282";
+    var t4 = "어서 모이자";
+    var result;
+
+    result = t1 + t2 + t3 + t4;
+    docoment.write(result); //"학교종이 땡땡땡 8282 어서 모이자"
+&lt;/script&gt;</pre></code>
+            </div>
             <h3>대입 연산자</h3>
+            <p>대입 연산자(=)는 연산된 데이터를 변수에 저장할 때 사용합니다. 복합 대입 연산자(+=, -=, *=, /=, %=)는
+                산술 연산자와 대입 연산자가 복합적으로 적용된 것을 말합니다.<br>아래는 대입 연산자의 종류입니다.
+            </p>
+            <table>
+                <tr>
+                    <td>종류</td>
+                    <td>풀이</td>
+                </tr>
+                <tr>
+                    <td>A = B</td>
+                    <td>A = B</td>
+                </tr>
+                <tr>
+                    <td>A +=B</td>
+                    <td>A =A+B</td>
+                </tr>
+                <tr>
+                    <td>A*=B</td>
+                    <td>A=A*B</td>
+                </tr>
+                <tr>
+                    <td>A/=B</td>
+                    <td>A=A/B</td>
+                </tr>
+                <tr>
+                    <td>A%=B</td>
+                    <td>A=A%B</td>
+                </tr>
+            </table>
+            <P>아래 예제로 대입 연산자에 대해 알아보겠습니다.</P>
+            <div class="code">
+                <pre><code>&lt;script&gt;
+    var num1 =10;
+    var num2 =3;
+
+    num1 +=num2; //num1 = num1(10) + num2(3);
+    document.write(num1, "&lt;br&gt;") //13
+
+    num1 -= num2; //num1 = num1(13) - num2(3);
+    document.write(num1, "&lt;br&gt;") //10
+
+    num1 *= num2; //num1 = num1(10) * num2(3);
+    document.write(num1, "&lt;br&gt;") //30
+
+    num1 %= num2; //num1 = num1(30) % num2(3);
+    document.write(num1, "&lt;br&gt;") //0
+&lt;/script&gt;</pre></code>
+            </div>
+
+            <p>다음은 여러 개의 문자형 데이터로 저장된 HTML 태그를 복합 대입 연산자를 이용하여 하나의 문자로 결합한 다음
+                docoment.write(str);을 이용하여 화면에 출력하는 예제입니다.
+            </p>
+            <div class="code">
+                <pre><code>&lt;script&gt;
+    var str ="&lt;table border = '1'&gt;";
+    str += "&lt;tr&gt;"
+    str += "&lt;td&gt;1&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;";
+    str += "&lt;/tr&gt;"
+    str += "&lt;/table&gt;"
+    docoment.write(str);
+&lt;/script&gt;</pre></code>
+            </div>
+            <p><strong>8~11행</strong>여러 개의 문자형 데이터가 하나의 문자로 결합되어 변수 str에 저장됩니다. 즉, 한 개의 문자형 데이터로 결합됩니다.
+                <br> 12행 str을 
+
+            </p>
 
             <h3>증감 연산자</h3>
 
