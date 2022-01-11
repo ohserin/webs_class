@@ -226,6 +226,9 @@ a {
     padding: 20px 20px 15px 20px;
     border-radius: 10px;
     background: #f4f8fa;
+    overflow-x: scroll;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 .doc strong {
     background: #c3eaff;
@@ -233,6 +236,51 @@ a {
     border-radius: 20px;
     padding: 2px 15px 0px 15px;
     display: inline-block;
+}
+.doc table {
+    overflow-x: auto;
+}
+
+.doc .table table {
+    width: 100%;
+    border: 1px solid #cdcdcd;
+    border-collapse: collapse;
+}
+
+.doc .table table th {
+    border-bottom: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+    background-color: #f5f5f5;
+    padding: 5px;
+}
+
+.doc .table table td {
+    border-bottom: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+    padding: 5px;
+}
+
+
+
+@media (max-width: 800px) {
+    .doc {
+        font-size: 14px;
+    } 
+    .doc h2 {
+        font-size: 18px;
+    }
+    .doc .line {
+        padding: 10px 15px;
+    }
+    .doc .table table {
+        overflow-x: scroll;
+    }
+    .doc .table table .center {
+        text-align: center;
+    }
+    .doc .table table .moddle {
+        vertical-align: middle;
+    }
 }
 
 /* result */
