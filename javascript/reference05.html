@@ -42,31 +42,46 @@
                 연산을 하기 위해서는 연산 대상 데이터가 반드시 2개 있어야 합니다.<br> 아래는 산술 연산자의 종류와
                 기본형을 정리한 표입니다.
             </p>
-            <table class="line">
-                <tr>
-                    <td>종류 / 기본형 / 설명</td>
-                </tr>
-                <tr>
-                    <td>+ A+B 더하기
-                    <td>
-                </tr>
-                <tr>
-                    <td>- A-B 빼기
-                    <td>
-                </tr>
-                <tr>
-                    <td>* A*B 곱하기
-                    <td>
-                </tr>
-                <tr>
-                    <td>/ A/B 나누기
-                    <td>
-                </tr>
-                <tr>
-                    <td>% A%B 나머지
-                    <td>
-                </tr>
-            </table>
+           
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>종류</th>
+                            <th>기본형</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>+</td>
+                            <td>A+B</td>
+                            <td>더하기</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>A-B</td>
+                            <td>빼기</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>A*B</td>
+                            <td>곱하기</td>
+                        </tr>
+                        <tr>
+                            <td>/</td>
+                            <td>A/B</td>
+                            <td>나누기</td>
+                        </tr>
+                        <tr>
+                            <td>%</td>
+                            <td>A%B</td>
+                            <td>나머지</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
 
             <br>
 
@@ -120,17 +135,6 @@ ex) "100" + 200 = "100200"; </pre></code>
             <p>대입 연산자(=)는 연산된 데이터를 변수에 저장할 때 사용합니다. 복합 대입 연산자(+=, -=, *=, /=, %=)는
                 산술 연산자와 대입 연산자가 복합적으로 적용된 것을 말합니다.<br>아래는 대입 연산자의 종류입니다.
             </p>
-            <div class="line">
-                <table>
-                    <tr>
-                        <td>종류</td>
-                        <td>풀이</td>
-                    </tr>
-                    <tr>
-                        <td>A = B</td>
-                        <td>A = B</td>
-                    </tr>
-                    <tr>
                         <td>A +=B</td>
                         <td>A =A+B</td>
                     </tr>
@@ -146,6 +150,38 @@ ex) "100" + 200 = "100200"; </pre></code>
                         <td>A%=B</td>
                         <td>A=A%B</td>
                     </tr>
+                </table>
+            </div>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>종류</th>
+                            <th>풀이</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A = B</td>
+                            <td>A = B</td>
+                        </tr>
+                        <tr>
+                            <td>A +=B</td>
+                            <td>A=A*B</td>
+                        </tr>
+                        <tr>
+                            <td>A*=B</td>
+                            <td>A=A/B</td>
+                        </tr>
+                        <tr>
+                            <td>A/=B</td>
+                            <td>A/B</td>
+                        </tr>
+                        <tr>
+                            <td>A%=B</td>
+                            <td>A=A%B</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
             <P>아래 예제로 대입 연산자에 대해 알아보겠습니다.</P>
