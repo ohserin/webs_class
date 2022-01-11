@@ -4,6 +4,7 @@
     background: #0066ff;
     position: relative;
     box-shadow: 0 -10px 0 0 #0057d9;
+    border-radius: 50%;
 }
 .dog .body {
     width: 150px;
