@@ -75,6 +75,7 @@ body {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 100px;
 }
 
 #contents h2 {
@@ -156,7 +157,6 @@ body {
 .doc {
     font-size: 18px;
     line-height: 1.8;
-    padding-bottom: 300px;
 }
 
 .doc h3 {
@@ -193,7 +193,7 @@ body {
 .doc .code {
     padding: 20px 20px 15px 20px;
     border-radius: 10px;
-    background: #f4f8fa;
+    background: #d2d2d2;
 }
 
 .doc strong {
@@ -246,5 +246,12 @@ body {
 
     .refer .table table td {
         padding: 10px;
+    }
+
+    .doc {
+        font-size: 14px;
+    }
+    .doc h3 {
+        font-size: 20px;
     }
 }
