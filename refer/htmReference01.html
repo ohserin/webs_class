@@ -29,6 +29,7 @@
 
         <div class="menu">
             <ul>
+                <li><a href="html.html">속성</a></li>
                 <li class="active"><a href="htmReference01.html">기초 문법</a></li>
                 <li><a href="htmReference02.html">웹표준/웹접근성/웹호환성</a></li>
             </ul>
@@ -36,6 +37,49 @@
         <!-- //menu -->
 
         <div class="refer">
+            <div class="doc">
+
+                <h3>HTML이란?</h3>
+                <p>HTML 은 Hyper Text Markup Language 약어로 HyperText(웹 페이지에서 다른 페이지로 이동할 수 있도록 하는 것) 기능을 가진 문서를 만드는 언어입니다.
+                    다시 말해, 구조를 설계할 때 사용되는 언어로 hyper link 시스템을 가지고 있으며, 흔히 말하는 웹 페이지를 위한 마크업 언어라고 할 수 있습니다.</p>
+
+                <div class="line">
+                    <h4>HTML 구성요소</h4>
+                    <p>태그(tag) : 여는 태그 = "&lt;"+"요소 이름"(+"속성")+"&gt;", 닫는 태그="&lt;"+"/"+"태그 이름"+"&gt;"</p>
+                    <p>속성(attribute) = "속성 이름"+"="+"속성 값(value)"</p>
+                    <p>내용(content) = 그냥 text</p>
+                    <p>요소(element) = 여는 태그 + 내용 + 닫는 태그&nbsp;</p>
+                </div>
+
+                <h3>기본적인 구조</h3>
+                <div class="code">
+                    <pre><code>&lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;title&gt; HTML 문서의 제목&lt;/title&gt;
+    &lt;/head&gt;
+
+        &lt;h1&gt;제목 크기1입니다.&lt;/h1&gt;
+        &lt;h2&gt;제목 크기2입니다.&lt;/h2&gt;
+        &lt;p&gt;이 부분은 단락입니다.&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;</pre></code>
+                </div>
+                <br>
+                <div class="line">
+                    &lt;!DOCTYPE html&gt; : html5 문서임을 명시.<br>
+                    &lt;html&gt; : html 문서의 루트(root)요소를 정의<br>
+                    &lt;head&gt; : html 문서의 메타데이터를 정의<br>
+                    메타데이터 : html 문서에 대한 정보로 웹 브라우저에는 직접적으로 표현되지 않는 정보.<br>
+                    &lt;title&gt;, &lt;style&gt;, &lt;meta&gt;, &lt;link&gt;, &lt;script&gt; 등의 태그들이 존재.<br>
+                    &lt;title&gt; : html 문서의 제목을 정의.<br>
+                    브라우저의 툴바에 표시됨.<br>
+                    검색 엔진의 결과페이지에 제목으로 표시됨.<br>
+                    &lt;body&gt; : 웹 브라우저를 통해 보이는 내용 부분.
+                </div>
+
+            </div>
+
 
         </div>
         <!-- //refer -->
