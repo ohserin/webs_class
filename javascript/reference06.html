@@ -86,6 +86,23 @@
             </div>
             <p>가장 위에 있는 조건식1부터 5까지 차례로 조건검사를 하면서 만족(true)하는 값이 나오면 그에 해당하는 코드를 실행하고 조건문을 종료합니다.<br>
             조건식 중 만족(true)하는 값이 하나도 없으면 else문의 중괄호에 있는 코드를 실행합니다.</p>
+            <div class="code">
+                <pre><code><h4>현재는 몇 월 입니까를 묻고 계절과 관련된 문구가 출력되는 예제입니다.</h4>
+&lt;script&gt;
+    var mon = prompt("현재는 몇 월 입니까?", "0");
+
+   if(mon &gt;= 9 && mon &lt;= 11){                     //9~11
+        document.write("독서의 계절 가을이네요!!");
+    }else if(mon &gt;= 6 && mon &lt;=8){                //6~8
+        document.write("여행가기 좋은 여름이네요!!");
+    }else if(mon &gt;= 3 && mon &lt;=5){                //3~5
+        document.write("햇살 가득한 봄이네요!!");
+    else{ //나머지 입력
+        document.write("스키의 계절 겨울이네요!!");
+    }
+&lt;/script&gt;</pre></code>
+            </div>
+
             <h3>중첩 if문</h3>
             <p>조건문 안에 조건문이 있으면 중첩 if문이라고 합니다.</p>
             <div class="line">

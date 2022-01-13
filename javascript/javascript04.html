@@ -390,9 +390,9 @@
             //01. if문
             {
                 if (true) {
-                    document.write("실행되었습니다. (true)");
+                    //document.write("실행되었습니다. (true)");
                 } else {
-                    document.write("실행되었습니다. (false)");
+                    //document.write("실행되었습니다. (false)");
                 }
             }
 
@@ -400,8 +400,8 @@
             {
                 const num = 100;
 
-                if (num == 100) document.write("실행되었습니다.(true)");
-                else document.write("실행되었습니다. (false)");
+                // if (num == 100) document.write("실행되었습니다.(true)");
+                // else document.write("실행되었습니다. (false)");
             }
 
             //03. 다중 if문
@@ -409,15 +409,15 @@
                 const num = 900;
 
                 if (num == 90) {
-                    document.write("실행되었습니다(num==90)");
+                    //document.write("실행되었습니다(num==90)");
                 } else if (num == 100) {
-                    document.write("실행되었습니다(num==100)");
+                    //document.write("실행되었습니다(num==100)");
                 } else if (num == 110) {
-                    document.write("실행되었습니다(num==110)");
+                    //document.write("실행되었습니다(num==110)");
                 } else if (num == 120) {
-                    document.write("실행되었습니다(num==120)");
+                    //document.write("실행되었습니다(num==120)");
                 } else {
-                    document.write("실행되었습니다(num==값이 없음)");
+                    //document.write("실행되었습니다(num==값이 없음)");
                 }
             }
 
@@ -426,15 +426,15 @@
                 const num = 100;
 
                 if (num == 100) {
-                    document.write("실행되었습니다(1)");
+                    //document.write("실행되었습니다(1)");
                     if (num == 100) {
-                        document.write("실행되었습니다(2)");
+                        //document.write("실행되었습니다(2)");
                         if (num == 100) {
-                            document.write("실행되었습니다(3)");
+                            //document.write("실행되었습니다(3)");
                         }
                     }
                 } else {
-                    document.write("실행되었습니다.(4)");
+                    //document.write("실행되었습니다.(4)");
                 }
             }
 
@@ -448,7 +448,7 @@
                 //     document.write("false");
                 // }
 
-                (num == 100) ? document.write("true"): document.write("false");
+                //(num == 100) ? document.write("true"): document.write("false");
             }
 
             //06. switch문 (여기까진 제어문)
@@ -457,16 +457,16 @@
 
                 switch (num) {
                     case 100:
-                        document.write("실행되었습니다.(num==100)");
+                        //document.write("실행되었습니다.(num==100)");
                         break;
                     case 200:
-                        document.write("실행되었습니다.(num==200)");
+                        //document.write("실행되었습니다.(num==200)");
                         break;
                     case 300:
-                        document.write("실행되었습니다.(num==300)");
+                        //document.write("실행되었습니다.(num==300)");
                         break;
                     default:
-                        document.write("실행되었습니다.(num==값이없음)");
+                        //document.write("실행되었습니다.(num==값이없음)");
                         break;
                 }
             }
@@ -475,7 +475,7 @@
             {
                 let num = 1;
                 while (num <= 10) {
-                    document.write(num + ". 실행되었습니다.");
+                    //document.write(num + ". 실행되었습니다.");
                     num++;
                 }
             }
@@ -484,7 +484,7 @@
             {
                 let num = 1;
                 do {
-                    document.write(num + ". 실행되었습니다.");
+                    //document.write(num + ". 실행되었습니다.");
                     num++;
                 } while (num <= 10);
             }
@@ -492,16 +492,16 @@
             //09. for문
             {
                 for (let i = 1; i <= 10; i++) {
-                    document.write(i + ". 실행되었습니다.");
+                    //document.write(i + ". 실행되었습니다.");
                 }
             }
 
             //10. 중첩 for문
             {
                 for (let i = 1; i <= 5; i++) {
-                    document.write(i + ". 실행(i)되었습니다.");
+                    //document.write(i + ". 실행(i)되었습니다.");
                     for (let j = 1; j <= 5; j++) {
-                        document.write(j + ". 실행(j)되었습니다.");
+                        //document.write(j + ". 실행(j)되었습니다.");
                     }
                 }
             }
@@ -510,14 +510,14 @@
             {
                 let num = 1;
                 while (num <= 20) {
-                    document.write(num);
+                    //document.write(num);
                     if (num == 10) {
                         break;
                     }
                     num++;
                 }
                 for (let i = 1; i <= 20; i++) {
-                    document.write(i);
+                    //document.write(i);
                     if (i == 10) {
                         break;
                     }
@@ -533,14 +533,14 @@
                     if (num == 5) {
                         continue;
                     }
-                    document.write(num);
+                    //document.write(num);
                 }
 
                 for (let i = 1; i <= 10; i++) {
                     if (i == 5) {
                         continue;
                     }
-                    document.write(i);
+                    //document.write(i);
                 }
             }
         </script>
