@@ -350,6 +350,38 @@
             </div>
             <!-- //sample11 -->
 
+            <!-- sample12 -->
+            <div id="sample12" class="sample">
+                <h3>12. countinue문</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    let num = 0;
+    while(num &lt; 10){
+        num++;
+        if(num == 5) {
+            continue;
+        }
+        document.write(num);
+    }
+
+    for(let i=1; i&lt;=10; i++) {
+        if(i == 5) {
+            continue;
+        }
+        document.write(i);
+    }
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        1234678910<br>
+                        1234678910
+                    </div>
+                </div>
+            </div>
+            <!-- //sample12 -->
+
         </div>
         <!-- //script -->
 
@@ -489,6 +521,26 @@
                     if (i == 10) {
                         break;
                     }
+                }
+            }
+
+            //12. countinue문
+
+            {
+                let num = 0;
+                while (num < 10) {
+                    num++;
+                    if (num == 5) {
+                        continue;
+                    }
+                    document.write(num);
+                }
+
+                for (let i = 1; i <= 10; i++) {
+                    if (i == 5) {
+                        continue;
+                    }
+                    document.write(i);
                 }
             }
         </script>
