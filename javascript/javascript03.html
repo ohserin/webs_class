@@ -30,6 +30,9 @@
                 <li class="active"><a href="javascript03.html">데이터 실행하기</a></li>
                 <li><a href="javascript04.html">데이터 제어하기</a></li>
             </ul>
+            <ul>
+                <li><a href="practice01.html">데이터 연습하기</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -57,8 +60,60 @@
                 <li>19. 클래스 </li>
             </ul>
         </div>
-
     </main>
-</body>
+        <!-- //list -->
 
+        <div class="note">
+            <a href="reference08.html">함수</a>
+        </div>
+        <!-- //note -->
+
+        <div class="script">
+
+        </div>
+        <!-- //script -->
+
+        <script>   
+            //데이터 저장 : 변수, 상수, 배열, 객체(저장소)
+            //변수 : 데이터 저장, 변경, 추가
+            //상수 : 데이터 저장, 변경X
+            //배열 : 데이터 저장, 여러개
+            //객체 : 데이터 저장, 여러개, 키와 값
+            //데이터 실행 : 함수(실행문)
+            //웹표준 : 표준안
+            //웹접근성 : 누구나
+            //웹호환성 : 브라우저
+
+
+            //01.선언적 함수
+            {
+                function func(){
+                    document.write("함수가 실행되었습니다.");
+                }
+                func();
+            }
+            //02.익명 함수
+            {
+                const func = function (){
+                    document.write("함수가 실행되었습니다.");
+                }
+                func();
+            }
+            //03.매개변수 함수
+            {
+                function func(str){
+                    document.write(str);
+                }
+                func("함수가 실행되었습니다.");
+            }
+            //04.리턴값 함수
+            {
+                function fun(){
+                    const str = "함수가 실행되었습니다.";
+                    return str;
+                }
+                document.write(fun());
+            }
+        </script>
+</body>
 </html>

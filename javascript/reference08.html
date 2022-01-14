@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/javascript.png">
+    <link rel="apple-touch-icon-precomposed" href="javascript.png">
+    <link rel="icon" href="../assets/face/javascript.png" sizes="128x128">
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="index.html">Javascript</a></h1>
+        <nav>
+            <ul>
+                <li><a href="reference01.html">기초 문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li><a href="reference03.html">자료형</a></li>
+                <li><a href="reference04.html">for문</a></li>
+                <li><a href="reference05.html">연산자</a></li>
+                <li><a href="reference06.html">조건문</a></li>
+                <li><a href="reference07.html">반복문</a></li>
+                <li class="active"><a href="reference08.html">함수</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="doc">
+            <h2>함수</h2>
+            <p>함수를 사용하면 코드를 메모리에 저장했다가 필요할 때 호출하여 사용할 수 있습니다. 예를 들어 TV 리모컨을 보면 각 채널버튼이 있고 버튼마다 해당 채널로 바꿀 수 있는
+                코드가 저장되어 있습니다.<br> 이 코드는 사용자가 리모컨을 눌러(호출) 해야만 실행됩니다.
+                이때 각 TV 리모컨의 버튼은 함수를 저장하고 있으며 버튼을 누를 때마다 함수가 호출 된다고 할 수 있습니다.
+            </p>
+
+            <h3>선언적 함수</h3>
+            <p>변수를 선언할 때 var 키워드를 사용한 것처럼 함수에서는 function 키워드를 사용해 변수를 선언합니다.</p>
+            <div class="line">
+                <h4>기본형</h4><br>
+                function 함수명 (){}<br>
+                &nbsp;&nbsp; 자바스크립트 코드;<br>
+                }<br><br>
+            </div>
+            <p>함수 정의문 ({...}) 안에 작성된 코드는 즉시 실행되지 않습니다. 함수는 메모리에 할당되어 대기하다가 함수가 호출되면 실행됩니다.</p>
+
+            <div class="code">
+                <pre><code> 함수 정의문을 이용해 [배경색 바꾸기] 버튼을 클릭할 때마다 배경색이 바뀌는 예제입니다.
+    &lt;script&gt;
+    var color = ["white", "yellow", "aqua", "purple"];
+
+    var i = 0;
+    function changeColor(){
+        i++;
+        if (i &gt;= color.length){
+            i=0;
+        }
+
+        var bodyTag = document.getElementByld("theBody");
+        bodyTag.style.backgroundColor = color[i];
+    }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body id="theBody"&gt;
+&lt;button onclick = "changeColor();"&gt;배경색 바꾸기 &lt;/button&gt;
+&lt;/body&gt;
+</pre></code></div>
+            <p>예제를 실행하면 처음에는 흰색이었던 배경색이 버튼을 클릭할 때마다 '노란색', '아쿠아색', '보라색' 순으로 바뀝니다.</p>
+            <!-- // 선언적 함수 -->
+
+            <!-- 익명 함수 -->
+            <h3>익명 함수</h3>
+            <p>익명 함수는 변수에 함수의 코드를 저장하는 대신 함수명을 사용하지 않습니다. 대신 변수명을 마치 함수명처럼 사용해서 함수를 호출하거나 변수값을 이동시키는데 사용할 수 있습니다.</p>
+            <div class="line">
+                <h4>기본형</h4><br>
+                var 변수명 = function( 매개변수 )<br>
+                {<br>
+                &nbsp;&nbsp;실행문;<br>
+                };
+            </div>
+            <p>이 경우 변수값을 변수에 넣은 형태이므로 함수 코드 끝에 세미콜론을 붙여줍니다.</p>
+
+            <div class="code">
+                <pre><code>package main
+        func main() {
+            sum := func(n ...int) int { //익명함수 정의
+                s := 0
+                for _, i := range n {
+                    s += i
+                }
+                return s
+            }
+            
+            result := sum(1, 2, 3, 4, 5) //익명함수 호출
+            println(result)
+}</pre></code></div>
+
+            <h3>매개변수 함수</h3>
+            <p>매개변수가 있는 함수 정의문은 함수를 호출할 때 전달하고자 하는 값을 입력하여 호출할 수 있습니다. 이렇게 전달된 값은 매개변수가 받아 함수 정의문에서 사용할 수 있습니다.</p>
+            <div class="line">
+                <h4>기본형</h4>
+                function 함수명(매개변수1, 매개변수2, ...매개변수 n){
+                자바스크립트 코드;
+                }
+                함수명(데이터1, 데이터2, ...데이터n);<br><br>
+                <p>▶ 함수를 호출할 때 값을 전달하는 기본형 입니다. 데이터 1은 매개변수 1에 저장되고 데이터 2는 매개변수 2에 저장됩니다. 그리고 데이터는 매개변수 n에 저장됩니다.
+            </div>
+            </p>
+            <div class="code">
+                <pre><code>아이디와 비밀번호가 일치하면 환영문구가 출력되는 예제입니다.
+    &lt;script&gt;
+    var rightld = "korea";
+    var rightPw = "1234";
+    function login(id, pw) {
+        if(id == rightld) {     // 올바른 아이디인 경우
+            if(pw == rightPw) {
+                document.write(id + "님 방문을 환영합니다");    // 올바른 비밀번호인 경우
+            } else {
+                alert("잘못된 비밀번호입니다.");     // 틀린 비밀번호의 경우
+            }
+        }else{  // 틀린 아이디인 경우
+            alert("존재하지 않는 아이디입니다.");
+        }
+    }
+
+    var userld = prompt("아이디를 입력하세요"",")
+    var userPw = prompt("패스워드를 입력하세요"",")
+    
+    login(userld, userPw);
+&lt;/script&gt;</pre></code>
+            </div>
+            <div class="line">
+                <h4>결과</h4>
+                <p>올바른 아이디와 비밀번호를 입력하면 해당문구가 출력됩니다.<br>
+                    ▶ korea님 방문을 환영합니다.
+                </p>
+            </div>
+
+            <!-- 리턴값 함수 -->
+            <h3>리턴값 함수</h3>
+            <p>return문은 함수에서 결괏값을 반환할 때 사용합니다. 그리고 함수에서 return문이 실행되면 반복문의 break문과 비슷하게 코드가 강제로 종료됩니다.<br>
+                다시 말해 정의문에 return문이 사용되면 함수를 호출했을 때 결괏값(date)을 반환합니다.</p>
+            <div class="line">
+                <h4>기본형</h4><br>
+                function 함수명(){<br>
+                &nbsp;&nbsp;&nbsp;자바스크립트 코드1;<br>
+                &nbsp;&nbsp;&nbsp;return 데이터(값);<br><br>
+
+                &nbsp;&nbsp;&nbsp;자바스크립트 코드2;<br>
+                }<br><br>
+
+                var 변수 = 함수명();<br><br>
+                <p>함수 호출문 → 함수 코드 실행 → 자바스크립트 코드2를 무시하고 데이터를 반환</p>
+            </div>
+
+            <div class="code">
+                <pre><code>코드 실행 후 계산된 결괏값을 return문으로 함수 호출문에 반환하는 예제입니다.
+&lt;script&gt;
+    function testAvg(arrDate) {
+        var sum = 0;
+        for(var i = 0;, i &lt; arrDate.length; i++){
+            sum += Number(prompt(arrDate[i] + "점수는?", "0"));   //배열에 저장된 데이터 개수(2) 만큼 반복문을 실행합니다.
+        }
+
+        var avg = sum / arrDate.length;
+        return avg;                               // 평균 점수를 구해 반환합니다.
+    }
+
+    var arrSubject = ["국어", "수학"];
+    var result = testAvg(arrSubject);
+
+    document.write("평균 점수는" + result + "점입니다");
+&lt;/script&gt;</pre></code>
+            </div>
+            <div class="line">결과
+                <p>함수를 호출하면 데이터가 매개변수에 전달되며 함수에 작성한 코드에 사용됩니다. 그리고 계산 결과를 return문을 사용해 함수를 호출한 지점에 되돌려주면
+                    result에 값이 저장됩니다.<br> result에 저장된 값으로 평균 점수를 출력한 결과입니다. ▶ 평균 점수는 75점입니다.
+                </p>
+            </div>
+
+            <div class="code">
+                <pre><code>총 8개의 이미지를 사용해 갤러리를 만드는 예제입니다.
+    &lt;script&gt;
+       var num = 1;
+       function gallery(derect) {
+           if (direct){
+               if (num == 8) return;        // [다음] 버튼을 누르면 direct의 값이 1이 되어 num의 값이 1만큼 증가됩니다.
+               num++;
+           }else {
+            if (num == 1) return;    // [이전] 버튼을 누르면 direct의 값이 0이 되어 num의 값이 1만큼 감소됩니다.
+            num--;
+           }
+
+           var imgTag = document.getElementByld("photo")
+           imgTag.setAttribute("src", "images/pic_" + num + ".jpg");    // id 값이 photo인 이미지 태그를 선택한 후 src 속성을 새 값으로 설정합니다.
+       }
+    &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id = "galleryZone"&gt;
+        &lt;p&gt;&lt;img src = "images/pic_1.jpg" id = "photo" alt=""&gt;&lt;/p&gt;
+        &lt;p&gt;
+            &lt;button onclick = "gallery(0)"&gt;이전&lt;/button&gt;
+            &lt;button onclick = "gallery(1)"&gt;다음&lt;/button&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</pre></code> </div>
+            <div class="line">결과
+                예제를 실행했을 때 처음에는 pic_1.jpg가 나타납니다. 여기서 [다음]버튼을 누르면 pic_2,3....jpg가 순서대로 나타납니다.
+                <br>즉, 이미지 파일명의 숫자가 1씩 증가되며 나타납니다. 8보다 큰 값이 나오면 return문으로 num++이전에 함수를 종료하여 문제를 해결합니다.
+                <br><br> ▶ [다음]버튼을 누르면 다음 이미지가 나오고 [이전]버튼을 누르면 이전 이미지가 나옵니다.
+            </div>
+
+
+
+
+        </div>
+    </main>
+</body>
+
+</html>

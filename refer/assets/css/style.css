@@ -145,6 +145,10 @@ body {
     font-weight: 500;
 }
 
+.refer .table table th a {
+    color: #00DB72;
+}
+
 .refer .table table td {
     border: 1px solid #aaa;
     padding: 15px;
