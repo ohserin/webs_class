@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout03-1</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/layout.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/layout.png">
+    <link rel="icon" href="../assets/face/layout.png" sizes="128x128">
+    
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #595a5a;
+        }
+
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #header {
+            width: 1200px;
+            height: 100px;
+            background-color: #424749;
+        }
+
+        #nav {
+            width: 1200px;
+            background-color: #293438;
+        }
+
+        #nav .aside {
+            width: 600px;
+            height: 100px;
+            background-color: #1c2c33;
+        }
+
+        #contents {
+            width: 1200px;
+            display: flex;
+        }
+
+        #contents .aside {
+            width: 300px;
+            height: 520px;
+            background-color: #101b20;
+        }
+
+        #contents .article1 {
+            width: 900px;
+            height: 260px;
+            background-color: #070e11;
+        }
+
+        #contents .article2 {
+            width: 900px;
+            height: 260px;
+            background-color: #0c5b88;
+        }
+
+        #main {
+            width: 1200px;
+            height: 260px;
+            background-color: #44809c;
+        }
+
+        #footer {
+            width: 1200px;
+            height: 100px;
+            background-color: #011520;
+        }
+    </style>
+</head>
+
+<body>
+    <div id=wrap>
+        <header id="header"></header>
+        <nav id="nav">
+            <aside class="aside"></aside>
+        </nav>
+        <main id="contents">
+            <aside class="aside"></aside>
+            <section class="content">
+                <section class="article1"></section>
+                <section class="article2"></section>
+            </section>
+        </main>
+        <section id="main"></section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+
+</html>
