@@ -21,6 +21,9 @@
 </head>
 
 <body>
+
+    <div class="top"><a href="#header">Top</a></div>
+
     <header id="header">
         <h1><a href="index.html">Javascript</a></h1>
         <nav>
@@ -86,7 +89,7 @@
                 </div>
                 <div class="result">
                     <h4>결과보기</h4>
-                    <div>
+                    <div class="result1">
                         실행되었습니다. (true)
                     </div>
                 </div>
@@ -394,6 +397,9 @@
             </div>
             <!-- //sample12 -->
 
+            <!-- //script -->
+            <script src="assets/js/script.js"></script>
+
         </div>
         <!-- //script -->
 
@@ -401,159 +407,159 @@
             //조건문
             //01. if문
             {
-                if (true) {
-                    //document.write("실행되었습니다. (true)");
-                } else {
-                    //document.write("실행되었습니다. (false)");
-                }
-            }
-
-            //02. if문 생략
-            {
-                const num = 100;
-
-                // if (num == 100) document.write("실행되었습니다.(true)");
-                // else document.write("실행되었습니다. (false)");
-            }
-
-            //03. 다중 if문
-            {
-                const num = 900;
-
-                if (num == 90) {
-                    //document.write("실행되었습니다(num==90)");
-                } else if (num == 100) {
-                    //document.write("실행되었습니다(num==100)");
-                } else if (num == 110) {
-                    //document.write("실행되었습니다(num==110)");
-                } else if (num == 120) {
-                    //document.write("실행되었습니다(num==120)");
-                } else {
-                    //document.write("실행되었습니다(num==값이 없음)");
-                }
-            }
-
-            //04. 중첩 if문
-            {
-                const num = 100;
-
-                if (num == 100) {
-                    //document.write("실행되었습니다(1)");
-                    if (num == 100) {
-                        //document.write("실행되었습니다(2)");
-                        if (num == 100) {
-                            //document.write("실행되었습니다(3)");
-                        }
-                    }
-                } else {
-                    //document.write("실행되었습니다.(4)");
-                }
-            }
-
-            //05. 삼항 연산자(조건부 연산자)
-            {
-                const num = 100;
-
-                // if(num == 100){
-                //     document.write("true");
-                // } else {
-                //     document.write("false");
+                //     if (true) {
+                //         //document.write("실행되었습니다. (true)");
+                //     } else {
+                //         //document.write("실행되었습니다. (false)");
+                //     }
                 // }
 
-                //(num == 100) ? document.write("true"): document.write("false");
-            }
+                // //02. if문 생략
+                // {
+                //     const num = 100;
 
-            //06. switch문 (여기까진 제어문)
-            {
-                const num = 100;
+                //     // if (num == 100) document.write("실행되었습니다.(true)");
+                //     // else document.write("실행되었습니다. (false)");
+                // }
 
-                switch (num) {
-                    case 100:
-                        //document.write("실행되었습니다.(num==100)");
-                        break;
-                    case 200:
-                        //document.write("실행되었습니다.(num==200)");
-                        break;
-                    case 300:
-                        //document.write("실행되었습니다.(num==300)");
-                        break;
-                    default:
-                        //document.write("실행되었습니다.(num==값이없음)");
-                        break;
-                }
-            }
+                // //03. 다중 if문
+                // {
+                //     const num = 900;
 
-            //07. while문 (여기서부턴 반복문)
-            {
-                let num = 1;
-                while (num <= 10) {
-                    //document.write(num + ". 실행되었습니다.");
-                    num++;
-                }
-            }
+                //     if (num == 90) {
+                //         //document.write("실행되었습니다(num==90)");
+                //     } else if (num == 100) {
+                //         //document.write("실행되었습니다(num==100)");
+                //     } else if (num == 110) {
+                //         //document.write("실행되었습니다(num==110)");
+                //     } else if (num == 120) {
+                //         //document.write("실행되었습니다(num==120)");
+                //     } else {
+                //         //document.write("실행되었습니다(num==값이 없음)");
+                //     }
+                // }
 
-            //08. do while문
-            {
-                let num = 1;
-                do {
-                    //document.write(num + ". 실행되었습니다.");
-                    num++;
-                } while (num <= 10);
-            }
+                // //04. 중첩 if문
+                // {
+                //     const num = 100;
 
-            //09. for문
-            {
-                for (let i = 1; i <= 10; i++) {
-                    //document.write(i + ". 실행되었습니다.");
-                }
-            }
+                //     if (num == 100) {
+                //         //document.write("실행되었습니다(1)");
+                //         if (num == 100) {
+                //             //document.write("실행되었습니다(2)");
+                //             if (num == 100) {
+                //                 //document.write("실행되었습니다(3)");
+                //             }
+                //         }
+                //     } else {
+                //         //document.write("실행되었습니다.(4)");
+                //     }
+                // }
 
-            //10. 중첩 for문
-            {
-                for (let i = 1; i <= 5; i++) {
-                    //document.write(i + ". 실행(i)되었습니다.");
-                    for (let j = 1; j <= 5; j++) {
-                        //document.write(j + ". 실행(j)되었습니다.");
-                    }
-                }
-            }
+                // //05. 삼항 연산자(조건부 연산자)
+                // {
+                //     const num = 100;
 
-            //11. break문
-            {
-                let num = 1;
-                while (num <= 20) {
-                    //document.write(num);
-                    if (num == 10) {
-                        break;
-                    }
-                    num++;
-                }
-                for (let i = 1; i <= 20; i++) {
-                    //document.write(i);
-                    if (i == 10) {
-                        break;
-                    }
-                }
-            }
+                //     // if(num == 100){
+                //     //     document.write("true");
+                //     // } else {
+                //     //     document.write("false");
+                //     // }
 
-            //12. countinue문
+                //     //(num == 100) ? document.write("true"): document.write("false");
+                // }
 
-            {
-                let num = 0;
-                while (num < 10) {
-                    num++;
-                    if (num == 5) {
-                        continue;
-                    }
-                    //document.write(num);
-                }
+                // //06. switch문 (여기까진 제어문)
+                // {
+                //     const num = 100;
 
-                for (let i = 1; i <= 10; i++) {
-                    if (i == 5) {
-                        continue;
-                    }
-                    //document.write(i);
-                }
+                //     switch (num) {
+                //         case 100:
+                //             //document.write("실행되었습니다.(num==100)");
+                //             break;
+                //         case 200:
+                //             //document.write("실행되었습니다.(num==200)");
+                //             break;
+                //         case 300:
+                //             //document.write("실행되었습니다.(num==300)");
+                //             break;
+                //         default:
+                //             //document.write("실행되었습니다.(num==값이없음)");
+                //             break;
+                //     }
+                // }
+
+                // //07. while문 (여기서부턴 반복문)
+                // {
+                //     let num = 1;
+                //     while (num <= 10) {
+                //         //document.write(num + ". 실행되었습니다.");
+                //         num++;
+                //     }
+                // }
+
+                // //08. do while문
+                // {
+                //     let num = 1;
+                //     do {
+                //         //document.write(num + ". 실행되었습니다.");
+                //         num++;
+                //     } while (num <= 10);
+                // }
+
+                // //09. for문
+                // {
+                //     for (let i = 1; i <= 10; i++) {
+                //         //document.write(i + ". 실행되었습니다.");
+                //     }
+                // }
+
+                // //10. 중첩 for문
+                // {
+                //     for (let i = 1; i <= 5; i++) {
+                //         //document.write(i + ". 실행(i)되었습니다.");
+                //         for (let j = 1; j <= 5; j++) {
+                //             //document.write(j + ". 실행(j)되었습니다.");
+                //         }
+                //     }
+                // }
+
+                // //11. break문
+                // {
+                //     let num = 1;
+                //     while (num <= 20) {
+                //         //document.write(num);
+                //         if (num == 10) {
+                //             break;
+                //         }
+                //         num++;
+                //     }
+                //     for (let i = 1; i <= 20; i++) {
+                //         //document.write(i);
+                //         if (i == 10) {
+                //             break;
+                //         }
+                //     }
+                // }
+
+                // //12. countinue문
+
+                // {
+                //     let num = 0;
+                //     while (num < 10) {
+                //         num++;
+                //         if (num == 5) {
+                //             continue;
+                //         }
+                //         //document.write(num);
+                //     }
+
+                //     for (let i = 1; i <= 10; i++) {
+                //         if (i == 5) {
+                //             continue;
+                //         }
+                //         //document.write(i);
+                //     }
             }
         </script>
     </main>
