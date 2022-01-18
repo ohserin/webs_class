@@ -1,105 +1,110 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout05</title>
+    <title>Document</title>
     <style>
         * {
-            padding: 0;
             margin: 0;
+            padding: 0;
         }
         #wrap {
-            width: 1200px;
-            background-color: rgb(177, 157, 157);
-            margin: 0 auto;
         }
         #header {
-            width: 1200px;
             height: 100px;
-            background-color: rgb(207, 164, 164);
+            background-color: #EFEBE9;
         }
         #nav {
-            width: 1200px;
-            background-color: #d17f83;
-            display: flex;
+            background-color: #666;
         }
-
-        #nav .nav1 {
-            width: 400px;
-            height: 100px;
-            background-color: #c0466b;
-        }
-
-        #nav .nav2 {
-            width: 400px;
-            height: 100px;
-            background-color: #d8656f;
-        }
-        
-        #nav .nav3 {
-            width: 400px;
-            height: 100px;
-            background-color: #d14f9b;
-        }
-
         #contents {
-            width: 1200px;
-            display: flex;
-        }
-
-        #contents .aside1{
-            width: 300px;
             height: 780px;
-            background-color: #973a59;
-        }
-        #contents .aside2{
-            width: 600px;
-            background-color: #db6369;
-        }
-        #contents .aside3{
-            width: 300px;
-            height: 780px;
-            background-color: #993946;
-        }
-
-        #contents .aside2 .article1 {
-            width: 600px;
-            height: 390px;
-            background-color: #ad3b4a;
-        }
-        #contents .aside2 .article2 {
-            width: 600px;
-            height: 390px;
-            background-color: #a0303f;
+            background-color: #8D6E63;
         }
         #footer {
-            width: 1200px;
             height: 100px;
-            background-color: #521820;
+            background-color: #4E342E;
         }
-
+        .container {
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+            background: rgba(0,0,0,0.3);
+        }
+        #contents .container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        #contents .container .article1 {
+            width: 800px;
+            height: 390px;
+            background-color: #6D4C41;
+        }
+        #contents .container .article2 {
+            width: 800px;
+            height: 390px;
+            background-color: #5D4037;
+        }
+        #contents .container .aside {
+            width: 400px;
+            height: 780px;
+            background-color: #795548;
+        }
+        #nav .container {
+            display: flex;
+        }
+        #nav .container .nav1 {
+            width: 50%;
+            height: 100px;
+            background: #333;
+        }
+        #nav .container .nav2 {
+            width: 50%;
+            height: 100px;
+            background: #666;
+        }
+        #contents .container .article1 {
+            display: flex;
+        }
+        #contents .container .article1 .article1-1 {
+            width: 50%;
+            height: 390px;
+            background-color: #777;
+        }
+        #contents .container .article1 .article1-2 {
+            width: 50%;
+            height: 390px;
+            background-color: #999;
+        }
     </style>
 </head>
 <body>
-    
     <div id="wrap">
-        <header id="header"></header>
+        <header id="header">
+            <div class="container"></div>
+        </header>
         <nav id="nav">
-            <section class="nav1"></section>
-            <section class="nav2"></section>
-            <section class="nav3"></section>
+            <div class="container">
+                <div class="nav1">1</div>
+                <div class="nav2">2</div>
+            </div>
         </nav>
         <section id="contents">
-            <aside class="aside1"></aside>
-            <aside class="aside2">
-                <article class="article1"></article>
-                <article class="article2"></article>
-            </aside>
-            <aside class="aside3"></aside>
+            <div class="container">
+                <div class="article1">
+                    <div class="article1-1"></div>
+                    <div class="article1-2"></div>
+                </div>
+                <div class="article2"></div>
+                <div class="aside"></div>
+            </div>
         </section>
-        <footer id="footer"></footer>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
     </div>
 </body>
 </html>

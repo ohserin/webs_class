@@ -1,101 +1,79 @@
-
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout03-1</title>
-    <!-- 파비콘 -->
-    <link rel="shortcut icon" href="../assets/face/layout.png">
-    <link rel="apple-touch-icon-precomposed" href="../assets/face/layout.png">
-    <link rel="icon" href="../assets/face/layout.png" sizes="128x128">
-    
+    <title>Layout04</title>
     <style>
         * {
-            padding: 0;
             margin: 0;
+            padding: 0;
         }
-        body{
-            background-color: #f2f5d8;
-        }
-
         #wrap {
+            width: 100%;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #E0F2F1;
+        }
+        #banner {
+            width: 100%;
+            height: 300px;
+            background-color: #80CBC4;
+        }
+        #conteants {
+            width: 100%;
+            height: 580px;
+            background-color: #26A69A;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #00897B;
+        }
+        .header-container {
             width: 1200px;
+            height: 100px;
+            background-color: #B2DFDB;
+            margin: 0 auto;
+        }
+        .banner-container {
+            width: 1200px;
+            height: 300px;
+            background-color: #4DB6AC;
+            margin: 0 auto;
+        }
+        .conteants-container {
+            width: 1200px;
+            height: 580px;
+            background-color: #009688;
+            margin: 0 auto;
+        }
+        .footer-container {
+            width: 1200px;
+            height: 100px;
+            background-color: #00796B;
             margin: 0 auto;
         }
 
-        #header {
-            width: 1200px;
-            height: 100px;
-            background-color: #f5ea84;
-        }
-
-        #nav {
-            width: 1200px;
-            background-color: #f1d96b;
-        }
-
-        #nav .aside {
-            width: 600px;
-            height: 100px;
-            background-color: #dbda7c;
-        }
-
-        #contents {
-            width: 1200px;
-            display: flex;
-        }
-
-        #contents .aside {
-            width: 300px;
-            height: 520px;
-            background-color: #bbb92c;
-        }
-
-        #contents .article1 {
-            width: 900px;
-            height: 260px;
-            background-color: #a7a416;
-        }
-
-        #contents .article2 {
-            width: 900px;
-            height: 260px;
-            background-color: #788315;
-        }
-
-        #main {
-            width: 1200px;
-            height: 260px;
-            background-color: #53520d;
-        }
-
-        #footer {
-            width: 1200px;
-            height: 100px;
-            background-color: #41420a;
-        }
     </style>
 </head>
-
 <body>
-    <div id=wrap>
-        <header id="header"></header>
-        <nav id="nav">
-            <aside class="aside"></aside>
-        </nav>
-        <main id="contents">
-            <aside class="aside"></aside>
-            <section class="content">
-                <section class="article1"></section>
-                <section class="article2"></section>
-            </section>
-        </main>
-        <section id="main"></section>
-        <footer id="footer"></footer>
+    <div id="wrap">
+        <header id="header">
+            <div class="header-container"></div>
+        </header>
+        <article id="banner">
+            <div class="banner-container"></div>
+        </article>
+        <section id="conteants">
+            <div class="conteants-container"></div>
+        </section>
+        <footer id=footer>
+            <div class="footer-container"></div>
+        </footer>
     </div>
 </body>
-
 </html>
