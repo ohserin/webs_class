@@ -47,10 +47,10 @@
                 <li>03. 요소 메서드 : 선택자 : document.getElementById() : 아이디 요소 선택자</li>
                 <li>04. 요소 메서드 : 선택자 : document.getElementByClassName() : 클래스 요소 선택자</li>
                 <br>
-                <li><a href="sample1">01. 요소 메서드 : 클래스 : .classList.add() : 클래스 추가하기</a></li>
-                <li><a href="sample2">02. 요소 메서드 : 클래스 : .classList.remove() : 클래스 삭제하기</a></li>
-                <li><a href="sample3">03. 요소 메서드 : 클래스 : .classList.toggle() : 클래스 추가/삭제하기</a></li>
-                <li><a href="sample4">04. 요소 메서드 : 클래스 : .classList.contains() : 클래스 존재여부 확인하기</a></li>
+                <li><a href="#sample1">01. 요소 메서드 : 클래스 : .classList.add() : 클래스 추가하기</a></li>
+                <li><a href="#sample2">02. 요소 메서드 : 클래스 : .classList.remove() : 클래스 삭제하기</a></li>
+                <li><a href="#sample3">03. 요소 메서드 : 클래스 : .classList.toggle() : 클래스 추가/삭제하기</a></li>
+                <li><a href="#sample4">04. 요소 메서드 : 클래스 : .classList.contains() : 클래스 존재여부 확인하기</a></li>
             </ul>
         </div>
         <!-- //list -->
@@ -192,16 +192,14 @@ document.querySelector("#sample3 .btn1").addEventListener("click", function(){
                 <h3>이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 색을 파란색으로 나오게 하시요!</h3>
                 <div class="view">
                     <div class="view1"><img src="assets/img/image13.jpg" alt="이미지01"></div>
-                    <div class="view2 selected"><img src="assets/img/image14.jpg" alt="이미지02"></div>
+                    <div class="view2"><img src="assets/img/image14.jpg" alt="이미지02"></div>
                     <div class="view3"><img src="assets/img/image15.jpg" alt="이미지03"></div>
-                    <div class="view4 selected"><img src="assets/img/image16.jpg" alt="이미지04"></div>
+                    <div class="view4"><img src="assets/img/image16.jpg" alt="이미지04"></div>
                     <div class="view5"><img src="assets/img/image17.jpg" alt="이미지05"></div>
-                    <div class="view6 selected"><img src="assets/img/image18.jpg" alt="이미지06"></div>
+                    <div class="view6"><img src="assets/img/image18.jpg" alt="이미지06"></div>
                 </div>
                 <div class="btn">
-                    <a href="#c" class="btn0">리셋</a>
                     <a href="#c" class="btn1">이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 클래스를 파란색으로 나오게 합니다.</a>
-                    <a href="#c" class="btn2">리셋</a>
                 </div>
                 <div class="code">
                     <pre class="line-numbers">
@@ -276,17 +274,19 @@ document.querySelector("#sample3 .btn1").addEventListener("click", function(){
         });
 
         //이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 색을 파란색으로 나오게 하시요!
-        document.querySelector("test2 .btn2").addEventListener("click", function(){
+        document.querySelector("test2 .btn1").addEventListener("click", function(){
             document.querySelectorAll("#test2 .view > div").forEach(function(el){
                 if (el.classList.contains("selected")) {
-                    el.classList.remove("selected");
+                    el.classList.toggle("selected");
                 }
             });
         });
-        document.querySelector("#test2 .btn0").addEventListener("click", function () {
-            document.querySelector("#test2 .view2").classList.add("selected");
-            document.querySelector("#test2 .view4").classList.add("selected");
-            document.querySelector("#test2 .view6").classList.add("selected");
+        document.querySelector("#test2 .btn01").addEventListener("click", function() {
+            document.querySelectorAll("#test2 .view > div").forEach(function(el){
+                if(el.classList.contains("selected")){
+                el.classList.add("blue")
+                }
+            });
         });
     </script>
 </body>

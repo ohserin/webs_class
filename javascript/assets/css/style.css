@@ -232,6 +232,12 @@ img {
     border-radius: 1.3em;
     box-sizing: border-box;
 }
+.script .sample .view > div.blue {
+    border:4px solid rgb(46, 124, 226);
+    background-color: rgb(18, 104, 184);
+    border-radius: 1.3em;
+    box-sizing: border-box;
+}
 .script .sample .view > div.selected img {
     opacity: 0.3;
 }
