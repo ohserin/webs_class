@@ -48,18 +48,19 @@
             <!-- 02 -->
             <h3>1.2 while문을 이용하여 2단부터 9단까지 출력하시오!</h3>
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">var i = 2;
-        do {
-            document.write(" " + i + "단:");
-            var j = 1;
-            do {
-                document.write(+i + "*" + j + "=" + i * j);
-                document.write(" , ");
-                j++;
-            } while (j &lt;= 9);
-            document.write();
-            i++;
-        } while (i &lt;= 9);</code></pre>
+                <pre class="line-numbers"><code class="language-js">let i = 2;
+let j = 1;
+
+while (i &lt; 10) {
+    j = 1;
+    document.write(i + "단");
+    while (j &lt; 10) {
+        document.write(i + "x" + j + "=" + (i * j));
+        j++;
+    }
+    document.write();
+    i++;
+}</code></pre>
             </div>
             <!-- //02 -->
 
@@ -118,20 +119,36 @@
         }
 
         //while문을 이용해서 구구단 출력
-        {
-            var i = 2;
-            do {
-               // document.write(" " + i + "단:");
-                var j = 1;
-                do {
-                   // document.write(+i + "*" + j + "=" + i * j);
-                   // document.write(" , ");
-                    j++;
-                } while (j <= 9);
-               // document.write();
-                i++;
-            } while (i <= 9);
+
+        let i = 2;
+        let j = 1;
+
+        while (i < 10) {
+            j = 1;
+            document.write(i + "단" +"<br>");
+            while (j < 10) {
+                document.write(i + "x" + j + "=" + (i * j)+ "<br>");
+                j++;
+            }
+            document.write();
+            i++;
         }
+
+
+        // {
+        //     var i = 2;
+        //     do {
+        //        // document.write(" " + i + "단:");
+        //         var j = 1;
+        //         do {
+        //            // document.write(+i + "*" + j + "=" + i * j);
+        //            // document.write(" , ");
+        //             j++;
+        //         } while (j <= 9);
+        //        // document.write();
+        //         i++;
+        //     } while (i <= 9);
+        // }
     </script>
 </body>
 
