@@ -230,13 +230,11 @@ img {
     border:4px solid rgb(187, 43, 43);
     background-color: rgb(187, 43, 43);
     border-radius: 1.3em;
-    box-sizing: border-box;
 }
 .script .sample .view > div.blue {
     border:4px solid rgb(46, 124, 226);
     background-color: rgb(18, 104, 184);
     border-radius: 1.3em;
-    box-sizing: border-box;
 }
 .script .sample .view > div.selected img {
     opacity: 0.3;
@@ -381,8 +379,9 @@ img {
     padding: 10px 20px;
     font-weight: normal;
     margin-top: 10px;
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px;
     font-size: 16px;
+    cursor: pointer;
 }
 .result > div {
     background: #272822;
@@ -391,7 +390,14 @@ img {
     border-radius: 0 0 5px 5px;
     font-size: 16px;
     line-height: 1.4;
-    /* display: none; */
+    display: none;
+}
+.result.active h4 {
+    border-radius: 5px 5px 0 0;
+}
+.result.active > div {
+    display: block;
+    border-radius: 0 0 5px 5px;
 }
 @media (max-width: 800px){
     .result h4 {
