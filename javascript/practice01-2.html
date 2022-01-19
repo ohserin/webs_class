@@ -34,12 +34,12 @@
             <h3>1.1 2단부터 9단까지 출력하시오!</h3>
             <div class="code">
                 <pre class="line-numbers"><code class="language-js">for(let i=2; i&lt;=9; i++){
-    document.write("<br>");
+    document.write("&lt;br&gt;");
 
     for(let j=1; j&lt;=9; j++){
         let sum = i * j;
 
-        document.write( i + " * " + j + " = " + sum, "<br>" );
+        document.write( i + " * " + j + " = " + sum, "&lt;br&gt;" );
     }
 }</code></pre>
             </div>
@@ -121,12 +121,12 @@ while (i &lt; 10) {
         //while문을 이용해서 구구단 출력
 
         let i = 2;
-        let j = 1;
+            j = 1;
 
-        while (i < 10) {
+        while (i <= 9) {
             j = 1;
             document.write(i + "단" +"<br>");
-            while (j < 10) {
+            while (j <= 9) {
                 document.write(i + "x" + j + "=" + (i * j)+ "<br>");
                 j++;
             }
