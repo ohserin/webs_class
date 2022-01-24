@@ -1,0 +1,46 @@
+/* 전체 레이아웃 */
+#wrap {}
+
+/* 헤더01 */
+/* float으로 인한 영역 깨짐 현상 발생(하이트 값을 인식 못함)
+    1. 깨지는 영역에 clwar:both; 설정
+    2. 부모 영역한테 overflow: hidden; 설정
+    3. 가상의 영역(clearfix) 속성을 설정
+*/
+
+#header {
+    background: 1px solid #eee;
+    padding: 10px;
+}
+
+#header .logo {
+    float: left;
+    width: 20%;
+}
+
+#header .logo a {
+    font-size: 30px;
+    padding: 12px 18px;
+    display: inline-block;
+}
+
+#header .logo em {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#header .menu {
+    float: left;
+    width: 60%;
+    text-align: center;
+}
+
+#header .menu li {
+    display: inline;
+}
+
+#header .member {
+    float: right;
+    width: 20%;
+    text-align: right;
+}
