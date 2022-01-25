@@ -1,12 +1,12 @@
 /* 전체 레이아웃 */
 #wrap {}
 
-/* 헤더01 */
-/* float으로 인한 영역 깨짐 현상 발생(하이트 값을 인식 못함)
+/* 헤더01 float을 사용한 경우 
+ float으로 인한 영역 깨짐 현상 발생(하이트 값을 인식 못함)
     1. 깨지는 영역에 clwar:both; 설정
     2. 부모 영역한테 overflow: hidden; 설정
     3. 가상의 영역(clearfix) 속성을 설정
-*/
+
 
 #header {
     padding: 10px;
@@ -57,3 +57,16 @@
     border: 1px solid #000;
     border-radius: 50px;
 }
+*/
+
+/* 헤더02 flex를 사용한 경우 */
+#header {
+    border-bottom: 1px solid #eee;
+    display: grid;
+}
+
+#header .logo {}
+
+#header .menu {}
+
+#header .member {}
