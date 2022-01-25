@@ -54,6 +54,10 @@
             </div>
             <div class="table">
                 <table>
+                    <colgroup>
+                        <col style="width: 30%" />
+                        <col style="width: 70%" />
+                    </colgroup>
                     <thead>
                         <tr>
                             <th>속성</th>
@@ -61,10 +65,83 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <th>align-content</th>
-                        <td></td>
+                        <tr>
+                            <th>grid</th>
+                            <td>grid-template-xxx과 grid-auto-xxx의 단축 속성</td>
                         </tr>
-                      
+                        <tr>
+                            <th>grid-area</th>
+                            <td>Grid 라인으로 둘러싸인 사각형 영역으로, 그리드 셀의 집합이예요.</td>
+                        </tr>
+                        <tr>
+                            <th>grid-auto-columns</th>
+                            <td>암시적 열(Track)의 크기를 정의합니다.
+                                아이템(Item)이 grid-template-columns로 정의한 명시적 열 외부에 배치되는 경우 암시적 열의 크기가 적용됩니다.</td>
+                        </tr>
+                        <tr>
+                            <th>grid-auto-flow</th>
+                            <td>배치하지 않은 아이템(Item)을 어떤 방식의 ‘자동 배치 알고리즘’으로 처리할지 정의합니다. 배치한 아이템은 grid-area(이하 개별 속성 포함)를 사용한 아이템을 의미합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>grid-auto-rows</th>
+                            <td>암시적 행(Track)의 크기를 정의합니다.
+                                아이템(Item)이 grid-template-rows로 정의한 명시적 행 외부에 배치되는 경우 암시적 행의 크기가 적용됩니다.</td>
+                        </tr>
+                        <tr>
+                            <th>grid-column</th>
+                            <td>grid-column-xxx의 단축 속성(열 시작/끝 위치)</td>
+                        </tr>
+                        <tr>
+                            <th>grid-column-end</th>
+                            <td>그리드 아이템의 열 끝 위치 지정</td>
+                        </tr>
+                        <tr>
+                            <th>grid-column-gap</th>
+                            <td>각 열과 열 사이의 간격(Gutter)을 지정합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>grid-column-start</th>
+                            <td>그리드 아이템의 열 시작 위치 지정</td>
+                        </tr>
+                        <tr>
+                            <th>grid-gap</th>
+                            <td>Grid 셀 사이의 간격입니다.</td>
+                        </tr>
+                        <tr>
+                            <th>grid-row</th>
+                            <td>grid-row-start과 grid-row-end의 단축 속성입니다.
+                                각 속성을 /로 구분하는 것에 주의하세요.</td>
+                        </tr>
+                        <tr>
+                            <th>grid-row-end</th>
+                            <td>그리드 아이템의 행 끝 위치 지정</td>
+                        </tr>
+                        <tr>
+                            <th>grid-row-gap</th>
+                            <td>각 행과 행 사이의 간격(Gutter)을 지정합니다. 더 명확하게는 그리드 선(Grid Line)의 크기를 지정한다고 표현할 수 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <th>grid-row-start</th>
+                            <td>그리드 아이템(Item)의 행 시작 위치 지정</td>
+                        </tr>
+                        <tr>
+                            <th>grid-template</th>
+                            <td>grid-template-rows, grid-template-columns 그리고 grid-template-areas의 단축 속성입니다.</td>
+                        </tr>
+                        <tr>
+                            <th>grid-template-areas</th>
+                            <td>각 영역(Grid Area)에 이름을 붙이고, 그 이름을 이용해서 배치하는 방법입니다.</td>
+                        </tr>
+                        <tr>
+                            <th>grid-template-columns</th>
+                            <td>컨테이너에 Grid 열 트랙의 크기들을 지정해주는 속성입니다.
+                                여러가지 단위를 사용할 수 있고 섞어서 쓸 수도 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <th>grid-template-rows</th>
+                            <td>컨테이너에 Grid 행 트랙의 크기들을 지정해주는 속성입니다.
+                                여러가지 단위를 사용할 수 있고 섞어서 쓸 수도 있습니다.</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

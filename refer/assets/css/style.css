@@ -131,9 +131,11 @@ body {
     border: 1px solid #000;
     overflow-x: auto;
 }
+
 .refer .title li {
     display: inline;
 }
+
 .refer .title li a {
     background-color: #00db72;
     color: #fff;
@@ -141,14 +143,37 @@ body {
     display: inline-block;
     margin: 5px;
 }
+
 .refer .title li.active a {
     background-color: #000;
     color: #fff;
 }
 
+.refer .subTitle {
+    margin-top: 10px;
+}
+
+.refer .subTitle li {
+    display: inline-block;
+}
+
+.refer .subTitle li a {
+    margin-right: 10px;
+}
+
+.refer .subTitle li.active a {
+    border-bottom: 2px solid #000;
+}
+
+
 .refer .table {
     margin-top: 40px;
     overflow-x: auto;
+}
+
+.refer .table h3 {
+    font-weight: normal;
+    margin-bottom: 5px;
 }
 
 .refer .table table {
@@ -240,30 +265,37 @@ body {
     #contents {
         width: 100%;
     }
+
     #header h1 {
         font-size: 18px;
         padding: 20px 10px 5px 16px;
     }
+
     #header strong {
         font-size: 14px;
         padding: 20px 10px 5px 16px;
     }
+
     #contents h2 {
         font-size: 40px;
         padding: 80px 0 40px 0;
     }
+
     .menu {
         margin: 16px 16px 0 16px;
     }
+
     .refer {
         background: transparent;
         border: 0;
         font-size: 14px;
         padding: 16px;
     }
+
     .refer .table table {
         min-width: 400px;
     }
+
     .refer .table table th {
         padding: 10px;
     }
@@ -275,7 +307,36 @@ body {
     .doc {
         font-size: 14px;
     }
+
     .doc h3 {
         font-size: 20px;
     }
+}
+
+
+
+
+/* 간격 셋팅 */
+.mt0 {
+    margin-top: 0 !important;
+}
+
+.mt10 {
+    margin-top: 10 !important;
+}
+
+.mt20 {
+    margin-top: 20 !important;
+}
+
+.mt30 {
+    margin-top: 30 !important;
+}
+
+.mt40 {
+    margin-top: 40 !important;
+}
+
+.mt50 {
+    margin-top: 50 !important;
 }
