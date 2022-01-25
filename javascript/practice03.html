@@ -15,6 +15,7 @@
     <!-- style -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/prism2.css">
+    
 
     <!-- script -->
 
@@ -31,6 +32,9 @@
         }
     </style>
 
+     <!-- script -->
+     <script src="assets/js/prism2.js"></script>
+
 </head>
 
 
@@ -40,6 +44,7 @@
 
 
     <main id="main">
+        
         <div class="test">
             <h2>1. 테이블 출력하기</h2>
 
@@ -49,21 +54,21 @@
             <!-- 01 -->
             <h3>1.1 for문을 이용해서 테이블을 출력하시오!</h3>
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">{
-     let table = "&lt;table&gt;";
-         let num = "1";
-         
-         for( let i=1; i&lt;=5; i++ ){
-             table += "&lt;tr&gt;";
-                 for (let j=1; j&lt;=5; j++){
-                     table += "&lt;td&gt;1&lt;/td&gt;";
-                 }
-             table += "&lt;/tr&gt;";
-         }
-         
-         table += "&lt;/table&gt;";
- 
-         document.write(table);
+<pre class="line-numbers"><code class="language-js">{
+let table = "&lt;table&gt;";
+    let num = "1";
+    
+    for( let i=1; i&lt;=5; i++ ){
+        table += "&lt;tr&gt;";
+            for (let j=1; j&lt;=5; j++){
+                table += "&lt;td&gt;1&lt;/td&gt;";
+            }
+        table += "&lt;/tr&gt;";
+    }
+    
+    table += "&lt;/table&gt;";
+
+    document.write(table);
  }</code></pre>
             </div>
         <div class="result">
@@ -76,21 +81,21 @@
         <h3>1.2 for문을 이용해서 테이블을 출력하시오!</h3>
         <p>1~25까지 숫자를 넣으시오!</p>
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">{
-     let num = 1;
-     let table = "&lt;table&gt;";
-         
-     for ( let i=1; i&lt;=5; i++ ){
-         table += "&lt;tr&gt;";
-             for ( let j=1; j&lt;=5; j++ ){
-                 table += "&lt;td&gt;"+ num +"&lt;/td&gt;";
-                 num++;
-             }
-         table += "&lt;/tr&gt;";   
-     }
-     table += "&lt;/table&gt;";
-     
-     document.write(table);
+        <pre class="line-numbers"><code class="language-js">{
+    let num = 1;
+    let table = "&lt;table&gt;";
+        
+    for ( let i=1; i&lt;=5; i++ ){
+        table += "&lt;tr&gt;";
+            for ( let j=1; j&lt;=5; j++ ){
+                table += "&lt;td&gt;"+ num +"&lt;/td&gt;";
+                num++;
+            }
+        table += "&lt;/tr&gt;";   
+    }
+    table += "&lt;/table&gt;";
+    
+    document.write(table);
  }</code></pre>
         </div>
         <div class="result">
