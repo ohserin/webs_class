@@ -69,7 +69,7 @@
                 <li>13. 객체 : 데이터 불러오기 : 기본</li>
                 <li>14. 객체 : 데이터 불러오기 : Object</li>
                 <li>15. 객체 : 데이터 불러오기 : 변수</li>
-                <li>16. 객체 : 데이터 불러오기 : for in</li>
+                <li>16. 객체 : 데이터 불러오기 : for in문</li>
                 <li>17. 객체 : 데이터 불러오기 : map()</li>
                 <li>18. 객체 : 데이터 불러오기 : hasOwnProperty()</li>
                 <li>19. 객체 : 데이터 불러오기 : 펼침연산자 - 복사</li>
@@ -504,6 +504,222 @@
             </div>
             <!-- //sample15 -->
 
+            <!-- sample16 -->
+            <div id="sample16" class="sample">
+                <h3>16. 객체 : 데이터 불러오기 : for in문</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    const obj = {
+        a: 100,
+        b: 200,
+        c: "javascript"
+    }
+
+    for(let key in obj) {
+        document.write(obj[key]);
+    }
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        100 200 javascript
+                    </div>
+                </div>
+            </div>
+            <!-- //sample16 -->
+
+            <!-- sample17 -->
+            <div id="sample17" class="sample">
+                <h3>17. 객체 : 데이터 불러오기 : map()</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+        const obj = [
+        {a: 100, b: 200, c: "javascript"}
+    ]
+
+    obj.map(function(el) {
+        document.write(el.a,)
+        document.write(el.b,)
+        document.write(el.c,)
+    });
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        100 200 javascript
+                    </div>
+                </div>
+            </div>
+            <!-- //sample17 -->
+
+            <!-- sample18 -->
+            <div id="sample18" class="sample">
+                <h3>18. 객체 : 데이터 불러오기 : hasOwnProperty()</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    const obj = {
+        a: 100,
+        b: 200,
+        c: "javascript"
+    }
+
+        document.write(obj.hasOwnProperty('a'));
+        document.write(obj.hasOwnProperty('b'));
+        document.write(obj.hasOwnProperty('c'));
+        document.write(obj.hasOwnProperty('d'));
+        document.write('a' in obj);
+        document.write('b' in obj);
+        document.write('c' in obj);
+        document.write('d' in obj);
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        true true true false true true true false
+                    </div>
+                </div>
+            </div>
+            <!-- //sample18 -->
+
+            <!-- sample19 -->
+            <div id="sample19" class="sample">
+                <h3>19. 객체 : 데이터 불러오기 : 펼침연산자 - 복사</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    const obj = {
+        a: 100,
+        b: 200,
+        c: "javascript"
+    }
+
+    const spread = { ...obj }
+
+    document.write(spread.a)
+    document.write(spread.b)
+    document.write(spread.c)
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        100 200 javascript
+                    </div>
+                </div>
+            </div>
+            <!-- //sample19 -->
+
+             <!-- sample20 -->
+             <div id="sample20" class="sample">
+                <h3>20. 객체 : 데이터 불러오기 : 펼침연산자 - 복사</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    const obj = {
+        a: 100,
+        b: 200,
+        c: "javascript"
+    }
+    
+    const spread = { ...obj, d: "jquery" }
+
+    document.write(spread.a)
+    document.write(spread.b)
+    document.write(spread.c)
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        100 200 javascript
+                    </div>
+                </div>
+            </div>
+            <!-- //sample20 -->
+
+            <!-- sample21 -->
+            <div id="sample20" class="sample">
+                <h3>21. 객체 : 데이터 불러오기 : 펼침연산자 - 결함</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    const objA = {
+        a: 100,
+        b: 200,
+    }
+    const objB = {
+        c: "javascript",
+        d: "jquery",
+    }
+    const spread = { ...objA, ...objB  }
+
+    document.write(spread.a)
+    document.write(spread.b)
+    document.write(spread.c)
+    document.write(spread.d)
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        100 200 javascript jquery
+                    </div>
+                </div>
+            </div>
+            <!-- //sample21 -->
+
+            <!-- sample22 -->
+            <div id="sample20" class="sample">
+                <h3>22. 객체 : 데이터 불러오기 : 비구조화 할당</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    const obj = {
+        a: 100,
+        b: 200,
+        c: "javascript"
+    }
+    const { a,b,c } = obj;
+
+    document.write(a);
+    document.write(b);
+    document.write(c);
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        100 200 javascript
+                    </div>
+                </div>
+            </div>
+            <!-- //sample22 -->
+
+            <!-- sample23 -->
+            <div id="sample20" class="sample">
+                <h3>23. 객체 : 데이터 불러오기 : 비구조화 할당 : 별도 이름 저장</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    const obj = {
+        a: 100,
+        b: 200,
+        c: "javascript"
+    }
+    const { a:name1, b:name2, c:name3 } = obj;
+
+    document.write(name1);
+    document.write(name2);
+    document.write(name3);
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        100 200 javascript
+                    </div>
+                </div>
+            </div>
+            <!-- //sample23 -->
+
             <!-- //script -->
     </main>
     <!-- script -->
@@ -707,6 +923,125 @@
             // document.write(name2)
             // document.write(name3)
         }
+
+        {
+            //16. 객체 : 데이터 블러오기 : for in문
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+            }
+
+            for(let key in obj) {
+                // document.write(obj[key]);
+            }
+        }
+            
+            //17. 객체 : 데이터 불러오기 : map ()
+            {
+                const obj = [
+                    {a: 100, b: 200, c: "javascript"}
+                ]
+
+                obj.map(function(el) {
+                    // document.write(el.a, "<br>")
+                    // document.write(el.b, "<br>")
+                    // document.write(el.c, "<br>")
+                });
+            }
+
+            //18. 객체 : 데이터 불러오기 : hasOwnProperty()
+            {
+                const obj = {
+                    a: 100,
+                    b: 200,
+                    c: "javascript"
+                }
+
+                // document.write(obj.hasOwnProperty('a'));
+                // document.write(obj.hasOwnProperty('b'));
+                // document.write(obj.hasOwnProperty('c'));
+                // document.write(obj.hasOwnProperty('d'));
+                // document.write('a' in obj);
+                // document.write('b' in obj);
+                // document.write('c' in obj);
+                // document.write('d' in obj);
+            }
+
+            //19. 객체 : 데이터 불러오기 : 펼침연산자 - 복사
+            {
+                const obj = {
+                    a: 100,
+                    b: 200,
+                    c: "javascript"
+                }
+                
+                const spread = { ...obj }
+
+                document.write(spread.a)
+                document.write(spread.b)
+                document.write(spread.c)
+            }
+
+            //20. 객체 : 데이터 불러오기 : 펼침연산자 - 복사
+            {
+                const obj = {
+                    a: 100,
+                    b: 200,
+                    c: "javascript"
+                }
+                
+                const spread = { ...obj, d: "jquery" }
+
+                document.write(spread.a)
+                document.write(spread.b)
+                document.write(spread.c)
+            }
+             //21. 객체 : 데이터 불러오기 : 펼침연산자 - 결함
+             {
+                const objA = {
+                    a: 100,
+                    b: 200,
+                }
+                const objB = {
+                    c: "javascript",
+                    d: "jquery",
+                }
+                const spread = { ...objA, ...objB  }
+
+                document.write(spread.a)
+                document.write(spread.b)
+                document.write(spread.c)
+                document.write(spread.d)
+            }
+
+            //22. 객체 : 데이터 불러오기 : 비구조화 할당
+            {
+                const obj = {
+                    a: 100,
+                    b: 200,
+                    c: "javascript"
+                }
+                const { a,b,c } = obj;
+
+                document.write(a);
+                document.write(b);
+                document.write(c);
+            }
+
+            //23. 객체 : 데이터 불러오기 : 비구조화 할당 : 별도 이름 저장
+            {
+                const obj = {
+                    a: 100,
+                    b: 200,
+                    c: "javascript"
+                }
+                const { a:name1, b:name2, c:name3 } = obj;
+
+                document.write(name1);
+                document.write(name2);
+                document.write(name3);
+            }
     </script>
 </body>
 

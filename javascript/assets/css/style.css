@@ -475,6 +475,12 @@ img {
         padding: 10px 0;
         
     }
+    .javascript .menu ul {
+        display: none;
+    }
+    .javascript .menu ul:first-child {
+        display: block;
+    }
 }
 
 /* test */
