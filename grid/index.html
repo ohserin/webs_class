@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>display : flex</title>
+    <title>display : grid</title>
     <style>
         /* reset */
         @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean');
@@ -316,7 +316,7 @@
         }
 
         .sample__sub_title h2 {
-            font-size: 120px;
+            font-size: 100px;
             line-height: 1.4;
             font-family: 'S-CoreDream-9Black';
             font-weight: normal;
@@ -1029,8 +1029,7 @@
             <div class="container">
                 <div class="main-wrap">
                     <div class="main__title">
-                        <strong><a href="../effectMenu/menuEffect-cover.html">라인 CSS
-                                수업</a></strong><strong>웹스토리보이</strong>
+                        <strong><a href="../index.html">라인 CSS 수업</a></strong><strong>오세린</strong>
                     </div>
                     <div class="main__desc">
                         <div class="inner">
@@ -1441,16 +1440,14 @@
         <!-- //sample5 -->
 
 
+
     </div>
     <!-- //content -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        $("a").on("click", function (e) {
+        $(".gridBtn1").on("click", "a", function (e) {
             e.preventDefault();
-        });
-
-        $(".gridBtn1").on("click", "a", function () {
             var attrText = $(this).text();
             $(".grid1").attr("style", attrText);
 
@@ -1458,7 +1455,8 @@
             $(this).addClass("active");
         });
 
-        $(".gridBtn2").on("click", "a", function () {
+        $(".gridBtn2").on("click", "a", function (e) {
+            e.preventDefault();
             var attrText = $(this).text();
             $(".grid2").attr("style", attrText);
 
@@ -1466,7 +1464,8 @@
             $(this).addClass("active");
         });
 
-        $(".gridBtn3").on("click", "a", function () {
+        $(".gridBtn3").on("click", "a", function (e) {
+            e.preventDefault();
             var attrText = $(this).text();
             $(".grid3 > div").eq(0).attr("style", attrText);
 
@@ -1474,7 +1473,8 @@
             $(this).addClass("active");
         });
 
-        $(".gridBtn4").on("click", "a", function () {
+        $(".gridBtn4").on("click", "a", function (e) {
+            e.preventDefault();
             var attrText = $(this).text();
             $(".grid4 > div").last().attr("style", attrText);
 
@@ -1482,7 +1482,8 @@
             $(this).addClass("active");
         });
 
-        $(".gridBtn5").on("click", "a", function () {
+        $(".gridBtn5").on("click", "a", function (e) {
+            e.preventDefault();
             var attrText = $(this).text();
             $(".grid5 > div").first().attr("style", attrText);
 

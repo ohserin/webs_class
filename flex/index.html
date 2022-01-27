@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,62 +8,32 @@
     <style>
         /* reset */
         @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean');
-
         @font-face {
             font-family: 'BBTreeTR';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeTR.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
-
         @font-face {
             font-family: 'S-CoreDream-3Light';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
-
         @font-face {
             font-family: 'S-CoreDream-9Black';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        *::before,
-        *::after {
-            box-sizing: border-box;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-weight: normal;
-        }
-
-        em {
-            font-style: normal;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        *::before, *::after {box-sizing: border-box;}
+        h1,h2,h3,h4,h5,h6 {font-weight: normal;}
+        em {font-style: normal;}
+        a {text-decoration: none;}
         hr {
             width: 100%;
-            border: 0;
-            border-bottom: 2px dashed #762917;
-            background: #F4B861;
-        }
+            border: 0; border-bottom: 2px dashed #762917; background: #F4B861;}
 
         /* root */
         :root {
@@ -73,44 +42,27 @@
             --bg-main: #F4B861;
             --bg-sub: #FDF2E0;
             --bg-white: #ffffff;
-            --font-black: "Black Han Sans";
-            --font-bbtree: "BBTreeTR";
-            --font-score: "S-CoreDream-3Light";
+            --font-black : "Black Han Sans";
+            --font-bbtree : "BBTreeTR";
+            --font-score : "S-CoreDream-3Light";
         }
-
-        .mt10 {
-            margin-top: 10px !important;
-        }
-
-        .mt20 {
-            margin-top: 20px !important;
-        }
-
-        .mt30 {
-            margin-top: 30px !important;
-        }
-
-        .mt40 {
-            margin-top: 30px !important;
-        }
-
-        .mt50 {
-            margin-top: 30px !important;
-        }
+        .mt10 {margin-top: 10px !important;}
+        .mt20 {margin-top: 20px !important;}
+        .mt30 {margin-top: 30px !important;}
+        .mt40 {margin-top: 30px !important;}
+        .mt50 {margin-top: 30px !important;}
 
         /* layout */
-        #content>section {
-            background: var(--bg-main);
-            padding: 100px 0;
+        #content > section {
+            background: var(--bg-main); 
+            padding: 100px 0; 
         }
-
         #main {
-            background: var(--bg-main);
+            background: var(--bg-main); 
             padding-top: 0px !important;
             padding-bottom: 100px;
             height: 100vh;
         }
-
         .main-wrap {
             position: absolute;
             left: 50%;
@@ -139,11 +91,9 @@
             display: inline-block;
             margin: 1.4em 0.6em 0.9em 0;
         }
-
         .main__title strong a {
             color: var(--brown);
         }
-
         .main__desc {
             background: var(--bg-sub);
             border: 4px solid var(--brown);
@@ -154,7 +104,6 @@
             align-items: center;
             justify-content: center;
         }
-
         .main__desc::before {
             content: '';
             width: 100%;
@@ -164,7 +113,6 @@
             left: 0;
             bottom: 6px;
         }
-
         .main__desc::after {
             content: '';
             width: 100%;
@@ -174,7 +122,6 @@
             left: 0;
             bottom: 16px;
         }
-
         .main__desc h2 {
             font-size: 80px;
             font-family: var(--font-black);
@@ -189,12 +136,10 @@
             margin-bottom: 20px;
             text-transform: uppercase;
         }
-
         .main__desc h2::after {
             content: '';
             position: absolute;
-            left: 0;
-            bottom: 10px;
+            left: 0; bottom: 10px;
             width: 100%;
             height: 30px;
             background: #ffa439;
@@ -202,7 +147,6 @@
             z-index: -1;
             border-radius: 30px;
         }
-
         .main__desc h1 {
             font-size: 180px;
             line-height: 1.4;
@@ -212,12 +156,10 @@
             color: #E5774F;
             -webkit-text-stroke: 3px #762917;
         }
-
         .main__desc h1 strong {
             font-weight: normal;
             color: #ffa439;
         }
-
         .main__desc p {
             font-family: var(--font-bbtree);
             color: #9E513C;
@@ -232,18 +174,15 @@
             position: relative;
             overflow: hidden;
         }
-
         .sample .deco {
             position: absolute;
-            left: 50%;
-            top: 0;
+            left: 50%; top: 0;
             transform: translatex(-50%);
             padding-top: 7px;
             white-space: nowrap;
         }
-
         .sample .deco span {
-            width: 30px;
+            width: 30px; 
             height: 30px;
             border: 10px solid var(--brown);
             display: inline-block;
@@ -252,24 +191,20 @@
             background: var(--bg-main);
             position: relative;
         }
-
         .sample .deco span::after {
             content: '';
-            width: 10px;
-            height: 10px;
+            width: 10px; height: 10px;
             background: var(--brown);
             position: absolute;
             left: 50%;
             top: -17px;
             transform: translateX(-50%);
         }
-
         .sample__title {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
         .sample__title h3 {
             width: 30%;
             border: 4px solid var(--brown);
@@ -280,7 +215,6 @@
             text-align: center;
             padding: .3em 0 .1em 50px;
         }
-
         .sample__title h3::before {
             content: '';
             position: absolute;
@@ -290,7 +224,6 @@
             height: 100%;
             background: #C54435;
         }
-
         .sample__title h3::after {
             content: '';
             position: absolute;
@@ -300,7 +233,6 @@
             height: 100%;
             background: var(--brown);
         }
-
         .sample__title p {
             width: 65%;
             text-align: left;
@@ -314,7 +246,6 @@
         .sample__sub_title {
             text-align: center;
         }
-
         .sample__sub_title h2 {
             font-size: 120px;
             line-height: 1.4;
@@ -324,7 +255,6 @@
             -webkit-text-stroke: 3px #762917;
             padding: 2rem 0;
         }
-
         .sample__sub_title p {
             font-family: var(--font-bbtree);
             color: #9E513C;
@@ -341,7 +271,6 @@
             line-height: 1.5;
             font-size: 0.8rem;
         }
-
         .sample__table table {
             width: 100%;
             border: 4px solid var(--brown);
@@ -350,22 +279,18 @@
             font-family: var(--font-score);
             font-size: 0.7rem;
         }
-
         .sample__table table td,
         .sample__table table th {
             border-bottom: 1px solid var(--brown);
             border-right: 1px solid var(--brown);
             padding: .8em;
         }
-
         .sample__table table th {
             border-bottom-width: 2px;
         }
-
         .sample__table table tr:hover {
             background: #f7d5cd;
         }
-
         .sample__table table caption {
             text-indent: -9999px;
         }
@@ -375,11 +300,9 @@
             border: 4px solid var(--brown);
             border-radius: 20px;
         }
-
         .sample__btn {
             margin: 20px 0
         }
-
         .sample__btn a {
             border: 4px solid var(--brown);
             display: inline-block;
@@ -389,16 +312,13 @@
             border-radius: 30px;
             font-family: var(--font-score);
         }
-
         .sample__btn a.active {
             background: var(--brown);
             color: var(--bg-white)
         }
-
         .sample__plus {
             text-align: right;
         }
-
         .sample__plus span {
             border: 3px solid var(--brown);
             display: inline-block;
@@ -412,7 +332,6 @@
             color: var(--brown);
             cursor: pointer;
         }
-
         .sample__plus span:hover {
             background: var(--bg-main);
         }
@@ -432,12 +351,11 @@
             min-height: 400px;
             padding: 5px;
         }
-
         .itemBox {
             background: var(--bg-main);
             box-sizing: border-box;
             border: 4px solid var(--brown);
-            box-shadow: 0 2px 0 rgba(0, 90, 250, 0.05);
+            box-shadow: 0 2px 0 rgba(0,90,250,0.05);
             height: 100px;
             width: 100px;
             margin: 10px;
@@ -447,7 +365,6 @@
             font-size: 2rem;
             color: var(--brown)
         }
-
         .itemBox::before {
             counter-increment: items;
             content: counter(items);
@@ -455,12 +372,11 @@
 
 
         /* media */
-        @media (max-width: 1420px) {
+        @media (max-width: 1420px){
 
             #main {
                 height: auto;
             }
-
             .main-wrap {
                 position: static;
                 transform: none;
@@ -468,109 +384,64 @@
                 max-width: auto;
             }
 
-            .container {
-                width: calc(100% - 40px);
-            }
-
-            .main__desc h2 {
-                font-size: 5.6vw;
-            }
-
-            .main__desc h1 {
-                font-size: 12.3vw;
-            }
-
+            .container {width: calc(100% - 40px);}
+            .main__desc h2 {font-size: 5.6vw;}
+            .main__desc h1 {font-size: 12.3vw;}
             .sample__title {
-                flex-direction: column;
+                flex-direction: column; 
                 text-align: left;
             }
-
-            .sample__title h3 {
-                width: 100%;
-            }
-
-            .sample__title p {
-                width: 100%;
-                margin-top: 1em;
-            }
+            .sample__title h3 {width: 100%;}
+            .sample__title p {width: 100%; margin-top: 1em;}
         }
-
-        @media (max-width: 800px) {
-            :root {
-                font-size: 16px;
-            }
-
-            hr {
-                border-width: 1px;
-            }
-
-            #content>section {
-                padding: 50px 0;
-            }
-
-            #main {
-                padding-bottom: 50px;
-            }
-
-            #about {
-                padding: 0;
-            }
-
-            .main__title strong {
-                border-width: 2px;
-            }
-
+        @media (max-width: 800px){
+            :root {font-size: 16px;}
+            hr {border-width: 1px;}
+            #content > section {padding: 50px 0;}
+            #main {padding-bottom: 50px;}
+            #about {padding: 0;}
+            .main__title strong {border-width: 2px;}
             .main__desc {
                 padding: 50px 0 70px 0;
                 border-width: 2px;
             }
-
             .main__desc::before {
                 height: 2px;
             }
-
             .main__desc::after {
                 height: 2px;
             }
-
             .main__desc h2 {
                 -webkit-text-stroke: 1px #762917;
                 font-size: 30px;
             }
-
             .main__desc h2::after {
                 border-width: 1px;
                 height: 10px;
                 bottom: 5px;
             }
-
             .main__desc h1 {
                 -webkit-text-stroke: 1px #762917;
                 letter-spacing: -1px;
                 font-size: 70px;
                 line-height: 1.1;
             }
-
             .main__desc h1 em {
                 display: block;
             }
-
             .main__desc p {
                 font-size: 20px;
             }
-
+            
             .sample {
                 border-width: 2px;
             }
-
             .sample__title h3 {
                 border-width: 2px;
             }
-
             .sample__title h3::after {
                 width: 2px;
             }
-
             .sample__table table {
                 border-width: 2px;
             }
@@ -578,22 +449,18 @@
             .sample .deco {
                 display: none;
             }
-
             .sample__sub_title h2 {
                 -webkit-text-stroke: 1px #762917;
                 letter-spacing: -1px;
                 font-size: 50px;
             }
-
             .sample__box {
                 border-width: 2px;
                 border-radius: 5px;
             }
-
             .flexBox {
                 min-height: 200px;
             }
-
             .itemBox {
                 border-width: 2px;
                 width: 40px;
@@ -603,23 +470,20 @@
                 font-weight: bold;
                 margin: 5px;
             }
-
             .sample__btn a {
                 border-width: 2px;
             }
-
             .sample__plus span {
                 border-width: 2px;
                 width: 30px;
                 height: 30px;
                 line-height: 29px;
             }
-
             .sample__point {
                 border-width: 2px;
                 padding: 1rem;
             }
-
+            
         }
 
         /* dog */
@@ -684,13 +548,8 @@
         }
 
         @keyframes dog-body {
-            from {
-                transform: translateX(-10%);
-            }
-
-            to {
-                transform: translateX(10%);
-            }
+            from {transform: translateX(-10%);}
+            to {transform: translateX(10%);}
         }
 
         .dog-head {
@@ -719,13 +578,8 @@
         }
 
         @keyframes dog-torso {
-            from {
-                transform: translateX(-5%);
-            }
-
-            to {
-                transform: translateX(5%);
-            }
+            from {transform: translateX(-5%);}
+            to {transform: translateX(5%);}
         }
 
         .dog-eyes {
@@ -764,7 +618,6 @@
         }
 
         @keyframes dog-eye {
-
             from,
             to {
                 animation-timing-function: step-end;
@@ -834,25 +687,13 @@
         }
 
         @keyframes dog-tongue {
-
             from,
-            to {
-                transform: rotate(0);
-            }
-
-            16.6666666667% {
-                transform: rotate(30deg);
-            }
-
+            to {transform: rotate(0);}
+            16.6666666667% {transform: rotate(30deg);}
             33.3333333333%,
-            66.6666666667% {
-                transform: rotate(0);
-            }
-
+            66.6666666667% {transform: rotate(0);}
             50%,
-            83.3333333333% {
-                transform: rotate(-20deg);
-            }
+            83.3333333333% {transform: rotate(-20deg);}
         }
 
         .dog-tongue:before {
@@ -877,15 +718,9 @@
         }
 
         @keyframes dog-tongue-inner {
-            from {
-                transform: translateY(5%);
-            }
-
-            to {
-                transform: translateY(22%);
-            }
+            from {transform: translateY(5%);}
+            to {transform: translateY(22%);}
         }
-
         .dog-ears {
             width: 40%;
             top: 25%;
@@ -894,31 +729,16 @@
         }
 
         @keyframes dog-ears {
-
             42.3%,
-            71.6% {
-                transform: rotate(-5deg);
-            }
-
+            71.6% {transform: rotate(-5deg);}
             50.3%,
-            79.6% {
-                transform: rotate(5deg);
-            }
-
-            5% {
-                transform: rotate(5deg);
-            }
-
-            12% {
-                transform: rotate(-5%);
-            }
-
+            79.6% {transform: rotate(5deg);}
+            5% {transform: rotate(5deg);}
+            12% {transform: rotate(-5%);}
             from,
             33.3%,
             66%,
-            to {
-                transform: rotate(0);
-            }
+            to {transform: rotate(0);}
         }
 
         .dog-ear {
@@ -966,30 +786,17 @@
         }
 
         @keyframes dog-tail-segment {
-            from {
-                transform: rotate(-10deg);
-            }
-
-            to {
-                transform: rotate(10deg);
-            }
+            from {transform: rotate(-10deg);}
+            to {transform: rotate(10deg);}
         }
-
         .dog-body>.dog-tail {
             bottom: 90%;
             animation: dog-tail 200ms ease-in-out infinite alternate;
         }
-
         @keyframes dog-tail {
-            from {
-                transform: rotate(-45deg);
-            }
-
-            to {
-                transform: rotate(45deg);
-            }
+            from {transform: rotate(-45deg);}
+            to {transform: rotate(45deg);}
         }
-
         .dog-body,
         .dog-torso,
         .dog-head {
@@ -999,13 +806,11 @@
             height: 100%;
             width: 100%;
         }
-
         .dog-body,
         .dog-torso {
             box-shadow: inset 0 -15px 0 0 #EAEBEC;
         }
-
-        @media (max-width: 800px) {
+        @media (max-width: 800px){
             .dog {
                 position: relative;
                 margin: 80px 0 50px 0;
@@ -1015,16 +820,14 @@
         }
     </style>
 </head>
-
 <body>
     <div id="content">
         <section id="main">
             <div class="container">
                 <div class="main-wrap">
                     <div class="main__title">
-                        <strong><a href="index.html">라인 CSS
-                                수업</a></strong><strong>오세린</strong>
-                    </div>
+                        <strong><a href="../index.html">라인 CSS 수업</a></strong><strong>오세린</strong>
+                    </div> 
                     <div class="main__desc">
                         <div class="inner">
                             <div class="dog-wrap">
@@ -1085,10 +888,8 @@
                     </div>
                     <div class="sample__table mt30">
                         <p>
-                            flexbox에서 사용하는 속성은 부모요소와 자식요소를 나누어집니다. 전체적인 정렬이나 흐름에 관한 속성은 flex container에서 정의하고 자식 요소의 크기나
-                            순서와 관련된 속성은 flex item에서 정의합니다. 이를 분리해서 적용하는 것이 flex-box에서 가장 중요합니다.<br>
-                            - flex container 속성 : flex-direction, flex-wrap, justify-content, align-items,
-                            align-content<br>
+                            flexbox에서 사용하는 속성은 부모요소와 자식요소를 나누어집니다. 전체적인 정렬이나 흐름에 관한 속성은 flex container에서 정의하고 자식 요소의 크기나 순서와 관련된 속성은 flex item에서 정의합니다. 이를 분리해서 적용하는 것이 flex-box에서 가장 중요합니다.<br>
+                            - flex container 속성 : flex-direction, flex-wrap, justify-content, align-items, align-content<br>
                             - flex item 속성 : flex, flex-grow, flex-shrink, flex-basis, order
                         </p>
                         <table>
@@ -1188,9 +989,8 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                align-items: center;
+                align-items : center;
             }
-
             .item1 {
                 height: auto;
             }
@@ -1201,9 +1001,9 @@
                 <div class="sample">
                     <div class="deco" aria-hidden="true">
                         <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
                     </div>
                     <div class="sample__sub_title">
                         <h2>align-items</h2>
@@ -1231,7 +1031,7 @@
         <!-- //sample1 -->
 
         <hr>
-
+        
 
         <style>
             .flex2 {
@@ -1245,9 +1045,9 @@
                 <div class="sample">
                     <div class="deco">
                         <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
                     </div>
                     <div class="sample__sub_title">
                         <h2>justify-content</h2>
@@ -1292,9 +1092,9 @@
                 <div class="sample">
                     <div class="deco">
                         <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
                     </div>
                     <div class="sample__sub_title">
                         <h2>flex-direction</h2>
@@ -1327,7 +1127,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                flex-basis: 100px;
+                flex-basis : 100px;
                 align-content: center;
             }
         </style>
@@ -1336,9 +1136,9 @@
                 <div class="sample">
                     <div class="deco">
                         <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
                     </div>
                     <div class="sample__sub_title">
                         <h2>flex-basis</h2>
@@ -1374,10 +1174,9 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                flex-basis: 100px;
+                flex-basis : 100px;
                 align-content: center;
             }
-
             .item5 {
                 flex-grow: 1;
             }
@@ -1387,9 +1186,9 @@
                 <div class="sample">
                     <div class="deco">
                         <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
                     </div>
                     <div class="sample__sub_title">
                         <h2>flex-grow</h2>
@@ -1425,7 +1224,6 @@
                 display: flex;
                 align-items: center;
             }
-
             .item6 {
                 flex: 1 1 25%;
             }
@@ -1435,9 +1233,9 @@
                 <div class="sample">
                     <div class="deco">
                         <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
                     </div>
                     <div class="sample__sub_title">
                         <h2>flex-shrink</h2>
@@ -1477,15 +1275,16 @@
                 justify-content: center;
                 align-content: center;
             }
+            
         </style>
         <section id="sample7">
             <div class="container">
                 <div class="sample">
                     <div class="deco">
                         <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
                     </div>
                     <div class="sample__sub_title">
                         <h2>flex-wrap</h2>
@@ -1534,7 +1333,6 @@
                 justify-content: center;
                 align-content: center;
             }
-
             .item8 {
                 flex: 1 1 10%;
             }
@@ -1544,9 +1342,9 @@
                 <div class="sample">
                     <div class="deco">
                         <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
                     </div>
                     <div class="sample__sub_title">
                         <h2>flex</h2>
@@ -1601,141 +1399,109 @@
         <style>
             .flex9 {
                 display: flex;
-
+    
                 justify-content: center;
 
             }
-
             .item9:last-child {
-                align-self: stretch;
+                align-self:stretch;
             }
         </style>
-        <section id="sample9">
-            <div class="container">
-                <div class="sample">
-                    <div class="deco">
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span><span></span>
-                    </div>
-                    <div class="sample__sub_title">
-                        <h2>align-self</h2>
-                        <p>align-self</p>
-                    </div>
-                    <div class="sample__plus">
-                        <span class="plus plus9">+</span>
-                        <span class="minus minus9">-</span>
-                    </div>
-                    <div class="sample__box">
-                        <div class="flexBox flex9">
-                            <div class="itemBox item9"></div>
-                            <div class="itemBox item9"></div>
-                            <div class="itemBox item9"></div>
-                            <div class="itemBox item9"></div>
-                        </div>
-                    </div>
-                    <div class="sample__btn flexBtn9">
-                        <a href="#" class="active">align-self: flex-start;</a>
-                        <a href="#">align-self:stretch;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- //sample9 -->
     </div>
     <!-- //content -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        $("a").on("click", function (e) {
+        $(".flexBtn1").on("click","a", function(e){
             e.preventDefault();
-        });
-
-        $(".flexBtn1").on("click", "a", function () {
             var attrText = $(this).text();
-            $(".flex1").attr("style", attrText);
+            $(".flex1").attr("style",attrText);
 
             $(".flexBtn1 a").removeClass();
             $(this).addClass("active");
         });
 
-        $(".flexBtn2").on("click", "a", function (e) {
+        $(".flexBtn2").on("click","a", function(e){
+            e.preventDefault();
             var attrText = $(this).text();
-            $(".flex2").attr("style", attrText);
+            $(".flex2").attr("style",attrText);
 
             $(".flexBtn2 a").removeClass();
             $(this).addClass("active");
         });
 
-        $(".flexBtn3").on("click", "a", function (e) {
+        $(".flexBtn3").on("click","a", function(e){
+            e.preventDefault();
             var attrText = $(this).text();
-            $(".flex3").attr("style", attrText);
+            $(".flex3").attr("style",attrText);
 
             $(".flexBtn3 a").removeClass();
             $(this).addClass("active");
         });
 
-        $(".flexBtn4").on("click", "a", function () {
+        $(".flexBtn4").on("click","a", function(e){
+            e.preventDefault();
             var attrText = $(this).text();
-            $(".flex4 > div").attr("style", attrText);
+            $(".flex4 > div").attr("style",attrText);
 
             $(".flexBtn4 a").removeClass();
             $(this).addClass("active");
         });
 
-        $(".flexBtn5").on("click", "a", function () {
+        $(".flexBtn5").on("click","a", function(e){
+            e.preventDefault();
             var attrText = $(this).text();
-            $(".flex5 > div").eq(3).attr("style", attrText);
+            $(".flex5 > div").eq(3).attr("style",attrText);
 
             $(".flexBtn5 a").removeClass();
             $(this).addClass("active");
         });
 
-        $(".flexBtn6").on("click", "a", function () {
+        $(".flexBtn6").on("click","a", function(e){
+            e.preventDefault();
             var attrText = $(this).text();
-            $(".flex6 > div").eq(3).attr("style", attrText);
+            $(".flex6 > div").eq(3).attr("style",attrText);
 
             $(".flexBtn6 a").removeClass();
             $(this).addClass("active");
         });
 
-        $(".flexBtn7").on("click", "a", function () {
+        $(".flexBtn7").on("click","a", function(e){
+            e.preventDefault();
             var attrText = $(this).text();
-            $(".flex7").attr("style", attrText);
+            $(".flex7").attr("style",attrText);
 
             $(".flexBtn7 a").removeClass();
             $(this).addClass("active");
         });
 
-        $(".plus7").click(function () {
+        $(".plus7").click(function(e){
+            e.preventDefault();
             $(".flex7").append("<div class='itemBox item7'></div>");
         });
-        $(".minus7").click(function () {
+        $(".minus7").click(function(e){
+            e.preventDefault();
             $(".flex7 > div:last-child").remove();
         });
 
-        $(".flexBtn8").on("click", "a", function () {
+        $(".flexBtn8").on("click","a", function(e){
+            e.preventDefault();
             var attrText = $(this).text();
-            $(".flex8 > div").attr("style", attrText);
+            $(".flex8 > div").attr("style",attrText);
 
             $(".flexBtn8 a").removeClass();
             $(this).addClass("active");
         });
 
-        $(".plus8").click(function () {
+        $(".plus8").click(function(e){
+            e.preventDefault();
             $(".flex8").append("<div class='itemBox item8'></div>");
         });
-        $(".minus8").click(function () {
+        $(".minus8").click(function(e){
+            e.preventDefault();
             $(".flex8 > div:last-child").remove();
         });
 
-        //
-        $(".flexBtn9").on("click", "a", function () {
-            var attrText = $(this).text();
-            $(".flex9 > div").eq(1).attr("style", attrText);
-        });
     </script>
 </body>
-
 </html>
