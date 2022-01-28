@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+
+    <style>
+         @font-face {
+    font-family: 'NexonLv1Gothic';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NexonLv1Gothic';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NexonLv1Gothic';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+   /* 기본 셋팅 */
+   :root {
+            font-size: 16px;
+            line-height: 1.53;
+        }
+
+        .ir_pm {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        .ir_wa {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            width: 100px;
+            height: 100px;
+            z-index: -1;
+        }
+
+        .ir_so {
+            overflow: hidden;
+            position: relative;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        /* 여백 초기화 */
+        body,
+        div,
+        dl,
+        dt,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        code,
+        form,
+        fieldset,
+        legend,
+        textarea,
+        p,
+        blockquote,
+        th,
+        td,
+        input,
+        select,
+        button,
+        figure,
+        article,
+        aside,
+        details,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section,
+        figcaption {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 100%;
+        }
+        #header {
+            width: 100%;
+            height: 109px;
+            background-color: #a8cae6c4;
+        }
+        #banner {
+            width: 100%;
+            height: 890px;
+            background-color: #8e84bec4;
+        }
+        #contents {
+            width: 100%;
+            background-color: #6dd6ff;
+        }
+        #footer {
+            width: 100%;
+            height: 400px;
+            background-color: #8260c0;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+            height: inherit;
+            background-color: rgba(255, 255, 255, 0.267);
+        }
+        #contents .container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        #contents .container .cont1 {
+            width: 1200px;
+            height: 640px;
+            background-color: #9183d1be;
+            padding: 150px 0;
+        }
+        #contents .container .cont2 {
+            width: 1200px;
+            height: 3000px;
+            background-color: #9081b1;
+            padding: 150px 0;
+        }
+        #contents .article3 {
+            font-family: 'NexonLv1Gothic';
+        }
+        #contents .container .cont3 {
+            width: 1200px;
+            height: 780px;
+            background-color: rgb(146, 223, 162);
+            padding: 150px 0;
+        }
+        #contents .container .cont3 .text {
+            font-family: 'NexonLv1Gothic';
+            margin-bottom: 50px;
+            font-size: 35px;
+            font-weight: 700;
+        }
+        #contents .container .cont3 .img {
+            float: left;
+            height: 460px;
+            width: 31%;
+            margin-right: 3.5%;
+            background-image: url(../webClass/img/img_text_bg3.jpg);
+            background-size: cover;
+        }
+        #contents .container .cont3 .img2 {
+            float: left;
+            height: 460px;
+            width: 31%;
+            background-image: url(../webClass/img/img_text_bg1.jpg);
+            background-size: cover;
+        }
+        #contents .container .cont3 .img3 {
+            float: left;
+            height: 460px;
+            width: 31%;
+            margin-left: 3.5%;
+            background-image: url(../webClass/img/img_text_bg2.jpg);
+            background-size: cover;
+        }
+        #contents .container .cont3 .text1 .desc1 {
+            float: left;
+            font-size: 28px;
+            margin: 30px 0 5px 0;
+            width: 31%;
+            margin-right: 3.5%;
+            font-weight: 500;
+        }
+        #contents .container .cont3 .text1 .desc2 {
+            float: left;
+            font-size: 28px;
+            margin: 30px 0 5px 0;
+            width: 31%;
+            font-weight: 500;
+        }
+        #contents .container .cont3 .text1 .desc3 {
+            float: left;
+            font-size: 28px;
+            margin: 30px 0 5px 0;
+            width: 31%;
+            margin-left: 3.5%;
+            font-weight: 500;
+        }
+
+        #contents .container .cont3 .text1 .type1 {
+            float: left;
+            font-size: 16px;
+            font-weight: 300;
+            width: 31%;
+            margin-right: 3.5%;
+        }
+
+        #contents .container .cont3 .text1 .type2 {
+            float: left;
+            font-size: 16px;
+            font-weight: 300;
+            width: 31%;
+        }
+        #contents .container .cont3 .text1 .type3 {
+            float: left;
+            font-size: 16px;
+            font-weight: 300;
+            width: 31%;
+            margin-left: 3.5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h2 class="ir_so">헤더</h2>
+            <div class="container"></div>
+            </nav>
+        </header>
+
+        <!-- //헤더 -->
+
+        <section id="banner">
+            <h2 class="ir_so">배너</h2>
+            <div class="container">
+        </section>
+        <section id="contents">
+            <h2 class="ir_so">cont1</h2>
+            <div class="container">
+                <article class="cont1">
+                    <h3 class="ir_so">cont2</h3>
+                </article>
+                <article class="cont2">
+                    <h3 class="ir_so">cont1</h3>
+                </article>
+                <article class="cont3">
+                    <div class="text">
+                        <h3 class>FIND opportunities</h3>
+                    </div>
+                    <div class="img"></div>
+                    <div class="img2"></div>
+                    <div class="img3"></div>
+                    <div class="text1">
+                        <div class="desc1">
+                            <p>Maldives</p>
+                        </div>
+                        <div class="desc2">
+                            <p>dog</p>
+                        </div>
+                        <div class="desc3">
+                            <p>sea</p>
+                        </div>
+                        <div class="type1">
+                            <p></p>
+                        </div>
+                        <div class="type2">
+                            <p></p>
+                        </div>
+                        <div class="type3">
+                            <p></p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <footer id="footer"></footer>
+
+
+    </div>
+
+</body>
+
+</html>
