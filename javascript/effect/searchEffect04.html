@@ -145,13 +145,32 @@
             }
         }
 
-        /*  */
-        .board .list li {
-            display: none;
-        }
-        .board .list li.show {
-            display: block;
-        }
+        /* option */
+    .board .desc {
+        background: #a5c3d5;
+        font-size: 18px;
+        margin: 5px 0;
+        border-radius: 4px;
+        padding: 15px 10px;
+    }
+    .board .list {
+        background: #a5c3d5;
+        padding: 15px 10px;
+        border-radius: 4px;
+    }
+    .board .list span {
+        border: 1px solid #223547;
+        border-radius: 20px;
+        padding: 5px 20px;
+        margin: 3px;
+        display: inline-block;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+    .board .list span:hover {
+        background: #223547;
+        color: #fff;
+    }
     </style>
 </head>
 
@@ -160,68 +179,87 @@
         <div class="number">
             <ul>
                 <li><a href="searchEffect01.html">1</a></li>
-                <li class="active"><a href="searchEffect02.html">2</a></li>
+                <li><a href="searchEffect02.html">2</a></li>
                 <li><a href="searchEffect03.html">3</a></li>
-                <li><a href="searchEffect04.html">4</a></li>
+                <li class="active"><a href="searchEffect04.html">4</a></li>
             </ul>
         </div>
         <div class="board">
-            <span class="sub"><a href="../javascript06.html#sample10">includes()</a>를 이용하여 CSS 속성 검색하기</span>
+            <span class="sub"><a href="../javascript06.html#sample11">find()</a>를 이용하여 속성을 검색하면 설명 보여주기</span>
             <h1><a href="searchEffect.html">CSS 속성 검색하기</a></h1>
 
+            <!-- 검색 영역 -->
             <div class="search">
                 <label for="search-box">검색하기</label>
                 <input type="text" id="search-box" placeholder="CSS 속성을 입력해주세요!!">
             </div>
 
-            <div class="count">
-                전체 속성 갯수 : <em>0</em>개
-            </div>
+            <!-- 전체 목록 갯수 -->
+            <div class="count">전체 목록 갯수 : 0개</div>
 
-            <div class="list">
-                <ul>
-                    <li data-name="all"><strong>all</strong> : all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다.</li>
-                    <li data-name="animation"><strong>animation</strong> : animation 속성은 장편 애니메이션 속성을 설정하기 위한 약식 속성입니다.</li>
-                    <li data-name="animation-delay"><strong>animation-delay</strong> : animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다.</li>
-                    <li data-name="animation-direction"><strong>animation-direction</strong> : animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다.</li>
-                    <li data-name="animation-duration"><strong>animation-duration</strong> : animation-duration 속성은 애니메이션이 움직이는 시간을 설정합니다.</li>
-                    <li data-name="animation-fill-mode"><strong>animation-fill-mode</strong> : animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다.</li>
-                    <li data-name="animation-iteration-count"><strong>animation-iteration-count</strong> : animation-iteration-count 속성은 애니메이션의 반복 횟수를 설정합니다.</li>
-                    <li data-name="animation-name"><strong>animation-name</strong> : animation-name 속성은 에니메이션 키프레인 이름을 설정합니다.</li>
-                    <li data-name="animation-play-state"><strong>animation-play-state</strong> : animation-play-state 속성은 에니메이션의 진행상태를 설정합니다.</li>
-                    <li data-name="backdrop-filter"><strong>backdrop-filter</strong> : backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다.</li>
-                    <li data-name="backface-visibility"><strong>backface-visibility</strong> : backface-visibility 속성은 요소 뒷면 여부를 설정합니다.</li>
-                    <li data-name="caption-side"><strong>caption-side</strong> : caption-side 속성은 테이블 캡션 설정합니다.</li>
-                </ul>
-            </div>
+
+            <!-- CSS 설명 영역 -->
+            <div class="desc">아래의 속성을 검색하면 속성이 나옵니다!</div>
+
+            <!-- CSS 속성 리스트 -->
+            <div class="list"></div>
         </div>
     </div>
 
     <!-- script -->
     <script>
+        const cssProperty = [
+            {name: "all", desc:"all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다."},
+            {name: "animation", desc:"animation 속성은 장편 애니메이션 속성을 설정하기 위한 약식 속성입니다."},
+            {name: "animation-delay", desc:"animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다."},
+            {name: "animation-direction", desc:"animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다."},
+            {name: "animation-duration", desc:"animation-duration 속성은 애니메이션이 움직이는 시간을 설정합니다."},
+            {name: "animation-fill-mode", desc:"animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다."},
+            {name: "animation-iteration-count", desc:"animation-iteration-count 속성은 애니메이션의 반복 횟수를 설정합니다."},
+            {name: "animation-name", desc:"animation-name 속성은 에니메이션 키프레인 이름을 설정합니다."},
+            {name: "animation-play-state", desc:"animation-play-state 속성은 에니메이션의 진행상태를 설정합니다."},
+            {name: "backdrop-filter", desc:"backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다."},
+            {name: "backface-visibility", desc:"backface-visibility 속성은 요소 뒷면 여부를 설정합니다."},
+            {name: "caption-side", desc:"caption-side 속성은 테이블 캡션 설정합니다."},
+        ]
         const searchBox = document.querySelector("#search-box");
-        const cssList = document.querySelectorAll(".list ul li");
-        const cssCount = document.querySelector(".count em")
+        const cssCount = document.querySelector(".count");
+        const cssDesc = document.querySelector(".desc");
+        const cssList = document.querySelector(".list");
 
-        cssList.forEach((e, index) => {
-                e.classList.add("show");
-                console.log(index);
-                cssCount.innerHTML = index + 1;
-        })
-
-        searchBox.addEventListener("keyup", () => {
-            const searchWord = searchBox.value; //사용자가 입력한 값
-            
-            cssList.forEach(el => {
-                const cssName = el.dataset.name; //CSS 속성 모든 값
-
-                if(cssName.includes(searchWord)){
-                    el.classList.add("show");
-                } else {
-                    el.classList.remove("show");
-                }
-            });
+       //CSS 속성 값/전체 갯수 출력하기
+       cssProperty.map((element, index) => {
+            cssCount.innerText = "전체 목록 갯수 : "+ (index+1) +"개";
+            cssList.innerHTML += "<span>"+ element.name +"</span>";
         });
+
+        //사용자가 검색한 값
+        searchBox.addEventListener("keyup", () => {
+            const searchWord = searchBox.value; //사용자 입력값이 searchWord에 저장되어 있음
+            //console.log(searchWord)
+            findProp(searchWord);
+        });
+
+        document.querySelectorAll(".list span").forEach(span => {
+            span.addEventListener("click", () => { //span을 클릭 했을 때
+                //클릭한 데이터 값을 가져옵니다.
+                const listProp = span.innerText;
+                findProp(listProp);
+            })
+        })
+        function findProp(searchWord){
+            const targetData = cssProperty.find((data) => data.name === searchWord) //cssProperty에 속성값이 들어있음
+
+            //찾는 데이터가 없을 때
+            if(targetData == null){
+                cssDesc.textContent = "해당 속성은 존재하지 않습니다. 다시 검색해 주세요!";
+                return;
+            }
+            //console.log(targetData)
+
+            cssDesc.innerHTML = targetData.desc;
+        }
+
 
     </script>
 </body>
