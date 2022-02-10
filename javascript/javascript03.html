@@ -358,6 +358,15 @@
     <script src="assets/js/prism.js"></script>
 
     <script>
+         //#id 이동하기
+         document.querySelectorAll("a[href^='#']").forEach(el => {
+            el.addEventListener("click", (event) => {
+                event.preventDefault();
+                document.querySelector(el.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                })
+            })
+        })
         //데이터 저장 : 변수, 상수, 배열, 객체(저장소)
         //변수 : 데이터 저장, 변경, 추가
         //상수 : 데이터 저장, 변경X

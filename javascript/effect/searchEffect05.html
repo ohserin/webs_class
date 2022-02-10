@@ -159,6 +159,20 @@
             color: #fff;
             cursor: pointer;
         }
+        .board .list li{
+            padding-right: 100px;
+            position: relative;
+        }
+        .board .list li span {
+            position: absolute;
+            right: 10px; top: 50%;
+            font-size: 14px;
+            transform: translateY(-50%);
+        }
+        .board .list li span::before {
+            content: 'view : ';
+            text-transform: uppercase;
+        }
     </style>
 </head>
 
@@ -182,10 +196,10 @@
 
             <!-- 검색 영역 -->
             <div class="search">
-                <span>조회수 10개 이상</span>
-                <span>조회수 20개 이상</span>
-                <span>조회수 30개 이상</span>
-                <span>조회수 40개 이상</span>
+                <span data-view="10">조회수 10개 이상</span>
+                <span data-view="20">조회수 20개 이상</span>
+                <span data-view="30">조회수 30개 이상</span>
+                <span data-view="40">조회수 40개 이상</span>
             </div>
 
             <!-- 전체 목록 갯수 -->
@@ -323,55 +337,29 @@
 
         const searchBox = document.querySelectorAll(".search span");    //각각의 버튼이 들어있음
         const cssList = document.querySelector(".list ul"); 
-        const cssCount = document.querySelector(".count em");   
+        const cssCount = document.querySelector(".count em"); 
+        let listHTML = ""; //데이터 저장
 
-        //버튼을 클릭했을 때
-        searchBox.forEach(span => { //스펜을 클릭했을 때
+        //목록 보여주기
+        function updataList(list){
+            listHTML = "";
+            
+            for(const data of list){//css안에 있는만큼 반복
+                listHTML += `<li>${data.name} : ${data.desc} <span>${data.view}</span></li>`; //추가로 업데이트 되도록
+            }
+            cssList.innerHTML = listHTML;
+        }
+        updataList(cssProperty);
+
+        //버튼 클릭하기
+        searchBox.forEach(span => {
             span.addEventListener("click", () => {
-                onClickButton();
-            })
-        });
-
-        //변수(데이터저장 + 변경 + 추가 + 전역/지역),
-        //배열(순차적으로 여러개 데이터 저장),
-        //객체(데이터 저장(키와 값)),
-        //함수(실행문 집합체, 재활용)
-
-        function onClickButton() {
-          //클릭했을 때 실행문
-        }
-        
-        //CSS 리스트 출력하기
-        function upDataList(){
-          let list =""; //let을 안쓰면 전역변수가 되므로 문제가 됨.
-
-        for(let data of cssProperty){
-        //list += "<li>" + li.view + "</li>"; 
-        list += `<li>${data.name} : ${data.desc} <span>${data.view}</span></li>`; 
-        }
-
-          cssList.innerHTML = list;
-        }
-        upDataList();
-
-        
-
-
-        //view 값만 출력
-        // for(let i = 0; i < cssProperty.length; i++){
-        //     console.log(cssProperty[i].view);
-        // }
-        //forEach문
-        //  cssProperty.forEach(ele => {
-        //     console.log(ele.name);
-        // });
-        //map()
-        // cssProperty.map(ele => {
-        //     console.log(ele.desc);
-        // });
-        //for of
-       //for( let data of cssProperty ){
-        // console.log(data.num);
+              const target = span.dataset.view;
+              const filterList = cssProperty.filter(data => data.view >= target)
+              
+              updataList(filterList);
+            });
+        })
 
     </script>
 </body>

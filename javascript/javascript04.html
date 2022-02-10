@@ -413,6 +413,15 @@
         <!-- //script -->
 
         <script>
+             //#id 이동하기
+        document.querySelectorAll("a[href^='#']").forEach(el => {
+            el.addEventListener("click", (event) => {
+                event.preventDefault();
+                document.querySelector(el.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                })
+            })
+        })
             //조건문
             //01. if문
             {

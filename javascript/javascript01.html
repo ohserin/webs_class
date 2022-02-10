@@ -529,6 +529,15 @@
 
     <!-- script -->
     <script>
+         //#id 이동하기
+         document.querySelectorAll("a[href^='#']").forEach(el => {
+            el.addEventListener("click", (event) => {
+                event.preventDefault();
+                document.querySelector(el.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                })
+            })
+        })
         //01. 변수 : 데이터 저장소
         {
             var x = 100; //변수 x에 숫자 100을 저장

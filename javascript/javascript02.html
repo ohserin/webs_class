@@ -727,7 +727,15 @@
 
 
     <script>
-
+ //#id 이동하기
+ document.querySelectorAll("a[href^='#']").forEach(el => {
+            el.addEventListener("click", (event) => {
+                event.preventDefault();
+                document.querySelector(el.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                })
+            })
+        })
 
 
         //01. 변수 : 데이터 불러오기
