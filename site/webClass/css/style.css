@@ -191,7 +191,7 @@
     background: url(../img/bg01.jpg) no-repeat center / cover; 
 } */
 
-.slider {
+/* .slider {
     position: relative;
     white-space: nowrap;
 }
@@ -231,26 +231,21 @@
     background: #000;
     color: #fff;
 }
-.slider-arrow {
-}
-.slider-arrow .left{
+.slider-arrow a {
     position: absolute;
-    left: 10px;
     top: 50%;
     transform: translateY(-50%);
     width: 27px;
     height: 56px;
     background: url(../img/bg-svg.svg);
+    
+}
+.slider-arrow .left{
+    left: 10px;
     background-position: 0 -50px;
 }
 .slider-arrow .right {
-    position: absolute;
     right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 27px;
-    height: 56px;
-    background: url(../img/bg-svg.svg);
     background-position: -23px -50px;
 }
 .slider-dot {
@@ -259,35 +254,96 @@
     bottom: 25px;
     transform: rotateX(-50%);
 }
-.slider-dot .dot {
+.slider-dot a {
     width: 14px;
     height: 14px;
     background: url(../img/bg-svg.svg);
-    background-position: -70px -50px;
     display: inline-block;
     margin: 2px;
+}
+.slider-dot .dot {
+    background-position: -70px -50px;
 }
 .slider-dot .dot.active {
     background-position: -50px -50px;
 }
 .slider-dot .play {
-    width: 14px; 
-    height: 14px;
-    background: url(../img/bg-svg.svg);
     background-position: -88px -50px;
-    display: inline-block;
-    margin: 2px;
 }
 .slider-dot .stop {
-    width: 14px;
-    height: 14px;
-    background: url(../img/bg-svg.svg);
     background-position: -110px -50px;
-    display: inline-block;
-    margin: 2px;
+} */
+
+.swiper {
+    width: 100%;
+    height: 600px;
 }
-
-
+.swiper-wrapper {}
+.swiper-slide:nth-child(1n) {
+    background: url(../img/bg01.jpg) no-repeat center / cover ;
+}
+.swiper-slide:nth-child(2n) {
+    background: url(../img/bg01.jpg) no-repeat center / cover ;
+}
+.swiper-slide:nth-child(3n) {
+    background: url(../img/bg01.jpg) no-repeat center / cover ;
+}
+.swiper-slide {}
+.swiper-slide .desc {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 100px 0;
+    color: #fff;
+}
+.swiper-slide .desc span {
+    font-size: 18px;
+}
+.swiper-slide .desc h4 {
+    font-size: 110px;
+    font-weight: 300;
+    margin-left: -8px;
+}
+.swiper-slide .desc p {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 100px;
+}
+.swiper-slide .desc .btn a {
+    font-size: 16px;
+    padding: 11px 50px;
+    display: inline-block;
+}
+.swiper-slide .desc .btn .white {
+    background: #fff;
+    color: #000;
+}
+.swiper-slide .desc .btn .black {
+    background: #000;
+    color: #fff;
+}
+.swiper-button-prev {
+    width: 30px;
+    height: 30px;
+    background: url(../img/bg-svg.svg);
+    background-position: 0 -50px;
+}
+.swiper-button-prev::after {
+    font-size: 0 !important;
+}
+.swiper-button-next {
+    width: 30px;
+    height: 30px;
+    background: url(../img/bg-svg.svg);
+    background-position: -23px -50px;
+}
+.swiper-button-next::after {
+    font-size: 0 !important;
+}
+.swiper-pagination-bullet {
+    width: 14px !important;
+    height: 14px !important;
+    background: #ffF !important;
+}
 
 /* 이미지/텍스트 유형 (imgText_type01)*/
 .imgText_type01 {

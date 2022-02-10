@@ -37,6 +37,7 @@
 <link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
 
 <body>
     <noscript>"페이지를 보려면 자바스크립트 옵션이 활성화 되어 있어야 합니다."</noscript>
@@ -75,7 +76,7 @@
 
             <section id="banner">
                 <h3 class="ir_so">배너 영역</h3>
-                <div class="img_type slider">
+                <!-- <div class="img_type slider">
                     <div class="slider-img">
                         <div class="desc">
                         <span>DEVELOPER</span>
@@ -98,9 +99,57 @@
                         <a href="#" class="dot"><span class="ir_pm">4</span></a>
                         <a href="#" class="play"><span class="ir_pm">자동플레이</span></a>
                         <a href="#" class="stop"><span class="ir_pm">정지</span></a>
+                    </div> -->
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="desc">
+                          <span>Night view</span>
+                          <h4>Metropolis</h4>
+                          <p>한 국가나 지역내에서 정치적, 경제적, 문화적,   <br>
+                           산업적 중심이 되는 커다란 영향력을 지니고 지역은  <br>
+                           물론 국제적인 소통에 중요한 역할을 하는 거대도시의 총칭.</p>
+                          <div class="btn">
+                              <a href="#" class="white">자세히 보기</a>
+                              <a href="#" class="black">사이트 보기</a>
+                          </div>
+                      </div>
                     </div>
-            </section>
-            <!-- //banner -->
+                    <div class="swiper-slide">
+                      <div class="desc">
+                          <span>Night views</span>
+                          <h4>Metropolisss</h4>
+                          <p>한 국가나 지역내에서 정치적, 경제적, 문화적,   <br>
+                           산업적 중심이 되는 커다란 영향력을 지니고 지역은  <br>
+                           물론 국제적인 소통에 중요한 역할을 하는 거대도시의 총칭.</p>
+                          <div class="btn">
+                              <a href="#" class="white">자세히 보기</a>
+                              <a href="#" class="black">사이트 보기</a>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="desc">
+                          <span>Night viewsss</span>
+                          <h4>Metropolisssssss</h4>
+                          <p>한 국가나 지역내에서 정치적, 경제적, 문화적,   <br>
+                           산업적 중심이 되는 커다란 영향력을 지니고 지역은  <br>
+                           물론 국제적인 소통에 중요한 역할을 하는 거대도시의 총칭.</p>
+                          <div class="btn">
+                              <a href="#" class="white">자세히 보기</a>
+                              <a href="#" class="black">사이트 보기</a>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+        </section>
+        <!-- //banner -->
 
             <section class="imgText_type01 container">
                 <div class="text">
@@ -276,5 +325,26 @@
     </div>
     <!-- //wrap -->
 
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+            effect: "slide",
+            // autoplay: {
+            // delay: 3000,
+            // },
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable : true
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 </html>
