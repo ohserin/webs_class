@@ -184,26 +184,27 @@
                 <li><a href="searchEffect02.html">2</a></li>
                 <li><a href="searchEffect03.html">3</a></li>
                 <li><a href="searchEffect04.html">4</a></li>
-                <li class="active"><a href="searchEffect05.html">5</a></li>
-                <li><a href="searchEffect06.html">6</a></li>
+                <li><a href="searchEffect05.html">5</a></li>
+                <li class="active"><a href="searchEffect06.html">6</a></li>
                 <li><a href="searchEffect07.html">7</a></li>
                 <li><a href="searchEffect08.html">8</a></li>
             </ul>
         </div>
         <div class="board">
-            <span class="sub"><a href="../javascript06.html#sample11">filter()</a>를 이용하여 조회수 검색하기</span>
+            <span class="sub"><a href="../javascript06.html#sample11">sort( ), reverse ( )</a>를 이용하여 정렬하기</span>
             <h1><a href="searchEffect.html">CSS 속성 검색하기</a></h1>
 
             <!-- 검색 영역 -->
             <div class="search">
-                <span data-view="10">조회수 10개 이상</span>
-                <span data-view="20">조회수 20개 이상</span>
-                <span data-view="30">조회수 30개 이상</span>
-                <span data-view="40">조회수 40개 이상</span>
+                <span class="btn1">반대로</span>
+                <span class="btn2">오름차순</span>
+                <span class="btn3">내림차순</span>
+                <span class="btn4">알파벳순 (a~z)</span>
+                <span class="btn5">알파벳순 (z~a)</span>
             </div>
 
             <!-- 전체 목록 갯수 -->
-            <div class="count">전체 목록 갯수 : 0개</div>
+            <div class="count"></div>
 
             <!-- CSS 속성 리스트 -->
             <div class="list">
@@ -216,35 +217,35 @@
     <script>
         const cssProperty = [
             //a
-{view: 10, name:"all", desc:"all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다."},
-{view: 20, name:"animation", desc:"animation 속성은 애니메이션 속성을 설정하기 위한 약식 속성입니다."},
-{view: 13, name:"animation-delay", desc:"animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다."},
-{view: 40, name:"animation-direction", desc:"animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다."},
-{view: 20, name:"animation-duration", desc:"animation-duration 속성은 애니메이션이 움직이는 시간을 설정합니다."},
-{view: 40, name:"animation-fill-mode", desc:"animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다."},
-{view: 15, name:"animation-iteration-count", desc:"animation-iteration-count 속성은 애니메이션 반복 횟수를 설정합니다."},
-{view: 14, name:"animation-name", desc:"animation-name 속성은 애니메이션 키프레임 이름을 설정합니다."},
-{view: 30, name:"animation-play-state", desc:"animation-play-state 속성은 애니메이션의 진행상태를 설정합니다."},
-{view: 50, name:"backdrop-filter", desc:"backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다."},
-{view: 49, name:"backface-visibility", desc:"backface-visibility 속성은 요소 뒷면 출력 여부 설정합니다."},
-{view: 20, name:"caption-side", desc:"caption-side 속성은 테이블 caption의 위치를 설정합니다."},
-{view: 40, name:"direction", desc:"direction 속성은 문장의 방향을 설정합니다."},
-{view: 15, name:"display", desc:"display 해당 요소를 어떻게 보여줄지를 지정할수있습니다."},
-{view: 13, name:"empty-cells", desc:"empty-cells 속성은 테이블의 빈요소의 속성을 설정합니다."},
-{view: 15, name:"filter", desc:"filter 속성은 그래픽 효과를 설정합니다."},
-{view: 10, name:"flex", desc:"flex 속성은 콘텐츠의 성질을 flex로 정의합니다."},
-{view: 10, name:"flex-basis", desc:"flex-basis 속성은 요소의 기본 단위를 정의합니다."},
-{view: 10, name:"flex-direction", desc:"flex-direction 속성은 요소의 정렬 방향을 정의합니다."},
-{view: 10, name:"flex-flow", desc:"flex-flow 속성은 요소의 정렬 방향 flex-direction와 줄 속성 flex-wrap을 같이 설정합니다."},
-{view: 10, name:"flex-grow", desc:"flex-grow 속성은 요소의 크기를 숫자를 통해 정의합니다."},
-{view: 10, name:"flex-shrink", desc:"flex-shrink 속성은 요소의 크기를 숫자를 통해 줄여줍니다."},
-{view: 10, name:"flex-wrap", desc:"flex-wrap 속성은 요소의 줄 속성을 설정합니다."},
-{view: 10, name:"float", desc:"flex-grow 속성은 블록요소의 정렬 상태를 설정합니다."},
-{view: 10, name:"font", desc:"font 속성은 폰트에 관한 설정을 정의합니다."},
-{view: 10, name:"font-family", desc:"font-family 속성은 폰트 종류를 설정합니다."},
-{view: 10, name:"font-size", desc:"font-size 속성은 폰트의 크기를 조절할수 있습니다."},
-{view: 10, name:"font-size-adjust", desc:"font-size-adjust 속성은 소문자를 기준으로 폰트 크기를 설정합니다."},
-{view: 10, name:"font-stretch", desc:"font-stretch 속성은 폰트의 굵기를 정의합니다."},
+{view: 1, name:"all", desc:"all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다."},
+{view: 2, name:"animation", desc:"animation 속성은 애니메이션 속성을 설정하기 위한 약식 속성입니다."},
+{view: 3, name:"animation-delay", desc:"animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다."},
+{view: 4, name:"animation-direction", desc:"animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다."},
+{view: 5, name:"animation-duration", desc:"animation-duration 속성은 애니메이션이 움직이는 시간을 설정합니다."},
+{view: 6, name:"animation-fill-mode", desc:"animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다."},
+{view: 7, name:"animation-iteration-count", desc:"animation-iteration-count 속성은 애니메이션 반복 횟수를 설정합니다."},
+{view: 8, name:"animation-name", desc:"animation-name 속성은 애니메이션 키프레임 이름을 설정합니다."},
+{view: 9, name:"animation-play-state", desc:"animation-play-state 속성은 애니메이션의 진행상태를 설정합니다."},
+{view: 10, name:"backdrop-filter", desc:"backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다."},
+{view: 11, name:"backface-visibility", desc:"backface-visibility 속성은 요소 뒷면 출력 여부 설정합니다."},
+{view: 12, name:"caption-side", desc:"caption-side 속성은 테이블 caption의 위치를 설정합니다."},
+{view: 13, name:"direction", desc:"direction 속성은 문장의 방향을 설정합니다."},
+{view: 14, name:"display", desc:"display 해당 요소를 어떻게 보여줄지를 지정할수있습니다."},
+{view: 15, name:"empty-cells", desc:"empty-cells 속성은 테이블의 빈요소의 속성을 설정합니다."},
+{view: 16, name:"filter", desc:"filter 속성은 그래픽 효과를 설정합니다."},
+{view: 17, name:"flex", desc:"flex 속성은 콘텐츠의 성질을 flex로 정의합니다."},
+{view: 1, name:"flex-basis", desc:"flex-basis 속성은 요소의 기본 단위를 정의합니다."},
+{view: 1, name:"flex-direction", desc:"flex-direction 속성은 요소의 정렬 방향을 정의합니다."},
+{view: 1, name:"flex-flow", desc:"flex-flow 속성은 요소의 정렬 방향 flex-direction와 줄 속성 flex-wrap을 같이 설정합니다."},
+{view: 1, name:"flex-grow", desc:"flex-grow 속성은 요소의 크기를 숫자를 통해 정의합니다."},
+{view: 1, name:"flex-shrink", desc:"flex-shrink 속성은 요소의 크기를 숫자를 통해 줄여줍니다."},
+{view: 1, name:"flex-wrap", desc:"flex-wrap 속성은 요소의 줄 속성을 설정합니다."},
+{view: 1, name:"float", desc:"flex-grow 속성은 블록요소의 정렬 상태를 설정합니다."},
+{view: 1, name:"font", desc:"font 속성은 폰트에 관한 설정을 정의합니다."},
+{view: 1, name:"font-family", desc:"font-family 속성은 폰트 종류를 설정합니다."},
+{view: 1, name:"font-size", desc:"font-size 속성은 폰트의 크기를 조절할수 있습니다."},
+{view: 1, name:"font-size-adjust", desc:"font-size-adjust 속성은 소문자를 기준으로 폰트 크기를 설정합니다."},
+{view: 1, name:"font-stretch", desc:"font-stretch 속성은 폰트의 굵기를 정의합니다."},
 {name:"font-style", desc:"font-style 속성은 폰트의 스타일을 정의합니다."},
 {name:"font-variant", desc:"font-variant 속성은 글꼴의 변형을 정의합니다."},
 {name:"font-weight", desc:"font-weight 속성은 폰트의 가중치나 굵기를 명시할수있다."},
@@ -335,31 +336,101 @@
 {name:"z-index", desc:"z-index 속성은 요소의 위치가 겹칠 경우 순서를 정의합니다."}
         ];
 
-        const searchBox = document.querySelectorAll(".search span");    //각각의 버튼이 들어있음
-        const cssList = document.querySelector(".list ul"); 
-        const cssCount = document.querySelector(".count em"); 
-        let listHTML = ""; //데이터 저장
+        const searchBtn = document.querySelectorAll(".search span");    // 버튼
+        const cssList = document.querySelector(".list ul");             // 속성 리스트
+        const cssCount = document.querySelector(".count");              // CSS 갯수
 
-        //목록 보여주기
-        function updataList(list){
-            listHTML = "";
-            
-            for(const data of list){//css안에 있는만큼 반복
-                listHTML += `<li>${data.name} : ${data.desc} <span>${data.view}</span></li>`; //추가로 업데이트 되도록
-            }
+        //1~100까지 for를 이용해서 출력 (짝수만)
+        // for(let i=0; i<=100; i+=2){
+        //   console.log(i)
+        // }
+        
+        // 데이터 출력
+        const updateList = function (){
+            let listHTML = '';
+
+            cssProperty.forEach((el, index) => {
+                listHTML += `<li>${el.num}. ${el.name} : ${el.desc}</li>`
+                cssCount.innerText = `전체 목록 갯수 : ${index+1}개`
+            })
             cssList.innerHTML = listHTML;
         }
-        updataList(cssProperty);
+        updateList();
 
-        //버튼 클릭하기
-        searchBox.forEach(span => {
-            span.addEventListener("click", () => {
-              const target = span.dataset.view;
-              const filterList = cssProperty.filter(data => data.view >= target)
-              
-              updataList(filterList);
-            });
+        // 반대정렬
+        function reverse(){
+            cssProperty.reverse()
+            updateList();
+        }
+
+        // 오름차순 정렬
+        function sortAscending(){
+            cssProperty.sort((a,b) => {
+                return a.num - b.num
+            })
+            updateList();
+        }
+        
+        // 내림차순 정렬
+        function sortDescending(){
+            cssProperty.sort((a,b) => {
+                return b.num - a.num
+            })
+            updateList();
+        }
+        
+        // 알파벳 정렬(a~z)
+        function sortAlphabet(){
+            cssProperty.sort((a,b) => {
+                let x = a.name;
+                let y = b.name;
+                return x.localeCompare(y)
+            })
+            updateList();
+        }
+        // 알파벳 정렬(z~a)
+        function sortAlphabetZ(){
+            cssProperty.sort((a,b) => {
+                let x = a.name;
+                let y = b.name;
+                return y.localeCompare(x)
+            })
+            updateList();
+        }
+
+        // forEach문
+        // cssProperty.forEach(el => {
+        //    listHTML += `<li>${el.name}</li>`
+        // })
+
+        // for of 문
+        // for(let data of cssProperty){
+        //    listHTML += `<li>${data.name}</li>`
+        // }
+        
+        // 반대로 버튼 클릭시
+        document.querySelector(".btn1").addEventListener("click", () => {
+            reverse();
         })
+        // 내림차순 버튼 클릭시
+        document.querySelector(".btn3").addEventListener("click", () => {
+            sortDescending();
+        })
+        // 오름차순 버튼 클릭시
+        document.querySelector(".btn2").addEventListener("click", () => {
+            sortAscending();
+        })
+        // 알파벳 정렬(a~z) 버튼 클릭시
+        document.querySelector(".btn4").addEventListener("click", () => {
+            sortAlphabet();
+        })
+        // 알파벳 정렬(z~a) 버튼 클릭시
+        document.querySelector(".btn5").addEventListener("click", () => {
+            sortAlphabetZ();
+        })
+
+
+    </script>
 
     </script>
 </body>
