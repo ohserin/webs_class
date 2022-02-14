@@ -2,6 +2,12 @@
 #wrap {
     height: 2000px;
 }
+.gray {
+    background: #f5f5f5;
+}
+.white {
+    background: #fff !important;
+}
 
 /* 컨테이너 */
 .container {
@@ -9,6 +15,7 @@
     margin: 0 auto;
     /* background: rgb(22, 22, 22); */
 }
+
 
 /* 헤더01 float을 사용한 경우 
  float으로 인한 영역 깨짐 현상 발생(하이트 값을 인식 못함)
@@ -766,4 +773,68 @@
 }
 .footer-sns li:nth-child(4) a {
     background-position: -150px 0;
+}
+
+
+/* 회원가입, 로그인 : join-type*/
+.join-type {
+    padding: 200px 0;
+}
+.member-form {
+    width: 665px;
+    height: 800px;
+    border: 1px solid #dedede;
+    background: #fff;
+    margin: 0 auto;
+    padding: 50px;
+}
+.member-form h3 {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.member-form .list li {
+    font-size: 14px;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 10px;
+    
+
+}
+.member-form .list li::before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 7px;
+}
+.member-form h4{
+    font-size: 16px;
+    text-decoration: underline;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-weight: 500;
+
+}
+.member-form .list2 {
+    background: #f5f5f5;
+    padding: 30px 30px;
+}
+.member-form .list2 li {
+    font-size: 14px;
+    line-height: 1.6;
+    position: relative;
+}
+.member-form .list2 li::before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    left: -7px;
+    top: 7px;
 }
