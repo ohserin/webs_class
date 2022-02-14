@@ -173,29 +173,29 @@
         overflow: hidden;
     }
 
-    .code-view .view-header{
-        padding: 7px 0 7px 10px;
-        border-bottom: 1px solid #e2e8f0;
-    }
+    .view-header {
+            padding: 7px 0 7px 10px;
+            border-bottom: 1px solid #e2e8f0;
+        }
 
-    .code-view .view-header > span{
-        width: 10px;
-        height: 10px;
-        display: inline-block;
-        border-radius: 10px;
-    }
+    .view-header>span {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            border-radius: 10px;
+        }
 
-    .view-header > span:nth-child(1){
-        border-bottom-color: #f56565;
-    }
+        .view-header>span:nth-child(1) {
+            background-color: #f56565;
+        }
 
-    .view-header > span:nth-child(2) {
-        border-bottom-color: #f6e05e;
-    }
+        .view-header>span:nth-child(2) {
+            background-color: #f6e05e;
+        }
 
-    .view-header > span:nth-child(3) {
-        border-bottom-color: #4ebb7b;
-    }
+        .view-header>span:nth-child(3) {
+            background-color: #4ebb7b;
+        }
 
     .view-title {
         border-bottom: 1px solid #eee;
@@ -319,11 +319,7 @@
         tabBtn.forEach((btn) => {
             btn.addEventListener("click", () => {
                 //내가 클릭하지 않은건 active 삭제
-                btn.classList.remove("active");
-                for(let i=0; i <= view-title.length; i++){
-
-                }
-
+                tabBtn.forEach(btn => {el("active");});
 
                 //내가 클릭한건 active 추가
                 btn.classList.add("active");
