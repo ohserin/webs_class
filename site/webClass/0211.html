@@ -106,10 +106,18 @@
             width: 100%;
         }
 
+        #header .logo {
+            width: 157px;
+            height: 35px;
+            background: url(./img/h_logo.svg);
+            background-position: -0 -100px;
+            margin: 30px;
+        }
+
         #header .logo a {
-            font-size: 25px;
             color: #000;
-            padding: 20px 10px;
+            font-weight: 300;
+            position: relative;
         }
 
         #header .menu {
@@ -121,17 +129,42 @@
             padding: 10px;
             font-weight: 500;
         }
+
         #header .menu2 {
             display: flex;
         }
+
         #header .menu2 .menu2_1 {
             background: #000;
         }
+
         #header .menu2 .menu2_2 {
             background: #000;
         }
+
         #header .menu2 .menu2_3 {
             background: #000;
+        }
+
+        #header .menu .menu_img01 {
+            width: 24px;
+            height: 24px;
+            background: url(./img/menu_img.svg);
+            background-position: 0 -150px;
+        }
+
+        #header .menu .menu_img02 {
+            width: 24px;
+            height: 24px;
+            background: url(./img/menu_img.svg);
+            background-position: 0 -150px;
+        }
+
+        #header .menu .menu_img03 {
+            width: 24px;
+            height: 24px;
+            background: url(./img/menu_img.svg);
+            background-position: 0 -150px;
         }
 
         #header .header_cont {
@@ -152,8 +185,9 @@
             display: flex;
             font-size: 16px;
             text-align: center;
-            
+
         }
+
         #header .header_cont .btn .Quote {
             width: 202px;
             height: 70px;
@@ -162,15 +196,17 @@
             line-height: 4.4;
             margin: 35px 13px 49px 0;
         }
+
         #header .header_cont .btn .Video {
             width: 202px;
             height: 70px;
             color: #c4a586;
             background-color: #fbfbfb;
-             line-height: 4.4;
-             border: 1px solid #c4a586;
-             margin: 35px 13px 49px 0;
+            line-height: 4.4;
+            border: 1px solid #c4a586;
+            margin: 35px 13px 49px 0;
         }
+
         #header .header_cont .header_img {}
 
         #banner {
@@ -190,20 +226,318 @@
             background: #FAE2C8;
         }
 
-        #contents .con2 {
-            height: 1500px;
-            background: rgb(172, 92, 92);
-        }
-
         #contents .con3 {
             height: 915px;
-            background: rgb(194, 63, 63);
         }
 
+        #contents {
+            height: 3650px;
+            width: 1440px;
+            margin: 0 auto;
+        }
+
+        .con1 {
+            width: 100%;
+            height: 285px;
+            background-color: #fff;
+        }
+
+        .con1 h3 {
+            text-align: center;
+            margin-top: 60px;
+            letter-spacing: -1px;
+            font-size: 16px;
+            line-height: 1;
+            font-weight: 700;
+        }
+
+        .con1 ul {
+            display: flex;
+            justify-content: space-between;
+            width: 1110px;
+            margin: 0 auto;
+            margin-top: 50px;
+            height: 60px;
+        }
+
+        .con1 li:nth-child(1) {
+            background: url(img/logo_2.svg) 1px 0px;
+            width: 101px;
+        }
+
+        .con1 li:nth-child(2) {
+            background: url(img/logo_2.svg) -100px 0px;
+            width: 100px;
+        }
+
+        .con1 li:nth-child(3) {
+            background: url(img/logo_2.svg) -200px 9px;
+            width: 110px;
+        }
+
+        .con1 li:nth-child(4) {
+            background: url(img/logo_2.svg) -319px -0px;
+            width: 130px;
+        }
+
+        .con1 li:nth-child(5) {
+            background: url(img/logo_2.svg) -500px -94px;
+            width: 100px;
+        }
+
+        .con1 li:nth-child(6) {
+            background: url(img/logo_2.svg) -600px -89px;
+            width: 150px;
+        }
+
+        .con2 {
+            height: 388px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .con2 .left {
+            width: 50%;
+            height: 388px;
+            background-color: rgb(252, 239, 233);
+            display: flex;
+        }
+
+        .con2 .left>div:nth-child(1) {
+            width: 267px;
+        }
+
+        .con2 .left>div:nth-child(2) {
+            width: 409px;
+            background-image: url(img/img_left.png);
+            margin-top: 30px;
+        }
+
+        .con2 .right {
+            width: 50%;
+            height: 388px;
+            background-color: rgb(250, 226, 200);
+            display: flex;
+        }
+
+        .con2 .right>div:nth-child(1) {
+            width: 267px;
+        }
+
+        .con2 .right>div:nth-child(2) {
+            width: 409px;
+            background-image: url(img/img_right.png);
+            margin: 106px 53px 66px 59px;
+        }
+
+        .con2 h3 {
+            font-size: 34px;
+            line-height: 44px;
+            margin-top: 110px;
+            margin-left: 67px;
+            margin-bottom: 91px;
+        }
+
+        .con2 a {
+            color: #000;
+            margin-left: 67px;
+            font-size: 20px;
+        }
+
+        .con3 {}
+
+        .con3 .con3_header {
+            display: flex;
+            margin: 0 196px 110px 191px;
+            position: relative;
+        }
+
+        .con3 .con3_header h2 {
+            font-size: 50px;
+            line-height: 0.8;
+            margin-top: 173px;
+            margin-right: 95px;
+        }
+
+        .con3 .con3_header ul {
+            display: flex;
+            justify-content: space-between;
+            width: 355px;
+            font-size: 23px;
+            margin-top: 185px;
+            margin-right: 200px;
+
+        }
+
+        .con3 .con3_header li {}
+
+        .con3 .con3_header li a {
+            color: rgb(169, 167, 166);
+        }
+
+        .con3 .con3_header li a:hover {
+            color: #000;
+        }
+
+        .con3 .con3_header span {
+            margin-top: 193px;
+            font-size: 17px;
+            margin-left: 50px;
+        }
+
+        .con3 .con3_header span a {
+            width: 42px;
+            height: 20px;
+            background: url(img/web3.svg) 0px -200px;
+            position: absolute;
+            right: -28.5px;
+        }
+
+        .con3 .kind {
+            height: 118px;
+            font-size: 18px;
+            z-index: -9999;
+        }
+
+        .con3 .kind ul {
+            display: flex;
+            justify-content: space-between;
+            width: 450px;
+            margin: 0 auto;
+        }
+
+        .con3 .kind li a {
+            color: rgb(169, 167, 166);
+        }
+
+        .con3 .kind li a:hover {
+            color: #000;
+        }
+
+        .con3 .product {
+            height: 1128px;
+            margin: 0 191px 0 197px;
+        }
+
+        .con3 .product article {
+            overflow: hidden;
+        }
+
+        .con3 .product>article .column1,
+        .con3 .product>article .column2 {
+            float: left;
+            width: 312px;
+            height: 305px;
+            background-color: rgb(255, 244, 232);
+            margin-right: 58px;
+            position: relative;
+        }
+
+        .con3 .product .col3 {
+            margin-right: 0 !important;
+        }
+
+        .con3 .product>article .column1 {
+            margin-top: 30px;
+            margin-bottom: 161px;
+        }
+
+        .con3 .product>article .column2 {
+            margin-top: 30px;
+            margin-bottom: 307px;
+        }
+
+        .con3 .product em {
+            color: #fff;
+            background-color: rgb(217, 171, 130);
+            display: inline-block;
+            width: 148px;
+            height: 40px;
+            font-size: 14px;
+            border-radius: 40px;
+            font-style: normal;
+            position: absolute;
+            right: 90px;
+            top: -20px;
+            z-index: 9999;
+        }
+
+        .con3 .product em a {
+            display: inline-block;
+            padding-left: 20px;
+            padding-top: 10px;
+            color: #fff;
+        }
+
+        .con3 .product em a span {
+            position: absolute;
+            background-image: url(img/web3.svg);
+            background-position: -50px -200px;
+            right: 7px;
+            top: 7px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .con3 .product h4 {
+            margin-top: 43px;
+            margin-left: 51px;
+            font-size: 26px;
+            letter-spacing: -2px;
+        }
+
+        .con3 .product p {
+            margin-top: 32px;
+            margin-left: 51px;
+            font-size: 19px;
+        }
+
+        .con3 .product p span {
+            font-size: 15px;
+            color: rgb(169, 167, 166);
+            padding-left: 38px;
+            text-decoration: line-through;
+        }
+
+        .con3 .product .column1 .img1 {
+            position: absolute;
+            top: 90px;
+            left: -50px
+        }
+
+        .con3 .product .column1 .img2 {
+            position: absolute;
+            top: 100px;
+            left: -40px;
+        }
+
+        .con3 .product .column1 .img3 {
+            position: absolute;
+            top: 90px;
+            left: -60px;
+        }
+
+        .con3 .product .column2 .img1 {
+            position: absolute;
+            top: 90px;
+            left: -10px;
+        }
+
+        .con3 .product .column2 .img2 {
+            position: absolute;
+            top: 90px;
+            left: -80px;
+        }
+
+        .con3 .product .column2 .img3 {
+            position: absolute;
+            left: 20px;
+            top: 120px;
+        }
 
         #footer {
-            height: 746px;
-            background: rgb(141, 16, 16);
+            height: 180px;
+            background-color: red;
         }
     </style>
 </head>
@@ -211,28 +545,26 @@
 <body>
     <div id="warp">
         <header id="header">
-
-            <h1 class="logo">
-                <a href="#">mistrium</a>
-            </h1>
+            <div class="logo">
+                <h1 class="ir_pm">MISTRIUM</h1>
+                    <a href=""></a>
+                    <a href="">MISTRIUM</a>
+            </div>
             <nav class="menu">
-                <h2 class="ir_so">메인 메뉴</h2>
+                <h2 class="ir_pm">main menu</h2>
                 <ul>
                     <li><a href="#">home</a></li>
-                    <li><a href="#">about as</a></li>
+                    <li><a href="#">about us</a></li>
                     <li><a href="#">products</a></li>
                     <li><a href="#">faqs</a></li>
                     <li><a href="#">contact us</a></li>
                 </ul>
             </nav>
-            <nav class="menu2">
-                <h2 class="ir_so">메인 메뉴</h2>
-                <ul>
-                    <li"><a href="#"><div class="menu2_1"></div></a></li>
-                    <li"><a href="#"><div class="menu2_2"></div></a></li>
-                    <li><a href="#"><div class="menu2_3"></div></a></li>
-                </ul>
-            </nav>
+            <div class="member">
+                <a href="#" class="ir_pm">찾기</a>
+                <a href="#" class="ir_pm">장바구니</a>
+                <a href="#" class="ir_pm">로그인</a>
+            </div>
             <div class="header_cont">
                 <h2>Modern Furniture For<br>
                     Modern Living Style</h2>
@@ -254,17 +586,109 @@
     </div>
     </header>
     <!-- header -->
-    <section id="banner"></section>
-    <div id="contents">
+    <section id="contents">
         <div class="con1">
-            <article class="article_left"></article>
-            <article class="article_right"></article>
+            <h2 class="ir_pm">client list</h2>
+            <h3>SOME OF OUR TRUSTED CLIENTS</h3>
+            <ul>
+                <li class="ir_pm">stripe</li>
+                <li class="ir_pm">Google</li>
+                <li class="ir_pm">Deloitte.</li>
+                <li class="ir_pm">accenture</li>
+                <li class="ir_pm">IBM</li>
+                <li class="ir_pm">SAMSUNG</li>
+            </ul>
         </div>
-        <div class="con2"></div>
-        <div class="con3"></div>
-    </div>
+        <div class="con2">
+            <h2 class="ir_pm">Browse Collection</h2>
+            <section class="left">
+                <div>
+                    <h3>Residential <br> Furniture</h3>
+                    <a href="">Browse Collection</a>
+                </div>
+                <div class="img"></div>
+            </section>
+            <section class="right">
+                <div>
+                    <h3>Hospitality <br> Furniture</h3>
+                    <a href="">Browse Collection</a>
+                </div>
+                <div class="img"></div>
+            </section>
+        </div>
+        <div class="con3">
+            <div class="con3_header">
+                <h2>PRODUCTS</h2>
+                <ul>
+                    <li><a href="">Best Selling</a></li>
+                    <li><a href="">More Popular</a></li>
+                </ul>
+                <span>See All<a href=""></a></span>
+            </div>
+            <div class="kind">
+                <ul>
+                    <li><a href="">All</a></li>
+                    <li><a href="">Bed</a></li>
+                    <li><a href="">Sofa</a></li>
+                    <li><a href="">Chair</a></li>
+                    <li><a href="">Light</a></li>
+                </ul>
+            </div>
+            <div class="product">
+                <article>
+                    <h3 class="ir_pm">first row;kinds</h3>
+                    <div class="column1 col1">
+                        <em><a href="">Add To Cart<span></span></a></em>
+                        <h4>Ramen Stool</h4>
+                        <p>$65.00<span>$95.00</span></p>
+                        <img src="img/col01.png" alt="Ramen Stool" class="img1">
+                    </div>
+                    <!-- //col1 -->
+                    <div class="column1 col2">
+                        <em><a href="">Add To Cart<span></span></a></em>
+                        <h4>Flexform</h4>
+                        <p>$35.00<span>$55.00</span></p>
+                        <img src="img/col02.png" alt="Flexform" class="img2">
+                    </div>
+                    <!-- //col12 -->
+                    <div class="column1 col3">
+                        <em><a href="">Add To Cart<span></span></a></em>
+                        <h4>Porada</h4>
+                        <p>$87.00<span>$97.00</span></p>
+                        <img src="img/col03.png" alt="Porada" class="img3">
+                    </div>
+                    <!-- //col3 -->
+                </article>
+                <article>
+                    <h3 class="ir_pm">second row;kinds</h3>
+                    <div class="column2 col1">
+                        <em><a href="">Add To Cart<span></span></a></em>
+                        <h4>Taknion</h4>
+                        <p>$45.00<span>$55.00</span></p>
+                        <img src="img/col04.png" alt="Taknion" class="img1">
+                    </div>
+                    <!-- //col4 -->
+                    <div class="column2 col2">
+                        <em><a href="">Add To Cart<span></span></a></em>
+                        <h4>Amora</h4>
+                        <p>$65.00<span>$95.00</span></p>
+                        <img src="img/col05.png" alt="Amora" class="img2">
+                    </div>
+                    <!-- //col5 -->
+                    <div class="column2 col3">
+                        <em><a href="">Add To Cart<span></span></a></em>
+                        <h4>Liquid Contract</h4>
+                        <p>$35.00<span>$45.00</span></p>
+                        <img src="img/col6.jpg" alt="Liquid Contract" class="img3">
+                    </div>
+                    <!-- //col6 -->
+                </article>
+            </div>
+        </div>
+    </section>
     <footer id="footer"></footer>
     </div>
+
 
 </body>
 
