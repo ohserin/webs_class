@@ -91,6 +91,13 @@
             text-decoration: none;
         }
 
+        /* 목록 초기화 */
+        ol,
+        ul,
+        li {
+            list-style: none;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -110,8 +117,8 @@
             width: 157px;
             height: 35px;
             background: url(./img/h_logo.svg);
-            background-position: -0 -100px;
-            margin: 30px;
+            background-position: 0 0px;
+            margin: 60px 0 0 100px;
         }
 
         #header .logo a {
@@ -124,9 +131,13 @@
             text-align: center;
         }
 
+        #header .menu ul {
+            margin-top: -50px;
+        }
+
         #header .menu li {
             display: inline-block;
-            padding: 10px;
+            padding: 30px;
             font-weight: 500;
         }
 
@@ -167,6 +178,34 @@
             background-position: 0 -150px;
         }
 
+        .member {
+            display: flex;
+            width: 100px;
+            justify-content: space-between;
+        }
+        .member a {
+            color: #000;
+        }
+        .member a:nth-child(1) {
+            width: 19px;
+            height: 19px;
+            background: url(img/menu_img.svg) 0 0;
+        }
+        .member a:nth-child(2) {
+            width: 19px;
+            height: 19px;
+            background: url(img/menu_img.svg) -50px 0;
+        }
+
+        .member a:nth-child(3) {
+            width: 19px;
+            height: 19px;
+            background: url(img/menu_img.svg) -100px 0;
+        }
+
+
+
+
         #header .header_cont {
             margin-left: 100px;
             background: url(../webClass/img/herder.jpg) no-repeat right;
@@ -179,7 +218,6 @@
             margin-bottom: 37px;
         }
 
-        #header .header_cont p {}
 
         #header .header_cont .btn {
             display: flex;
@@ -207,16 +245,11 @@
             margin: 35px 13px 49px 0;
         }
 
-        #header .header_cont .header_img {}
-
         #banner {
             height: 745px;
             background: rgb(160, 160, 160);
         }
 
-        #contents .con1 {
-            height: 388px;
-        }
 
         #contents .con1 .article_left {
             background: #FCEFE9;
@@ -231,8 +264,8 @@
         }
 
         #contents {
-            height: 3650px;
             width: 1440px;
+            height: 3650px;
             margin: 0 auto;
         }
 
@@ -309,7 +342,7 @@
 
         .con2 .left>div:nth-child(2) {
             width: 409px;
-            background-image: url(img/img_left.png);
+            background-image: url(img/web3C2L.png);
             margin-top: 30px;
         }
 
@@ -326,7 +359,7 @@
 
         .con2 .right>div:nth-child(2) {
             width: 409px;
-            background-image: url(img/img_right.png);
+            background-image: url(img/web3C2R.png);
             margin: 106px 53px 66px 59px;
         }
 
@@ -343,9 +376,6 @@
             margin-left: 67px;
             font-size: 20px;
         }
-
-        .con3 {}
-
         .con3 .con3_header {
             display: flex;
             margin: 0 196px 110px 191px;
@@ -368,9 +398,6 @@
             margin-right: 200px;
 
         }
-
-        .con3 .con3_header li {}
-
         .con3 .con3_header li a {
             color: rgb(169, 167, 166);
         }
@@ -471,8 +498,8 @@
 
         .con3 .product em a span {
             position: absolute;
-            background-image: url(img/web3.svg);
-            background-position: -50px -200px;
+            background-image: url(../webClass/img/spanbg.svg);
+            background-position: 0 0;
             right: 7px;
             top: 7px;
             width: 30px;
@@ -508,7 +535,7 @@
         .con3 .product .column1 .img2 {
             position: absolute;
             top: 100px;
-            left: -40px;
+            left: -37px;
         }
 
         .con3 .product .column1 .img3 {
@@ -519,14 +546,14 @@
 
         .con3 .product .column2 .img1 {
             position: absolute;
-            top: 90px;
+            top: 108px;
             left: -10px;
         }
 
         .con3 .product .column2 .img2 {
             position: absolute;
             top: 90px;
-            left: -80px;
+            left: -68px;
         }
 
         .con3 .product .column2 .img3 {
@@ -537,7 +564,7 @@
 
         #footer {
             height: 180px;
-            background-color: red;
+            background-color: rgb(129, 116, 241);
         }
     </style>
 </head>
@@ -547,8 +574,7 @@
         <header id="header">
             <div class="logo">
                 <h1 class="ir_pm">MISTRIUM</h1>
-                    <a href=""></a>
-                    <a href="">MISTRIUM</a>
+                <a href=""></a>
             </div>
             <nav class="menu">
                 <h2 class="ir_pm">main menu</h2>
@@ -641,21 +667,21 @@
                         <em><a href="">Add To Cart<span></span></a></em>
                         <h4>Ramen Stool</h4>
                         <p>$65.00<span>$95.00</span></p>
-                        <img src="img/col01.png" alt="Ramen Stool" class="img1">
+                        <img src="img/Web3C3c1.png" alt="Ramen Stool" class="img1">
                     </div>
                     <!-- //col1 -->
                     <div class="column1 col2">
                         <em><a href="">Add To Cart<span></span></a></em>
                         <h4>Flexform</h4>
                         <p>$35.00<span>$55.00</span></p>
-                        <img src="img/col02.png" alt="Flexform" class="img2">
+                        <img src="img/Web3C3c2.png" alt="Ramen Stool" class="img2">
                     </div>
                     <!-- //col12 -->
                     <div class="column1 col3">
                         <em><a href="">Add To Cart<span></span></a></em>
                         <h4>Porada</h4>
                         <p>$87.00<span>$97.00</span></p>
-                        <img src="img/col03.png" alt="Porada" class="img3">
+                        <img src="img/Web3C3c3.png" alt="Ramen Stool" class="img3">
                     </div>
                     <!-- //col3 -->
                 </article>
@@ -665,21 +691,21 @@
                         <em><a href="">Add To Cart<span></span></a></em>
                         <h4>Taknion</h4>
                         <p>$45.00<span>$55.00</span></p>
-                        <img src="img/col04.png" alt="Taknion" class="img1">
+                        <img src="img/Web3C3c4.png" alt="Ramen Stool" class="img1">
                     </div>
                     <!-- //col4 -->
                     <div class="column2 col2">
                         <em><a href="">Add To Cart<span></span></a></em>
                         <h4>Amora</h4>
                         <p>$65.00<span>$95.00</span></p>
-                        <img src="img/col05.png" alt="Amora" class="img2">
+                        <img src="img/Web3C3c5.png" alt="Ramen Stool" class="img2">
                     </div>
                     <!-- //col5 -->
                     <div class="column2 col3">
                         <em><a href="">Add To Cart<span></span></a></em>
                         <h4>Liquid Contract</h4>
                         <p>$35.00<span>$45.00</span></p>
-                        <img src="img/col6.jpg" alt="Liquid Contract" class="img3">
+                        <img src="img/Web3C3c6.png" alt="Ramen Stool" class="img3">
                     </div>
                     <!-- //col6 -->
                 </article>
