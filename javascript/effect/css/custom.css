@@ -25,6 +25,22 @@ body {
     overflow: hidden;
     color: #fff;
 }
+body.img01 {
+    background-image: url(../img/slider03.jpg);
+}
+body.img02 {
+    background-image: url(../img/slider04.jpg);
+}
+body.img03 {
+    background-image: url(../img/slider05.jpg);
+}
+body.img04 {
+    background-image: url(../img/slider06.jpg);
+}
+body.img05 {
+    background-image: url(../img/slider07.jpg);
+}
+
 body::before {
     content: '';
     position: absolute;
