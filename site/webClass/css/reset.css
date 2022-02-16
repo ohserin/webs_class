@@ -91,6 +91,9 @@ li {
 em, address {
     font-style: normal;
 }
+img, fieldset, button{
+    border: 0;
+}
 
 /* 스킵 메뉴 */
 #skip {
