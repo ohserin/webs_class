@@ -143,7 +143,32 @@
                         </div>
                         <div class="view-cont">
                             <div>
-                                <pre><code class="language-javascript"></code></pre>
+                                <pre><code class="language-javascript">const sliderWrap = document.querySelector(".slider__wrap")
+const sliderImg = document.querySelector(".slider__img")    
+const sliderInner = document.querySelector(".slider__inner")  
+const slider = document.querySelectorAll(".slider")          
+const sliderBtn= document.querySelector(".slider__btn")
+const sliderBtnPrev = sliderBtn.querySelector(".prev")         
+const sliderBtnNext = sliderBtn.querySelector(".next")          
+
+let currentIndex = 0;
+let sliderCount = slider.length;
+let sliderWidth = sliderImg.offsetWidth; 
+
+function gotoSlider(num){
+    sliderInner.style.transition = "all 400ms";
+    sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)"
+    currentIndex = num;    //현재값을 알아내기 위해서 이렇게 지정해줌
+}
+
+sliderBtnPrev.addEventListener("click", () => {
+    let prevIndex = (currentIndex + (sliderCount -1)) % sliderCount;
+    gotoSlider(prevIndex);
+})
+sliderBtnNext.addEventListener("click", () => {
+    let nextIndex = (currentIndex + 1) % sliderCount;
+    gotoSlider(nextIndex);
+})</code></pre>
                                 
                             </div>
                             <div>

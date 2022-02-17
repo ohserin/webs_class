@@ -169,7 +169,58 @@
                         </div>
                         <div class="view-cont">
                             <div>
-                                <pre><code class="language-javascript"></code></pre>
+                                <pre><code class="language-javascript">const sliderWrap = document.querySelector(".slider__wrap")
+const sliderImg = document.querySelector(".slider__img")    
+const sliderInner = document.querySelector(".slider__inner")  
+const slider = document.querySelectorAll(".slider")          
+const sliderBtn= document.querySelector(".slider__btn")
+const sliderDot= document.querySelector(".slider__dot")
+
+let currentIndex = 0;
+let sliderCount = slider.length;
+let sliderWidth = sliderImg.offsetWidth;
+let dotIndex ="";
+let dotActive;
+
+function init(){
+    slider.forEach(() => dotIndex += "&lt;a href='#' class='dot'&gt;&lt;/a&gt;");
+    sliderDot.innerHTML = dotIndex;
+    sliderDot.firstElementChild.classList.add("active");
+}
+init();
+
+function gotoSlider(num){
+    sliderInner.style.transition = "all 400ms";
+    sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)"
+    currentIndex = num; 
+
+    dotActive = document.querySelectorAll(".slider__dot .dot")
+    dotActive.forEach(el => {
+        el.classList.remove("active");
+    })
+    dotActive[num].classList.add("active");
+}
+
+document.querySelectorAll(".slider__btn a").forEach((btn, index)=>{
+    btn.addEventListener("click", () => {
+
+    
+    let prevIndex = (currentIndex + (sliderCount - 1)) % sliderCount;
+    let nextIndex = (currentIndex + 1) % sliderCount;
+
+    if(btn.classList.contains("prev")){
+    gotoSlider(prevIndex);
+    } else {
+    gotoSlider(nextIndex);
+    };
+});
+});
+
+document.querySelectorAll(".slider__dot .dot").forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+        gotoSlider(index);
+    });
+});</code></pre>
                                 
                             </div>
                             <div>
