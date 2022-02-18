@@ -110,7 +110,11 @@
         }
 
         #header {
-            width: 100%;
+            width: 1250px;
+            display: flex;
+            margin: 0 auto;
+            margin-top: 42px;
+            justify-content: space-between; 
         }
 
         #header .logo {
@@ -118,7 +122,6 @@
             height: 35px;
             background: url(./img/h_logo.svg);
             background-position: 0 0px;
-            margin: 60px 0 0 100px;
         }
 
         #header .logo a {
@@ -132,12 +135,12 @@
         }
 
         #header .menu ul {
-            margin-top: -50px;
+            margin-top: -30px;
         }
 
         #header .menu li {
             display: inline-block;
-            padding: 30px;
+            padding: 33px 0 0 55px;
             font-weight: 500;
         }
 
@@ -205,9 +208,11 @@
 
 
 
-
+        #con {
+            width: 100%;
+        }
         #con .header_cont {
-            margin-left: 100px;
+            margin-left: 330px;
             background: url(../webClass/img/herder.jpg) no-repeat right;
             height: 745px;
         }
@@ -396,7 +401,6 @@
             font-size: 23px;
             margin-top: 185px;
             margin-right: 200px;
-
         }
         .con3 .con3_header li a {
             color: rgb(169, 167, 166);
@@ -561,6 +565,33 @@
             left: 20px;
             top: 120px;
         }
+        #contents .cont2 {
+            width: 1052px;
+            height: 800px;
+            margin: 0 auto;
+            clear: both;
+            position: relative;
+            
+        }
+        #contents .cont2 .cont2_img {
+            width: 477px;
+            height: 615px;
+            background: url(../webClass/img/con2_img.jpg) no-repeat;
+            position: absolute;
+
+        }
+        #contents .cont2 .text {
+            margin: 50px 0 30px 0;
+            float: right;
+        }
+        #contents .cont2 h2 {
+            font-size: 53px;
+            margin-bottom: 30px;
+            color: #3d3d3f;
+        }
+        #contents .cont2 p {
+            font-size: 18px;
+        }
 
         #footer {
             height: 180px;
@@ -663,28 +694,26 @@
             </div>
             <div class="product">
                 <article>
-                    <h3 class="ir_pm">first row;kinds</h3>
+                    <h3 class="ir_pm">first rowkinds</h3>
                     <div class="column1 col1">
                         <em><a href="">Add To Cart<span></span></a></em>
                         <h4>Ramen Stool</h4>
                         <p>$65.00<span>$95.00</span></p>
                         <img src="img/Web3C3c1.png" alt="Ramen Stool" class="img1">
                     </div>
-                    <!-- //col1 -->
                     <div class="column1 col2">
                         <em><a href="">Add To Cart<span></span></a></em>
                         <h4>Flexform</h4>
                         <p>$35.00<span>$55.00</span></p>
                         <img src="img/Web3C3c2.png" alt="Ramen Stool" class="img2">
                     </div>
-                    <!-- //col12 -->
                     <div class="column1 col3">
                         <em><a href="">Add To Cart<span></span></a></em>
                         <h4>Porada</h4>
                         <p>$87.00<span>$97.00</span></p>
                         <img src="img/Web3C3c3.png" alt="Ramen Stool" class="img3">
                     </div>
-                    <!-- //col3 -->
+
                 </article>
                 <article>
                     <h3 class="ir_pm">second row;kinds</h3>
@@ -692,28 +721,40 @@
                         <em><a href="">Add To Cart<span></span></a></em>
                         <h4>Taknion</h4>
                         <p>$45.00<span>$55.00</span></p>
-                        <img src="img/Web3C3c4.png" alt="Ramen Stool" class="img1">
+                        <img src="img/Web3C3c4.png" class="img1">
                     </div>
-                    <!-- //col4 -->
                     <div class="column2 col2">
                         <em><a href="">Add To Cart<span></span></a></em>
                         <h4>Amora</h4>
                         <p>$65.00<span>$95.00</span></p>
-                        <img src="img/Web3C3c5.png" alt="Ramen Stool" class="img2">
+                        <img src="img/Web3C3c5.png" class="img2">
                     </div>
-                    <!-- //col5 -->
                     <div class="column2 col3">
                         <em><a href="">Add To Cart<span></span></a></em>
                         <h4>Liquid Contract</h4>
                         <p>$35.00<span>$45.00</span></p>
-                        <img src="img/Web3C3c6.png" alt="Ramen Stool" class="img3">
+                        <img src="img/Web3C3c6.png" class="img3">
                     </div>
-                    <!-- //col6 -->
                 </article>
+            </div>
+            <div class="cont2">
+                <div class="cont2_img"> </div>
+                <div class="text">
+                    <h2>Let’s see what our<br>
+                        customer’s say</h2>
+                        <p>Dwelling and speedily ignorant any steepest.<br>
+                            Admiration instrument affronting invitation reasonably<br>
+                            up do of prosperous in. Shy saw declared age debating<br>
+                            ecstatic man. Call in so want pure rank am dear were.<br>
+                            Remarkably to continuing in surrounded diminution on.</p>
+                        </div>
+                       
             </div>
         </div>
     </section>
-    <footer id="footer"></footer>
+    <footer id="footer">
+        <div class="box"></div>
+    </footer>
     </div>
 
 
