@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/html.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/html.png">
+    <link rel="icon" href="../assets/face/html.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <h1><a href="index.html">라인 중학교 1학년 코딩반</a></h1>
+        <strong>오세린</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="html.html">HTML <em>웹표준/웹접근성/웹호환성</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="html.html">속성</a></li>
+                <li><a href="htmReference01.html">기초 문법</a></li>
+                <li><a href="htmReference02.html">웹표준/웹접근성/웹호환성</a></li>
+                <li class="active"><a href="htmReference03.html">시멘틱 태그</a></li>
+                <li><a href="htmReference04.html">SEO</a></li>
+                <li><a href="htmReference05.html">그리드 시스템</a></li>
+                <li><a href="htmReference06.html">와이어 프레임</a></li>
+
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>시멘틱 태그</h2>
+                    <p> <p>시맨틱(Semantic) 태그는 의미가 있는 태그란 뜻입니다. HTML 태그를 통해 웹 문서를 작성할 때 좀 더 의미 있는 태그를 사용함으로써 정확하게 정보를 전달하고 웹 문서의 구조를 쉽게 파악할 수 있도록 합니다. 
+                        또한, 검색 엔진은 웹 사이트의 HTML 태그들을 분석하여 사용자가 원하는 정보를 노출시키기 때문에 시맨틱 마크업은 중요합니다.</p></p>
+                    <h3>종류</h3>
+                    <div class="table">
+                        <table>
+                            <tbody>
+                                <th>&lt;header&gt;</th>
+                                <td>&lt;header&gt; 웹문서 상단을 의미한다. 주로 로고, 타이틀 등이 포함되어 있다.</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;nav&gt;</th>
+                                <td>&lt;nav&gt; 내비게이션을 나타내는 태그이다. 주로 메뉴등이 포함된다.</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;aside&gt;</th>
+                                <td>&lt;aside&gt;왼쪽 또는 오른쪽 사이드 부분을 나타내는 태그이다.</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;section&gt;</th>
+                                <td>&lt;section&gt; 태그는 주제별 그룹의 콘텐츠 섹션을 나타낼 때 사용합니다.</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;article&gt;</th>
+                                <td>&lt;article&gt; 마찬가지로 본문의 내용을 나타낸다. section과는 조금 다른 의미를 가지고 있다.</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;footer&gt;</th>
+                                <td>&lt;footer&gt; 웹문서의 하단 부분을 나타내는 태그이다.</td>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>HTML5에 없어진 태그</h3>
+                    <div class="table">
+                        <table>
+                            <tbody>
+                                <th>&lt;acronym&gt;</th>
+                                <td><p>영문 축양형 사용 시, 예를 들어 NATO, NASA, GUI 등</p></td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;applet&gt;</th>
+                                <td>임베디드 애플릿 사용시</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;basefont&gt;</th>
+                                <td>글꼴의 형태 정의</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;big&gt;</th>
+                                <td>글꼴의 크기 지정</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;center&gt;</th>
+                                <td>텍스트 위치 중앙 정렬</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;dir&gt;</th>
+                                <td>디렉토리 리스트</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;font&gt;</th>
+                                <td>글꼴</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;frame&gt;</th>
+                                <td>프레임</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;frameset&gt;</th>
+                                <td>프레임 부속 태그</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;noframes&gt;</th>
+                                <td>프레임 부속 태그</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;strike&gt;</th>
+                                <td>글꼴 효과 (글 취소 효과)</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;tt&gt;</th>
+                                <td>글꼴 효과 (타자기 효과)</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;u&gt;</th>
+                                <td>글꼴 효과 언더라인</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;xmp&gt;</th>
+                                <td>pre 태그와 동일 효과</td>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p></p>
+
+                    <h3>HTML5에 의미가 변경된 태그</h3>
+                    <div class="table">
+                        <table>
+                            <tbody>
+                                <th>태그</th>
+                                <th>변경 전</th>
+                                <th>변경 후</th>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;a&gt;</th>
+                                <td>href="#", href="javascript:;"로 null link(널링크) 사용</td>
+                                <td>href 속성없이 사용하면 바로 null link(널링크)로 사용</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;address&gt;</th>
+                                <td>이름, 이메일주소, 전화번호 등 제작자에 대한 정보 표시</td>
+                                <td>실제 우편 주소를 표시</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;b&gt;</th>
+                                <td>텍스트를 진하게</td>
+                                <td>내용이 중요하지는 않지만 진하게 표시할 때 사용</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;hr&gt;</th>
+                                <td>단순한 가로줄 표시</td>
+                                <td>단락 단위로 주제 변경 시 사용</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;i&gt;</th>
+                                <td>텍스트 기울어지게 표시</td>
+                                <td>텍스트를 기울어지게 할 뿐 아니라, 중요한 정보가 들어있지 않은 주변 요소로부터 텍스트를 따로 표시할때 사용</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;menu&gt;</th>
+                                <td>사용하지 않도록 권고</td>
+                                <td>실제 문서 메뉴 정보를 제공하는데 사용</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;small&gt;</th>
+                                <td>작은 글자로 표시</td>
+                                <td>세부 주석이나 법적 인쇄 문서에서 작은 인쇄 정보를 표시할 때 사용</td>
+                            </tbody>
+                            <tbody>
+                                <th>&lt;strong&gt;</th>
+                                <td>글자 강조</td>
+                                <td>단순히 글자를 강조하는 것보다 중요한 내용을 표시할 때 사용</td>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+        </div>
+        <!-- //refer -->
+    </main>
+
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+
+</html>

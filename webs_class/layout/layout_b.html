@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout03</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #wrap {
+        width: 1200px;
+        background-color: #FCE4EC;
+        margin: 0 auto;
+    }
+
+    #header {
+        width: 1200px;
+        height: 100px;
+        background-color: #F8BBD0;
+    }
+
+    #nav {
+        width: 1200px;
+        height: 100px;
+        background-color: #F48FB1;
+    }
+
+    #contents {
+        width: 1200px;
+        display: flex;
+        background-color: #E91E63;
+    }
+
+    #contents .aside {
+        width: 300px;
+        height: 780px;
+        background-color: #F06292;
+    }
+
+    #contents .content .article1 {
+        width: 50%;
+        height: 260px;
+        background-color: #EC407A;
+    }
+
+    #contents .content .article2 {
+        width: 900px;
+        height: 260px;
+        background-color: #C2185B;
+    }
+
+    #contents .content .article3 {
+        width: 900px;
+        height: 260px;
+        background-color: #880E4F;
+    }
+
+    #footer {
+        width: 1200px;
+        height: 100px;
+        background-color: #F50057;
+    }
+</style>
+
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <section id="contents">
+            <aside class="aside"></aside>
+            <section class="content">
+                <article class="article1"></article>
+                <article class="article2"></article>
+                <article class="article3"></article>
+            </section>
+        </section>
+        <footer id="footer"></footer>
+    </div>
+
+</body>
+
+</html>

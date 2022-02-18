@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <h1><a href="index.html">라인 중학교 1학년 코딩반</a></h1>
+        <strong>오세린</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="css.html">CSS <em>float의 영역 깨짐</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">Block/Inline</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li><a href="cssRefer04.html">CSS 색상</a></li>
+                <li><a href="cssRefer05.html">id/class 차이점</a></li>
+                <li><a href="cssRefer06.html">float의 영역 깨짐</a></li>
+                <li class="active"><a href="cssRefer07.html">vendor prefix</a></li>
+                <li><a href="cssRefer08.html">이미지 표현방법</a></li>
+                <li><a href="cssRefer09.html">IR 효과</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>vendor prefix란?</h3>
+                <p>벤더 프리픽스는 브라우저마다 따로 놀던 CSS3의 속성을 각각의 브라우저들이 인식할 수 있게 해주기 위해서 만들어졌습니다.
+
+                    CSS 표준안으로 확정되지 않았거나 특정 브라우저에서만 지원되는 CSS 속성을 사용하고싶을 때, 벤더 프리픽스를 사용하면 그 기능이 포함되어 있지 않은 브라우저에서도 사용할 수
+                    있게 해줍니다.</p>
+
+                <h4>벤더 프리픽스를 사용하는 방법</h4>
+
+                <div class="line">
+                    <p>
+                        -webkit-border-radius: 10px; //크롬, 사파리<br>
+                        -moz-border-radius: 10px; // 파이어폭스<br>
+                        -o-border-radius: 10px; //오페라<br>
+                        -ms-border-radius: 10px; //인터넷 익스플로러<br>
+                        border-radius: 10px;
+                    </p>
+                </div>
+                <p>
+                    CSS 속성은 속성이 오는 순서에 따라 순차적으로 적용되기 때문에 벤더 프리픽스가 붙은 속성과 표준 속성이 모두 있을 경우 나중에 나오는 속성이 적용됩니다.
+표준 속성을 가장 마지막에 둔다는 것은 주의해야 합니다.
+                </p>
+
+                <h4>브라우저별 벤더 프리픽스 사용법</h4>
+            <div class="table">
+                <table>
+                    <colgroup>
+                        <col style="width: 40%" />
+                        <col style="width: 60%" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Browser</th>
+                            <th>Vendor Prefix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>IE or Edge</td>
+                            <td>-ms-</td>
+                        </tr>
+                        <tr>
+                            <td>Chrome</td>
+                            <td>-webkit-</td>
+                        </tr>
+                        <tr>
+                            <td>Firefox</td>
+                            <td>-moz-</td>
+                        </tr>
+                        <tr>
+                            <td>Safari</td>
+                            <td>-webkit-</td>
+                        </tr>
+                        <tr>
+                            <td>Opera</td>
+                            <td>-o-</td>
+                        </tr>
+                        <tr>
+                            <td>iOS Safari</td>
+                            <td>-webkit-</td>
+                        </tr>
+                        <tr>
+                            <td>Android Browser</td>
+                            <td>-webkit-</td>
+                        </tr>
+                        <tr>
+                            <td>Chrome for Android</td>
+                            <td>-webkit-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+            <!-- //refer -->
+    </main>
+
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+
+</html>

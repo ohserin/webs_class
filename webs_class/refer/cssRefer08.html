@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <h1><a href="index.html">라인 중학교 1학년 코딩반</a></h1>
+        <strong>오세린</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="css.html">CSS <em>이미지 표현방법</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">Block/Inline</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li><a href="cssRefer04.html">CSS 색상</a></li>
+                <li><a href="cssRefer05.html">id/class 차이점</a></li>
+                <li><a href="cssRefer06.html">float의 영역 깨짐</a></li>
+                <li><a href="cssRefer07.html">vendor prefix</a></li>
+                <li class="active"><a href="cssRefer08.html">이미지 표현방법</a></li>
+                <li><a href="cssRefer09.html">IR 효과</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>이미지를 표현하는방법</h3>
+                <p>alt 태그<br>
+                    이미지가 없을때 출력할 대체 문자 표현 (웹접근성조건)<br>
+                    css- background 속성으로 표현 (이미지가 의미가 없을 때) / 대체문자x<br>
+                    a { background: url(../img/icon.png) repeat-x}</p>
+
+                <h4>요즘 사이트는 이미지를 모두 background 속성으로 표현합니다.</h4>
+                <p>왜냐하면 백그라운드로 만들면 편하기 때문입니다. 이미지 스프라이트 기법(다수의 이미지를 하나의 이미지에 포함시키고 좌표와 크기지정을 통해 추출하여 사용하는 방식) 으로 이미지를
+                    한번에 정렬하여 작업하면 수정하기 편하고 이미지용량이 더 줄어든다.
+                    대신 가상으로 대체 문자를 만들어주기 위해 IR기법 사용합니다. (웹 표준을 준수하기위해)</p>
+
+                <h3>이미지 스프라이트(image sprite)</h3><br>
+
+                <img src="../site/webClass/img/img_2.JPG" alt="이미지스프라이트1">
+                <img src="../site/webClass/img/img_1.JPG" alt="이미지스프라이트2">
+                <p>이미지 스프라이트(image sprite)란 여러 개의 이미지를 하나의 이미지로 합쳐서 관리하는 이미지를 의미합니다.
+
+
+
+                    웹 페이지에 이미지가 사용될 경우 해당 이미지를 다운받기 위해 웹 브라우저는 서버에 이미지를 요청하게 됩니다.
+
+                    하지만 사용된 이미지가 많을 경우 웹 브라우저는 서버에 해당 이미지의 수만큼 요청해야만 하므로 웹 페이지의 로딩 시간이 오래 걸리게 됩니다.
+
+
+
+                    이미지 스프라이트(image sprite)를 사용하면 이미지를 다운받기 위한 서버 요청을 단 몇 번으로 줄일 수 있습니다.
+
+                    모바일 환경과 같이 한정된 자원을 사용하는 플랫폼(platform)에서는 웹 페이지의 로딩 시간을 단축해주는 효과가 있습니다.
+
+                    또한, 많은 이미지 파일을 관리하는 대신 몇 개의 스프라이트 이미지(sprite image) 파일만을 관리하면 되므로 매우 간편합니다.
+
+
+
+                    다음 예제는 하나의 이미지를 가지고 네 개의 아이콘을 만드는 예제입니다.
+
+                    네 개의 아이콘을 만들기 위해 네 개의 이미지를 사용하는 것이 아닌 다음 이미지 하나만을 가지고 작업하게 됩니다.
+
+                </p>
+
+                <h4>이미지 스트라이트의 위치를 얻는 방법</h4>
+
+                <p>하나씩 스타일을 조정하면서 위치를 얻는 방법도 있겠지만, 편한 방법으로 온라인 도구를 사용하는 것이 가장 좋습니다. 
+                    와 같은 사이트에서는 이미지 스프라이트 위치를 쉽게 찾을 수 있습니다. 따라서, 이미지들을 조합하여 이미지의 집 한인 스프라이트를 생성했고, 
+                    그것을 웹페이지에 적용하고자 한다면 해당 이미지를 요청한 뒤 위의 사이트를 활용하여 위치 값을 잡을 수 있습니다.</p>
+
+                <h3>이미지 스프라이트의 장점</h3>
+                <h4>1. 요청을 단 한번 만한다.</h4>
+                <p>브라우저는 화면을 그릴 때 필요한 모든 자원(이미지, CSS, JS 등)을 서버에 요청하고 가져와 사용합니다. 서버에 요청하고 가져오는 작업은 일괄적으로 한 번에 이루어지지
+                    않습니다.
+                    서버에 자원을 요청하는 구문이 사용된 횟수만큼 서버에 자원을 요청합니다.</p>
+
+                <h4>2. 하나의 이미지 파일만 관리한다.</h4>
+
+                <p> 이미지 스프라이트는 여러 개의 이미지를 하나로 합쳤기 때문에, 합친 이미지의 개수만큼 관리를 해야 하는 이미지 파일이 줄어듭니다. 관리해야 하는 이미지 수가 줄어든다는 것은
+                    관리하는 대상이 줄어든다는 말과 같기 때문에 유지보수 측면에서도 유리한 점이 있습니다.
+                    다만 스프라이트 이미지를 만드는 경우는 아이콘들처럼 문맥적으로 같은 유형을 묶어서 사용하는 것이 좋습니다. 아무리 하나의 이미지라도 다른 의미를 지닌 이미지를 합친다면, 하나의
+                    이미지를 관리하는 게 아니라 여러 개의 이미지를 하나의 파일에서 관리하는 것 일 뿐입니다.
+                </p>
+
+
+
+                <h4>CSS속성 / background-image 백그라운드 이미지 사용하는 경우</h4>
+
+                <div class="line">
+                    <p>
+                        일정부분만 선택해 보여줄 경우 (ex 호버 버튼)<br>
+                        : 간단하게 css를 사용하여 이미지를 다른 것으로 손 쉽게 변경 가능하다.<br><br>
+
+                        이미지 위에 텍스트가 들어가는 경우<br>
+                        :이미지 위에 텍스트가 들어가는 경우에는 백그라운드 이미지를 넣고 그 태그 내부에 간단히 텍스트를 넣어 사용할 수 있다.<br><br>
+
+                        페이지 전체 출력시 이미지를 제거해야 되는 경우<br>
+                        :이미지가 출력되면 곤란한 경우나 겹치는 경우에 해당한다.<br><br>
+
+                        CSS sprites를 사용해 이미지 속도를 향상시킬 경우<br>
+                        수많은 img 태그를 퍼블리싱한 방법보다 CSS sprites 기법을 사용하면 이미지의 수정, 보관, 관리가 용이하고 로딩 속도도 향상할 수 있다.<br><br>
+
+                        배경 전체에 확대해 보여줄 필요가 있는 경우<br>
+                        background-size 등의 속성을 사용해 배경 이미지의 크기를 간단하게 조작 가능합니다.
+                    </p>
+                </div>
+
+
+            </div>
+            <!-- //refer -->
+    </main>
+
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+
+</html>

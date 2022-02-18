@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/javascript.png">
+    <link rel="apple-touch-icon-precomposed" href="javascript.png">
+    <link rel="icon" href="../assets/face/javascript.png" sizes="128x128">
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="index.html">Javascript</a></h1>
+        <nav>
+            <ul>
+                <li><a href="reference01.html">기초 문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li><a href="reference03.html">자료형</a></li>
+                <li class="active"><a href="reference04.html">for문</a></li>
+                <li><a href="reference05.html">연산자</a></li>
+                <li><a href="reference06.html">조건문</a></li>
+                <li><a href="reference07.html">반복문</a></li>
+                <li><a href="reference08.html">함수</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="doc">
+            <h2>for()문</h2>
+            <p>for문은 조건식을 만족할 때 까지 특정 코드를 반복하여 실행합니다. 사용 방법은 while문과 같지만<br>
+                while문 보다 사용하기 편해 사용 빈도가 높은 편 입니다.</p>
+
+            <div class="line">
+                for(초깃값; 조건식; 증감식){
+                자바스크립트 코드;
+                }
+            </div><br>
+
+            <p>다음은 for문으로 '반복1~반복10'까지 i를 1씩 증가하며 출력한 예제입니다.</p>
+            <div class="code">
+                <pre><code>&lt;script&gt;
+    초깃값     조건식   증감식
+    for(var i = 1; i &lt;10; i++){
+    document.write("반복" + i, "&lt;br&gt;");   //중괄호의 코드가 10회 반복해서 실행됩니다.
+    }
+&lt;/script&gt;</code></pre>
+            </div><br>
+            <div class="line">
+                실행결과:<br>
+                반복1<br>
+                반복2<br>
+                반복3<br>
+                반복4<br>
+                반복5<br>
+                반복6<br>
+                반복7<br>
+                반복8<br>
+                반복9<br>
+                반복10</div>
+            <br>
+            <h2>for()문 문법 </h2>
+            <p>
+                foreach 반복문은 오직 Array 객체에서만 사용가능한 메서드입니다. 배열의 요소들을 반복하여 작업을 수행할수 있습니다.<br>
+                foreach구문의 인자로 callback함수를 등록할수 있고, 배열의 각 요소들이 반복될 떄 이 callback 함수가 호출됩니다. callback 함수에서 배열요소의 인덱스와 값에
+                접근할 수 있습니다.
+            </p>
+
+            <div class="code">
+                <pre><code>var arr = ['가','나','다','라'];
+arr.forEach(function(item,index,arr2){
+console.log(item,index,arr2[index+1]); })
+
+//첫번째 인수는 배열의 각각의 item
+//두번째 인수는 배열의 index
+//세번째 인수는 배열 그자체</code></pre>
+</div>
+
+
+
+        </div>
+    </main>
+</body>
+
+</html>

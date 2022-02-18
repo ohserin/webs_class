@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <h1><a href="index.html">라인 중학교 1학년 코딩반</a></h1>
+        <strong>오세린</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="css.html">CSS <em>id/class 차이점</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">Block/Inline</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li><a href="cssRefer04.html">CSS 색상</a></li>
+                <li class="active"><a href="cssRefer05.html">id/class 차이점</a></li>
+                <li><a href="cssRefer06.html">float의 영역 깨짐</a></li>
+                <li><a href="cssRefer07.html">vendor prefix</a></li>
+                <li><a href="cssRefer08.html">이미지 표현방법</a></li>
+                <li><a href="cssRefer09.html">IR 효과</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>id/class 차이점</h3>
+                <p>id 선택자와 class 선택자의 차이는 문서 안의 '복수'의 요소에 스타일을 적용하는 것인가 아니면 '유일'한 요소에 스타일을 적용하는 것인가입니다.
+                    결론적으로 말하면 id는 '유일'한 요소에 적용, class는 '복수'의 요소에 적용할 수 있습니다.<br></p>
+                    <div class="line">
+                        <p> id : '유일'한 요소에 스타일을 적용<br>
+                            class : '복수'의요소에 스타일을 적용</p>
+                    </div>
+                    <h4>id 선택자</h4>
+                <p>id 선택자는 문서 안에 있는 단 하나의 요소에 스타일을 적용하는 경우에 사용합니다. 선택자에 샤프(#)와 id명(임의의 이름)을 붙여 식별합니다.</p>
+                <h4>class 선택자</h4>
+                <p>class 선택자는 문서 안 복수 요소에 스타일을 적용하는 경우에 사용합니다. 요소명에 피리어드(.)와 class명(임의의 이름)을 붙여 구별합니다.</p>
+
+                <h3>이름을 불러오는 방식</h3>
+               <p>클래스를 불러올 때는 클래스명 앞에 마침표(.)를 찍어준다. 아이디를 불러올 때는 아이디값 앞에 샵(#) 표시를 해준다.
+                아래는 아이디값과 클래스명을 모두 가진 &lt;p&gt;태그가 있고, 이것을 css를 이용하여 꾸며줍니다.</p>
+                <div>
+<pre class="line-numbers"><code class="language-js">&lt;p id = "attendance" class = "name"&gt;김영희&lt;/p&gt;
+&lt;style&gt;
+#attendance {
+    color: grey;
+    font-size: 16px;
+}
+.name {
+    text-align: center;
+    
+}
+&lt;/style&gt;</code></pre>
+                </div>
+                <h3>중복 사용 여부</h3>
+               <p>클래스는 중복 사용이 가능하여, 동일한 클래스명을 페이지의 여러 곳에 사용해도 무방하지만 아이디는 중복으로 사용할 수 없다. 한 개의 아이디는 페이지에서 딱 한번만 사용해야 한다.</p>
+<div>
+<pre class="line-numbers"><code class="language-js">// name 클래스를 여러 곳에 중복으로 사용할 수 있음
+    &lt;p class = "name"&gt;김영희&lt;/p&gt;
+    &lt;p class = "name"&gt;박철수&lt;/p&gt;
+    
+    // attendance 아이디는 여러곳에 사용할 수 없음
+    //김영희가 속한 &lt;p&gt; 태그에 사용했다면 박철수가 속한 &lt;p&gt; 태그에는 사용불가
+    &lt;p id = "attendance"&gt;김영희&lt;/p&gt;
+    &lt;p&gt;박철수&lt;/p&gt;</code></pre>
+</div>
+                <h3>한 요소가 갖는 클래스 & 아이디의 갯수 제한</h3>
+               <p>클래스(class)의 경우에는 한 요소에 여러개의 클래스명이 적용될 수 있다. 그러나 아이디(id)는 한 요소에 한 아이디만 적용이 가능합니다.</p>
+<div>
+<pre class="line-numbers"><code class="language-js">//하나의  &lt;p&gt; 태그에 여러 클래스 사용, 클래스를 추가할 때는 띄어쓰기로 구분
+    &lt;p class = "school name friend"&gt;김영희&lt;/p&gt;
+    
+    // 하나의 &lt;p&gt; 태그에 하나의 아이디만 사용 가능 
+    &lt;p id = "attendance"&gt;김영희&lt;/p&gt;
+    
+    // 여러개 아이디를 사용할 수 없음. 아이디의 잘못된 사용 
+    &lt;p id = "attendance education"&gt;김영희&lt;/p&gt;
+    
+    // 한 요소가 여러개의 클래스, 한개의 아이디를 동시에 가지는 것은 가능 
+    &lt;p class="school name" id="attendance"&gt;김영희&gt;&lt;/p&gt;</code></pre>
+</div>
+<p>즉, 여러가지 스타일링을 한꺼번에 적용해야 할 때는 클래스(class)를 사용하고, 한가지만 적용하고 싶다면 아이디(id)를 사용하면 됩니다.</p>
+            </div>
+        <!-- //refer -->
+    </main>
+
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+
+</html>
