@@ -46,12 +46,42 @@
             background-color: rgba(255,255,255,0.1);
             user-select: none;
             pointer-events: none;
-            transition: background-color 0.2s,
-                        border-color 0.2s;
+            transition: background-color .2s,
+                        border-color .2s,
+                        border-radius .2s,
+                        transform .6s;
         }
-        .cursor .style1 {
+        .cursor.style1 {
             background-color: rgba(255,165,0,0.4);
             border-color: orange;
+        }
+        .cursor.style2 {
+            background-color: rgba(140, 0, 255, 0.4);
+            border-color: rgb(140, 0, 255);
+            transform: rotate(720deg) scale(2);
+        }
+        .cursor.style3 {
+        background-color: rgb(0, 47, 255, 0.4);
+        border-color: rgb(0, 47, 255);
+        transform: scale(1.5) rotate(45deg);
+        border-radius: 10px;
+        }
+        .cursor.style4 {
+            background-color: rgb(121, 235, 197, 0.4);
+            border-color: rgb(121, 235, 197);
+            transform: scale(10) rotateY(360deg);
+        }
+        .cursor.style5 {
+            background-color: rgb(255, 0, 85, 0.4);
+            border-color: rgb(255, 0, 85);
+            transform: rotateY(720deg) scale(0.1);
+        }
+
+        .cursor.style6 {
+            background-color: rgba(187, 255, 27, 0.74);
+            border-color: rgb(241, 255, 165);
+            transform: scale(5) rotateX(360deg);
+            border-radius: 5px;
         }
 
 
@@ -177,6 +207,43 @@
         document.querySelector(".style1").addEventListener("mouseout", () => {
             document.querySelector(".cursor").classList.remove("style1");
         })
+        document.querySelector(".style2").addEventListener("mouseover", () => {
+            document.querySelector(".cursor").classList.add("style2");
+        })
+        document.querySelector(".style2").addEventListener("mouseout", () => {
+            document.querySelector(".cursor").classList.remove("style2");
+        })
+        document.querySelector(".style3").addEventListener("mouseover", () => {
+            document.querySelector(".cursor").classList.add("style3");
+        })
+        document.querySelector(".style3").addEventListener("mouseout", () => {
+            document.querySelector(".cursor").classList.remove("style3");
+        })
+        document.querySelector(".style4").addEventListener("mouseover", () => {
+            document.querySelector(".cursor").classList.add("style4");
+        })
+        document.querySelector(".style4").addEventListener("mouseout", () => {
+            document.querySelector(".cursor").classList.remove("style4");
+        })
+        document.querySelector(".style5").addEventListener("mouseover", () => {
+            document.querySelector(".cursor").classList.add("style5");
+        })
+        document.querySelector(".style5").addEventListener("mouseout", () => {
+            document.querySelector(".cursor").classList.remove("style5");
+        })
+        document.querySelector(".style6").addEventListener("mouseover", () => {
+            document.querySelector(".cursor").classList.add("style6");
+        })
+        document.querySelector(".style6").addEventListener("mouseout", () => {
+            document.querySelector(".cursor").classList.remove("style6");
+        })
+
+        // const mouseOver = document.querySelectorAll(".mouse__wrap p span");
+
+        // //for ()
+        // for(let i=0; i<6; i++)
+        // style[i].
+        // //forEach ()
 
     </script>
 </body>

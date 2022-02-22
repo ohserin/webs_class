@@ -706,63 +706,63 @@
         <a href="mailto:dhtpfls321@naver.com">dhtpfls321@naver.com</a>
     </footer>
 
-    <script>
-        const quizType = document.querySelector(".quiz__type");         //문제 유형
-        const quizNumber = document.querySelector(".quiz__number");     //문제 번호
-        const quizAsk = document.querySelector(".quiz__ask");           //문제 질문
-        const quizConfirm = document.querySelector(".quiz__confirm");   //문제 정답 버튼
-        const quizResult = document.querySelector(".quiz__result");     //문제 정답
-        const quizView = document.querySelector(".quiz__view");         //문제 화면
+     <script>
+        const quizType = document.querySelector(".quiz__Type");          //문제 유형
+        const quizNumber = document.querySelector(".quiz__number");      //문제 번호
+        const quizAsk = document.querySelector(".quiz__ask");            //문제 질문
+        const quizConfirm = document.querySelector(".quiz__confirm");    //문제 정답 버튼
+        const quizResult = document.querySelector(".quiz__result");      //문제 설명
+        const quizView = document.querySelector(".quiz__view");          //문제 화면
         const quizSelects = document.querySelector(".quiz__selects");    //객관식 보기
-        const quizChoice = quizSelect.querySelectorAll(".quiz__choice");    //객관식 보기
-        const quizSelect = quizSelect.querySelectorAll(".quiz__select");    //객관식 보기
+        const quizChoice = quizSelects.querySelectorAll(".choice");      //객관식 보기
+        const quizSelect = quizSelects.querySelectorAll(".select");      //객관식 보기
 
         //문제 정보
-       const quizInfo = [
+        const quizInfo = [
             {
-                anwerType : "javascript",
-                anwerNum : 1,
-                anwerAsk : "객체 기반의 스크립트 프로그래밍 언어는 무엇입니까?",
-                anwerChoice :["javascript","html","css","jquery"],
-                anwerResult : "1",
-                anwerEx : "객체 기반의 스크립트 프로그래밍 언어는 자바스크립트입니다."
-
+                answerType : "javascript",
+                answerNum : 1,
+                answerAsk : "객체 기반의 스크립트 프로그래밍 언어는 무엇입니까?",
+                answerChoice : ["javascript", "html", "css", "jquery"],
+                answerResult : "1",
+                answerEx : "객체 기반의 스크립트 프로그래밍 언어는 자바스크립트입니다."
             }
-            ];
-
-            //문제출력
-            function updataQuiz(){
-                //타입, 문제, 정답, 보기
-                quizType.textContent = quizInfo[0].anwerType;
-                quizNumber.textContent = quizInfo[0].anwerNum + ". ";
-                quizAsk.textContent = quizInfo[0].anwerAsk;
-                quizResult.textContent = quizInfo[0].anwerEx;
-
-                for(let i=0; i<4; i++)
-                quizChoice[i].textContent = quizInfo[0].anwerChoice[i];
-                
-                //설명 감추기
-                quizResult.style.display = "none";
+        ];
+        
+        //문제 출력
+        function updateQuiz(){
+            quizType.textContent = quizInfo[0].answerType;
+            quizNumber.textContent = quizInfo[0].answerNum;
+            quizAsk.textContent = quizInfo[0].answerAsk;
+            quizResult.textContent = quizInfo[0].answerEx;
+            for(let i=0; i<4; i++){
+                quizChoice[i].textContent = quizInfo[0].answerChoice[i];
             }
-            
-            updataQuiz();
 
-            //정답 확인
-            function answerQuiz() {
-                //사용자가 클릭한 input -->checked : 사용자가 선택한 정답 == 객체 안에 정답
-                for(let i=0; i<quizSelect.lenght; i++){
-                    if(quizSelect[i].checked == true){
-                        if(quizSelect[i].value == quizInfo[0].anwerResult){
-                            //정답
-                        }else {
-                            //오답
-                        }
+            //설명 감추기
+            quizResult.style.display = "none";
+        }
+        updateQuiz();
+
+        //정답 확인
+        function answerQuiz(){
+            //사용자가 클릭한 input --> checked : 사용자가 선택한 정답 == 객체 안에 정답
+            for(let i=0; i<quizSelect.length; i++){
+                if(quizSelect[i].checked == true){      //사용자가 무엇을 체크했는지 확인
+                    if(quizSelect[i].value == quizInfo[0].answerResult){
+                        //정답일때
+                        quizView.classList.add("like");
+                        quizConfirm.style.display = "none";
+                    } else {
+                        //오답일때
+                        quizView.classList.add("dislike");
+                        quizConfirm.style.display = "none";
+                        quizResult.style.display = "block"
                     }
                 }
-             
             }
-
-            quizConfirm.addEventListener("click", answerQuiz)
+        }
+        quizConfirm.addEventListener("click", (answerQuiz))
     </script>
 </body>
 </html>
