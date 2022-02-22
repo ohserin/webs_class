@@ -40,6 +40,15 @@ body.img04 {
 body.img05 {
     background-image: url(../img/slider07.jpg);
 }
+body.img06 {
+    background-image: url(../img/slider10.jpg);
+}
+body.img07 {
+    background-image: url(../img/slider08.jpg);
+}
+body.img08 {
+    background-image: url(../img/slider09.jpg);
+}
 
 body::before {
     content: '';
@@ -109,6 +118,13 @@ body::before {
 .source button:hover {
     background: #fff;
     color: #000
+}
+.attr {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    font-size: 14px;
+    line-height: 1.6;
 }
 /* modal */
 #modal {
