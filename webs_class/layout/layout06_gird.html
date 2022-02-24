@@ -51,6 +51,30 @@
             background-color: #FF9800;
             grid-area: footer;
         }
+        @media(max-width: 1300px){
+            #wrap {
+                width: 96%;
+            }
+        }
+        @media (max-width: 768px) {
+            #wrap {
+                width: 100%;
+            }
+        }
+        @media (max-width: 600px) {
+            #wrap {
+                display: grid;
+            grid-template-areas:
+                "header "
+                "nav "
+                "aside"
+                "contents"
+                "footer "
+                ;
+            grid-template-columns: 100%;
+            grid-template-rows: 100px 100px 300px 480px 100px;
+            }
+        }
 
     </style>
 </head>
