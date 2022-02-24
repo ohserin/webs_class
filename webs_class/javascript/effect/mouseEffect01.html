@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마우스 이펙트</title>
+
     <link rel="stylesheet" href="css/NexonLv1Gothic.css">
     <link rel="stylesheet" href="css/draula.min.css">
     <link rel="stylesheet" href="css/custom.css">
+
     <style>
         body::before {
             background: rgba(5, 36, 70, 0.87)
@@ -87,25 +90,26 @@
 
     </style>
 </head>
+
 <body class="img08">
     <!-- main -->
     <main>
         <section id="mouseType01">
             <div class="cursor"></div>
-
             <div class="mouse__wrap">
                 <p><span class="style1">Getting</span> lost <span class="style2">means</span> finding a <span class="style3">new way.</span></p>
-                <p>길을<span class="style4">잃는다</span>는 것은 곧 <span class="style5">새로운</span> 길을 <span class="style6">알게 된다</span>는 것이다</p>
+                <p>길을 <span class="style4">잃는다</span>는 것은 곧 <span class="style5">새로운</span> 길을 <span class="style6">알게 된다</span>는 것이다.</p>
             </div>
         </section>
     </main>
-    <!-- //main -->
+
     <!-- info -->
     <div class="info">
         <div class="title">
-            <h1><a href="mouseEffect.html">JavaScript Mouse Effect01</a></h1>
+            <h1><a href="mounseEffect.html">Javascript Mouse Effect01</a></h1>
             <p>마우스 이펙트 - 따라다니기</p>
         </div>
+
         <div class="number">
             <ul>
                 <li class="active"><a href="mouseEffect01.html">1</a></li>
@@ -118,14 +122,15 @@
                 <li><a href="mouseEffect08.html">8</a></li>
             </ul>
         </div>
+
         <div class="source">
-            <button class="source-btn">소스보기</button>
+            <button class="source-btn">소스 보기</button>
             <div id="modal">
                 <div class="modal-wrap">
                     <div class="modal-cont">
                         <div class="code-view">
                             <div class="view-header" aria-hidden="true">
-                                <span></span>
+                                <span class="close"></span>
                                 <span></span>
                                 <span></span>
                             </div>
@@ -137,21 +142,147 @@
                                 </ul>
                             </div>
                             <div class="view-cont">
+<div>
+    <pre><code class="language-html">&lt;main&gt;
+        &lt;section id="mouseType01"&gt;
+            &lt;div class="cursor"&gt;&lt;/div&gt;
+    
+            &lt;div class="mouse__wrap"&gt;
+                &lt;p&gt;&lt;span class="style1"&gt;Getting&lt;/span&gt; lost &lt;span class="style2"&gt;means&lt;/span&gt; finding a &lt;span class="style3"&gt;new way.&lt;/span&gt;&lt;/p&gt;
+                &lt;p&gt;길을&lt;span class="style4"&gt;잃는다&lt;/span&gt;는 것은 곧 &lt;span class="style5"&gt;새로운&lt;/span&gt; 길을 &lt;span class="style6"&gt;알게 된다&lt;/span&gt;는 것이다&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;</code></pre>
+</div>
                                 <div>
-<pre><code class="language-html">
-</code></pre>
+                                    <pre><code class="language-css">body::before {
+    background: rgba(48, 5, 70, 0.63);
+}
+
+.mouse__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    cursor: none;
+}
+
+.mouse__wrap p {
+    font-size: 2.5vw;
+    line-height: 2;
+    font-weight: 300;
+}
+
+.mouse__wrap p:last-child {
+    font-size: 3vw;
+    font-weight: 400;
+}
+
+.mouse__wrap p span {
+    border-bottom: 0.15vw dashed #fff;
+}
+
+.cursor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    user-select: none;
+    pointer-events: none;
+    transition:
+        background-color .2s,
+        border-color .2s,
+        border-radius .2s,
+        transform .6s;
+}
+
+.cursor.style1 {
+    background-color: rgba(255, 165, 0, 0.4);
+    border-color: orange;
+}
+
+.cursor.style2 {
+    background-color: rgba(140, 0, 255, 0.4);
+    border-color: rgb(140, 0, 255);
+    transform: rotate(720deg) scale(2)
+}
+
+.cursor.style3 {
+    background-color: rgb(0, 47, 255, 0.4);
+    border-color: rgb(0, 47, 255);
+    transform: scale(1.5) rotate(45deg);
+    border-radius: 10px;
+}
+
+.cursor.style4 {
+    background-color: rgb(121, 235, 197, 0.4);
+    border-color: rgb(121, 235, 197);
+    transform: scale(10) rotateY(360deg);
+}
+
+.cursor.style5 {
+    background-color: rgb(255, 0, 85, 0.4);
+    border-color: rgb(255, 0, 85);
+    transform: rotateY(720deg) scale(0.1);
+}
+
+.cursor.style6 {
+    background-color: rgba(229, 255, 0, 0.4);
+    border-color: rgb(229, 255, 0);
+    transform: rotateY(1080deg) scale(3);
+    border-radius: 20px;
+}</code></pre>
                                 </div>
-                                <!-- //cont1 -->
                                 <div>
-<pre><code class="language-javascript">
-</code></pre>
+                                    <pre><code class="language-javascript">//출력용
+window.addEventListener("mousemove", (event) => {
+    document.querySelector(".clientX").innerText = event.clientX;       //현재창 기준 마우스커서 수평 좌표
+    document.querySelector(".clientY").innerText = event.clientY;       //현재창 기준 마우스커서 수직 좌표
+    document.querySelector(".offsetX").innerText = event.offsetX;       //좌표를 출력하도록 하는 이벤트가 걸려있는 DOM node를 기준으로 수평 좌표
+    document.querySelector(".offsetY").innerText = event.offsetY;       //좌표를 출력하도록 하는 이벤트가 걸려있는 DOM node를 기준으로 수직 좌표
+    document.querySelector(".pageX").innerText = event.pageX;           //전체 문서를 기준으로 수평 좌표
+    document.querySelector(".pageY").innerText = event.pageX;           //전체 문서를 기준으로 수직 좌표
+    document.querySelector(".screenX").innerText = event.screenX;       //사용자 모니터 화면을 기준으로 수평 좌표
+    document.querySelector(".screenY").innerText = event.screenX;       //사용자 모니터 화면을 기준으로 수직 좌표
+});
+
+//마우스 움직이기
+window.addEventListener("mousemove", (e) => {       //해당 div(class=".cursor")가 마우스를 따라 좌표값이 바뀌면서 따라다니는 효과가 난다.
+    document.querySelector(".cursor").style.left = e.clientX - 25 + "px";   //마우스의 수직 좌표 위치를 .cursor의 left값으로 설정..가운데로오게함
+    document.querySelector(".cursor").style.top = e.clientY - 25 + "px";    //마우스의 수평 좌표 위치를 .cursor의 top값으로 설정..가운데로오게함
+});
+
+const mouseOver = document.querySelectorAll(".mouse__wrap p span");         //mouseOver 변수에 span태그들을 저장
+
+//for()
+// for (let i = 0; i &lt; mouseOver.length; i++) {
+//     mouseOver[i].addEventListener("mouseover", () => {
+//         document.querySelector(".cursor").classList.add(`style${i+1}`);
+//     });
+//     mouseOver[i].addEventListener("mouseout", () => {
+//         document.querySelector(".cursor").classList.remove(`style${i+1}`);
+//     });
+// }
+
+
+//forEach()
+mouseOver.forEach((span, i) => {        //span태그들 순회, 요소와 인덱스값 받음
+    span.addEventListener("mouseover", () => {  //span태그에 mouseover 이벤트 발생시
+        document.querySelector(".cursor").classList.add(`style${i+1}`); //.cursor에 style 클래스 추가
+    });
+    span.addEventListener("mouseout", () => {   //span태그에 mouseout 이벤트 발생시
+        document.querySelector(".cursor").classList.remove(`style${i+1}`);  //.cursor에 style 클래스 추가
+    });
+});</code></pre>
                                 </div>
-                                <!-- //cont2 -->
-                                <div>
-<pre><code class="language-javascript">
-</code></pre>
-                                </div>
-                                <!-- //cont3 -->
                             </div>
                         </div>
                     </div>
@@ -159,16 +290,17 @@
                 </div>
             </div>
         </div>
+
         <div class="attr">
             <ul>
-                <li>clientX : <span class="clientX">0</span>px</li>
-                <li>clientY : <span class="clientY">0</span>px</li>
-                <li>offsetX : <span class="offsetX">0</span>px</li>
-                <li>offsetY : <span class="offsetY">0</span>px</li>
-                <li>pageX : <span class="pageX">0</span>px</li>
-                <li>pageY : <span class="pageY">0</span>px</li>
-                <li>screenX : <span class="screenX">0</span>px</li>
-                <li>screenY : <span class="screenY">0</span>px</li>
+                <li>clientX : <span class="clientX"></span>px</li>
+                <li>clientY : <span class="clientY"></span>px</li>
+                <li>offsetX : <span class="offsetX"></span>px</li>
+                <li>offsetY : <span class="offsetY"></span>px</li>
+                <li>pageX : <span class="pageX"></span>px</li>
+                <li>pageY : <span class="pageY"></span>px</li>
+                <li>screenX : <span class="screenX"></span>px</li>
+                <li>screenY : <span class="screenY"></span>px</li>
             </ul>
         </div>
     </div>
@@ -178,101 +310,118 @@
     <script src="js/highlight.min.js"></script>
     <script src="js/custom.js"></script>
     <script>
-        // highlight();
-        // modal();
-        // tabMenu();
+        highlight(); //외부 스크립트 함수 (highlight)호출
+        modal(); //외부 스크립트 함수 (modal, 소스보기 창)호출
+        tabMenu(); //외부 스크립트 함수 (tabMenu, 소스보기의 탭 메뉴)호출
 
         //출력용
         window.addEventListener("mousemove", (event) => {
-            document.querySelector(".clientX").innerText = event.clientX;
-            document.querySelector(".clientY").innerText = event.clientY;
-            document.querySelector(".offsetX").innerText = event.offsetX;
-            document.querySelector(".offsetY").innerText = event.offsetY;
-            document.querySelector(".pageX").innerText = event.pageX;
-            document.querySelector(".pageY").innerText = event.pageY;
-            document.querySelector(".screenX").innerText = event.screenX;
-            document.querySelector(".screenY").innerText = event.screenY;
+            document.querySelector(".clientX").innerText = event.clientX; //현재창 기준 마우스커서 수평 좌표
+            document.querySelector(".clientY").innerText = event.clientY; //현재창 기준 마우스커서 수직 좌표
+            document.querySelector(".offsetX").innerText = event
+            .offsetX; //좌표를 출력하도록 하는 이벤트가 걸려있는 DOM node를 기준으로 수평 좌표
+            document.querySelector(".offsetY").innerText = event
+            .offsetY; //좌표를 출력하도록 하는 이벤트가 걸려있는 DOM node를 기준으로 수직 좌표
+            document.querySelector(".pageX").innerText = event.pageX; //전체 문서를 기준으로 수평 좌표
+            document.querySelector(".pageY").innerText = event.pageX; //전체 문서를 기준으로 수직 좌표
+            document.querySelector(".screenX").innerText = event.screenX; //사용자 모니터 화면을 기준으로 수평 좌표
+            document.querySelector(".screenY").innerText = event.screenX; //사용자 모니터 화면을 기준으로 수직 좌표
         });
 
         //마우스 움직이기
-        window.addEventListener("mousemove",(e) => {
-            // document.querySelector(".cursor").style.left = e.clientX -25 + "px";
-            // document.querySelector(".cursor").style.top = e.clientY -25 + "px";
+        window.addEventListener("mousemove", (e) => { //해당 div(class=".cursor")가 마우스를 따라 좌표값이 바뀌면서 따라다니는 효과가 난다.
+            document.querySelector(".cursor").style.left = e.clientX - 25 + "px"; //마우스의 수직 좌표 위치를 .cursor의 left값으로 설정..가운데로오게함
+            document.querySelector(".cursor").style.top = e.clientY - 25 + "px"; //마우스의 수평 좌표 위치를 .cursor의 top값으로 설정..가운데로오게함
 
-            let x = e.clientX -25 + "px";
-            let y = e.clientY -25 + "px";
-            document.querySelector(".cursor").style.cssText ="left:" + x + "; top:" + y;
+            // let x = e.clientX - 25 + "px";
+            // let y = e.clientX - 25 + "px";
+            // document.querySelector(".cursor").style.cssText = "left:" + x + "; top:" + y;
         });
 
-        //마우스 효과
+        // //마우스 효과1
         // document.querySelector(".style1").addEventListener("mouseover", () => {
         //     document.querySelector(".cursor").classList.add("style1");
-        // })
+        // });
         // document.querySelector(".style1").addEventListener("mouseout", () => {
         //     document.querySelector(".cursor").classList.remove("style1");
-        // })
+        // });
+
+        // //마우스 효과2
         // document.querySelector(".style2").addEventListener("mouseover", () => {
         //     document.querySelector(".cursor").classList.add("style2");
-        // })
+        // });
         // document.querySelector(".style2").addEventListener("mouseout", () => {
         //     document.querySelector(".cursor").classList.remove("style2");
-        // })
+        // });
+
+        // //마우스 효과3
         // document.querySelector(".style3").addEventListener("mouseover", () => {
         //     document.querySelector(".cursor").classList.add("style3");
-        // })
+        // });
         // document.querySelector(".style3").addEventListener("mouseout", () => {
         //     document.querySelector(".cursor").classList.remove("style3");
-        // })
+        // });
+
+        // //마우스 효과4
         // document.querySelector(".style4").addEventListener("mouseover", () => {
         //     document.querySelector(".cursor").classList.add("style4");
-        // })
+        // });
         // document.querySelector(".style4").addEventListener("mouseout", () => {
         //     document.querySelector(".cursor").classList.remove("style4");
-        // })
+        // });
+
+        // //마우스 효과5
         // document.querySelector(".style5").addEventListener("mouseover", () => {
         //     document.querySelector(".cursor").classList.add("style5");
-        // })
+        // });
         // document.querySelector(".style5").addEventListener("mouseout", () => {
         //     document.querySelector(".cursor").classList.remove("style5");
-        // })
+        // });
+
+        // //마우스 효과6
         // document.querySelector(".style6").addEventListener("mouseover", () => {
         //     document.querySelector(".cursor").classList.add("style6");
-        // })
+        // });
         // document.querySelector(".style6").addEventListener("mouseout", () => {
         //     document.querySelector(".cursor").classList.remove("style6");
-        // })
+        // });
 
-        // //for ()
-        // for(let i=1; i<=6; i++){
-        //     document.querySelector(".style" +i).addEventListener("mouseover", () => {
-        //      document.querySelector(".cursor").classList.add("style" +i);
-        //  })
-        //  document.querySelector(".style" +i).addEventListener("mouseout", () => {
-        //      document.querySelector(".cursor").classList.remove(".style" +i);
-        //  })
+        //mouseOver 변수에 span태그들을 저장
+
+        //for()
+        // for (let i = 0; i < mouseOver.length; i++) {
+        //     mouseOver[i].addEventListener("mouseover", () => {
+        //         document.querySelector(".cursor").classList.add(`style${i+1}`);
+        //     });
+        //     mouseOver[i].addEventListener("mouseout", () => {
+        //         document.querySelector(".cursor").classList.remove(`style${i+1}`);
+        //     });
         // }
-        // //forEach ()
-    //     document.querySelectorAll(".mouse__wrap span").forEach((span, index) => {
-    //         span.addEventListener("mouseover", () => {
-    //           document.querySelector(".cursor").classList.add("style" +(index+1));
-    //       })
-    //       span.addEventListener("mouseout", () => {
-    //           document.querySelector(".cursor").classList.remove(".style" +(index+1));
-    //     }) 
-    // })
 
-    //getAttyibute
-    //span 마우스 오버 했을 때 속성값을 alert()
-    document.querySelectorAll(".mouse__wrap span").forEach(span => {  //span = el
-        let attr = span.getAttribute("class"); //속성값 저장
 
-        span.addEventListener("mouseover", () => {
-            document.querySelector(".cursor").classList.add(attr);
+        //forEach()
+        // pSpan.forEach((span, i) => {        //span태그들 순회, 요소와 인덱스값 받음
+        //     span.addEventListener("mouseover", () => {  //span태그에 mouseover 이벤트 발생시
+        //         document.querySelector(".cursor").classList.add(`style${i+1}`); //.cursor에 style 클래스 추가
+        //     });
+        //     span.addEventListener("mouseout", () => {   //span태그에 mouseout 이벤트 발생시
+        //         document.querySelector(".cursor").classList.remove(`style${i+1}`);  //.cursor에 style 클래스 추가
+        //     });
+        // });
+
+        //getAttribute
+        //span 마우스 오버 했을 대 속성값을 alert()
+        document.querySelectorAll(".mouse__wrap p span").forEach((span) => {
+            let attr = span.getAttribute("class");
+            span.addEventListener("mouseover", () => {
+                document.querySelector(".cursor").classList.add(attr); //.cursor에 style 클래스 추가
+            });
+            span.addEventListener("mouseout", () => {
+                document.querySelector(".cursor").classList.remove(attr); //.cursor에 style 클래스 추가
+            });
         });
-        span.addEventListener("mouseout", () => {
-            document.querySelector(".cursor").classList.remove(attr);
-        })
-    })
     </script>
+
 </body>
+
 </html>

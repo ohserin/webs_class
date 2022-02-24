@@ -20,16 +20,17 @@
             color: #fff;
             width: 100%;
             height: 100vh;
-            overflow: hidden;
+            overflow: hidden;  
+            cursor: none;        
         }
         .mouse__img {
             position: relative;
             text-align: center;
-            perspective: 600px;
+            /* perspective: 600px; */
             transform: rotateX(0deg) rotateY(0deg);
             transform-style: preserve-3d;
             will-change: transform;
-            transition: all 1s;
+            transition: all 0.1s;
         }
         .mouse__img figure {
             width: 50vw;
@@ -39,10 +40,10 @@
             content: '';
             position: absolute;
             left: 5%;
-            bottom: -40px;
-            width: 90%;
+            bottom: -30px;
             height: 40px;
-            background: url(img/slider10.jpg) center center no-repeat;
+            width: 90%;
+            background: url(img/slider08.jpg) center center no-repeat;
             background-size: 100% 40px;
             filter: blur(15px) grayscale(50%);
             opacity: 0.6;
@@ -53,9 +54,9 @@
             left: 50%;
             top: 50%;
             font-size: 1vw;
-            white-space: nowrap;           /*한 줄로 처리*/
+            white-space: nowrap;
             line-height: 1.6;
-            background: rgba(0,0,0,0.4);
+            background: rgba(15, 89, 107, 0.479);
             padding: 1vw 2vw;
             transform: translate3d(-50%, -50%, 150px);
         }
@@ -70,7 +71,6 @@
             z-index: 1000;
             user-select: none;
             pointer-events: none;
-            cursor: none;
             mix-blend-mode: difference;
         }
 
@@ -190,8 +190,8 @@
              let centerPageY = window.innerHeight/2 - mousePageY;
 
             //최소값은 -50 최대값은 50 설정
-            let maxPageX = Math.max(-800, Math.min(50, centerPageX));
-            let maxPageY = Math.max(-300, Math.min(50, centerPageY));
+            let maxPageX = Math.max(-800, Math.min(800, centerPageX));
+            let maxPageY = Math.max(-300, Math.min(300, centerPageY));
 
             //각도 줄이는 설정
             let anlexpageX = maxPageX * 0.12;
@@ -204,10 +204,10 @@
             softPageY += (anlexpageY - softPageY) *0.4;
 
 
-            //이미지 움직이기
-            //transform: rotateX(0deg) rotateY(0deg);
+            //이미지 움직이기 
+            // transform: rotateX(0deg) rotateY(0deg);
             const imgMove = document.querySelector(".mouse__img");
-            imgMove.style.transform ="rotateX("+maxPageX+"deg) rotateY("+ -maxPageY+"deg)";
+            imgMove.style.transform ="perspective(600px) rotateX("+softPageY+"deg) rotateY("+ -softPageX+"deg)";
 
             //원 크기
             let circleWidth = mousePageX-circle.width/2;

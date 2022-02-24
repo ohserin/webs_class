@@ -64,8 +64,8 @@
             <div class="cursor"></div>
 
             <div class="mouse__wrap">
-               <p>Without<span> haste</span> but without <span>rest</span></p>
-               <p><span>서두르지도</span> 말고 <span>쉬지도</span> 말아라.</p>
+               <p>Life is a <span>tragedy</span> when seen in close-up, but a <span>comedy</span> in long shot.</p>
+               <p>인생은 <span>가까이서</span> 보면 비극이지만 <span>멀리서</span> 보면 희극이다.</p>
             </div>
         </section>
     </main>
@@ -108,18 +108,90 @@
                             </div>
                             <div class="view-cont">
                                 <div>
-<pre><code class="language-html">
-</code></pre>
+<pre><code class="language-html">&lt;main&gt;
+    &lt;section id="mouseType03"&gt;
+        &lt;div class="cursor"&gt;&lt;/div&gt;
+
+        &lt;div class="mouse__wrap"&gt;
+           &lt;p&gt;Life is a &lt;span&gt;tragedy&lt;/span&gt; when seen in close-up, but a &lt;span&gt;comedy&lt;/span&gt; in long shot.&lt;/p&gt;
+           &lt;p&gt;인생은 &lt;span&gt;가까이서&lt;/span&gt; 보면 비극이지만 &lt;span&gt;멀리서&lt;/span&gt; 보면 희극이다.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/main&gt;</code></pre>
                                 </div>
                                 <!-- //cont1 -->
                                 <div>
-<pre><code class="language-javascript">
-</code></pre>
+<pre><code class="language-javascript">body::before {
+    background: rgba(5, 36, 70, 0.87)
+}
+.mouse__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    cursor: none;
+}
+
+.mouse__wrap p {
+    font-size: 2.5vw;
+    line-height: 2;
+    font-weight: 300;
+}
+
+.mouse__wrap p:last-child {
+    font-size: 3vw;
+    font-weight: 400;
+}
+
+.mouse__wrap p span {
+    border-bottom: 0.15vw dashed orange;
+    color: orange;
+}
+
+.cursor {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+    background-image: url(img/slider06.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    border: 5px solid #fff;
+}</code></pre>
                                 </div>
                                 <!-- //cont2 -->
                                 <div>
-<pre><code class="language-javascript">
-</code></pre>
+<pre><code class="language-javascript">// const circle1 =document.querySelector(".cursor").clientWidth;           //190 :border값이 빠진 상태
+    // const circle2 =document.querySelector(".cursor").offsetWidth;           //200 :border값이 포함 상태
+    
+    // bottom, height, left, right, top, width, x, y
+    // const circle3 = {
+        //     bottom : 0,
+        //     height : 200,
+        //     left: 0,
+        //     width: 200
+        // }
+        
+        
+        const circle =document.querySelector(".cursor").getBoundingClientRect();  
+
+    function follow(e){
+        gsap.to(".cursor", {duration: .3, left: e.pageX - circle.width/2, top: e.pageY - circle.height/2});
+
+        //출력용
+        document.querySelector(".pageX").innerText = e.pageX;
+        document.querySelector(".pageY").innerText = e.pageY;
+
+    }
+    window.addEventListener("mousemove", follow);</code></pre>
                                 </div>
                                 <!-- //cont3 -->
                             </div>
@@ -143,9 +215,9 @@
     <script src="js/custom.js"></script>
     <script src="js/gsap.min.js"></script>
     <script>
-       // highlight();
-        // modal();
-        // tabMenu();
+       highlight();
+        modal();
+        tabMenu();
 
         // const circle1 =document.querySelector(".cursor").clientWidth;           //190 :border값이 빠진 상태
         // const circle2 =document.querySelector(".cursor").offsetWidth;           //200 :border값이 포함 상태
