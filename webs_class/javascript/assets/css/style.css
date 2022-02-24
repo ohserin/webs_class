@@ -560,6 +560,16 @@ img {
     border-radius: 5px;
 }
 
+button {
+    border: 1px solid #cdcdcd;
+    padding: 3px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+button:active {
+    background: rgb(182, 182, 182);
+}
+
 /* 간격설정 */
 .mt0 {margin-top: 0px !important;}
 .mt5 {margin-top: 5px !important;}

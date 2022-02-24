@@ -23,19 +23,23 @@
             overflow: hidden;
             cursor: none;
         }
+
         .mouse__wrap p {
             font-size: 2.5vw;
             line-height: 2;
             font-weight: 300;
         }
+
         .mouse__wrap p:last-child {
             font-size: 3vw;
             font-weight: 400;
         }
+
         .mouse__wrap p span {
             border-bottom: 0.15vw dashed orange;
             color: orange;
         }
+
         .cursor {
             position: absolute;
             left: 0px;
@@ -60,22 +64,23 @@
             background-color: rgba(255, 255, 255, 0.3);
             user-select: none;
             pointer-events: none;
-            transition: transform 0.3s, opacity 0.2s;;
+            transition: transform 0.3s, opacity 0.2s;
         }
-        .cursor.active {
+
+        .cursor.active,.cursor.show {
             transform: scale(0);
         }
+
         .cursor-follower.active {
             transform: scale(10);
-            background: rgba(255,166,0,.6);
+            background: rgba(255, 0, 0, 0.6);
         }
-        .cursor.show {
-            transform: translateY(10px);
-            background: rgba(107, 129, 255, 0.6);
-        }
+
         .cursor-follower.show {
-            transform: skewX(10deg);
-            background: rgba(72, 255, 194, 0.6);
+            transform: scale(7);
+            border-radius: 0;
+            background: rgba(111, 0, 255, 0.6);
+            cursor: none !important;
         }
      
     </style>
@@ -170,38 +175,56 @@
         // highlight();
         // modal();
         // tabMenu();
+        
+        const cursor = document.querySelector(".cursor");               //div.cursor
+        const follower = document.querySelector(".cursor-follower");    //div.cursor-follower
 
-        const cursor = document.querySelector(".cursor");
-        const follower = document.querySelector(".cursor-follower");
-
-        window.addEventListener("mousemove", e => {
+        window.addEventListener("mousemove", e => {         //마우스 움직일 때 마다
             //커서 좌표값 할당
             // cursor.style.left = e.pageX -5 + "px";
             // cursor.style.top = e.pageY -5 + "px";
             // follower.style.left = e.pageX -15 + "px";
             // follower.style.top = e.pageY -15 + "px";
 
-            gsap.to(cursor, {duration: .3, left: e.pageX -5, top: e.pageY -5});
-            gsap.to(cursor, {duration: .8, left: e.pageX -15, top: e.pageY -15});
-
-            //오버효과
-            //span 오버 했을 때 active추가 / 나갔을 때 activs 삭제
-            //mouseover,mouseenter / mouseout, mouseleave / 이벤트 버블링
-
-            document.querySelectorAll(".mouse__wrap p span").forEach(span => {
-                span.addEventListener("mouseover", () => {
-                    cursor.classList.add("active");
-                    follower.classList.add("active");
-                });
-                span.addEventListener("mouseleave", () => {
-                    cursor.classList.remove("active");
-                    follower.classList.remove("active");
-                })
+            gsap.to(cursor, {           //gsap으로 부드러운 애니메이션 효과
+                duration: .3,
+                left: e.pageX - 5,
+                top: e.pageY - 5
+            })
+            gsap.to(follower, {
+                duration: .8,
+                left: e.pageX - 15,
+                top: e.pageY - 15
             })
 
             //출력
-            document.querySelector(".pageX").innerText = e.pageX;
-            document.querySelector(".pageY").innerText = e.pageY;
+            document.querySelector(".pageX").innerText = e.pageX; //전체 문서를 기준으로 수평 좌표
+            document.querySelector(".pageY").innerText = e.pageY; //전체 문서를 기준으로 수직 좌표
+        });
+
+        //오버 효과
+        //mouseover,mouseenter / mouseout,mouseleave
+        document.querySelectorAll(".mouse__wrap p span").forEach(span => {
+            //span에 오버 했을 때 클래스 active 추가
+            span.addEventListener("mouseenter", () => {
+                cursor.classList.add("active");
+                follower.classList.add("active");
+            });
+            //span에 나갔을 때 클래스 active 삭제
+            span.addEventListener("mouseleave", () => {
+                cursor.classList.remove("active");
+                follower.classList.remove("active");
+            });
+        })
+
+        //.info 영역에서의 마우스효과
+        document.querySelector(".info").addEventListener("mouseover", () => {
+            cursor.classList.add("show");
+            follower.classList.add("show");
+        })
+        document.querySelector(".info").addEventListener("mouseout", () => {
+            cursor.classList.remove("show");
+            follower.classList.remove("show");
         })
 
     </script>
