@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
 
 </head>
 <!-- CSS style -->
@@ -17,33 +17,571 @@
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/style.css">
 
+<style>
+    #header0 {
+        width: 100%;
+        background-color: #bbc1ff;
+    }
+
+    .header0__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header0__left {
+        margin-top: 250px;
+        text-align: left;
+        margin-bottom: 50px;
+    }
+
+    .header0__left h2 {
+        font-size: 35px;
+        color: #697CE2;
+        font-weight: 700;
+        padding-top: 50px;
+        padding-left: 30px;
+        margin-bottom: 35px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .header0__left h2::before {
+        content: '';
+        width: 600px;
+        height: 420px;
+        position: absolute;
+        left: -31px;
+        top: -30px;
+        background-color:#e4e6ff;
+        z-index: -1;
+        opacity: 0.6;
+        border-radius: 30px;
+    }
+
+    .header0__left p {
+        font-size: 30px;
+        color: #8e9be6;
+        line-height: 2;
+        position: relative;
+        padding-left: 30px;
+        z-index: 1;
+        font-weight: 500;
+    }
+
+    .header0__right {
+        margin-top: 151px;
+    }
+
+    .header0__right .insta {
+        background-color: #8c95fc;
+        font-size: 23px;
+        width: 400px;
+        text-align: left;
+        padding-left: 50px;
+        position: relative;
+        padding-top: 10px;
+        margin-bottom: 2px;
+        border-radius: 5px;
+        color: #fff;
+    }
+
+    .header0__right .insta::before {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        opacity: 0.7;
+        left: 14.5px;
+        top: 16px;
+    }
+
+    /* .header0__right .insta__img {
+            width: 400px;
+            height: 433px;
+            background-color: #fff;
+            display: block;
+        } */
+    .header0__right .insta__img1 {
+        width: 400px;
+        height: 433px;
+        background-image: url(img/baby_img01.jpg);
+        display: block;
+    }
+
+    /* .header0__right .insta__img1.bottoms {
+            width: 400px; height: 433px;
+            position: absolute;
+            bottom: -698px; right: 0;
+        } */
+    .header0__right p {
+        width: 400px;
+        background-color: #fff;
+        text-align: left;
+        font-size: 20px;
+        position: relative;
+        padding-top: 5px;
+        padding-left: 16px;
+    }
+
+    .header0__right p span {
+        position: absolute;
+        right: 5px;
+    }
+
+    .header1__wrap {
+        margin-top: 200px;
+    }
+
+    .header1__wrap p {
+        font-size: 35px;
+        text-align: left;
+        color: #ffffff;
+        margin-bottom: 25px;
+    }
+
+    .header1__span {
+        display: flex;
+    }
+
+    .header1__span span:nth-child(1) {
+        background-image: url(img/baby_img02.jpg);
+        width: 400px;
+        height: 433px;
+    }
+
+    .header1__span span:nth-child(2) {
+        background-image: url(img/baby_img03.jpg);
+        width: 400px;
+        height: 433px;
+    }
+
+    .header1__span span:nth-child(3) {
+        background-image: url(img/baby_img01.jpg);
+        width: 400px;
+        height: 433px;
+        margin-bottom: 100px;
+        display: none;
+    }
+</style>
+
 <body>
     <div id="wrap">
-        <div id="header">
-            <div class="header_logo">
-                <h1 class="ir_pm">Pics_logo</h1>
-            </div>
-            <div class="container">
-            <div class="header_cont">
-                    <p class="text1">소중한 추억 조각들을 모아 만든</p>
-                    <h2 class="header-tit">웹앨범 제작 사이트 'Pics'<br>
-                        Purple Identity Cube Story</h2>
-                    <p class="text2">I pics you</p>
-                </div>
-                <div class="header2">
-                    <div class="header_cont2">
-                        <p class="text3"></p>
+        <header>
+            <div id="header0">
+                <div class="container">
+                    <div class="header0__wrap">
+                        <div class="header0__left">
+                            <h2>간편하게 웹 앨범을 사용하세요.</h2>
+                            <p>
+                                다양한 템플릿 보유<br>
+                                직관적 인터페이스<br>
+                                누구나 사용가능
+                            </p>
+                        </div>
+                        <div class="header0__right">
+                            <p class="insta">나른한 일요일 오후</p>
+                            <p class="insta_banner">아기와 나 <span>2020.02.02</span></p>
+                            <!-- <span class="insta__img"></span> -->
+                            <span class="insta__img1"></span>
+                        </div>
+                    </div>
+                    <div class="header1__wrap">
+                        <p>이전에 없던 경험</p>
+                        <div class="header1__span">
+                            <span></span>
+                            <span></span>
+                            <span class="bottoms"></span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="contents"></div>
-        <div id="footer"></div>
-        <div></div>
-        <div></div>
-        <div></div>
+
+            <div id="header">
+                <div class="header_logo">
+                    <h1 class="ir_pm">Pics_logo</h1>
+                </div>
+                <div class="container">
+                    <div class="header_cont">
+                        <p class="text1">소중한 추억 조각들을 모아 만든</p>
+                        <h2 class="header-tit">웹앨범 제작 사이트 'Pics'<br>
+                            Purple Identity Cube Story</h2>
+                        <p class="text2">I pics you</p>
+                        <div class="foot">
+                                <p class="left">1조 웹 앨범 제작 사이트<br>precious memory storage.</p>
+                                <p class="right">Share precious memories and <br>keep them forever.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <main>
+                <section id="intro">
+                    <div class="container">
+                        <h2>큐브처럼 나눠진 추억을 하나로 모아주는</h2>
+                        <p><em>Pics</em></p>
+                        <p class="desc">
+                            큐브처럼 작은 조각으로 나눠진 순간의 추억들을 하나로 모은 이야기들, <br>
+                            보고싶을 때마다 언제든지 공유하고 볼 수 있도록 하는 웹 앨범 제작 사이트입니다.
+                        </p>
+                    </div>
+                </section>
+                <section id="contents">
+                    <article class="con1">
+                        <div class="container">
+                            <h2>Service Point</h2>
+                            <p>"1가정 1웹앨범을 꿈꾸는 웹 앨범 사이트"</p>
+                            <div class="sp">
+                                <div class="sp0">
+                                    <img src="img/web.png" alt="웹앨범">
+                                    <h3>간편하고 easy하게</h3>
+                                    <p>개인 앨범, 가족 앨범,<br>친구와의 앨범을 통해 <br>추억을 간직할 수 있습니다.</p>
+                                </div>
+                                <div class="sp0">
+                                    <img src="img/coding.png" alt="개발자">
+                                    <h3>더욱, private하게</h3>
+                                    <p>개발자들이 상주하는 곳,<br>쉽게 해킹당하지 않습니다.</p>
+                                </div>
+                                <div class="sp0">
+                                    <img src="img/browser.png" alt="커밋">
+                                    <h3>업데이트는 Git으로</h3>
+                                    <p>
+                                        commit으로 간편한 업로드,<br>
+                                        webp파일로 저장해 <br>용량 부담을 덜었습니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+    
+                    <article class="con2">
+                        <div class="con2_1">
+                            <div class="container">
+                                <h2>웹 앨범이 <em>왜</em> 필요할까요?</h2>
+                            </div>
+                        </div>
+                        <div class="con2_2"></div>
+                        <div class="con2_3">
+                            <div class="container">
+                                <p>쉬운 <br>온 오프 전환</p>
+                                <p>원하는 사람과 <br>쉽게 공유</p>
+                                <img src="img/c2_2.jpg" alt="pics">
+                                <p>사생활<br> 보호</p>    
+                                <p>편리한<br> 보관</p>
+                            </div>
+                            <div class="container">
+                                <span>웹 앨범은 주위 사람들과 소중한 추억을 공유할 수 있고 사진들을 원하는 형태로 <br>
+                                웹 앨범을 제작하여 어디서나 볼 수 있고 영원히 간직할 수 있습니다.</span>
+                            </div>
+                        </div>
+                    </article>
+    
+                    <article class="con3">
+                        <div class="container">
+                            <h2>앨범은 이런 점이 불편했어요!</h2>
+                        </div>
+                    </article>
+    
+                    <article class="con4">
+                        <div class="container">
+                            <h2>사진 공유 플랫폼의 현황</h2>
+                            <h3>사진을 공유하는 대표 플랫폼을 통한 사진 공유 횟수</h3>
+                            <div class="con4Con">
+                                <span></span>
+                                <div class="con4_p">
+                                    <div class="con4_p1">
+                                        <h4>늘어가는 이용자 수</h4>
+                                        <p>
+                                            사진 공유 대표 플랫폼의 이용자 수가 증가하고<br> 있습니다.
+                                            사진을 인화하여 간직하는 사람보단 <br>
+                                            웹으로 공유하고 간직하는 사람들이  <br>늘어나고 있습니다.
+                                        </p>
+                                    </div>
+                                    <div class="con4_p2">
+                                        <h4>400억장 이상 공유</h4>
+                                        <p>년간 400억장 이상의 사진이 공유되며, <br> 해당 플랫폼 사용자의 63%가 매일 사용합니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="con5">
+                        <div class="con5_1">
+                            <div class="container">
+                                <h2>Operations and Plans.</h2>
+                                    <div class="con5_1flex">
+                                    <p>Pics 웹 앨범의 앨범 공유 서비스를 중심으로 기존 플랫폼의 개선을 시도하여
+                                        주 타겟층에 맞추어 <br>누구든 보기 쉬운 디자인과 기존의 사진 보관 문제 해결을 통하여 
+                                        앨범에 불편함을 가지셨던 분들에게 초점을 맞췄습니다.</p>
+                                    <h3>- 프로젝트 목표</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="con5_2">
+                            <div class="container">
+                                <div class="con5_2BoxAll">
+                                    <div class="con5_2Box box1">
+                                        <h3>심플하고 직관적인 <br>디자인</h3>
+                                        <p>누구나 쉽게 이용할 수 있는 <br>보기 좋고 직관적인 UI 디자인</p>
+                                    </div>
+                                    <div class="con5_2Box box2">
+                                        <h3>데이터 손실 걱정 없는<br> 안전한 보관</h3>
+                                        <p>사진을 공유하여 데이터 손식없이 안전 보관</p>
+                                    </div>
+                                    <div class="con5_2Box box3">
+                                        <h3>소중한 사람들과 <br>어디서나 쉬운 공유</h3>
+                                        <p>소중한 지인들과 나누는 자유로운 공유</p>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                    </article>
+    
+                    <article class="con6">
+                        <div class="container">
+                            <h2>Persona</h2>
+                            <p>웹 앨범이 필요한 각 세대를 타겟으로 페르소나를 정하였습니다.</p>
+                            <table>
+                                <colgroup>
+                                    <col style="width: 30%">
+                                    <col style="width: 30%">
+                                    <col style="width: 30%">
+                                </colgroup>
+                                <tr class="tb0">
+                                    <td><img src="img/pe_01.jpg" alt="student"></td>
+                                    <td><img src="img/pe_02.jpg" alt="pet sitter"></td>
+                                    <td><img src="img/pe_03.jpg" alt="grandmother"></td>
+                                </tr>
+                                <tr class="tb1">
+                                    <td>student</td>
+                                    <td>pet sitter</td>
+                                    <td>grandmother</td>
+                                </tr>
+                                <tr class="tb2">
+                                    <td>Ham poo-song</td>
+                                    <td>Chae joo-young</td>
+                                    <td>Jeon da-young</td>
+                                </tr>
+                                <tr class="tb3">
+                                    <td>지인들과 사진 공유할 일이 많은데, 매번 일일히 <br>
+                                        올리기가 번거로워서 한 번에 올릴 수 있고 <br>
+                                        사진이 유실될 걱정이 없었으면 좋겠어요</td>
+                                    <td>반려동물의 성장과정을 날짜 별로 <br> 간직하고 싶고
+                                        나중에는 앨범으로 제작해서<br> 보고싶을 때 마다 보고 싶어요</td>
+                                    <td>손주들이 커가는 과정을 보고 싶지만<br>
+                                        멀리 살아서 자주 보지 못해요<br>
+                                        그리고 휴대폰 조작이 조금 힘들어서<br> 
+                                        보기 쉽고, 공유도 쉬웠으면 좋겠어요 </td>
+                                </tr>
+                            </table>
+                            
+                        </div>
+                    </article>
+    
+                    <article class="con7">
+                        <div class="container">
+                        <h2>Customer Journey Map</h2>
+                        <div class="con7__flex">
+                            <img src="img/con07_2.jpg">
+                            <table class="t1">
+                                <tr>
+                                    <td>로그인</td>
+                                </tr>
+                                <tr>
+                                    <td>사진 업로드</td>
+                                </tr>
+                                <tr>
+                                    <td>사진 공유(최대 3명)</td>
+                                </tr>
+                                <tr>
+                                    <td>앨범 제작</td>
+                                </tr>
+                            </table>
+                            <table class="t2">
+                                <tr>
+                                    <td>간편한 로그인으로 누구나 쉽게 접속</td>
+                                </tr>
+                                <tr>
+                                    <td>올리고 싶은 사진을 선택하여 업로드 하기</td>
+                                </tr>
+                                <tr>
+                                    <td>공유할 사람을 선택하여 사진 공유하기</td>
+                                </tr>
+                                <tr>
+                                    <td>원하는 레이아웃을 지정하여 웹 앨범 제작하기</td>
+                                </tr>
+                            </table>
+                        </div>
+                        </div>
+                    </article>
+    
+                    <article class="con8">
+                        <div class="container">
+                            <h2>AS IS - TO BE</h2>
+                            <div class="con8__tb">
+                                <table class="con8__tb1">
+                                    <tr>
+                                        <td>보고싶은 사진을 일일이<br>찾아야 하는 번거로움</td>
+                                    </tr>
+                                    <tr>
+                                        <td>인화해야 하는 비용 문제</td>
+                                    </tr>
+                                    <tr>
+                                        <td>훼손되거나 <br> 분실 위험에서부터 오는 불안감</td>
+                                    </tr>
+                                    <tr>
+                                    <td>항상 정리와 관리가 필요한,<br> 점점 낡아가는 앨범</td>
+                                    </tr>
+                                </table>
+                                <table class="con8__tb2">
+                                    <tr>
+                                        <td>편리한 휴대성</td>
+                                    </tr>
+                                    <tr>    
+                                        <td>쉬운 공유 시스템</td>
+                                    </tr>
+                                    <tr>    
+                                        <td>날짜별 사진 정리</td>
+                                    </tr>
+                                    <tr>    
+                                        <td>직관적인 UI 디자인</td>
+                                    </tr>
+                                    <tr>    
+                                        <td>사용자를 고려한 UX 디자인</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </article>
+    
+                    <article class="con9">
+                        <div class="container">
+                            <h2>Affinity Diagram</h2>
+                            <div class="con9__table">
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 33%">
+                                        <col style="width: 33%">
+                                        <col style="width: 33%">
+                                    </colgroup>
+                                    <tr>
+                                        <td colspan="3">지향방향</td>
+                                    </tr>
+                                    <tr>
+                                        <td>누구나</td>
+                                        <td>접근성</td>
+                                        <td>공통점</td>
+                                    </tr>
+                                    <tr>
+                                        <td>언제</td>
+                                        <td>가까운</td>
+                                        <td>소통</td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <col style="width: 33%">
+                                    <col style="width: 33%">
+                                    <col style="width: 33%">
+                                    <tr>
+                                        <td colspan="3">개인</td>
+                                    </tr>
+                                    <tr>
+                                        <td>나의 공간</td>
+                                        <td>취미</td>
+                                        <td>개인일기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>촬영</td>
+                                        <td>저장공간</td>
+                                        <td>덕질</td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <col style="width: 33%">
+                                    <col style="width: 33%">
+                                    <col style="width: 33%">
+                                    <tr>
+                                        <td colspan="3">공유</td>
+                                    </tr>
+                                    <tr>
+                                        <td>반려동물</td>
+                                        <td>기록</td>
+                                        <td>스포츠</td>
+                                    </tr>
+                                    <tr>
+                                        <td>전시</td>
+                                        <td>그림</td>
+                                        <td>추억</td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <col style="width: 33%">
+                                    <col style="width: 33%">
+                                    <col style="width: 33%">
+                                    <tr>
+                                        <td colspan="3">기념일</td>
+                                    </tr>
+                                    <tr>
+                                        <td>생일</td>
+                                        <td>운동회</td>
+                                        <td>축하</td>
+                                    </tr>
+                                    <tr>
+                                        <td>크리스마스</td>
+                                        <td>이벤트</td>
+                                        <td>특별함</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="con9Img">
+                                <img src="img/con9_01.jpg" alt="과정1">
+                                <img src="img/con9_02.jpg" alt="과정2">
+                            </div>
+                        </div>
+                    </article>
+    
+                    <article class="con10">
+                        <div class="container">
+                            <div class="head">
+                                <h2>와이어 프레임</h2>
+                                <p>웹사이트의 구성을 간략하게 표현하였습니다.</p>
+                            </div>
+                            <img src="img/wf_01.jpg" alt="와이어 프레임">
+                        </div>
+                    </article>
+                </section>
+            </main>
+    
+            <section id="footer">
+                <div class="container">
+                    <h2>Pics 시작하기</h2>
+                </div>
+            </section>
     </div>
 
+    <script>
+        const header0 = document.querySelector("#header0");
+        const moveImg = header0.querySelector(".insta__img1");
+        const bb = header0.querySelector(".bottoms");
+        // const values = moveImg.getBoundingClientRect();
+
+
+        window.addEventListener("scroll", (e) => {
+            if (window.scrollY <= 588.5) {
+                moveImg.style.position = "fixed";
+                bb.style.display = "none";
+                moveImg.style.display = "block";
+            } else {
+                e.preventDefault();
+                moveImg.style.position = "relative";
+                bb.style.display = "block";
+                moveImg.style.display = "none";
+            }
+
+            console.log(window.scrollY);
+        })
+    </script>
 </body>
 
 </html>
