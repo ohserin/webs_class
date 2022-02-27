@@ -1,0 +1,39 @@
+/* 전체 레이아웃 */
+#wrap {
+    height: 2000px;
+}
+
+/* 컨테이너 */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    /* background: rgb(22, 22, 22); */
+}
+
+/*  헤더 */
+
+#header {
+    width: 100%;
+    height: 1080px;
+    background: url(../img/header_bg.jpg);
+}
+.header_logo {
+    width: 20%;
+    height: 290px;
+}
+.header_cont {
+text-align: center;
+}
+#header .header-tit {
+    font-size: 85px;
+    color: #fff;
+}
+.text1 {
+    font-size: 30px;
+    color: #fff;
+}
+.text2 {
+    font-size: 65px;
+    color: #fff;
+    font-family: 'Parisienne', cursive;
+}
