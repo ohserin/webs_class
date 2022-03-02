@@ -411,18 +411,18 @@ text-align: center;
 
 /* con6 */
  
-.con6 {
+#con6 {
     width: 100%;
     height: 950px;
     background: linear-gradient(to right, #F0F2FF 40%, #ffffff 46%);
 }
 
-.con6 .container {
+#con6 .container {
     background-color: #fff;
     height: 1080px;
     text-align: left;
 }
-.con6 h2 {
+#con6 h2 {
     padding-left: 50px;
     margin-top: 100px;
     display: inline-block;
@@ -430,34 +430,34 @@ text-align: center;
     color: #727EF6;
     margin-bottom: 28px;
 }
-.con6 p {
+#con6 p {
     padding-left: 50px;
     font-size: 25px;
     color: #C7C7C7;
     margin-bottom: 50px;
 }
 
-.con6 table {
+#con6 table {
     /* border: 1px solid #000; */
     border-spacing: 0 10px;
 }
 
-.con6 td {
+#con6 td {
     /* border: 1px solid #000; */
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 50px;
 }
 
-.con6 .tb1{
+#con6 .tb1{
     font-size: 25px;
     color: #B1B7FF;
 }
 
-.con6 .tb1 td {
+#con6 .tb1 td {
     position: relative;
 }
-.con6 .tb1 td::after {
+#con6 .tb1 td::after {
     content: '';
     position: absolute;
     width: 300px;
@@ -466,11 +466,11 @@ text-align: center;
     left: 45px; bottom: 0;
 }
 /* con7 */
-.con7 {
+#con7 {
     width: 100%;
     height: 800px;
 }
-.con7 h2 {
+#con7 h2 {
     margin-top: 100px;
     text-align-last: left;
     font-size: 70px;
@@ -514,11 +514,7 @@ text-align: center;
     padding: 0 30px;
 }
 
-.con7 table {
-    /* border: 1px solid #000; */
-}
-.con7 td {
-    /* border: 1px solid #000; */
+#con7 td {
     border-radius: 20px;
 }
 
