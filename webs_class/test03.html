@@ -59,9 +59,36 @@
         // }else {
         //     document.write("조건물 노농");
         // }
-        for(let i=1; i<=10; i++){
-            document.write(i);
-        }
+        // for(let i=1; i<=10; i++){
+        //     document.write(i);
+        // }
+
+        // const num = [100, 200, 300, 400, 500];
+
+        // for(let i=0; i<num.length; i++){
+        //     document.write(num[i]);
+        // }
+
+        // const num = [100, 200, 300, 400, 500];
+        
+        // num.forEach(function(el){
+        //     document.write(el);
+        // });
+        {
+             function funC(){
+                 setTimeout(() => {
+                     document.write("funC가 실행되었습니다.");
+                 }, 1000);
+             }
+             function funD(){
+                 setTimeout(() => {
+                     document.write("funD가 실행되었습니다.");
+                 }
+                 funC();
+                 funD();
+                 }
+
+
     </script>
 </body>
 
