@@ -547,6 +547,51 @@
         //     }
         //     // document.write(func());
         // }
+        //내부 함수
+        // {
+        //     function func(){
+        //         function funA(){
+        //             document.write("함수가 실행되었습니다.")
+        //         }
+        //         funA();
+        //         function funB(){
+        //             document.write("함수가 실행되었습니다.")
+        //         }
+        //         funB();
+        //     }
+        //     func();
+        // }
+        //즉시 실행 함수
+        {
+            function func(){
+                document.write("함수가 실행되었습니다.");
+            }
+            func();
+        }
+
+        (function(){
+            document.write("함수가 실행되었습니다.");
+        })();
+
+        (() => {
+            document.write("함수가 실행되었습니다.");
+        })();
+
+        //파라미터 함수
+        {
+            function func(str = "함수가 실행되었습니다."){
+                document.write(str);
+            }
+            func();
+        }
+        //아규먼트 함수
+        {
+        function func(a, b){
+            document.write(arguments[0]);
+            document.write(arguments[1]);
+        }
+        func("함수가 실행되었습니다","함수가 실행되었습니다.")
+        }
     </script>
 
 

@@ -1,0 +1,80 @@
+/* 지마켓산스 */
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'UtoLoveSpring';
+    font-weight: normal;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoLovespring/UtoLoveSpring.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoLovespring/UtoLoveSpring.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/utoLovespring/UtoLoveSpring.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/utoLovespring/UtoLoveSpring.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/utoLovespring/UtoLoveSpring.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'UtoImageHand';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoImageHand/UtoImageHandLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoImageHand/UtoImageHandLight.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/utoImageHand/UtoImageHandLight.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/utoImageHand/UtoImageHandLight.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/utoImageHand/UtoImageHandLight.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'UtoImageHand';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoImageHand/UtoImageHandRegular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoImageHand/UtoImageHandRegular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/utoImageHand/UtoImageHandRegular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/utoImageHand/UtoImageHandRegular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/utoImageHand/UtoImageHandRegular.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'UtoImageHand';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoImageHand/UtoImageHandBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoImageHand/UtoImageHandBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/utoImageHand/UtoImageHandBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/utoImageHand/UtoImageHandBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/utoImageHand/UtoImageHandBold.ttf') format("truetype");
+    font-display: swap;
+}
