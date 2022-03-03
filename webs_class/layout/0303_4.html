@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            height: 100px;
+            background-color: rgb(210, 211, 255);
+        }
+        #banner {
+            height: 300px;
+            background-color: rgb(145, 156, 255);
+        }
+        #main {
+            height: 400px;
+            background-color: rgb(107, 92, 247);
+        }
+        .container {
+            width: 80%;
+            height: 400px;
+            margin: 0 auto;
+            display: grid;
+            place-items: center;
+            grid-template-areas: 
+            "con con con con con"
+            "con con con con con";
+        }
+        .con {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(255, 253, 124);
+            border-radius: 15px;
+        }
+        #footer {
+            height: 100px;
+            background-color: rgb(57, 46, 156);
+        }
+        @media(max-width: 1300px){
+            #wrap {width: 100%;}
+            .container {
+                grid-template-areas: 
+                "con con con con"
+                "con con con con";
+            }
+            .con:nth-child(1),.con:nth-child(2) {
+                display: none;
+            }
+        }
+        @media(max-width: 768px){
+            #banner {height: 200px;}
+            #main {
+                height: 600px;
+                padding-top: 80px;
+                padding-bottom: 50px;
+            }
+            .container {
+                width: 90%;
+                height: inherit;
+                grid-template-areas: 
+                "con con con"
+                "con con con"
+                "con con con";
+            }
+            .con:nth-child(2) {
+                display: block;
+            }
+        }
+        @media(max-width: 480px){
+            #main {
+                height: 950px;
+                padding-top: 50px;
+            }
+            .container {
+                grid-template-areas: 
+                "con con"
+                "con con"
+                "con con"
+                "con con"
+                "con con";
+            }
+            .con:nth-child(1) {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="banner"></nav>
+        <section id="main">
+            <div class="container">
+                <div class="con"></div>
+                <div class="con"></div>
+                <div class="con"></div>
+                <div class="con"></div>
+                <div class="con"></div>
+                <div class="con"></div>
+                <div class="con"></div>
+                <div class="con"></div>
+                <div class="con"></div>
+                <div class="con"></div>
+            </div>
+        </section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
