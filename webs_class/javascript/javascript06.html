@@ -1510,7 +1510,7 @@
 
             document.querySelector(".sample11_N4").innerHTML = 4;
             document.querySelector(".sample11_Q4").innerHTML = "['javascript', 'react', 'vue']";
-            document.querySelector(".sample11_M4").innerHTML = "find(el => el === 'javascript')";
+            document.querySelector(".sample11_M4").innerHTML = "findIndex(el => el === 'javascript')";
             document.querySelector(".sample11_R4").innerHTML = result4;
 
             const arrText5 = ["javascript", "react", "vue"];
@@ -1518,7 +1518,7 @@
 
             document.querySelector(".sample11_N5").innerHTML = 5;
             document.querySelector(".sample11_Q5").innerHTML = "['javascript', 'react', 'vue']";
-            document.querySelector(".sample11_M5").innerHTML = "find(el => el === 'html')";
+            document.querySelector(".sample11_M5").innerHTML = "findIndex(el => el === 'html')";
             document.querySelector(".sample11_R5").innerHTML = result5;
         }
 
@@ -1531,7 +1531,7 @@
 
             document.querySelector(".sample12_N1").innerHTML = 1;
             document.querySelector(".sample12_Q1").innerHTML = "[100, 200, 300, 400, 500]";
-            document.querySelector(".sample12_M1").innerHTML = "find(el => el === 300)";
+            document.querySelector(".sample12_M1").innerHTML = "filter(el => el === 300)";
             document.querySelector(".sample12_R1").innerHTML = result;
             console.log(result);
 
@@ -1611,7 +1611,7 @@
 
             document.querySelector(".sample14_N2").innerHTML = 2;
             document.querySelector(".sample14_Q2").innerHTML = "javascript";
-            document.querySelector(".sample14_M2").innerHTML = "Array.from()";
+            document.querySelector(".sample14_M2").innerHTML = "Array.from(text2, el => el+10)";
             document.querySelector(".sample14_R2").innerHTML = result2;
 
             const text3 ="javascript";
@@ -1619,7 +1619,7 @@
 
             document.querySelector(".sample14_N3").innerHTML = 3;
             document.querySelector(".sample14_Q3").innerHTML = "javascript";
-            document.querySelector(".sample14_M3").innerHTML = ".map()";
+            document.querySelector(".sample14_M3").innerHTML = "[...text3].map(el => el)";
             document.querySelector(".sample14_R3").innerHTML = result3;
         }
 
