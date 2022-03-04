@@ -7,33 +7,6 @@
     <title>0304사이트</title>
     <link rel="stylesheet" href="css/fonts.css">
     <style>
-        /* 기본 셋팅 */
-        .ir_pm {
-            display: block;
-            overflow: hidden;
-            font-size: 0;
-            line-height: 0;
-            text-indent: -9999px;
-        }
-
-        .ir_wa {
-            display: block;
-            overflow: hidden;
-            position: relative;
-            width: 100px;
-            height: 100px;
-            z-index: -1;
-        }
-
-        .ir_so {
-            overflow: hidden;
-            position: relative;
-            width: 0;
-            height: 0;
-            line-height: 0;
-            text-indent: -9999px;
-        }
-
         /* 여백 초기화 */
         body,
         div,
@@ -185,16 +158,22 @@
             }
         }
         @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                margin: 0 auto;
+            }
             .text {
                 float: none;
+                margin: 0 auto;
             }
             .box1 {
                 float: none;
-                margin: 20px -30px;
+                margin: 0 auto;
             }
             .box2 {
                 float: none;
-                margin: 10px -30px;
+                margin: 30px auto;
+
             }
             
         }
@@ -209,24 +188,24 @@
     <div id="wrap">
         <div id="banner">
             <div class="container">
-            <div class="text">
-                <span class="sub">이미지 텍스트 유형01</span>
-                <h2 class="title">웹스토리보이<br>사이트</h2>
-                <p class="desc">웹디자이너, 웹 퍼블리셔, 프론트앤드 개발자를 위한 강의 사이트입니다. 
-                    Gmarket Sans Light 22px 150% #67778A </p>
-                    <a href="#" class="view">더 많은 유형 살펴보기</a>
-            </div>
-            <div id="imgType">
-            <div class="box1">
-                <div class="img01">
-                    <a href="#" class="box1_bt">레퍼런스 사이트</a>
+                <div class="text">
+                    <span class="sub">이미지 텍스트 유형01</span>
+                    <h2 class="title">웹스토리보이<br>사이트</h2>
+                    <p class="desc">웹디자이너, 웹 퍼블리셔, 프론트앤드<br> 개발자를 위한 강의 사이트입니다.<br> 
+                        Gmarket Sans Light 22px 150%<br> #67778A </p>
+                        <a href="#" class="view">더 많은 유형 살펴보기</a>
                 </div>
-            </div>
-            <div class="box2">
-                <div class="img02">
-                    <a href="#" class="box2_bt">튜토리얼 사이트</a>
+                <div id="imgType">
+                <div class="box1">
+                    <div class="img01">
+                        <a href="#" class="box1_bt">레퍼런스 사이트</a>
+                    </div>
                 </div>
-            </div>
+                <div class="box2">
+                    <div class="img02">
+                        <a href="#" class="box2_bt">튜토리얼 사이트</a>
+                    </div>
+                </div>
             </div>
         </div>
         </div>
