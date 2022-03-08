@@ -271,7 +271,7 @@
             <!-- //sample8 -->
 
             <!-- sample9 -->
-            <div id="sample8" class="sample">
+            <div id="sample9" class="sample">
                 <h3>09. 화살표 함수 : 익명함수 + 매개변수 + 리턴값</h3>
                 <div class="code">
                     <pre class="line-numbers"><code class="language-js">{
@@ -291,7 +291,7 @@
             <!-- //sample9 -->
 
             <!-- sample10 -->
-            <div id="sample8" class="sample">
+            <div id="sample10" class="sample">
                 <h3>10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략</h3>
                 <div class="code">
                     <pre class="line-numbers"><code class="language-js">{
@@ -311,7 +311,7 @@
             <!-- //sample10 -->
 
             <!-- sample11 -->
-            <div id="sample8" class="sample">
+            <div id="sample11" class="sample">
                 <h3>11. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
                 <div class="code">
                     <pre class="line-numbers"><code class="language-js">{
@@ -330,7 +330,7 @@
             <!-- //sample11 -->
 
             <!-- sample12 -->
-            <div id="sample8" class="sample">
+            <div id="sample12" class="sample">
                 <h3>12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 +괄호 생략 + 리턴 생략</h3>
                 <div class="code">
                     <pre class="line-numbers"><code class="language-js">{
@@ -347,6 +347,129 @@
                 </div>
             </div>
             <!-- //sample12 -->
+
+            <!-- sample13 -->
+            <div id="sample13" class="sample">
+                <h3>13. 내부 함수</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    function func(){
+        function funA(){
+            document.write("함수가 실행되었습니다.");
+        }
+        funA();
+        function funB(){
+            document.write("함수가 실행되었습니다.");
+        }
+        funB();
+    }
+    func();
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        함수가 실행되었습니다.<br>
+                        함수가 실행되었습니다.
+                    </div>
+                </div>
+            </div>
+            <!-- //sample13 -->
+
+            <!-- sample14 -->
+            <div id="sample14" class="sample">
+                <h3>14. 즉시 실행 함수</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    (function (){
+        document.write("함수가 실행되었습니다.");
+    }());
+
+    (() => {
+        document.write("함수가 실행되었습니다.");
+    })();
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        함수가 실행되었습니다.<br>
+                        함수가 실행되었습니다.
+                    </div>
+                </div>
+            </div>
+            <!-- //sample14 -->
+
+            <!-- sample15 -->
+            <div id="sample15" class="sample">
+                <h3>15. 피라미터 함수</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    function func(str = "함수가 실행되었습니다."){
+        document.write(str);
+    }
+    func();
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        함수가 실행되었습니다.
+                    </div>
+                </div>
+            </div>
+            <!-- //sample15 -->
+
+            <!-- sample16 -->
+            <div id="sample16" class="sample">
+                <h3>16. 아규먼트 함수</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    function func(a, b){
+        document.write(arguments[0]);
+        document.write(arguments[1]);
+    }
+    func("0. 함수가 실행되었습니다.<br>", "1. 함수가 실행되었습니다.");
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+함수가 실행되었습니다.<br>
+함수가 실행되었습니다.
+                    </div>
+                </div>
+            </div>
+            <!-- //sample16 -->
+
+            <!-- sample17 -->
+            <div id="sample17" class="sample">
+                <h3>17. 재귀함수</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    function func(num){
+        if(num &lt;=1){
+            document.write("함수가 실행되었습니다");
+        } else {
+            document.write("함수가 실행되었습니다.");
+            func(num-1);
+        }
+    }
+    func(5)
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        함수가 실행되었습니다.<br>
+                        함수가 실행되었습니다.<br>
+                        함수가 실행되었습니다.<br>
+                        함수가 실행되었습니다.<br>
+                        함수가 실행되었습니다.
+                    </div>
+                </div>
+            </div>
+            <!-- //sample17 -->
 
 
         </div>
@@ -592,6 +715,31 @@
         }
         func("함수가 실행되었습니다","함수가 실행되었습니다.")
         }
+
+        //재귀함수 : 자기 스스로를 호출
+        {
+            // function func(){
+            //     document.write("함수가 실행되었습니다.");
+            //     func();
+            // }
+            // func();
+            function func(num){
+                if(num <=1){
+                    document.write("함수가 실행되었습니다");
+                } else {
+                    document.write("함수가 실행되었습니다.");
+                    func(num-1);
+                }
+            }
+            func(5)
+        }
+        //재귀함수 : 반복문
+        {
+
+        }
+
+        //콜백함수
+
     </script>
 
 
