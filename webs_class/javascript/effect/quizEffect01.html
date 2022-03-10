@@ -612,14 +612,21 @@
                 </div>
             </div>
         </div>
-        <div class="quiz__source"></div>
+        <div class="quiz__source">
+            
+        </div>
     </main>
     <footer id="footer">
         <a href="mailto:dhtpfls321@naver.com">dhtpfls321@naver.com</a>
     </footer>
     
-    
+    <script src="js/highlight.min.js"></script>
+    <script src="js/custom.js"></script>
     <script>
+        quizMenu();
+        quizsource();
+        highlight();
+        
         const quizType = document.querySelector(".quiz__type");         // 퀴즈 종류
         const quizNumber = document.querySelector(".quiz__number");     // 퀴즈 번호
         const quizAsk = document.querySelector(".quiz__ask");           // 퀴즈 질문
