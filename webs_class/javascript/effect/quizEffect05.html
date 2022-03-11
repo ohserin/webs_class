@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>퀴즈 이펙트</title>
     <style>
+        @import url(css/win98.css);
+        @import url(css/min.css);
+
         @font-face {
             font-family: 'DungGeunMo';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
@@ -21,16 +24,17 @@
             font-style: normal;
         }
 
-        *,
-        *:before,
-        *:after {
-            box-sizing: border-box;
-        }
-
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
             font-family: 'DungGeunMo';
+        }
+
+        *,
+        *:before,
+        *::after {
+            box-sizing: border-box;
         }
 
         a {
@@ -38,6 +42,7 @@
         }
 
         body {
+            width: 100%;
             background-color: #f6f6f6;
             background-image:
                 linear-gradient(90deg, #cdcccc 0px, #cdcccc 1px, transparent 1px, transparent 99px, transparent 100px),
@@ -79,6 +84,11 @@
 
         #header h1 {
             padding: 3px 0 6px 10px;
+            color: #fff;
+        }
+
+        #header h1 a {
+            color: #fff;
         }
 
         #header nav {
@@ -99,25 +109,42 @@
         }
 
         #header nav li.active a {
-            background: #fff;
             color: #262626;
+            background: #fff;
         }
 
         #header nav li a:hover {
             opacity: 0.5;
         }
 
+        /* footer */
         #footer {
-            margin-top: 150px;
+            margin-top: 200px;
             width: 100%;
-            background: #fff;
+            background: #838383;
             text-align: center;
             padding: 20px;
         }
 
         #footer a {
-            color: #000;
+            color: #fff;
             font-size: 16px;
+        }
+
+        .quiz_source {
+            position: fixed;
+            padding: 10px 20px;
+            border: 8px ridge #cacaca;
+            background: #cacaca;
+            border-radius: 30px;
+            bottom: 90px;
+            right: 100px;
+        }
+
+        .quiz_source:hover {
+            background: #8d8d8d;
+            color: #fff;
+            cursor: pointer;
         }
 
         /* quiz__wrap */
@@ -130,8 +157,8 @@
         }
 
         .quiz {
-            max-width: 500px;
             width: 100%;
+            max-width: 500px;
             background: #fff;
             border: 8px ridge #cacaca;
             margin: 10px;
@@ -152,8 +179,8 @@
             position: absolute;
             left: 2px;
             top: 2px;
-            width: 15px;
-            height: 15px;
+            width: 5px;
+            height: 5px;
             border: 6px ridge #cacaca;
         }
 
@@ -162,8 +189,8 @@
             position: absolute;
             right: 2px;
             top: 2px;
-            width: 15px;
-            height: 15px;
+            width: 5px;
+            height: 5px;
             border: 6px ridge #cacaca;
         }
 
@@ -195,13 +222,14 @@
             top: 100px;
             width: 120px;
             height: 120px;
+            background: #f5534f;
             border-radius: 50%;
             z-index: 100;
             line-height: 120px;
             text-align: center;
             color: #fff;
-            background-color: #F5534F;
             opacity: 0;
+            transition: all 0.3s ease;
         }
 
         .quiz__view .false {
@@ -215,8 +243,9 @@
             z-index: 100;
             line-height: 120px;
             text-align: center;
-            color: #F5534F;
+            color: #f5534f;
             opacity: 0;
+            transition: all 0.3s ease;
         }
 
         .quiz__view.like .true {
@@ -259,6 +288,7 @@
             }
         }
 
+
         .quiz__answer {
             background-color: #f5f5f5;
             border-top: 6px ridge #cacaca;
@@ -270,8 +300,8 @@
             width: 100%;
             font-size: 22px;
             padding: 13px 20px;
-            background: #d6d6d6;
-            font-family: 'Cafe24Dangdanghae';
+            background: rgb(192, 192, 192);
+            font-family: 'DungGeunMo';
             text-shadow: 1px 1px 1px #fff;
             transition: all 0.3s;
             cursor: pointer;
@@ -282,36 +312,38 @@
         }
 
         .quiz__result {
-            text-align: center;
             border: 6px ridge #cacaca;
+            text-align: center;
             width: 100%;
             font-size: 22px;
-            line-height: 1.4;
             padding: 13px 20px;
-            background: #fff;
-            font-family: 'Cafe24Dangdanghae';
+            background: rgb(255, 255, 255);
+            font-family: 'DungGeunMo';
             text-shadow: 1px 1px 1px #fff;
-        }
-
-        .quiz__ex {
-            text-align: center;
-            border: 6px ridge #cacaca;
-            width: 100%;
-            font-size: 22px;
             line-height: 1.4;
-            padding: 13px 20px;
-            background: #fff;
-            font-family: 'Cafe24Dangdanghae';
-            text-shadow: 1px 1px 1px #fff;
+            /* display: none; */
         }
 
         .quiz__input {
             width: 100%;
             border: 6px ridge #cacaca;
             font-size: 22px;
+            text-align: left;
             padding: 13px 20px;
-            background: #fff;
-            font-family: 'Cafe24Dangdanghae';
+            background: rgb(255, 255, 255);
+            font-family: 'DungGeunMo';
+            text-shadow: 1px 1px 1px #fff;
+            margin-bottom: 10px;
+        }
+
+        .quiz__ex {
+            width: 100%;
+            border: 6px ridge #cacaca;
+            font-size: 22px;
+            text-align: left;
+            padding: 13px 20px;
+            background: rgb(255, 255, 255);
+            font-family: 'DungGeunMo';
             text-shadow: 1px 1px 1px #fff;
             margin-bottom: 10px;
         }
@@ -332,11 +364,11 @@
 
         .quiz__selects label span {
             font-size: 20px;
-            line-height: 1.3;
             padding: 10px 30px 10px 20px;
             margin: 3px 0;
-            border-radius: 5px;
-            font-family: 'Cafe24Dangdanghae';
+            line-height: 1.3;
+            border-radius: 20px;
+            font-family: 'DungGeunMo';
             display: flex;
             align-items: center;
             cursor: pointer;
@@ -357,7 +389,7 @@
         }
 
         .quiz__selects label input:checked+span {
-            background-color: #f5ffe7;
+            background-color: #e8ffc5;
         }
 
         .quiz__selects label input:checked+span::before {
@@ -365,6 +397,7 @@
         }
 
         /* dog */
+
         .dog .tail,
         .dog .chin,
         .dog .tongue::before,
@@ -501,7 +534,7 @@
             position: relative;
             top: 34.5%;
             width: 4px;
-            height: 6px;
+            height: 10px;
             margin: 0 auto;
             text-align: center;
             background: #451d1c;
@@ -612,7 +645,6 @@
             transform-origin: 100% 50%;
             border-radius: 25px 0 0 25px;
             z-index: -2;
-            animation: movetail 0.1s linear infinite alternate forwards;
         }
 
         .dog .legs {
@@ -647,6 +679,9 @@
             height: 250%;
             border-radius: 20px 20px 35px 35px;
         }
+
+        /* dog like */
+        .like .dog {}
 
         .like .dog .face::before {
             margin-top: 10px;
@@ -691,21 +726,31 @@
         }
 
         .like .dog .chin {
-            top: 34%;
+            top: 30%;
         }
 
-        .like .dog .tail {
+        .dog .tail {
             animation: movetail 0.1s linear infinite alternate forwards;
         }
 
+        .dislike .dog .tail {
+            animation: none;
+        }
+
+
+
+        /* .dislike .dog */
+        .dislike .dog .ears::before,
         .dislike .dog .ears::before {
             transform: rotate(-50deg) translate(-7px, 2px);
         }
 
+        .dislike .dog .ears::after,
         .dislike .dog .ears::after {
             transform: rotate(50deg) translate(7px, 2px);
         }
 
+        .dislike .dog .face::before,
         .dislike .dog .face::before {
             margin-top: 28px;
         }
@@ -732,6 +777,7 @@
         }
 
         .dislike .dog .teardrop {
+            -webkit-animation: cry 0.1s ease-in 0.25s forwards;
             animation: cry 0.1s ease-in 0.25s forwards;
         }
 
@@ -749,8 +795,9 @@
 
         .dislike .dog .tail {
             transform: rotate(0);
-            animation: none;
         }
+
+
 
         @keyframes movetongue {
             100% {
@@ -800,10 +847,332 @@
 
     <footer id="footer">
         <a href="mailto:dhtpfls321@naver.com">dhtpfls321@naver.com</a>
+        <div class="quiz_source">소스보기</div>
     </footer>
+    <div class="source">
+        <div class="window">
+            <div class="title-bar">
+                <div class="minimize">
+                    <div class="symbol"></div>
+                </div>
+                <div class="maximize">
+                    <div class="symbol"></div>
+                </div>
+                <div class="close">
+                    <div class="symbol"></div>
+                </div>
+            </div>
+            <div class="menu-bar"><span class="active">HTML</span><span>CSS</span><span>JavaScrpit</span></div>
+            <div class="content-container">
+                <div class="content">
+                    <div class="main">
+                        <div>
+                            <pre><code class="language-html">&lt;main id="main"&gt;
+    &lt;div class="quiz__wrap"&gt;
+        &lt;!-- javascript : quiz --&gt;
+    &lt;/div&gt;
+&lt;/main&gt;<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</code></pre>
+                        </div>
+                        <div>
+                            <pre><code class="language-css">.quiz_source {
+    position: fixed;
+    padding: 10px 20px;
+    border: 8px ridge #cacaca;
+    background: #cacaca;
+    border-radius: 30px;
+    bottom: 90px;
+    right: 100px;
+}
+.quiz_source:hover {
+    background: #8d8d8d;
+    color: #fff;
+    cursor: pointer;
+}
+/* quiz__wrap */
+.quiz__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 150px;
+}
+.quiz {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    border: 8px ridge #cacaca;
+    margin: 10px;
+}
+.quiz__type {
+    background: #cacaca;
+    text-align: center;
+    font-size: 14px;
+    color: #3b3b3b;
+    border: 3px ridge #cacaca;
+    padding: 3px 0;
+    position: relative;
+}
 
+.quiz__type::before {
+    content: '';
+    position: absolute;
+    left: 2px;top: 2px;
+    width: 5px; height: 5px;
+    border: 6px ridge #cacaca;
+}
+.quiz__type::after {
+    content: '';
+    position: absolute;
+    right: 2px;top: 2px;
+    width: 5px; height: 5px;
+    border: 6px ridge #cacaca;
+}
+
+.quiz__question {
+    border-top: 6px ridge #cacaca;
+    border-bottom: 6px ridge #cacaca;
+    padding: 13px 30px;
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.quiz__number {
+    font-family: 'Cafe24Dangdanghae';
+    color: #64a30b;
+}
+
+.quiz__ask {
+    font-family: 'Cafe24Dangdanghae';
+}
+
+.quiz__view {
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+.quiz__view .true {
+    position: absolute;
+    left: 70%;
+    top: 100px;
+    width: 120px;
+    height: 120px;
+    background: #f5534f;
+    border-radius: 50%;
+    z-index: 100;
+    line-height: 120px;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.quiz__view .false {
+    position: absolute;
+    right: 70%;
+    top: 100px;
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 100;
+    line-height: 120px;
+    text-align: center;
+    color: #f5534f;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.quiz__view.like .true{
+    opacity: 1;
+    animation: wobble 0.6s;
+}
+
+.quiz__view.dislike .false{
+    opacity: 1;
+    animation: wobble 0.6s;
+}</code></pre>
+                        </div>
+                        <div>
+                            <pre><code class="language-js">const quizWrap = document.querySelector(".quiz__wrap");
+
+//문제 정보
+const quizInfo = [{
+        answerType: "javascript",
+        answerNum: 1,
+        answerAsk: "객체 기반의 스크립트 프로그래밍 언어는 무엇입니까?",
+        answerChoice: {
+            1: "html",
+            2: "css",
+            3: "javascript",
+            4: "react"
+        },
+        answerResult: "3",
+        answerEx: "객체 기반의 스크립트 프로그래밍 언어는 자바스크립트입니다."
+    },
+    {
+        answerType: "html",
+        answerNum: 2,
+        answerAsk: "웹 페이지를 표현하기 위한 마크업 언어는 무엇인가요?",
+        answerChoice: {
+            1: "html",
+            2: "css",
+            3: "javascript",
+            4: "react"
+        },
+        answerResult: "1",
+        answerEx: "웹 페이지를 표현하기 위한 마크업 언어는 HTML입니다."
+    },
+    {
+        answerType: "css",
+        answerNum: 3,
+        answerAsk: "웹 페이지를 꾸미기 위해서 사용하는 언어는 무엇인가요?",
+        answerChoice: {
+            1: "html",
+            2: "css",
+            3: "javascript",
+            4: "react"
+        },
+        answerResult: "2",
+        answerEx: "웹 페이지를 꾸미기 위해서 사용하는 언어는 css입니다."
+    }
+];
+
+//문제 출력
+function updataQuiz() {
+    const html = [];
+
+    quizInfo.forEach((question, number) =&gt; {
+        html.push(`
+            &lt;div class="quiz"&gt;
+                &lt;h2 class="quiz__type"&gt;${question.answerType}&lt;/h2&gt;
+                &lt;h3 class="quiz__question"&gt;
+                    &lt;span class="quiz__number"&gt;${question.answerNum}. &lt;/span&gt;
+                    &lt;span class="quiz__ask"&gt;${question.answerAsk}&lt;/span&gt;
+                &lt;/h3&gt;
+                &lt;div class="quiz__view"&gt;
+                    &lt;div class="true"&gt;정답입니다!&lt;/div&gt;
+                    &lt;div class="false"&gt;틀렸습니다!&lt;/div&gt;
+                    &lt;div class="dog"&gt;
+                        &lt;div class="head"&gt;
+                            &lt;div class="ears"&gt;&lt;/div&gt;
+                            &lt;div class="face"&gt;&lt;/div&gt;
+                            &lt;div class="eyes"&gt;
+                                &lt;div class="teardrop"&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="nose"&gt;&lt;/div&gt;
+                            &lt;div class="mouth"&gt;
+                                &lt;div class="tongue"&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="chin"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="body"&gt;
+                            &lt;div class="tail"&gt;&lt;/div&gt;
+                            &lt;div class="legs"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="quiz__answer"&gt;
+                    &lt;div class="quiz__selects"&gt;
+                        &lt;label for="select1${number}"&gt;
+                            &lt;input class="select" type="radio" id="select1${number}" name="select${number}" value="1"&gt;
+                            &lt;span class="choice"&gt;${question.answerChoice[1]}&lt;/span&gt;
+                        &lt;/label&gt;
+                        &lt;label for="select2${number}"&gt;
+                            &lt;input class="select" type="radio" id="select2${number}" name="select${number}" value="2"&gt;
+                            &lt;span class="choice"&gt;${question.answerChoice[2]}&lt;/span&gt;
+                        &lt;/label&gt;
+                        &lt;label for="select3${number}"&gt;
+                            &lt;input class="select" type="radio" id="select3${number}" name="select${number}" value="3"&gt;
+                            &lt;span class="choice"&gt;${question.answerChoice[3]}&lt;/span&gt;
+                        &lt;/label&gt;
+                        &lt;label for="select4${number}"&gt;
+                            &lt;input class="select" type="radio" id="select4${number}" name="select${number}" value="4"&gt;
+                            &lt;span class="choice"&gt;${question.answerChoice[4]}&lt;/span&gt;
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        `)
+    });
+
+    html.push(`
+        &lt;div class="quiz__btn"&gt;
+            &lt;button class="quiz__confirm"&gt;정답 확인하기&lt;/button&gt;   
+            &lt;div class="quiz__result"&gt;&lt;/div&gt; 
+        &lt;/div&gt;
+    `);
+
+    quizWrap.innerHTML = html.join('');
+}
+updataQuiz();
+
+function answerQuiz() {
+    const quizSelects = document.querySelectorAll(".quiz__selects"); //보기 선택 박스
+    const quizView = document.querySelectorAll(".quiz__view"); //보기 선택 박스
+    const quizResult = document.querySelector(".quiz__result");
+
+    let scoreCurrent = 0;
+
+    quizInfo.forEach((question, number) =&gt; {
+        const quizSelectsWrap = quizSelects[number]; //전체 보기 박스 
+        const userSelector = `input[name=select${number}]:checked`; //사용자가 클릭한것
+        const userAnswer = (quizSelectsWrap.querySelector(userSelector) || {}).value //클릭한 값의 속성 값을 가져옮
+
+        if (userAnswer == question.answerResult) {
+            //console.log("정답입니다.")
+            quizView[number].classList.add("like");
+            scoreCurrent++;
+        } else {
+            //console.log("오답입니다.")
+            quizView[number].classList.add("dislike");
+            const div = document.createElement("div");
+            quizSelectsWrap.appendChild(div).innerHTML = `&lt;p class="quiz__ex"&gt;${question.answerEx}&lt;/p&gt;`;
+        }
+    });
+    quizResult.innerHTML = `${quizInfo.length} 문제 중에 ${scoreCurrent} 문제를 맞추었습니다.`;
+}
+
+document.querySelector(".quiz__confirm").addEventListener("click", answerQuiz);</code></pre>
+                        </div>
+                    </div>
+                    <div class="scroll">
+                        <div class="start"></div>
+                        <div class="progress"></div>
+                        <div class="end"></div>
+                    </div>
+                </div>
+                <div class="scroll -row">
+                    <div class="start"></div>
+                    <div class="progress"></div>
+                    <div class="end"></div>
+                </div>
+            </div>
+            <div class="footer"></div>
+        </div>
+    </div>
+
+
+    <script src="js/highlight.min.js"></script>
+    <script src="js/window98.js"></script>
     <!-- script -->
     <script>
+        highlight(); //외부 스크립트 함수 (highlight)호출
+
         const quizWrap = document.querySelector(".quiz__wrap");
 
         //문제 정보
@@ -854,64 +1223,64 @@
 
             quizInfo.forEach((question, number) => {
                 html.push(`
-                    <div class="quiz">
-                        <h2 class="quiz__type">${question.answerType}</h2>
-                        <h3 class="quiz__question">
-                            <span class="quiz__number">${question.answerNum}. </span>
-                            <span class="quiz__ask">${question.answerAsk}</span>
-                        </h3>
-                        <div class="quiz__view">
-                            <div class="true">정답입니다!</div>
-                            <div class="false">틀렸습니다!</div>
-                            <div class="dog">
-                                <div class="head">
-                                    <div class="ears"></div>
-                                    <div class="face"></div>
-                                    <div class="eyes">
-                                        <div class="teardrop"></div>
-                                    </div>
-                                    <div class="nose"></div>
-                                    <div class="mouth">
-                                        <div class="tongue"></div>
-                                    </div>
-                                    <div class="chin"></div>
-                                </div>
-                                <div class="body">
-                                    <div class="tail"></div>
-                                    <div class="legs"></div>
-                                </div>
+            <div class="quiz">
+                <h2 class="quiz__type">${question.answerType}</h2>
+                <h3 class="quiz__question">
+                    <span class="quiz__number">${question.answerNum}. </span>
+                    <span class="quiz__ask">${question.answerAsk}</span>
+                </h3>
+                <div class="quiz__view">
+                    <div class="true">정답입니다!</div>
+                    <div class="false">틀렸습니다!</div>
+                    <div class="dog">
+                        <div class="head">
+                            <div class="ears"></div>
+                            <div class="face"></div>
+                            <div class="eyes">
+                                <div class="teardrop"></div>
                             </div>
+                            <div class="nose"></div>
+                            <div class="mouth">
+                                <div class="tongue"></div>
+                            </div>
+                            <div class="chin"></div>
                         </div>
-                        <div class="quiz__answer">
-                            <div class="quiz__selects">
-                                <label for="select1${number}">
-                                    <input class="select" type="radio" id="select1${number}" name="select${number}" value="1">
-                                    <span class="choice">${question.answerChoice[1]}</span>
-                                </label>
-                                <label for="select2${number}">
-                                    <input class="select" type="radio" id="select2${number}" name="select${number}" value="2">
-                                    <span class="choice">${question.answerChoice[2]}</span>
-                                </label>
-                                <label for="select3${number}">
-                                    <input class="select" type="radio" id="select3${number}" name="select${number}" value="3">
-                                    <span class="choice">${question.answerChoice[3]}</span>
-                                </label>
-                                <label for="select4${number}">
-                                    <input class="select" type="radio" id="select4${number}" name="select${number}" value="4">
-                                    <span class="choice">${question.answerChoice[4]}</span>
-                                </label>
-                            </div>
+                        <div class="body">
+                            <div class="tail"></div>
+                            <div class="legs"></div>
                         </div>
                     </div>
-                `)
+                </div>
+                <div class="quiz__answer">
+                    <div class="quiz__selects">
+                        <label for="select1${number}">
+                            <input class="select" type="radio" id="select1${number}" name="select${number}" value="1">
+                            <span class="choice">${question.answerChoice[1]}</span>
+                        </label>
+                        <label for="select2${number}">
+                            <input class="select" type="radio" id="select2${number}" name="select${number}" value="2">
+                            <span class="choice">${question.answerChoice[2]}</span>
+                        </label>
+                        <label for="select3${number}">
+                            <input class="select" type="radio" id="select3${number}" name="select${number}" value="3">
+                            <span class="choice">${question.answerChoice[3]}</span>
+                        </label>
+                        <label for="select4${number}">
+                            <input class="select" type="radio" id="select4${number}" name="select${number}" value="4">
+                            <span class="choice">${question.answerChoice[4]}</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        `)
             });
 
             html.push(`
-                <div class="quiz__btn">
-                    <button class="quiz__confirm">정답 확인하기</button>   
-                    <div class="quiz__result"></div> 
-                </div>
-            `);
+        <div class="quiz__btn">
+            <button class="quiz__confirm">정답 확인하기</button>   
+            <div class="quiz__result"></div> 
+        </div>
+    `);
 
             quizWrap.innerHTML = html.join('');
         }
