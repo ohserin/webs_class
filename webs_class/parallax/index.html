@@ -169,18 +169,17 @@
         }
 
         .view_bt {
-            width: 100px;
-            height: 100px;
+            position: absolute;
+            bottom: 200px; left: 50%;
+            width: 100px; height: 100px;
+            background: rgba(87, 209, 189, 0.9);
+            transform: translateX(-50%);
+            display: inline-block;
+            border-radius: 50%;
             line-height: 100px;
             color: #fff;
-            font-size: 20px;
-            background: rgba(129, 164, 194, 0.6);
-            position: absolute;
-            left: 47%;
-            top: 8.5vw;
-            border-radius: 30px;
             text-align: center;
-            font-weight: 500;
+            transition: all 0.3s;
         }
     </style>
 </head>
@@ -266,7 +265,7 @@
 
            <div class="section2_img3 fixed"
             data-18200="top: 200%;"
-             data-19400="top: 60%;"
+             data-19400="top: 57%;"
              data-21000 ="top: 60%; transform: translate(-50%, -50%) scale(1)"
              data-22000 ="top: 60%; transform: translate(-50%, -50%) scale(0)"
              >
@@ -286,20 +285,20 @@
            <!-- //img3 -->
 
            <div class="section2_img4 fixed"
-            data-19900="top: 200%;"
-             data-21500="top: 60%;"
+            data-21000="top: 200%;"
+             data-22000="top: 57%;"
              >
                <img src="img/MacBook Pro 13.png" alt="macbook">
 
                <div class="section2_img4_site">
                    <div class="move"
-                    data-21000="top: 0%"
-                     data-22000="top: -315%"
+                    data-22000="top: 0%"
+                     data-23000="top: -315%"
                      >
                        <img src="img/site.jpg" alt="사이트03"></div>
                    <a href="#" class="view_bt"
-                   data-21000 = "opacity:0"
-                    data-21500 = "opacity:1">View</a>
+                   data-22500 = "opacity:0"
+                    data-23000 = "opacity:1">View</a>
                </div>
            </div>
            <!-- //img4 -->
