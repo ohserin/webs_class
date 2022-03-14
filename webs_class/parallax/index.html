@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,24 @@
     <title>parallax</title>
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
     <style>
-        *
-        {
+        * {
             margin: 0;
             padding: 0;
             font-family: 'NexonLv1Gothic';
             font-weight: 300;
         }
+
+        /* 링크 초기화 */
+        a {
+            color: #222;
+            text-decoration: none;
+        }
+
         .scrollTop {
             position: fixed;
             left: 20px;
             top: 20px;
-            background: rgba(0,0,0,0.4);
+            background: rgba(0, 0, 0, 0.4);
             color: #fff;
             width: 60px;
             height: 30px;
@@ -26,9 +33,11 @@
             line-height: 30px;
             z-index: 10000;
         }
+
         body {
-            height: 20000px;
+            height: 30000px;
         }
+
         /* common */
         .fixed {
             position: fixed;
@@ -37,12 +46,13 @@
             transform: translate(-50%, -50%);
             z-index: 1000;
         }
+
         img {
             width: 100%;
             vertical-align: top;
             object-fit: cover;
         }
-   
+
         /* section1__bg */
         .section1__bg img {
             width: 70%;
@@ -51,11 +61,13 @@
             /* width: 100%;
             height: 100vh; */
         }
+
         .section1_text1 {
             color: #fff;
             font-size: 7vw;
             transform: translate(-50%, -50%) scale(0);
         }
+
         .section1_text2 {
             color: #fff;
             font-size: 7vw;
@@ -63,6 +75,7 @@
             white-space: nowrap;
             font-weight: 500;
         }
+
         .section1_text3 {
             color: #fff;
             font-size: 7vw;
@@ -70,93 +83,230 @@
             white-space: nowrap;
             font-weight: 500;
         }
+
         /* section2 */
         .section2_bg {
             width: 100%;
             height: 100vh;
-            background: #000;
+            background: rgb(108, 218, 203);
         }
+
         .section2_text1 {
-            font-size: 3vw;
-            color: #fff;
+            font-size: 4vw;
+            color: rgb(255, 255, 255);
             white-space: nowrap;
         }
+
         .section2_img1 {
-            width: 50vw;
+            width: 70vw;
             top: 80%;
+        }
+
+        .section2_img1_site {
+            position: absolute;
+            left: 50%;
+            top: 1.5vw;
+            transform: translate(-50%);
+            width: 55vw;
+            height: calc(100% - 5vw);
+            /* border: 1px solid #fff; */
+            border-radius: 1vw 1vw 0 0;
+            overflow: hidden;
+        }
+
+        .move {
+            position: absolute;
+            top: 0;
+        }
+        .section2_img2 {
+            width: 70vw;
+            top: 80%;
+        }
+
+        .section2_img2_site {
+            position: absolute;
+            left: 50%;
+            top: 1.5vw;
+            transform: translate(-50%);
+            width: 55vw;
+            height: calc(100% - 5vw);
+            /* border: 1px solid #fff; */
+            border-radius: 1vw 1vw 0 0;
+            overflow: hidden;
+        }
+        .section2_img3 {
+            width: 70vw;
+            top: 80%;
+        }
+
+        .section2_img3_site {
+            position: absolute;
+            left: 50%;
+            top: 1.5vw;
+            transform: translate(-50%);
+            width: 55vw;
+            height: calc(100% - 5vw);
+            /* border: 1px solid #fff; */
+            border-radius: 1vw 1vw 0 0;
+            overflow: hidden;
+        }
+
+        .section2_img4 {
+            width: 70vw;
+            top: 80%;
+        }
+
+        .section2_img4_site {
+            position: absolute;
+            left: 50%;
+            top: 1.5vw;
+            transform: translate(-50%);
+            width: 55vw;
+            height: calc(100% - 5vw);
+            /* border: 1px solid #fff; */
+            border-radius: 1vw 1vw 0 0;
+            overflow: hidden;
+        }
+
+        .view_bt {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            color: #fff;
+            font-size: 20px;
+            background: rgba(129, 164, 194, 0.6);
+            position: absolute;
+            left: 47%;
+            top: 8.5vw;
+            border-radius: 30px;
+            text-align: center;
+            font-weight: 500;
         }
     </style>
 </head>
+
 <body>
     <div class="scrollTop">0</div>
     <div id="contents">
-        <section id="section1"
-        data-8500 ="display: block"
-        data-8501 ="display: none"
-        >
+        <section id="section1" data-8500="display: block" data-8501="display: none">
             <div class="section1__bg">
-                <img class="fixed" src="img/sea_01.jpg" alt="이미지"
-                data-0 = "width: 70%; height: 17vh"
-                data-1000 = "width: 100%; height: 17vh"
-                data-2000 = "width: 100%; height: 50vh"
-                data-7000 = "width: 100%; height: 50vh"
-                data-8000 = "width: 100%; height: 0vh">
+                <img class="fixed" src="img/sea_01.jpg" alt="이미지" data-0="width: 70%; height: 17vh"
+                    data-1000="width: 100%; height: 17vh" data-2000="width: 100%; height: 50vh"
+                    data-7000="width: 100%; height: 50vh" data-8000="width: 100%; height: 0vh">
             </div>
-            <div class="section1_text1 fixed"
-            data-1100="transform: translate(-50%, -50%) scale(0); top:50%"
-            data-2000="transform: translate(-50%, -50%) scale(1); top:50% "
-            data-3000="transform: translate(-50%, -50%) scale(1); top:50%"
-            data-4000="transform: translate(-50%, -50%) scale(1); top:-10%"
-            >안녕하세요!</div>
-            
-            <div class="section1_text2 fixed"
-                data-3000="transform: translate(-50%, -50%) scale(1); top:100%; left:50%"
+            <div class="section1_text1 fixed" data-1100="transform: translate(-50%, -50%) scale(0); top:50%"
+                data-2000="transform: translate(-50%, -50%) scale(1); top:50% "
+                data-3000="transform: translate(-50%, -50%) scale(1); top:50%"
+                data-4000="transform: translate(-50%, -50%) scale(1); top:-10%">안녕하세요!</div>
+
+            <div class="section1_text2 fixed" data-3000="transform: translate(-50%, -50%) scale(1); top:100%; left:50%"
                 data-4000="transform: translate(-50%, -50%) scale(1); top:50%; left:50%"
                 data-5000="transform: translate(-50%, -50%) scale(1); top:50%; left:50%"
-                data-6000="transform: translate(-50%, -50%) scale(1); top:50%; left:-100%"
-            >포트폴리오 사이트 입니다.</div>
+                data-6000="transform: translate(-50%, -50%) scale(1); top:50%; left:-100%">포트폴리오 사이트 입니다.</div>
 
-            <div class="section1_text3 fixed"
-                data-5000="transform: translate(-50%, -50%) scale(1); top:50%; left: 150%"
+            <div class="section1_text3 fixed" data-5000="transform: translate(-50%, -50%) scale(1); top:50%; left: 150%"
                 data-6000="transform: translate(-50%, -50%) scale(1); top:50%; left: 50%"
                 data-7000="transform: translate(-50%, -50%) scale(1); top:50%; left: 50%"
-                data-8000="transform: translate(-50%, -50%) scale(1); top:50%; left: -100%"
-            >지금부터 보여드릴게요!</div>
-
-            <div class="section2_img1 fixed"
-                data-5000="transform: translate(-50%, -50%) scale(1); top:50%; left: 150%"
-                data-6000="transform: translate(-50%, -50%) scale(1); top:50%; left: 50%"
-                data-7000="transform: translate(-50%, -50%) scale(1); top:50%; left: 50%"
-                data-8000="transform: translate(-50%, -50%) scale(1); top:50%; left: -100%"
-            >지금부터 보여드릴게요!</div>
-
-            <!-- <div class="section2_text1 fixed"
-                data-5000="transform: translate(-50%, -50%) scale(1); top:50%; left: 150%"
-                data-6000="transform: translate(-50%, -50%) scale(1); top:50%; left: 50%"
-                data-7000="transform: translate(-50%, -50%) scale(1); top:50%; left: 50%"
-                data-8000="transform: translate(-50%, -50%) scale(1); top:50%; left: -100%"
-            >지금부터 보여드릴게요!</div> -->
-
-            <!-- 밑에서 모니터가 올라오고 글씨는 모니터위로 -->
+                data-8000="transform: translate(-50%, -50%) scale(1); top:50%; left: -100%">지금부터 보여드릴게요!</div>
         </section>
         <!-- //section1 -->
 
-        <section id="section2"
-        data-8700 ="display: none"
-        data-9001 ="display: block"
-        >
-            <div class="section2_bg fixed"
-            data-9000 ="width: 0%; height:0vh; border-radius:500px"
-            data-10000 ="width: 100%; height:100vh; border-radius:0px"
-            ></div>
-            <div class="section2_text1 fixed"
-            data-8500="transform: translate(-50%, -50%) scale(0.8);"
-            data-10500="transform: translate(-50%, -50%) scale(1);"
-            >I've Been Workong In On Sites
-            <div class="section2_img1 fixed">
-                <img src="img/MacBook Pro 13.png" alt="맥북">
+        <section id="section2" data-8700="display: none" data-9001="display: block">
+            <div class="section2_bg fixed" data-9000="width: 0%; height:0vh; border-radius:500px"
+                data-10000="width: 100%; height:100vh; border-radius:0px"></div>
+
+            <div class="section2_text1 fixed" 
+            data-8500="transform: translate(-50%, -50%) scale(0.3);"
+                data-10500="transform: translate(-50%, -50%) scale(0.8);"
+                data-11500="transform: translate(-50%, -500%) scale(1);">
+                I've Been Working In On Sites
             </div>
+
+            <div class="section2_img1 fixed"
+             data-10500="top:170%"
+              data-12000="top:58%"
+              data-13700="left:50%"
+              data-14600="left:-40%"
+              >
+                <img src="img/MacBook Pro 13.png" alt="macbook">
+
+                <div class="section2_img1_site">
+                    <div class="move"
+                     data-12000="top: 0%"
+                      data-13500="top: -315%"
+                      >
+                        <img src="img/site.jpg" alt="사이트01"></div>
+                    <a href="#" class="view_bt"
+                    data-13300 = "opacity:0"
+                    data-13550 = "opacity:1">View</a>
+                </div>
             </div>
+            <!-- //img1 -->
+
+            <div class="section2_img2 fixed"
+            data-14600="top:170%"
+             data-16000="top:58%"
+             data-17600="transform: translate(-50%, -50%) scale(1); left: 50%"
+              data-19000="transform: translate(-50%, -50%) scale(1); left: 150%"
+             >
+               <img src="img/MacBook Pro 13.png" alt="macbook">
+
+               <div class="section2_img2_site">
+                   <div class="move"
+                    data-16000="top: 0%"
+                     data-17500="top: -315%"
+                     >
+                       <img src="img/site.jpg" alt="사이트02"></div>
+                   <a href="#" class="view_bt"
+                   data-17300 = "opacity:0"
+                    data-17400 = "opacity:1">View</a>
+               </div>
+           </div>
+           <!-- //img2 -->
+
+           <div class="section2_img3 fixed"
+            data-18200="top: 200%;"
+             data-19400="top: 60%;"
+             data-21000 ="top: 60%; transform: translate(-50%, -50%) scale(1)"
+             data-22000 ="top: 60%; transform: translate(-50%, -50%) scale(0)"
+             >
+               <img src="img/MacBook Pro 13.png" alt="macbook">
+
+               <div class="section2_img3_site">
+                   <div class="move"
+                    data-19500="top: 0%"
+                     data-21000="top: -315%"
+                     >
+                       <img src="img/site.jpg" alt="사이트03"></div>
+                   <a href="#" class="view_bt"
+                   data-20000 = "opacity:0"
+                    data-21000 = "opacity:1">View</a>
+               </div>
+           </div>
+           <!-- //img3 -->
+
+           <div class="section2_img4 fixed"
+            data-19900="top: 200%;"
+             data-21500="top: 60%;"
+             >
+               <img src="img/MacBook Pro 13.png" alt="macbook">
+
+               <div class="section2_img4_site">
+                   <div class="move"
+                    data-21000="top: 0%"
+                     data-22000="top: -315%"
+                     >
+                       <img src="img/site.jpg" alt="사이트03"></div>
+                   <a href="#" class="view_bt"
+                   data-21000 = "opacity:0"
+                    data-21500 = "opacity:1">View</a>
+               </div>
+           </div>
+           <!-- //img4 -->
+
+           
+
+            
         </section><!-- //section2 -->
         <section id="section3"></section><!-- //section3 -->
         <section id="section4"></section><!-- //section4 -->
@@ -168,10 +318,10 @@
     <script type="text/javascript">
         var s = skrollr.init();
 
-        function scroll(){
+        function scroll() {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
             document.querySelector(".scrollTop").innerText = Math.round(scrollTop);
-            
+
 
             //document.querySelector(".section1__bg img").style.width = scrollTop + "px";
 
@@ -180,4 +330,5 @@
         scroll();
     </script>
 </body>
+
 </html>
