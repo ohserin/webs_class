@@ -439,11 +439,14 @@ INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, reg
                     </div>
                     <h4 class="pt20">모든 회원의 비밀번호를 '1234' 변경</h4>
                     <pre class="language-js"><code>UPDATE myMember SET youPass = "1234";</code></pre>
+
+                    <h4 class="pt20">아이디 번호가 3, 비밀번호를 '1234' 변경</h4>
+                    <pre class="language-js"><code>UPDATE myMember SET youPass = "1234" WHERE boardID = 3;</code></pre>
                    
-                    <h4 class="pt20">아이디 내림차순</h4>
+                    <h4 class="pt20">5~10회원의 비밀번호를 '1234567' 변경</h4>
                     <pre class="language-js"><code>UPDATE myMember SET youPass = "1234567" WHERE memberID BETWEEN 5 AND 10;</code></pre>
 
-                    <h4 class="pt20">5~10회원의 비밀번호를 '1234567' 변경</h4>
+                    <h4 class="pt20">아이디 내림차순</h4>
                     <pre class="language-js"><code>UPDATE myMember SET youPass = "****" ORDER BY memberID DESC LIMIT 10;</code></pre>
 
 
