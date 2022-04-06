@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test2</title>
+    <style>
+     @font-face {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
+    font-display: swap;
+}
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'GmarketSans';
+        }
+         /* 링크 초기화 */
+        a {
+            color: #222;
+            text-decoration: none;
+        }
+        .clearfix::before, .clearfix::after 
+        {display: block; content: ''; clear: both;}
+        .wrap {
+            width: 1500px;
+            margin: 0 auto;
+        }
+        .cantainar {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        #header {height: 100px;}
+        #header h1 {float: left; padding-top: 5px;}
+        #header h1 img {width: 130px;}
+        #header .nav {float: right; z-index: 100; position: relative; margin-top: 20px;}
+        #header .nav li {position: relative; float: left; width: 120px; text-align: center;}
+        #header .nav li a {display: block; padding: 20px 15px; background: #ccc; white-space: nowrap;}
+        #header .nav li a:hover {background: #ddd;}
+        #header .nav li ul.foodmenu {display: none; position: absolute; left: 0; top: 59px; background: #ddd;}
+        #header .nav li ul.foodmenu li a {padding: 10px;}
+        #header .nav li ul.foodmenu li a:hover {background: #999;}
+
+        /* #main #banner {
+            height: 410px;
+            background-image: url(img2/ban.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        } */
+
+  
+        #section2 {
+            width: 100%;
+        }
+        .sec2__con {
+            display: flex;
+            justify-content: space-between;
+            height: 168px;
+        }
+        #section2 .left {
+            flex: 0 0 49%;
+            background-image: url(../img/0405sec2-1.jpg);
+            background-size: cover;
+            
+        }
+        #section2 .right {
+            flex: 0 0 49%;
+            background-image: url(../img/0405sec2-2.jpg);
+            background-size: cover;
+        }
+        #section2 .cont h3 {
+            font-size: 30px;
+            padding-top: 30px;
+            padding-left: 30px;
+        }
+        #section2 .cont p {
+            padding-left: 30px;
+            margin-top: 10px;
+        }
+        
+        #section2 .left span {
+            position: relative;
+        }
+        #section2 .left span::before {
+            content: '';
+            position: absolute;
+            left: 22px;
+            top: 0;
+            background-image: url(../img/0405where.jpg);
+            width: 27px; height: 27px;
+            background-size: cover;
+        }
+        #section2 .right span {
+            position: relative;
+        }
+        #section2 .right span::before {
+            content: '';
+            position: absolute;
+            left: 22px;
+            top: 0;
+            background-image: url(../img/0405time.jpg);
+            width: 27px; height: 27px;
+            background-size: cover;
+        }
+        #section2 .cont span {
+            padding-left: 60px;
+            padding-top: 5px;
+            display: inline-block;
+        }
+        #section2 .cont span p {
+            display: inline;
+            color: #000;
+            font-weight: lighter;
+        }
+     
+
+        .card_wrap {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        .card_text {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .pri {
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        .pri span {
+            color: #555;
+            font-weight: 500;
+        }
+
+        .card1 .card_img {
+            background-image: url(img2/card_1.jpg);
+            background-size: cover;
+            width: 310px;
+            height: 310px;
+            background-repeat: no-repeat;
+        }
+        
+        .card2 .card_img {
+            background-image: url(img2/card_2.jpg);
+            background-size: cover;
+            width: 310px;
+            height: 310px;
+            background-repeat: no-repeat;
+        }
+        .card3 .card_img {
+            background-image: url(img2/card_3.jpg);
+            background-size: cover;
+            width: 310px;
+            height: 310px;
+            background-repeat: no-repeat;
+        }
+        .card1 .card_img .box {
+            font-weight: 300;
+            width: 50px;
+            height: 50px;
+            background: #000;
+            padding: 5px;
+            color: #fff;
+            position: relative;
+            left: 10px; top: 10px;
+            text-align: center;
+        }
+        .card2 .card_img .box,
+        .card3 .card_img .box{
+            font-weight: 300;
+            width: 50px;
+            height: 50px;
+            background: #000;
+            line-height: 50px;
+            color: #fff;
+            position: relative;
+            left: 10px; top: 10px;
+            text-align: center;
+        }
+
+        #cont_bottom h3 {
+            font-size: 30px;
+            margin: 40px 0 40px 0;
+            font-weight: 600;
+        }
+
+        #cont_bottom h3 span {
+            color: rgb(158, 158, 158);
+        }
+
+        #footer {
+            width: 100%;
+            height: 200px;
+            background: #202020;
+        }
+        #footer img {
+            width: 200px;
+            margin-top: 40px;
+        }
+        #footer .text {
+            margin-top: 50px;
+            margin-left: 150px;
+            text-align: left;
+            color: #fff;
+            
+        }
+        #footer .text h3 {
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+        #footer .text p {
+            color: #555;
+            font-size: 10px;
+            line-height: 3;
+            margin-top: 20px;
+        }
+        #footer .box {
+            display: flex;
+            justify-content:space-between;
+           
+        }
+        .slideImg img {
+            width: 1000px;
+            height: 390px;
+        }
+
+        .slideList {position: relative; width: 3000px; z-index: 50;}
+        .slideList .slideImg {position: relative; width: 1000px; float: left;}
+        .slideList .slideImg h2 {position: absolute; left: 50%; top: 50%;
+        transform: translate(-50%,-50%); background: rgba(0,0,0,0.4); padding: 10px 30px;
+        border-radius: 20px;}
+
+        .layer_bg {display: none; position: fixed; left: 0; top: 0; z-index: 900;
+        width: 100%; height: 100%; background: rgba(0,0,0,0.8);}
+        .layer {display: none; position: absolute; left: 30px; top: 30px; z-index: 1000;
+        width: 500px; height: 500px; border: 3px solid #000; background: #fff;}
+        .layer h2 {padding: 20px; color: #000;}
+        .layer .close {position: absolute; bottom: 20px; right: 20px;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="cantainar">
+        <header id="header" class="clearfix">
+            <h1><a href="#"><img src="img2/logo.jpg" alt="쿠킷"></a></h1>
+            <nav class="nav">
+                <ul class="clearfix">
+                    <li><a href="#">COOKIT소개</a>
+                        <ul class="foodmenu">
+                            <li><a href="#">foodmenu-1</a></li>
+                            <li><a href="#">foodmenu-2</a></li>
+                            <li><a href="#">foodmenu-3</a></li>
+                            <li><a href="#">foodmenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">COOKIT메뉴</a>
+                        <ul class="foodmenu">
+                            <li><a href="#">foodmenu-1</a></li>
+                            <li><a href="#">foodmenu-2</a></li>
+                            <li><a href="#">foodmenu-3</a></li>
+                            <li><a href="#">foodmenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">리뷰</a>
+                        <ul class="foodmenu">
+                            <li><a href="#">foodmenu-1</a></li>
+                            <li><a href="#">foodmenu-2</a></li>
+                            <li><a href="#">foodmenu-3</a></li>
+                            <li><a href="#">foodmenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이벤트</a>
+                        <ul class="foodmenu">
+                            <li><a href="#">foodmenu-1</a></li>
+                            <li><a href="#">foodmenu-2</a></li>
+                            <li><a href="#">foodmenu-3</a></li>
+                            <li><a href="#">foodmenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MY쿡킷</a>
+                        <ul class="foodmenu">
+                            <li><a href="#">foodmenu-1</a></li>
+                            <li><a href="#">foodmenu-2</a></li>
+                            <li><a href="#">foodmenu-3</a></li>
+                            <li><a href="#">foodmenu-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //header -->
+        
+        
+        <main id="main">
+            <div class="slideList">
+                <div class="slideImg">
+                    <h2>이미지1</h2>
+                    <img src="img2/ban.jpg" alt="쿡킷을 더 편리하게 COOKIT 앱 런칭기념 이벤트1">
+                </div>
+                <div class="slideImg">
+                    <h2>이미지2</h2>
+                    <img src="img2/ban.jpg" alt="쿡킷을 더 편리하게 COOKIT 앱 런칭기념 이벤트2">
+                </div>
+                <div class="slideImg">
+                    <h2>이미지3</h2>
+                    <img src="img2/ban.jpg" alt="쿡킷을 더 편리하게 COOKIT 앱 런칭기념 이벤트3">
+                </div>
+            </div>
+
+            <section id="section2">
+                <div class="container sec2__con">
+                    <div class="left cont">
+                        <h3>우리집도 COOKIT 배송이 되나요?</h3>
+                        <p>배송이 가능한지 알려드려요.</p>
+                        <span>배송지 검색</span>
+                    </div>
+                    <div class="right cont">
+                        <h3>7월 30일(화)에 받을 수 있어요</h3>
+                        <p>오전 7시까지 주문하시면 다음날 배송됨니다.</p>
+                        <span>63:28:32 <p>남은 시간</p></span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cont_bottom">
+                <h3 class="active">실시간 베스트 <span>생생한 리뷰</span></h3>
+                <div class="card_wrap">
+                    <div class="card1">
+                        <div class="card_img">
+                            <div class="box">best<br>01</div>
+                        </div>
+                        <div class="card_text">평양식 어복쟁반</div>
+                        <div class="pri">33,800원/<span> 3인분</span></div>
+                    </div>
+                    <div class="card2">
+                        <div class="card_img">
+                            <div class="box">02</div>
+                        </div>
+                        <div class="card_text">새우쭈꾸미삼겹살</div>
+                        <div class="pri">29,800원/<span> 3인분</span></div>
+                    </div>
+                    <div class="card3">
+                        <div class="card_img">
+                            <div class="box">03</div>
+                        </div>
+                        <div class="card_text">방풍나물 아귀찜</div>
+                        <div class="pri">32,800원/<span> 3인분</span></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        </main>
+
+        
+    
+    <div id="footer">
+        <div class="cantainar">
+            <div class="box">
+        <h1><a href="#"><img src="img2/logo2.jpg" alt="쿠킷"></a></h1>
+        <div class="text">
+        <h3>이용약관 &#124; 개인정보 &#124; 법적고지 &#124; 사업자정보 확인</h3>
+        <p>씨제이제일제당(주) &#124; 대표자:신현재<br>
+        주소:서울 중구 동호로330 CJ제일제당 센터(우)04560 &#124; 사업자등록번호:104-86-09535<br>
+        통신판매업신고 중구 제 07767호 &#124; 개인정보책임자:류화정</p>
+    </div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<!-- layer -->
+<div class="layer_bg"></div>
+<div class="layer">
+    <h2>제목</h2>
+    <a href="#" class="close">닫기</a>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="script/script2.js"></script>
+
+<script>
+var currentIndex = 0;
+setInterval(function(){
+    if(currentIndex < 2){
+        currentIndex++;
+    } else {
+        currentIndex =0;
+    }
+
+    var sliderPosition = currentIndex * (-1000)+"px";
+    $(".slideList").animate({left: sliderPosition},400);
+}, 3000);
+
+    $(".right").click(function(){
+        $(".layer").slideDown(300);
+        $(".layer_bg").show();
+    });
+    $(".layer .close").click(function(){
+        $(".layer").slideUp(300);
+        $(".layer_bg").hide();
+    });
+</script>
+
+</body>
+</html>

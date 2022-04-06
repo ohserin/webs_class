@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test1</title>
+</head>
+
+<style>
+    /* 넥슨고딕Lv1 */
+@font-face {
+    font-family: 'NexonLv1Gothic';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NexonLv1Gothic';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NexonLv1Gothic';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.ttf') format("truetype");
+    font-display: swap;
+}
+    /* 링크 초기화 */
+a {
+    color: #222;
+    text-decoration: none;
+}
+* {
+    margin: 0 auto;
+    font-family: 'NexonLv1Gothic';
+}
+    .container {
+    width: 960px;
+    margin: 0 auto;
+    }
+
+#header {height: 100px;}
+#header h1 {float: left; padding-top: 5px;}
+#header h1 img {width: 130px;}
+#header .nav {float: right; z-index: 100; position: relative; margin-top: 20px;}
+#header .nav li {position: relative; float: left; width: 120px; text-align: center;}
+#header .nav li a {display: block; padding: 20px 15px; background: #ccc; white-space: nowrap;}
+#header .nav li a:hover {background: #ddd;}
+#header .nav li ul.submenu {display: none; position: absolute; left: 0; top: 59px; background: #ddd;}
+#header .nav li ul.submenu li a {padding: 10px;}
+#header .nav li ul.submenu li a:hover {background: #999;}
+.clearfix::before, .clearfix::after {display: block; content: ''; clear: both;}
+
+.notice {position: relative; padding: 30px;}
+.notice ul li {float: left; margin-right: 20px;}
+.notice ul li a {font-size: 24px; color: #999; font-weight: bold;}
+.notice ul li.active a {color: #000;}
+.notice ul li ul {position: absolute; left: 30px; top: 70px;}
+.notice ul li ul li {width: 95%; padding: 5px 0;}
+.notice ul li ul li a {float: left; width: 60%; font-size: 16px; color: #333;
+    overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-weight: normal;}
+.notice ul li ul li span {float: right; width: 20%;}
+.notice .more {position: absolute; right: 30px; top: 35px;}
+#cont_ban .banner {
+        height: 360px;
+        background: url(img/hd.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 2px  dashed rgb(134, 211, 127);
+    }
+
+    #cont_tab .tab_menu {
+        display: flex;
+    }
+
+    #cont_cont .cont {
+        display: flex;
+        justify-content: center;
+        margin-left: 10px;
+    }
+</style>
+<body>
+    <div id="wrap">
+        <header id="header" class="clearfix">
+            <h1><a href="#"><img src="img/logo.jpg" alt="롯데월드"></a></h1>
+            <nav class="nav">
+                <ul class="clearfix">
+                    <li><a href="#">즐길거리</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">요금/우대혜택</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">참여프로그램</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이용가이드</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">소통서비스</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //header -->
+
+    <!-- //header -->
+    
+    <article class="notice">
+        <ul class="clearfix">
+            <li class="active"><a href="#">롯데월드 소식</a>
+                <ul>
+                    <li><a href="#">1. 첫번째 목록입니다. 첫번째 목록입니다. 첫번째 목록입니다.</a><span>2019.05.03</span></li>
+                    <li><a href="#">1. 첫번째 목록입니다. 첫번째 목록입니다. 첫번째 목록입니다.</a><span>2019.05.03</span></li>
+                    <li><a href="#">1. 첫번째 목록입니다. 첫번째 목록입니다. 첫번째 목록입니다.</a><span>2019.05.03</span></li>
+                    <li><a href="#">1. 첫번째 목록입니다. 첫번째 목록입니다. 첫번째 목록입니다.</a><span>2019.05.03</span></li>
+                </ul>
+            </li>
+            <li><a href="#">뉴스&middot;공지</a>
+                <ul>
+                    <li><a href="#">2. 두번째 목록입니다. 두번째 목록입니다. 두번째 목록입니다.</a><span>2019.05.03</span></li>
+                    <li><a href="#">2. 두번째 목록입니다. 두번째 목록입니다. 두번째 목록입니다.</a><span>2019.05.03</span></li>
+                    <li><a href="#">2. 두번째 목록입니다. 두번째 목록입니다. 두번째 목록입니다.</a><span>2019.05.03</span></li>
+                    <li><a href="#">2. 두번째 목록입니다. 두번째 목록입니다. 두번째 목록입니다.</a><span>2019.05.03</span></li>
+                </ul>
+            </li>
+        </ul>
+        <a href="#" class="more">더보기 +</a>
+    </article>
+        <div class="popup"></div>
+    </div>
+    <div id="cont_cont">
+        
+        <div class="cont">
+            <div class="con1">
+                <img src="img/con1.jpg" alt="연간">
+                <p>연간회원안내</p>
+            </div>
+            <div class="con2">
+                <img src="img/con2.jpg" alt="투어">
+                <p>프리미엄투어</p>
+            </div>
+            <div class="con3">
+                <img src="img/con3.jpg" alt="공연">
+                <p>공연참여 프로그램</p>
+            </div>
+            <div class="con4">
+                <img src="img/con4.jpg" alt="단체">
+                <p>단체프로그램</p>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="desc">
+            서울특별시 송파구 올림픽로 240 호텔롯데 롯데월드 | 대표자 : 박동기<br>
+            사업자 등록번호 :219-85-00014 | 통신판매업신고번호: 송파 제 5513호 | 전화:1661-2000
+        </div>
+        <div class="copy">
+            COPYRIGHT 2018 LOTTEWORLD.ALL RIGHTS RESERVED.
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="script/script.js"></script>
+<script>
+
+</script>
+</body>
+</html>
