@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         * {
@@ -14,25 +16,29 @@
             box-sizing: border-box;
             font-family: "Poppins";
         }
+
         :root {
-            --pink : #FF74A4;
-            --violet : #9F6EA3;
-            --white : #fff;
-            --lightshadow : rgba(0, 0, 0, 0.15);
-            --lightblack : #515C6F;
-            --pinkshadow : #FFCBDD;
-            --darkwhite : #CECACA;
+            --pink: #FF74A4;
+            --violet: #9F6EA3;
+            --white: #fff;
+            --lightshadow: rgba(0, 0, 0, 0.15);
+            --lightblack: #515C6F;
+            --pinkshadow: #FFCBDD;
+            --darkwhite: #CECACA;
         }
+
         body {
             height: 100vh;
             background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
         }
+
         .wrap__music {
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 100%;
         }
+
         .music__inner {
             width: 380px;
             padding: 25px 30px;
@@ -42,20 +48,24 @@
             background: var(--white);
             box-shadow: 0px 6px 15px var(--lightshadow);
         }
+
         .music__top {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
+
         .music__top i {
             font-size: 30px;
             color: var(--lightblack);
         }
+
         .music__top h3 {
             font-size: 18px;
             color: var(--lightblack);
             font-weight: 500;
         }
+
         .music__img {
             width: 100%;
             height: 256px;
@@ -64,28 +74,34 @@
             margin-top: 25px;
             box-shadow: 0px 6px 12px var(--lightshadow);
         }
+
         .music__img img {
             width: 100%;
             height: 100%;
             vertical-align: top;
             object-fit: cover;
         }
+
         .music__song {
             text-align: center;
             margin: 30px;
         }
+
         .music__song p {
             color: var(--lightblack);
         }
+
         .music__song .name {
             font-size: 21px;
         }
+
         .music__song .artist {
             font-size: 18px;
             opacity: 0.9;
             line-height: 35px;
             font-weight: 300;
         }
+
         .music__progress {
             height: 6px;
             width: 100%;
@@ -94,13 +110,15 @@
             cursor: pointer;
             margin-bottom: 40px;
         }
+
         .music__progress .bar {
             height: inherit;
-            width: 10%;
+            width: 0;
             position: relative;
             border-radius: inherit;
             background: linear-gradient(90deg, var(--pink) 0%, var(--violet) 100%);
         }
+
         .music__progress .timer {
             margin-top: 2px;
             display: flex;
@@ -109,11 +127,13 @@
             color: var(--lightblack);
             font-size: 0.9em;
         }
+
         .music__control {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
+
         .music__control i {
             font-size: 28px;
             user-select: none;
@@ -122,12 +142,15 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .music__control i:nth-child(2),
         .music__control i:nth-child(4) {
             font-size: 40px;
         }
+
         .music__control .play-pause {
-            width: 54px; height: 54px;
+            width: 54px;
+            height: 54px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -136,18 +159,22 @@
             box-shadow: 0 0 0 2px var(--pink);
             z-index: 1;
         }
+
         .music__control .play-pause::before {
-            content :'';
-            width: 40px; height: 40px;
+            content: '';
+            width: 40px;
+            height: 40px;
             border-radius: inherit;
             background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
             position: absolute;
             z-index: -1;
         }
+
         .music__control .play-pause i {
             -webkit-text-fill-color: var(--white);
             opacity: 0.8;
         }
+
         .music__list {
             position: absolute;
             background: var(--white);
@@ -156,17 +183,19 @@
             z-index: 10;
             border-radius: 15px;
             padding: 15px 30px;
-            box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
             transition: all 0.15s ease-out;
             bottom: -400px;
             opacity: 0;
             pointer-events: none;
         }
+
         .music__list.show {
             bottom: 0;
             opacity: 1;
             pointer-events: auto;
         }
+
         .music__list .title {
             display: flex;
             align-items: center;
@@ -174,21 +203,26 @@
             color: var(--lightblack);
             margin-bottom: 10px;
         }
+
         .music__list .title .queue {
             vertical-align: -6px;
         }
+
         .music__list .list {
             color: var(--lightblack)
         }
-        .music__list .list > ul {
+
+        .music__list .list>ul {
             max-height: 260px;
             margin: 10px 0;
             overflow: auto;
         }
-        .music__list .list > ul::-webkit-scrollbar {
+
+        .music__list .list>ul::-webkit-scrollbar {
             width: 0;
         }
-        .music__list .list > ul > li {
+
+        .music__list .list>ul>li {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -196,14 +230,17 @@
             padding-bottom: 5px;
             margin-bottom: 5px;
         }
-        .music__list .list > ul > li > div em {
+
+        .music__list .list>ul>li>div em {
             font-style: normal;
         }
-        .music__list .list > ul > li > div p {
+
+        .music__list .list>ul>li>div p {
             opacity: 0.8;
         }
     </style>
 </head>
+
 <body>
     <div class="wrap__music">
         <div class="music__inner">
@@ -228,7 +265,7 @@
                 </div>
                 <div class="timer">
                     <span class="current">0:00</span>
-                    <span class="max">0:00</span>
+                    <span class="duration">0:00</span>
                 </div>
             </div>
             <!-- /music__progress -->
@@ -279,50 +316,104 @@
         const musicPlay = musicWrap.querySelector("#control-play");
         const musicPrevBtn = musicWrap.querySelector("#control-prev");
         const musicNextBtn = musicWrap.querySelector("#control-next");
-        let musicIndex = 10;
+        const musicProgress = musicWrap.querySelector(".music__progress");
+        const musicProgressBar = musicProgress.querySelector(".bar");
+        const musicProgressCurrent = musicProgress.querySelector(".current");
+        const musicProgressDuration = musicProgress.querySelector(".duration");
+        let musicIndex = 14;
+
         //음악 재생
-        function loadMusic(num){
+        function loadMusic(num) {
             musicImg.src = `images/${allMusic[num-1].img}.jpg`;
-            musicImg.alt = allMusic[num-1].name;
-            musicName.innerText = allMusic[num-1].name;
-            musicArtist.innerText = allMusic[num-1].artist;
+            musicImg.alt = allMusic[num - 1].name;
+            musicName.innerText = allMusic[num - 1].name;
+            musicArtist.innerText = allMusic[num - 1].artist;
             musicAudio.src = `songs/${allMusic[num-1].audio}.mp3`;
         }
-        window.addEventListener("load", () => {
-            loadMusic(musicIndex);
-        });
+
         // 플레이 버튼
-        function playMusic(){
+        function playMusic() {
             musicWrap.classList.add("paused");
             musicPlay.innerText = "pause";
             musicAudio.play();
         }
+
         // 정지 버튼
-        function pauseMusic(){
+        function pauseMusic() {
             musicWrap.classList.remove("paused");
             musicPlay.innerText = "play_arrow";
             musicAudio.pause();
         }
-        // 이전 곡 듣기 버튼 (1)
-        function pervMusic(){
+
+        // 이전 곡 듣기 버튼
+        function pervMusic() {
             musicIndex--;
             musicIndex < 1 ? musicIndex = allMusic.length : musicIndex = musicIndex;
             loadMusic(musicIndex);
             playMusic();
         }
-        // 다음 곡 듣기 버튼 (20)
-        function nextMusic(){
+
+        // 다음 곡 듣기 버튼
+        function nextMusic() {
             musicIndex++;
             musicIndex > allMusic.length ? musicIndex = 1 : musicIndex = musicIndex;
             loadMusic(musicIndex);
             playMusic();
         }
+
+        // 뮤직 진행바
+        musicAudio.addEventListener("timeupdate", (e) => {
+            //console.log(e);
+            const currentTime = e.target.currentTime;
+            const duration = e.target.duration;
+            let progressWidth = (currentTime / duration) * 100;
+            musicProgressBar.style.width = `${progressWidth}%`;
+            musicAudio.addEventListener("loadeddata", () => {
+                let audioDuration = musicAudio.duration;
+                let totalMin = Math.floor(audioDuration / 60);
+                let totalSec = Math.floor(audioDuration % 60);
+                if (totalSec < 10) totalSec = `0${totalSec}`;
+                musicProgressDuration.innerText = `${totalMin}:${totalSec}`;
+            });
+
+            let currentMin = Math.floor(currentTime / 60);
+            let currentSec = Math.floor(currentTime % 60);
+            if(currentSec < 10) currentSec = `0${currentSec}`;
+            musicProgressCurrent.innerText = `${currentMin}:${currentSec}`;
+        });
+
+        // 플레이 버튼
         musicPlay.addEventListener("click", () => {
             const isMusicPaused = musicWrap.classList.contains("paused");
             isMusicPaused ? pauseMusic() : playMusic();
         });
-        musicPrevBtn.addEventListener("click", pervMusic);
-        musicNextBtn.addEventListener("click", nextMusic);
+
+        // 이전 곡 버튼
+        musicPrevBtn.addEventListener("click", () => {
+            pervMusic();
+        });
+
+        // 다음 곡 버튼
+        musicNextBtn.addEventListener("click", () => {
+            nextMusic();
+        });
+
+        // 진행 버튼 클릭
+        musicProgress.addEventListener("click", (e) => {
+            let progressWidth = musicProgress.clientWidth;
+            let clickedOffsetX = e.offsetX;
+            let songDuration = musicAudio.duration;
+
+            musicAudio.currentTime = (clickedOffsetX / progressWidth) * songDuration;
+            // 클릭할때 재생하냐 안하냐 차이
+            playMusic();
+        })
+
+        // 플레이
+        window.addEventListener("load", () => {
+            loadMusic(musicIndex);
+        });
     </script>
 </body>
+
 </html>
