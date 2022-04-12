@@ -20,78 +20,88 @@
             color: #fff;
             width: 100%;
             height: 100vh;
-            overflow: hidden;  
-            cursor: none;        
+            overflow: hidden;
+            /* cursor: none; */
+        }
+        .mouse__text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            /* height: 100vh; */
+            overflow: hidden;
+        }
+        .mouse__text p {
+            font-size: 2vw;
+            margin-bottom: 2vw;
         }
         .mouse__img {
             position: relative;
-            text-align: center;
-            /* perspective: 600px; */
-            transform: rotateX(0deg) rotateY(0deg);
-            transform-style: preserve-3d;
-            will-change: transform;
-            transition: all 0.1s;
         }
-        .mouse__img figure {
-            width: 50vw;
-            position: relative;
-        }
-        .mouse__img figure::before {
-            content: '';
-            position: absolute;
-            left: 5%;
-            bottom: -30px;
-            height: 40px;
-            width: 90%;
-            background: url(img/slider08.jpg) center center no-repeat;
-            background-size: 100% 40px;
-            filter: blur(15px) grayscale(50%);
-            opacity: 0.6;
-            z-index: -1;
-        }
-        .mouse__img figcaption {
+        .mouse__img .img {
             position: absolute;
             left: 50%;
-            top: 50%;
-            font-size: 1vw;
-            white-space: nowrap;
-            line-height: 1.6;
-            background: rgba(15, 89, 107, 0.479);
-            padding: 1vw 2vw;
-            transform: translate3d(-50%, -50%, 150px);
-        }
-        .cursor {
-            position: absolute;
-            left: 0;
             top: 0;
-            width: 100px;
-            height: 100px;
-            background: #fff;
-            border-radius: 50%;
-            z-index: 1000;
-            user-select: none;
-            pointer-events: none;
-            mix-blend-mode: difference;
+            transform: translateX(-50%);
+            width: 400px;
+            opacity: 0;
         }
-
+        .mouse__img .txt {
+            font-size: 3vw;
+        }
+    
     </style>
 </head>
-<body class="img08">
+<body class="img01">
     <!-- main -->
     <main>
         <section id="mouseType05">
             <div class="cursor"></div>
 
             <div class="mouse__wrap">
-                <div class="mouse__img">
-                    <figure>
-                        <img src="img/slider10.jpg" alt="이미지">
-                    </figure>
-                    <figcaption>
-                        <p>We can give advice, but we cannot give conduct.</p>
-                        <p>충고는 해 줄 수 있으나, 행동하게 할 수는 없다.</p>
-                    </figcaption>
+                <div class="mouse__text">
+                    <p>The harder you work, the more likely you can reach the goal</p>
                 </div>
+                <div>
+                    <a href="#" class="mouse__img">
+                        <div class="img">
+                            <img src="img/vimages01.jpg" alt="vimages01">
+                            <span class="txt">더</span>
+                        </div>
+                    </a>
+                    <a href="#" class="mouse__img">
+                        <div class="img">
+                            <img src="img/vimages02.jpg" alt="vimages02">
+                            <span class="txt">열심히</span>
+                        </div>
+                    </a>
+                    <a href="#" class="mouse__img">
+                        <div class="img">
+                            <img src="img/vimages03.jpg" alt="vimages03">
+                            <span class="txt">할수록</span>
+                        </div>
+                    </a>
+                    <a href="#" class="mouse__img">
+                        <div class="img">
+                            <img src="img/vimages04.jpg" alt="vimages04">
+                            <span class="txt">목표에</span>
+                        </div>
+                    </a>
+                    <a href="#" class="mouse__img">
+                        <div class="img">
+                            <img src="img/vimages05.jpg" alt="vimages05">
+                            <span class="txt">가까워질</span>
+                        </div>
+                    </a>
+                    <a href="#" class="mouse__img">
+                        <div class="img">
+                            <img src="img/vimages06.jpg" alt="vimages06">
+                            <span class="txt">거예요</span>
+                        </div>
+                    </a>
+                </div>
+              
             </div>
         </section>
     </main>
@@ -100,8 +110,8 @@
     <!-- info -->
     <div class="info">
         <div class="title">
-            <h1><a href="mouseEffect.html">JavaScript Mouse Effect05</a></h1>
-            <p>마우스 이펙트 - 이미지 효과2</p>
+            <h1><a href="mouseEffect.html">JavaScript Mouse Effect07</a></h1>
+            <p>마우스 이펙트 - 이미지 오버 효과</p>
         </div>
 
         <div class="number">
@@ -110,9 +120,9 @@
                 <li><a href="mouseEffect02.html">2</a></li>
                 <li><a href="mouseEffect03.html">3</a></li>
                 <li><a href="mouseEffect04.html">4</a></li>
-                <li class="active"><a href="mouseEffect05.html">5</a></li>
+                <li><a href="mouseEffect05.html">5</a></li>
                 <li><a href="mouseEffect06.html">6</a></li>
-                <li><a href="mouseEffect07.html">7</a></li>
+                <li class="active"><a href="mouseEffect07.html">7</a></li>
                 <li><a href="mouseEffect08.html">8</a></li>
             </ul>
         </div>
@@ -279,16 +289,6 @@ function mouseMove(e){
                 </div>
             </div>
         </div>
-        <div class="attr">
-            <ul>
-                <li>mousePageX : <span class="mousePageX">0</span>px</li>
-                <li>mousePageY : <span class="mousePageY">0</span>px</li>
-                <li>centerPageX : <span class="centerPageX">0</span>px</li>
-                <li>centerPageY : <span class="centerPageY">0</span>px</li>
-                <li>maxPageX : <span class="maxPageX">0</span>px</li>
-                <li>maxPageY : <span class="maxPageY">0</span>px</li>
-            </ul>
-        </div>
     </div>
     <!-- //info -->
 
@@ -297,60 +297,38 @@ function mouseMove(e){
     <script src="js/custom.js"></script>
     <script src="js/gsap.min.js"></script>
     <script>
-       highlight();
-        modal();
-        tabMenu();
-            const circle =document.querySelector(".cursor").getBoundingClientRect();  
+    //    highlight();
+    //     modal();
+    //     tabMenu();
 
-        function mouseMove(e){
-            //마우스 좌표 값
-            let mousePageX = e.pageX;
-            let mousePageY = e.pageY;
+    const mouseImg = document.querySelectorAll(".mouse__img");
+            mouseImg.forEach((item) => {
+                const imageWrap = item.querySelector(".img");
+                const imageWrapBounds = imageWrap.getBoundingClientRect();
+                let itemBounds = item.getBoundingClientRect();
+                const onMouseEnter = () => {
+                    gsap.set(imageWrap, {xPercent: 50, yPercent: 50, rotation:-30, scale: 0.3, ease: Power3.easeOut});
+                    gsap.to(imageWrap, {xPercent: 50, yPercent: -50, rotation: 0, scale: 1, opacity: 1});
+                };
+                const onMouseLeave = () => {
+                    gsap.to(imageWrap, {xPercent: -50, yPercent: -100, rotation: 30, scale: 0.3, opacity: 0});
+                };
+                const onMouseMove = ({x, y}) => {
+                    gsap.to(imageWrap, {
+                        duration: 1.25,
+                        x: Math.abs(x - itemBounds.left) - imageWrapBounds.width - 100,
+                        y: Math.abs(y - itemBounds.bottom) - imageWrapBounds.height - 100
+                    })
+                };
+                item.addEventListener("mouseenter", onMouseEnter);
+                item.addEventListener("mouseleave", onMouseLeave);
+                item.addEventListener("mousemove", onMouseMove);
 
-            //마우스 좌표 기준점을 가운데로 변경
-             let centerPageX = window.innerWidth/2 - mousePageX;
-             let centerPageY = window.innerHeight/2 - mousePageY;
 
-            //최소값은 -50 최대값은 50 설정
-            let maxPageX = Math.max(-300, Math.min(300, centerPageX));
-            let maxPageY = Math.max(-300, Math.min(300, centerPageY));
+    });
+          
 
-            //각도 줄이는 설정
-            let anlexpageX = maxPageX * 0.12;
-            let anlexpageY = maxPageY * 0.12;
-
-            //부드럽게 설정   10-->30
-            let softPageX = 0, softPageY = 0;
-
-            softPageX += (anlexpageX - softPageX) *0.4;
-            softPageY += (anlexpageY - softPageY) *0.4;
-
-
-            //이미지 움직이기 
-            // transform: rotateX(0deg) rotateY(0deg);
-            const imgMove = document.querySelector(".mouse__img");
-            imgMove.style.transform ="perspective(600px) rotateX("+softPageY+"deg) rotateY("+ -softPageX+"deg)";
-
-            //원 크기
-            let circleWidth = mousePageX-circle.width/2;
-            let circleHeight = mousePageY-circle.height/2;
-           
-
-             //커서
-             gsap.to(".cursor", {duration: .3, left: circleWidth, top: circleHeight});
-
-             //출력
-            document.querySelector(".mousePageX").textContent = mousePageX
-            document.querySelector(".mousePageY").textContent = mousePageY
-            document.querySelector(".centerPageX").textContent = centerPageX
-            document.querySelector(".centerPageY").textContent = centerPageY
-            document.querySelector(".maxPageX").textContent = maxPageX
-            document.querySelector(".maxPageY").textContent = maxPageY
-
-        }
-
-            document.addEventListener("mousemove", mouseMove);
-
+ 
     
     </script>
 </body>
