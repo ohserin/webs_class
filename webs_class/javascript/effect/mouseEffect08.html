@@ -5,113 +5,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마우스 이펙트</title>
-    <link rel="stylesheet" href="css/NexonLv1Gothic.css">
-    <link rel="stylesheet" href="css/draula.min.css">
     <link rel="stylesheet" href="css/custom.css">
     <style>
-        body::before {
-            background: rgba(5, 36, 70, 0.87)
-        }
-        .mouse__wrap {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            color: #fff;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            /* cursor: none; */
-        }
-        .mouse__text {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            width: 100%;
-            /* height: 100vh; */
-            overflow: hidden;
-        }
-        .mouse__text p {
-            font-size: 2vw;
-            margin-bottom: 2vw;
-        }
-        .mouse__img {
-            position: relative;
-        }
-        .mouse__img .img {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            transform: translateX(-50%);
-            width: 400px;
-            opacity: 0;
-        }
-        .mouse__img .txt {
-            font-size: 3vw;
-        }
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111;
+    font-family: 'Poppins', sans-serif;
+    background-size: cover;
+    background-position: center center;
+}
+.textBox {
+    width: 53%;
+    height: 53%;
+    background: rgba(202, 143, 179, 0.6);
+    border-radius: 40px;
+    position: absolute;
+}
+ul {
+    position: relative;
+}
+ul li {
+    position: relative;
+    list-style: none;
+    word-spacing: 10px;
+}
+ul li a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 6em;
+    font-weight: 800;
+    color: rgba(255, 255, 255, .1);
+}
+
+ul li a:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('https://as1.ftcdn.net/jpg/01/38/07/68/500_F_138076808_y4D6u52C27CvVUtmsXfGabrTXHfpKrk8.jpg');
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-repeat: repeat-x;
+    animation: wave 2s linear infinite;
+    transition: .8s;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+ul li a:hover:before {
+    width: 100%;
+}
+
+@keyframes wave {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: 100px;
+    }
+}
     
     </style>
 </head>
 <body class="img01">
     <!-- main -->
-    <main>
-        <section id="mouseType05">
-            <div class="cursor"></div>
-
-            <div class="mouse__wrap">
-                <div class="mouse__text">
-                    <p>The harder you work, the more likely you can reach the goal</p>
-                </div>
-                <div>
-                    <a href="#" class="mouse__img">
-                        <div class="img">
-                            <img src="img/vimages01.jpg" alt="vimages01">
-                            <span class="txt">더</span>
-                        </div>
-                    </a>
-                    <a href="#" class="mouse__img">
-                        <div class="img">
-                            <img src="img/vimages02.jpg" alt="vimages02">
-                            <span class="txt">열심히</span>
-                        </div>
-                    </a>
-                    <a href="#" class="mouse__img">
-                        <div class="img">
-                            <img src="img/vimages03.jpg" alt="vimages03">
-                            <span class="txt">할수록</span>
-                        </div>
-                    </a>
-                    <a href="#" class="mouse__img">
-                        <div class="img">
-                            <img src="img/vimages04.jpg" alt="vimages04">
-                            <span class="txt">목표에</span>
-                        </div>
-                    </a>
-                    <a href="#" class="mouse__img">
-                        <div class="img">
-                            <img src="img/vimages05.jpg" alt="vimages05">
-                            <span class="txt">가까워질</span>
-                        </div>
-                    </a>
-                    <a href="#" class="mouse__img">
-                        <div class="img">
-                            <img src="img/vimages06.jpg" alt="vimages06">
-                            <span class="txt">거예요</span>
-                        </div>
-                    </a>
-                </div>
-              
-            </div>
-        </section>
-    </main>
+    <div class="textBox">
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="https://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/alphabet.js"></script>
+  </head>
+  <body>
+    <canvas id="myCanvas"></canvas>
+    <script type="text/javascript" src="https://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/bubbles.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</div>
     <!-- //main -->
 
     <!-- info -->
     <div class="info">
         <div class="title">
-            <h1><a href="mouseEffect.html">JavaScript Mouse Effect07</a></h1>
-            <p>마우스 이펙트 - 이미지 오버 효과</p>
+            <h1><a href="mouseEffect.html">JavaScript Mouse Effect08</a></h1>
+            <p>마우스 이펙트 - 마우스 효과</p>
         </div>
 
         <div class="number">
@@ -122,8 +109,8 @@
                 <li><a href="mouseEffect04.html">4</a></li>
                 <li><a href="mouseEffect05.html">5</a></li>
                 <li><a href="mouseEffect06.html">6</a></li>
-                <li class="active"><a href="mouseEffect07.html">7</a></li>
-                <li><a href="mouseEffect08.html">8</a></li>
+                <li><a href="mouseEffect07.html">7</a></li>
+                <li class="active"><a href="mouseEffect08.html">8</a></li>
             </ul>
         </div>
         <div class="source">
@@ -300,32 +287,28 @@ function mouseMove(e){
     //    highlight();
     //     modal();
     //     tabMenu();
+    var myName = "Mouse Effect";
 
-    const mouseImg = document.querySelectorAll(".mouse__img");
-            mouseImg.forEach((item) => {
-                const imageWrap = item.querySelector(".img");
-                const imageWrapBounds = imageWrap.getBoundingClientRect();
-                let itemBounds = item.getBoundingClientRect();
-                const onMouseEnter = () => {
-                    gsap.set(imageWrap, {xPercent: 50, yPercent: 50, rotation:-30, scale: 0.3, ease: Power3.easeOut});
-                    gsap.to(imageWrap, {xPercent: 50, yPercent: -50, rotation: 0, scale: 1, opacity: 1});
-                };
-                const onMouseLeave = () => {
-                    gsap.to(imageWrap, {xPercent: -50, yPercent: -100, rotation: 30, scale: 0.3, opacity: 0});
-                };
-                const onMouseMove = ({x, y}) => {
-                    gsap.to(imageWrap, {
-                        duration: 1.25,
-                        x: Math.abs(x - itemBounds.left) - imageWrapBounds.width - 100,
-                        y: Math.abs(y - itemBounds.bottom) - imageWrapBounds.height - 100
-                    })
-                };
-                item.addEventListener("mouseenter", onMouseEnter);
-                item.addEventListener("mouseleave", onMouseLeave);
-                item.addEventListener("mousemove", onMouseMove);
+var red = [0, 100, 63];
+var orange = [40, 100, 60];
+var green = [75, 100, 40];
+var blue = [196, 77, 55];
+var purple = [280, 50, 60];
+var letterColors = [red, orange, green, blue, purple];
 
+drawName(myName, letterColors);
 
-    });
+if(10 < 3)
+{
+    bubbleShape = 'square';
+}
+else
+{
+    bubbleShape = 'circle';
+}
+
+bounceBubbles();
+
           
 
  
