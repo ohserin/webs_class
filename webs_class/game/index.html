@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="../game/assets/css/style.css">
+    <link rel="stylesheet" href="../game/assets/css/bg.css">
+    <link href="https://webfontworld.github.io/fontlab/LABDigital.css" rel="stylesheet">
+   
+</head>
+
+<body>
+
+    <div class="cursor">
+        <img src="https://assets.codepen.io/756881/pointer.svg" alt="">
+    </div>
+
+    <header id="header">
+        <h1>Game Site</h1>
+        <div class="time"></div>
+    </header>
+    <main>
+        <div class="btn btn1">
+            <a href="#">
+                <img src="../game/assets/img/guitar-light.svg" alt="">
+                <span>Music</span>
+            </a>
+        </div>
+
+        <div class="btn btn2" memory>
+            <a href="#">
+                <img src="../game/assets/img/camera-light.svg" alt="">
+                <span>Momory Game</span>
+            </a>
+        </div>
+
+        <div class="btn btn3">
+            <a href="#">
+                <img src="../game/assets/img/station-light.svg" alt="">
+                <span>Typing Game</span>
+            </a>
+        </div>
+    </main>
+
+    <div class="memoryBox">
+        <iframe class="musicBoxIframe" src="memoryGame/index2.html" frameborder="0"></iframe>
+    </div>
+
+
+    <div class="musicBox">
+        <iframe class="musicBoxIframe" src="musicPlayer/index.html" frameborder="0"></iframe>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
+    <script>
+        $(".btn1").draggable();
+        $(".btn2").draggable();
+        $(".btn3").draggable();
+
+        $(".btn1").click(function(){
+            $(".musicBox").toggleClass("show")
+        });
+
+        window.addEventListener("mousemove", (e) => {
+            gsap.to(".cursor", {duration: .3, left: e.pageX -25, top: e.pageY - 40});
+        });
+        
+        function printTime() {
+            var clock = document.querySelector(".time");      
+            var now = new Date();    
+            var nowTime = (now.getMonth()+1) + "월" + now.getDate() + "일 " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+            clock.innerHTML = nowTime;          
+            setTimeout("printTime()",1000);        
+        }
+
+        window.onload = function() {                       
+            printTime();
+        }
+
+    </script>
+</body>
+
+</html>
