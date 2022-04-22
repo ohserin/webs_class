@@ -62,19 +62,20 @@ header .time {
     top: 100px;
 }
 .btn2 {
-    left: 200px;
-    top: 100px;
+    left: 100px;
+    top: 200px;
 }
 .btn3 {
-    left: 330px;
-    top: 100px;
+    left: 100px;
+    top: 300px;
 }
 .btn4{
-    left: 300px;
-    top: 320px;
+    left: 100px;
+    top: 400px;
 }
 .btn4 span {
     color: aqua;
+    display: flex;
 }
 .btn4 a {
     color: #fff; text-decoration: none; outline: none
@@ -110,6 +111,47 @@ header .time {
     overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1),
                         0 6px 10px 0 rgba(0,0,0,0.17);
+}
+
+.memoryBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: -200%;
+    margin: auto;
+    width: 600px;
+    height: 600px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+                0 6px 10px 0 rgba(0,0,0,0.17);
+    transition: all 1s;
+}
+
+.memoryBox.show {
+  right: 1%;
+}
+
+.typingBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: -300%;
+    margin: auto;
+    width: 1000px;
+    height: 600px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+                0 6px 10px 0 rgba(0,0,0,0.17);
+    transition: all 1s;
+}
+.typingBox.show {
+    right: 1%;
 }
 iframe {
     width: 100%;
