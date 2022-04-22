@@ -25,22 +25,28 @@
     <main>
         <div class="btn btn1">
             <a href="#">
-                <img src="../game/assets/img/guitar-light.svg" alt="">
+                <img src="../game/assets/img/cheese.svg" alt="">
                 <span>Music</span>
             </a>
         </div>
 
         <div class="btn btn2" memory>
             <a href="#">
-                <img src="../game/assets/img/camera-light.svg" alt="">
+                <img src="../game/assets/img/mushroom.svg" alt="">
                 <span>Momory Game</span>
             </a>
         </div>
 
         <div class="btn btn3">
             <a href="#">
-                <img src="../game/assets/img/station-light.svg" alt="">
+                <img src="../game/assets/img/drumsticks.svg" alt="">
                 <span>Typing Game</span>
+            </a>
+        </div>
+        <div class="btn btn4">
+            <a href="#">
+                <img src="../game/assets/img/fish.svg" alt="">
+                <span>react</span>
             </a>
         </div>
     </main>
@@ -48,7 +54,6 @@
     <div class="memoryBox">
         <iframe class="musicBoxIframe" src="memoryGame/index2.html" frameborder="0"></iframe>
     </div>
-
 
     <div class="musicBox">
         <iframe class="musicBoxIframe" src="musicPlayer/index.html" frameborder="0"></iframe>
@@ -62,6 +67,7 @@
         $(".btn1").draggable();
         $(".btn2").draggable();
         $(".btn3").draggable();
+        $(".btn4").draggable();
 
         $(".btn1").click(function(){
             $(".musicBox").toggleClass("show")
