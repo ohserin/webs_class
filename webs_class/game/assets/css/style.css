@@ -11,7 +11,7 @@ body {
     cursor: none;
 }
 header {
-    background: rgb(120, 67, 182);
+    background: rgba(56, 14, 103, 0.7);
 }
 header h1 {
     font-size: 20px;
@@ -55,6 +55,7 @@ header .time {
 }
 .btn:hover a {
     background: rgb(49, 248, 204);
+    cursor: none;
 }
 .btn1 {
     left: 100px;
