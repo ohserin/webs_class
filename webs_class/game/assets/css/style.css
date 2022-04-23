@@ -41,7 +41,7 @@ header .time {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    /* background: linear-gradient(140deg, #ed99fb 30%, #c1bbfc 50%, rgba(255,255,255,.6) 70%); */
+    background: linear-gradient(140deg, #ed99fb 30%, #c1bbfc 50%, rgba(255,255,255,.6) 70%);
     transition: all 0.3s;
 }
 .btn a img {
@@ -50,15 +50,15 @@ header .time {
 }
 .btn a span {
     position: absolute;
-    left: 50%; bottom: -20px;
+    left: 50%; bottom: -30px;
     transform: translateX(-50%);
-    /* background: rgb(49, 248, 204); */
-    padding: 0 10px;
+    background: #62ffea;
+    padding: 0 20px;
     white-space: nowrap;
-    color: aqua;
+    color: rgb(11, 81, 245);
 }
 .btn:hover a {
-    background: rgb(49, 248, 204);
+    background: rgb(255, 255, 255);
     cursor: none;
 }
 .btn1 {
@@ -88,11 +88,19 @@ header .time {
 .btn5 span {
     color: aqua;
     display: flex;
+    
 }
 
 .btnM img{
   width: 40px;
   height: 40px;
+}
+
+.btnM a span {
+    width: 45px;
+    padding-left: 3px;
+    background: #62ffea;
+    color: rgb(11, 81, 245);
 }
 
 .musicBox {
