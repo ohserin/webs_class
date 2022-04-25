@@ -59,6 +59,12 @@
                 </a>
             </div>
         </div>
+        <div class="btn btn6">
+            <a href="#">
+                <img src="../game/assets/img/drumsticks.svg" alt="">
+                <span>Game</span>
+            </a>
+        </div>
     </main>
 
     <div class="memoryBox">
@@ -87,6 +93,7 @@
         $(".btn3").draggable();
         $(".btn4").draggable();
         $(".btn5").draggable();
+        $(".btn6").draggable();
 
         $(".btn1").click(function(){
             $(".musicBox").toggleClass("show")
@@ -97,6 +104,10 @@
         });
 
         $(".btn3").click(function(){
+            $(".typingBox").toggleClass("show")
+        });
+
+        $(".btn6").click(function(){
             $(".typingBox").toggleClass("show")
         });
 
