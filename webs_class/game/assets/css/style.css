@@ -91,6 +91,16 @@ header .time {
     
 }
 
+.btn6 {
+    left: 100px;
+    top: 400px;
+}
+.btn6 span {
+    color: aqua;
+    display: flex;
+    
+}
+
 .btnM img{
   width: 40px;
   height: 40px;
