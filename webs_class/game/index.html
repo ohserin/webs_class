@@ -62,7 +62,7 @@
         <div class="btn btn6">
             <a href="#">
                 <img src="../game/assets/img/Violet.svg" alt="">
-                <span>Game</span>
+                <span>tetris</span>
             </a>
         </div>
     </main>
@@ -83,6 +83,9 @@
         <iframe class="typingBoxIframe" src="typingGame/index.html" frameborder="0"></iframe>
     </div>
 
+    <div class="tetrisBox">
+        <iframe class="tetrisBoxIframe" src="tetrisGame/index2.html" frameborder="0"></iframe>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -108,7 +111,7 @@
         });
 
         $(".btn6").click(function(){
-            $(".typingBox").toggleClass("show")
+            $(".tetrisBox").toggleClass("show")
         });
 
         window.addEventListener("mousemove", (e) => {

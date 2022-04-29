@@ -111,6 +111,21 @@ header .time {
     padding-left: 3px;
     background: #62ffea;
     color: rgb(11, 81, 245);
+    margin-top: 15px;
+    
+}
+.btnM a {
+    padding: 5px 0 0 7px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(140deg, #ed99fb 30%, #c1bbfc 50%, rgba(255,255,255,.6) 70%);
+    transition: all 0.3s;
+}
+.btnM:hover a {
+    background: rgb(255, 255, 255);
+    cursor: none;
 }
 
 .musicBox {
@@ -124,23 +139,6 @@ header .time {
 .musicBox.show {
     right: 10px;
 }
-
-.memoryBox {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    width: 500px;
-    height: 500px;
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1),
-                        0 6px 10px 0 rgba(0,0,0,0.17);
-}
-
 .memoryBox {
     position: absolute;
     left: 0;
@@ -179,6 +177,26 @@ header .time {
     transition: all 1s;
 }
 .typingBox.show {
+    right: 1%;
+}
+
+.tetrisBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: -200%;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+                0 6px 10px 0 rgba(0,0,0,0.17);
+    transition: all 1s;
+}
+.tetrisBox.show {
     right: 1%;
 }
 iframe {

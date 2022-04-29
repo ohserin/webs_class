@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,71 +11,92 @@
             margin: 0;
             padding: 0;
         }
+
         body {
             height: 100vh;
             overflow: hidden;
+            background: #000;
         }
-        li {
+
+        ul {
             list-style: none;
         }
-        .start__btn, 
-        .info__box, 
-        .result__box {display: none;}
+
+        li {
+        }
+
+        .start__btn,
+        .info__box,
+        .result__box {
+            display: none;
+        }
 
         .tetris__inner {
             width: 250px;
             margin: 100px auto;
         }
-        .tetris__inner > ul {
-            border: 3px solid #ccc;
+
+        .tetris__inner>ul {
+            border: 3px solid rgb(186, 102, 181);
         }
-        .tetris__inner > ul > li {
+
+        .tetris__inner>ul>li {
             width: 100%;
             height: 25px;
         }
-        .tetris__inner > ul > li > ul {
+
+        .tetris__inner>ul>li>ul {
             display: flex;
         }
-        .tetris__inner > ul > li > ul > li {
+
+        .tetris__inner>ul>li>ul>li {
             width: 25px;
             height: 25px;
-            border: 1px solid #ccc;
+            border: 1px solid rgb(241, 235, 235);
             box-sizing: border-box;
         }
+
         .Tmino {
             border: 6px outset #a042a2 !important;
             background-color: #952d98;
         }
+
         .Imino {
             border: 6px outset #1aa9de !important;
             background-color: #009fda;
         }
+
         .Omino {
             border: 6px outset #fed01a !important;
             background-color: #fecb00;
         }
+
         .Zmino {
             border: 6px outset #ef3e4d !important;
             background-color: #ed2939;
         }
+
         .Smino {
             border: 6px outset #78c53e !important;
             background-color: #69be28;
         }
+
         .Jmino {
             border: 6px outset #1a74c4 !important;
             background-color: #0065bd;
         }
+
         .Lmino {
             border: 6px outset #ff861a !important;
             background-color: #ff7900;
         }
     </style>
 </head>
+
 <body>
     <!-- 시작버튼 -->
     <div class="start__btn active">
-        <button>Start</button>  
+        <button>Start</button>
     </div>
 
     <!-- 규칙 박스 -->
@@ -124,47 +146,187 @@
         let gameMovingItem;
 
         const blocks = {
-            Tmino : [
-                [[2,1],[0,1],[1,0],[1,1]],
-                [[1,2],[0,1],[1,0],[1,1]],
-                [[1,2],[0,1],[2,1],[1,1]],
-                [[2,1],[1,2],[1,0],[1,1]],
+            Tmino: [
+                [
+                    [2, 1],
+                    [0, 1],
+                    [1, 0],
+                    [1, 1]
+                ],
+                [
+                    [1, 2],
+                    [0, 1],
+                    [1, 0],
+                    [1, 1]
+                ],
+                [
+                    [1, 2],
+                    [0, 1],
+                    [2, 1],
+                    [1, 1]
+                ],
+                [
+                    [2, 1],
+                    [1, 2],
+                    [1, 0],
+                    [1, 1]
+                ],
             ],
-            Imino : [
-                [[0,0],[0,1],[0,2],[0,3]],
-                [[0,0],[1,0],[2,0],[3,0]],
-                [[0,0],[0,1],[0,2],[0,3]],
-                [[0,0],[1,0],[2,0],[3,0]],
+            Imino: [
+                [
+                    [1, 0],
+                    [1, 1],
+                    [1, 2],
+                    [1, 3]
+                ],
+                [
+                    [0, 0],
+                    [1, 0],
+                    [2, 0],
+                    [3, 0]
+                ],
+                [
+                    [1, 0],
+                    [1, 1],
+                    [1, 2],
+                    [1, 3]
+                ],
+                [
+                    [0, 0],
+                    [1, 0],
+                    [2, 0],
+                    [3, 0]
+                ],
             ],
-            Omino : [
-                [[0,0],[1,0],[0,1],[1,1]],
-                [[0,0],[1,0],[0,1],[1,1]],
-                [[0,0],[1,0],[0,1],[1,1]],
-                [[0,0],[1,0],[0,1],[1,1]],
+            Omino: [
+                [
+                    [0, 0],
+                    [0, 1],
+                    [1, 0],
+                    [1, 1]
+                ],
+                [
+                    [0, 0],
+                    [0, 1],
+                    [1, 0],
+                    [1, 1]
+                ],
+                [
+                    [0, 0],
+                    [0, 1],
+                    [1, 0],
+                    [1, 1]
+                ],
+                [
+                    [0, 0],
+                    [0, 1],
+                    [1, 0],
+                    [1, 1]
+                ],
             ],
-            Zmino : [
-                [[0,0],[1,0],[1,1],[2,1]],
-                [[1,0],[1,1],[0,1],[0,2]],
-                [[0,0],[1,0],[1,1],[2,1]],
-                [[1,0],[1,1],[0,1],[0,2]],
+            Zmino: [
+                [
+                    [0, 0],
+                    [2, 1],
+                    [1, 0],
+                    [1, 1]
+                ],
+                [
+                    [0, 2],
+                    [0, 1],
+                    [1, 0],
+                    [1, 1]
+                ],
+                [
+                    [0, 0],
+                    [2, 1],
+                    [1, 0],
+                    [1, 1]
+                ],
+                [
+                    [0, 2],
+                    [0, 1],
+                    [1, 0],
+                    [1, 1]
+                ],
             ],
-            Smino : [
-                [[0,1],[1,1],[1,0],[2,0]],
-                [[0,0],[0,1],[1,1],[1,2]],
-                [[0,1],[1,1],[1,0],[2,0]],
-                [[0,0],[0,1],[1,1],[1,2]],
+            Smino: [
+                [
+                    [2, 0],
+                    [0, 1],
+                    [1, 0],
+                    [1, 1]
+                ],
+                [
+                    [2, 2],
+                    [2, 1],
+                    [1, 0],
+                    [1, 1]
+                ],
+                [
+                    [2, 0],
+                    [0, 1],
+                    [1, 0],
+                    [1, 1]
+                ],
+                [
+                    [2, 2],
+                    [2, 1],
+                    [1, 0],
+                    [1, 1]
+                ],
             ],
-            Jmino : [
-                [[1,0],[1,1],[1,2],[0,2]],
-                [[0,0],[0,1],[1,1],[2,1]],
-                [[0,0],[0,1],[0,2],[1,0]],
-                [[0,0],[1,0],[2,0],[2,1]],
+            Jmino: [
+                [
+                    [1, 0],
+                    [1, 1],
+                    [1, 2],
+                    [0, 2]
+                ],
+                [
+                    [0, 0],
+                    [0, 1],
+                    [1, 1],
+                    [2, 1]
+                ],
+                [
+                    [0, 0],
+                    [0, 1],
+                    [0, 2],
+                    [1, 0]
+                ],
+                [
+                    [0, 0],
+                    [1, 0],
+                    [2, 0],
+                    [2, 1]
+                ],
             ],
-            Lmino : [
-                [[0,0],[0,1],[0,2],[1,2]],
-                [[0,1],[1,1],[2,1],[0,2]],
-                [[0,1],[1,1],[1,2],[1,3]],
-                [[0,3],[1,3],[2,3],[2,2]],
+            Lmino: [
+                [
+                    [1, 0],
+                    [1, 1],
+                    [1, 2],
+                    [2, 2]
+                ],
+                [
+                    [0, 0],
+                    [1, 0],
+                    [2, 0],
+                    [0, 1]
+                ],
+                [
+                    [0, 0],
+                    [1, 0],
+                    [1, 1],
+                    [1, 2]
+                ],
+                [
+                    [2, 0],
+                    [2, 1],
+                    [1, 1],
+                    [0, 1]
+                ],
             ]
         }
 
@@ -175,27 +337,29 @@
             top: 0,
             left: 3,
         }
-        
+
         init()
 
         // 시작하기
-        function init(){
-            gameMovingItem = {...movingItem};
+        function init() {
+            gameMovingItem = {
+                ...movingItem
+            };
 
             //console.log(gameMovingItem)
 
-            for(let i=0; i<game_rows; i++){
+            for (let i = 0; i < game_rows; i++) {
                 tetrisLine();
             }
             //renderBlocks();
             generateNewBlock()
-        }   
+        }
 
         // 블록 만들기
-        function tetrisLine(){
+        function tetrisLine() {
             const li = document.createElement("li");
             const ul = document.createElement("ul");
-            for(let j=0; j<game_cols; j++){
+            for (let j = 0; j < game_cols; j++) {
                 const block = document.createElement("li");
                 ul.prepend(block);
             }
@@ -204,8 +368,13 @@
         }
 
         // 블록 출력하기
-        function renderBlocks(moveType = " "){
-            const {type, direction, top, left} = gameMovingItem;
+        function renderBlocks(moveType = " ") {
+            const {
+                type,
+                direction,
+                top,
+                left
+            } = gameMovingItem;
 
             const movingBlocks = document.querySelectorAll(".moving");
             movingBlocks.forEach(moving => {
@@ -216,23 +385,26 @@
                 const x = block[0] + left;
                 const y = block[1] + top;
                 //console.log(tetrisInner)
-                const target = tetrisInner.childNodes[y] ? tetrisInner.childNodes[y].childNodes[0].childNodes[x] : null;
+                const target = tetrisInner.childNodes[y] ? tetrisInner.childNodes[y].childNodes[0].childNodes[
+                    x] : null;
                 const isAvailable = checkEmpty(target);
 
-                if(isAvailable){
+                if (isAvailable) {
                     target.classList.add(type, "moving");
                 } else {
-                    gameMovingItem = {...movingItem};
+                    gameMovingItem = {
+                        ...movingItem
+                    };
 
-                    if(moveType === "retry"){
+                    if (moveType === "retry") {
                         clearInterval(gameInterval);
                         gameover();
                     }
-                    
+
                     setTimeout(() => {
                         renderBlocks("retry");
 
-                        if(moveType === "top"){
+                        if (moveType === "top") {
                             seizeBlock();
                         }
                     }, 0)
@@ -244,7 +416,7 @@
             movingItem.direction = direction
         }
 
-        function seizeBlock(){
+        function seizeBlock() {
             const movingBlocks = document.querySelectorAll(".moving");
             movingBlocks.forEach(moving => {
                 moving.classList.remove("moving");
@@ -254,16 +426,16 @@
         }
 
         //블록 한줄 제거하기
-        function checkMatch(){
+        function checkMatch() {
             const childNodes = tetrisInner.childNodes;
             childNodes.forEach(child => {
                 let matched = true;
                 child.children[0].childNodes.forEach(li => {
-                    if(!li.classList.contains("seized")){
+                    if (!li.classList.contains("seized")) {
                         matched = false;
                     }
                 })
-                if(matched){
+                if (matched) {
                     child.remove();
                     tetrisLine();
                     gameScore++;
@@ -274,7 +446,7 @@
         }
 
         //새로운 블록 만들기
-        function generateNewBlock(){
+        function generateNewBlock() {
 
             clearInterval(gameInterval);
             gameInterval = setInterval(() => {
@@ -287,39 +459,41 @@
             movingItem.top = 0;
             movingItem.left = 3;
             movingItem.direction = 0;
-            gameMovingItem = {...movingItem};
+            gameMovingItem = {
+                ...movingItem
+            };
             renderBlocks();
         }
 
-        function checkEmpty(target){
-            if(!target || target.classList.contains("seized")){
+        function checkEmpty(target) {
+            if (!target || target.classList.contains("seized")) {
                 return false;
             }
             return true;
         }
 
         // 블록 움직이기
-        function moveBlock(moveType, amount){
+        function moveBlock(moveType, amount) {
             gameMovingItem[moveType] += amount;
             renderBlocks(moveType);
         }
 
         // 모양 변경하기
-        function changeDirectioin(){
+        function changeDirectioin() {
             const direction = gameMovingItem.direction;
             direction === 3 ? gameMovingItem.direction = 0 : gameMovingItem.direction += 1;
             renderBlocks();
         }
 
         // 스페이스바 누르기
-        function dropBlock(){
+        function dropBlock() {
             clearInterval(gameInterval);
             gameInterval = setInterval(() => {
                 moveBlock("top", 1)
             }, 10);
         }
 
-        function gameover(){
+        function gameover() {
             //게임 끝났을 때
             console.log("게임오버")
         }
@@ -327,7 +501,7 @@
         // 키보드 이벤트
         document.addEventListener("keydown", e => {
             //console.log(e)
-            switch(e.keyCode){
+            switch (e.keyCode) {
                 case 39:
                     moveBlock("left", 1);
                     break;
@@ -347,7 +521,7 @@
                     break;
             }
         })
-        
     </script>
 </body>
+
 </html>
