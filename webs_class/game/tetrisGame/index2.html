@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,164 +11,256 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         @font-face {
-    font-family: 'SF_IceLemon';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_IceLemon.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+            font-family: 'SF_IceLemon';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_IceLemon.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-}
-ul {
-    list-style: none;
-}
-body {
-    height: 100%;
-    overflow: hidden;
-   background-image: url(../tetrisGame/img/bg2.jpg);
-   background-size: contain;
-}
-body::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0; left: 0;
-    background: rgba(0,0,0,0.6);
-    z-index: -1;
-}
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-.info__box {
+        ul {
+            list-style: none;
+        }
+
+        body {
+            height: 100%;
+            overflow: hidden;
+            background-image: url(../tetrisGame/img/bg2.jpg);
+            background-size: contain;
+        }
+
+        body::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        button {
+            border: 0;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:active {
+            opacity: 0.6;
+        }
+
+        .start__btn,
+        .info__box,
+        .card__wrap,
+        .result__box {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.17);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .start__btn.active,
+        .info__box.active,
+        .card__wrap.active,
+        .result__box.active {
+            opacity: 1;
+            z-index: 10;
+            pointer-events: auto;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .start__btn button {
+            background: #fff;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-size: 1.3em;
+        }
+
+        .info__box {
             width: 500px;
             background: #fff;
             border-radius: 5px;
             font-size: 1.3em;
-           
+            transition: all 0.3s;
         }
+
         .info__box .title {
             border-bottom: 1px solid #ccc;
-            padding: .8rem 2rem;
-            font-size: 1.3em;
-            text-align: center;
+            padding: 1rem 2rem;
         }
-        .info__box .list ol {
-            padding: 1.3rem 3rem;
+
+        .info__box ol {
+            padding: 1.3rem 2.5rem;
         }
+
         .info__box .buttons {
             border-top: 1px solid #ccc;
-            padding: .8rem 2rem;
-            text-align: center;            
+            text-align: center;
         }
+
         .info__box .buttons button {
-            margin: 0 .3em;
-            background: #007BFF;
-            color: #fff;
-            padding: .4rem 2rem;
+            background: #fff;
+            color: dodgerblue;
+            padding: 0.4rem 2rem;
+            margin: 0.6rem 0;
             border-radius: 5px;
-            font-size: 1em;
-            border: 1px solid #007BFF;
+            font-size: 1.1em;
+            border: 1px solid dodgerblue;
         }
+
+        .info__box .buttons .start {
+            background: dodgerblue;
+            color: #fff;
+        }
+
         .info__box .buttons button:first-child {
             background: #fff;
             border: 1px solid #007BFF;
             color: #007BFF
         }
-.wrapper {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-.game-text {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-    left: 0;
-    top: 0;
-    color: #fff;
-    font-size: 90px;
-    font-family: 'Diplomata SC', cursive;
-}
-.game-text > button {
-    margin: 3rem;
-    padding: 0.5rem 1rem;
-    color: #fff;
-    background: #ff156f;
-    border: none;
-    cursor: pointer;
-    border-radius: 6px;
-}
-.game-text > button:hover {
-    background: #15ffa5;
-}
-.scoreText {
-    width: 18vw;
-    text-align: center;
-    font-size: 60px;
-    color: rgb(38, 255, 183);
-    font-family: 'Press Start 2P', cursive;
-    margin-bottom: 20px;
-}
-.score {
-    width: 12vw;
-    text-align: center;
-    font-size: 50px;
-    color: #fff;
-    font-family: 'Press Start 2P', cursive;
-    /* font-family: 'SF_IceLemon'; */
-    margin-bottom: 20px;
-}
-.playground > ul {
-    border: 2px solid rgb(48, 235, 163);
-    border-radius: 10px;
-    width: 300px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-.playground > ul > li {
-    width: 100%;
-    height: 25px;
-}
-.playground > ul > li > ul {
-    display: flex;
-} 
-.playground > ul > li > ul > li {
-    width: 25px;
-    height: 25px;
-    outline: 0.25px solid rgb(37, 63, 61);
-}
-.Tmino {
-    background: #fc45ff;
-}
-.Imino {
-    background: #2f2fff;
-}
-.Omino {
-    background: #ffde5a;
-}
-.Zmino{
-    background: #fc3748;
-}
-.Smino {
-    background: #93fe41;
-}
-.Jmino {
-    background: #34ffee;
-}
-.Lmino {
-    background: #ff8921;
-}
+
+        .wrapper {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .game-text {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            left: 0;
+            top: 0;
+            color: #fff;
+            font-size: 90px;
+            font-family: 'Diplomata SC', cursive;
+        }
+
+        .game-text>button {
+            margin: 3rem;
+            padding: 0.5rem 1rem;
+            color: #fff;
+            background: #ff156f;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        .game-text>button:hover {
+            background: #15ffa5;
+        }
+
+        .scoreText {
+            width: 18vw;
+            text-align: center;
+            font-size: 60px;
+            color: rgb(38, 255, 183);
+            font-family: 'Press Start 2P', cursive;
+            margin-bottom: 20px;
+        }
+
+        .score {
+            width: 12vw;
+            text-align: center;
+            font-size: 50px;
+            color: #fff;
+            font-family: 'Press Start 2P', cursive;
+            /* font-family: 'SF_IceLemon'; */
+            margin-bottom: 20px;
+        }
+
+        .playground>ul {
+            border: 2px solid rgb(48, 235, 163);
+            border-radius: 10px;
+            width: 300px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .playground>ul>li {
+            width: 100%;
+            height: 25px;
+        }
+
+        .playground>ul>li>ul {
+            display: flex;
+        }
+
+        .playground>ul>li>ul>li {
+            width: 25px;
+            height: 25px;
+            outline: 0.25px solid rgb(37, 63, 61);
+        }
+
+        .Tmino {
+            background: #fc45ff;
+        }
+
+        .Imino {
+            background: #2f2fff;
+        }
+
+        .Omino {
+            background: #ffde5a;
+        }
+
+        .Zmino {
+            background: #fc3748;
+        }
+
+        .Smino {
+            background: #93fe41;
+        }
+
+        .Jmino {
+            background: #34ffee;
+        }
+
+        .Lmino {
+            background: #ff8921;
+        }
     </style>
 </head>
+
 <body>
+
+    <!-- 시작버튼 -->
+    <div class="start__btn active">
+        <button>Start</button>
+    </div>
+    <!-- 규칙 박스 -->
+    <div class="info__box">
+        <div class="title">테트리스 규칙</div>
+        <div class="list">
+            <ol>
+                <li>당신에게는 기회가 <em>0번</em> 있습니다.</li>
+                <li>기회를 5번을 소진하면, 시도가 1번 발생합니다.</li>
+                <li>시도를 3번하면 죽습니다.</li>
+                <li>완성하면 점수가 높습니다.</li>
+                <li>한줄을 없애면 5점이 추가됩니다.</li>
+            </ol>
+        </div>
+        <div class="buttons">
+            <button class="stop">그만하기</button>
+            <button class="start">도전하기</button>
+        </div>
+    </div>
+
     <div class="wrapper">
         <div class="game-text">
             <span>GAME OVER</span>
@@ -179,50 +272,51 @@ body::before {
             <div class="playground">
                 <ul></ul>
             </div>
-        </div>    
-    </div>
-
-     <!-- 규칙 박스 -->
-     <div class="info__box">
-        <div class="title">메모리 게임을 하기 위한 규칙</div>
-        <div class="list">
-            <ol>
-                <li>당신에게는 기회가 <em>5번</em> 있습니다.</li>
-            </ol>
-        </div>
-        <div class="buttons">
-            <button class="stop">그만하기</button>
-            <button class="start">도전하기</button>
         </div>
     </div>
 
-   <script>
-       // DOM
-const playground = document.querySelector(".playground > ul");
-const gameText =  document.querySelector(".game-text");
-const scoreDisplay =  document.querySelector(".score");
-const infoBoxStart = document.querySelector(".info__box .buttons .start");
-const restartButton = document.querySelector(".game-text > button");
+    <script>
+        // DOM
+        const startBtn = document.querySelector(".start__btn");
+        const infoBox = document.querySelector(".info__box");
+        const playground = document.querySelector(".playground > ul");
+        const gameText = document.querySelector(".game-text");
+        const scoreDisplay = document.querySelector(".score");
+        const infoBoxStart = document.querySelector(".info__box .buttons .start");
+        const restartButton = document.querySelector(".game-text > button");
+        
+      //시작버튼
+      startBtn.onclick = ()=>{
+            infoBox.classList.add("active");
+            startBtn.classList.remove("active");
+        }
 
- 
-// Setting
-const GAME_ROWS = 20;
-const GAME_COLS = 12;
+        //게임시작 버튼(도전하기)
+        infoBoxStart.onclick = ()=>{
+            infoBox.classList.remove("active");
+            setTimeout(()=>{
+                tetrisWrap.classList.add("active");       
+            },800);
+        }
 
-// variables
-let score = 0;
-let duration = 500;
-let downInterval;
-let tempMovingItem;
-const movingItem = {
-    type: "tree",
-    direction: 3,
-    top: 0,
-    left: 0,
-}
+        // Setting
+        const GAME_ROWS = 20;
+        const GAME_COLS = 12;
 
-const BLOCKS = {
-    Tmino: [
+        // variables
+        let score = 0;
+        let duration = 500;
+        let downInterval;
+        let tempMovingItem;
+        const movingItem = {
+            type: "tree",
+            direction: 3,
+            top: 0,
+            left: 0,
+        }
+
+        const BLOCKS = {
+            Tmino: [
                 [
                     [2, 1],
                     [0, 1],
@@ -406,156 +500,177 @@ const BLOCKS = {
             ]
         }
 
-// functions
-function init(){
-    tempMovingItem = { ...movingItem };
+        // functions
+        function init() {
+            tempMovingItem = {
+                ...movingItem
+            };
 
-    for(let i = 0; i < GAME_ROWS; i++){
-        prependNewLine()
-    }
-    generateNewBlock()
-}
-
-function prependNewLine(){
-    const li = document.createElement("li");
-    const ul = document.createElement("ul");
-    for (let j = 0; j < GAME_COLS; j++) {
-        const matrix = document.createElement("li");
-        ul.prepend(matrix);
-    }
-    li.prepend(ul);
-    playground.prepend(li)
-}
-function renderBlocks(moveType = ""){
-    const { type, direction, top, left} = tempMovingItem;
-    const movingBlocks = document.querySelectorAll(".moving");
-    movingBlocks.forEach(moving =>{
-        moving.classList.remove(type, "moving");
-    });
-    BLOCKS[type][direction].some(block => {
-        const x = block[0] + left;
-        const y = block[1] + top;
-        const target = playground.childNodes[y] ? playground.childNodes[y].childNodes[0].childNodes[x] : null;
-        const isAvailable = checkEmpty(target);
-        if(isAvailable){
-            target.classList.add(type, "moving");
-        } else {
-            tempMovingItem = {...movingItem};
-            if(moveType === 'retry'){
-                clearInterval(downInterval);
-                showGameoverText()
+            for (let i = 0; i < GAME_ROWS; i++) {
+                prependNewLine()
             }
-            setTimeout(()=>{
-                renderBlocks('retry');
-                if(moveType === "top"){
-                    seizeBlock();
+            generateNewBlock()
+        }
+
+        function prependNewLine() {
+            const li = document.createElement("li");
+            const ul = document.createElement("ul");
+            for (let j = 0; j < GAME_COLS; j++) {
+                const matrix = document.createElement("li");
+                ul.prepend(matrix);
+            }
+            li.prepend(ul);
+            playground.prepend(li)
+        }
+
+        function renderBlocks(moveType = "") {
+            const {
+                type,
+                direction,
+                top,
+                left
+            } = tempMovingItem;
+            const movingBlocks = document.querySelectorAll(".moving");
+            movingBlocks.forEach(moving => {
+                moving.classList.remove(type, "moving");
+            });
+            BLOCKS[type][direction].some(block => {
+                const x = block[0] + left;
+                const y = block[1] + top;
+                const target = playground.childNodes[y] ? playground.childNodes[y].childNodes[0].childNodes[x] :
+                    null;
+                const isAvailable = checkEmpty(target);
+                if (isAvailable) {
+                    target.classList.add(type, "moving");
+                } else {
+                    tempMovingItem = {
+                        ...movingItem
+                    };
+                    if (moveType === 'retry') {
+                        clearInterval(downInterval);
+                        showGameoverText()
+                    }
+                    setTimeout(() => {
+                        renderBlocks('retry');
+                        if (moveType === "top") {
+                            seizeBlock();
+                        }
+                    }, 0);
+                    //renderBlocks();
+                    return true;
                 }
-            },0);
-            //renderBlocks();
+            })
+            movingItem.left = left;
+            movingItem.top = top;
+            movingItem.direction = direction;
+        }
+
+        function seizeBlock() {
+            const movingBlocks = document.querySelectorAll(".moving");
+            movingBlocks.forEach(moving => {
+                moving.classList.remove("moving");
+                moving.classList.add("seized");
+            });
+            checkMatch()
+        }
+
+        function checkMatch() {
+            const childNodes = playground.childNodes;
+            childNodes.forEach(child => {
+                let matched = true;
+                child.children[0].childNodes.forEach(li => {
+                    if (!li.classList.contains("seized")) {
+                        matched = false;
+                    }
+                });
+                if (matched) {
+                    child.remove();
+                    prependNewLine();
+                    score++;
+                    scoreDisplay.innerText = score * 5;
+                }
+            });
+            generateNewBlock()
+        }
+
+        function generateNewBlock() {
+            clearInterval(downInterval);
+            downInterval = setInterval(() => {
+                moveBlock('top', 1)
+            }, duration);
+            const blockArray = Object.entries(BLOCKS);
+            const randomIndex = Math.floor(Math.random() * blockArray.length);
+            movingItem.type = blockArray[randomIndex][0];
+            movingItem.top = 0;
+            movingItem.left = 3;
+            movingItem.direction = 0;
+            tempMovingItem = {
+                ...movingItem
+            };
+            renderBlocks();
+        }
+
+        function checkEmpty(target) {
+            if (!target || target.classList.contains("seized")) {
+                return false;
+            }
             return true;
         }
-    })
-    movingItem.left = left;
-    movingItem.top = top;
-    movingItem.direction = direction;
-}
-function seizeBlock(){
-    const movingBlocks = document.querySelectorAll(".moving");
-    movingBlocks.forEach(moving =>{
-        moving.classList.remove("moving");
-        moving.classList.add("seized");
-    });
-    checkMatch()
-}
-function checkMatch() {
-    const childNodes = playground.childNodes;
-    childNodes.forEach(child =>{
-        let matched =true;
-        child.children[0].childNodes.forEach(li=>{
-            if(!li.classList.contains("seized")){
-                matched = false;
+
+        function moveBlock(moveType, amount) {
+            tempMovingItem[moveType] += amount
+            renderBlocks(moveType)
+        }
+
+        function changeDirection() {
+            const direction = tempMovingItem.direction;
+            direction === 3 ? tempMovingItem.direction = 0 : tempMovingItem.direction += 1;
+            renderBlocks();
+        }
+
+        function dropBlock() {
+            clearInterval(downInterval);
+            downInterval = setInterval(() => {
+                moveBlock("top", 1);
+            }, 10);
+        }
+
+        function showGameoverText() {
+            gameText.style.display = "flex"
+        }
+
+        init();
+
+        // Event handling
+        document.addEventListener("keydown", e => {
+            switch (e.keyCode) {
+                case 39:
+                    moveBlock("left", 1);
+                    break;
+                case 37:
+                    moveBlock("left", -1);
+                    break;
+
+                case 40:
+                    moveBlock("top", 1);
+                    break;
+                case 38:
+                    changeDirection();
+                    break;
+                case 32:
+                    dropBlock();
+                    break;
+                default:
+                    break;
             }
         });
-        if(matched){
-            child.remove();
-            prependNewLine();
-            score++;
-            scoreDisplay.innerText = score * 5;
-        }
-    });
-    generateNewBlock()
-}
-function generateNewBlock() {
-    clearInterval(downInterval);
-    downInterval =setInterval(()=>{
-        moveBlock('top',1)
-    },duration);
-    const blockArray = Object.entries(BLOCKS);
-    const randomIndex = Math.floor(Math.random() * blockArray.length);
-    movingItem.type = blockArray[randomIndex][0];
-    movingItem.top =0;
-    movingItem.left =3;
-    movingItem.direction =0;
-    tempMovingItem = {...movingItem};
-    renderBlocks();
-}
 
-function checkEmpty(target){
-    if(!target || target.classList.contains("seized")){
-        return false;
-    }
-    return true;
-}
-function moveBlock(moveType, amount) {
-    tempMovingItem[moveType] += amount
-    renderBlocks(moveType)
-}
-function changeDirection(){
-    const direction = tempMovingItem.direction;
-    direction === 3 ? tempMovingItem.direction = 0 : tempMovingItem.direction +=1;
-    renderBlocks();
-}
-function dropBlock(){
-    clearInterval(downInterval);
-    downInterval = setInterval(()=>{
-        moveBlock("top",1);
-    },10);
-}
-function showGameoverText(){
-    gameText.style.display = "flex"
-}
-
-init();
-
-// Event handling
-document.addEventListener("keydown", e => {
-    switch(e.keyCode){
-        case 39:
-            moveBlock("left",1);
-            break;
-        case 37:
-            moveBlock("left", -1);
-            break;
-
-        case 40:
-            moveBlock("top",1);
-            break;
-        case 38:
-            changeDirection();
-            break;
-        case 32: 
-            dropBlock();
-            break;
-        default:
-            break;    
-    }
-});
-
-restartButton.addEventListener("click",()=>{
-    playground.innerHTML = "";
-    gameText.style.display = "none";
-    init()
-});
-   </script>
+        restartButton.addEventListener("click", () => {
+            playground.innerHTML = "";
+            gameText.style.display = "none";
+            init()
+        });
+    </script>
 </body>
+
 </html>
