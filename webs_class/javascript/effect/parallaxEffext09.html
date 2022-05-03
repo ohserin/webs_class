@@ -142,10 +142,7 @@
 
         #section4 .sec4 {
             position: fixed;
-            left: 0;
-            top: 0;
-            width: 300vh;
-            height: 100%;
+            left: 0;top: 0;              
             background-color: red;
             display: flex;
         }
@@ -188,9 +185,36 @@
 
         #section7 {
             background-color: #333;
-            z-index: 7000;
+            z-index: 3000;
+            height: 900vh;
+        }
+        #section7 .sec7 {
+            position: fixed;
+            left: 0;top: 0;              
+            background-color: red;
+            display: flex;
         }
 
+        #section7 .sec7 .item {
+            width: 200vh;
+            height: 100vh;
+            position: relative;
+        }
+        #section7 .sec7 .item .content__item__num {
+            font-size: 10vw;
+        }
+
+        #section7 .sec7 .item:nth-child(1) {
+            background-color: rgb(141, 194, 255);
+        }
+
+        #section7 .sec7 .item:nth-child(2) {
+            background-color: rgb(186, 241, 113)
+        }
+
+        #section7 .sec7 .item:nth-child(3) {
+            background-color: rgb(255, 202, 141)
+        }
         #section8 {
             background-color: #222;
             z-index: 8000;
@@ -236,18 +260,10 @@
         <!-- //section3 -->
         <section id="section4" class="content__item">
             <div class="sec4">
-                <div class="item">
-                    <span class="content__item__num">04-1</span></div>
-            </div>
-            <div class="item">
-                <span class="content__item__num">04-2</span></div>
-            </div>
-            <div class="item">
-                <span class="content__item__num">04-3</span></div>
-            </div>
-            <div class="item">
-                <span class="content__item__num">04-4</span></div>
-            </div>
+                <span class="item"> <span class="content__item__num">04-1</span></span>
+                <span class="item"> <span class="content__item__num">04-2</span></span>
+                <span class="item"> <span class="content__item__num">04-3</span></span>
+                <span class="item"> <span class="content__item__num">04-4</span></span>
             </div>
         </section>
         <!-- //section4 -->
@@ -260,7 +276,12 @@
         </section>
         <!-- //section6 -->
         <section id="section7" class="content__item">
-            <span class="content__item__num">07</span>
+           <div class="sec7">
+            <span class="item"> <span class="content__item__num">07-1</span></span>
+            <span class="item"> <span class="content__item__num">07-2</span></span>
+            <span class="item"> <span class="content__item__num">07-3</span></span>
+            <span class="item"> <span class="content__item__num">07-4</span></span>
+           </div>
         </section>
         <!-- //section7 -->
         <section id="section8" class="content__item">
@@ -281,23 +302,28 @@
     <!-- script -->
     <script src="js/gsap.min.js"></script>
     <script>
-        //section4번 지점에 왔을 때 red를 blue로 변경해주세요
+     const section4 = document.getElementById("section4");
+     const section7 = document.getElementById("section7");
+      const sec4 = document.querySelector("#section4 .sec4");
+      const sec7 = document.querySelector("#section7 .sec7");
 
-        function scroll() {
+      function scroll(){
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
 
+            //4번째 섹션에 왓을때 스크롤탑을 0으로 초기화해서 시작 
+            let offset4 = scrollTop - section4.offsetTop
+            let offset7 = scrollTop - section7.offsetTop
 
-            //4번째 섹션에 왔을 때 스크롤 탑을 0으로 초기화해서 시작
-            let offset = scrollTop - document.querySelector("#section4").offsetTop;
+            document.querySelector(".scrollTop span ").innerText = scrollTop;
 
-            if (scrollTop >= document.querySelector("#section4").offsetTop) {
-                gsap.to(".sec4", {
-                    left: -offset,
-                    ease: "linear"
-                })
-            }
-
-            document.querySelector(".scrollTop span").innerText = Math.round(scrollTop);
+            if(scrollTop >= section4.offsetTop){
+                //sec4.style.backgroundColor = "blue";
+                gsap.to(sec4, {left: -offset4, ease: "linear"})
+            } 
+            if(scrollTop >= section7.offsetTop){
+                //sec4.style.backgroundColor = "blue";
+                gsap.to(sec7, {left: -offset7, ease: "linear"})
+            } 
             requestAnimationFrame(scroll);
         }
         scroll();
