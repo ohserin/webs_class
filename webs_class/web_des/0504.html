@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myCanvas"></div>
+
+    <script type="x-shader/x-vertex" id="vertex">
+        varying vec2 vUv;
+        uniform float u_time;
+        uniform vec4 u_resolution;
+    
+        void main() {
+            vUv = uv;
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+    </script>
+    
+    <script type="x-shader/x-fragment" id="fragment">
+        varying vec2 vUv;
+        uniform float u_time;
+        uniform vec4 u_resolution;
+        uniform vec2 u_mouse; 
+        uniform sampler2D u_matcap;
+        
+        vec2 getMatcap(vec3 eye, vec3 normal) {
+            vec3 reflected = reflect(eye, normal);
+            float m = 2.8284271247461903 * sqrt( reflected.z+1.0 );
+            return reflected.xy / m + 0.5;
+        }
+        
+        mat4 rotationMatrix(vec3 axis, float angle) {
+            axis = normalize(axis);
+            float s = sin(angle);
+            float c = cos(angle);
+            float oc = 1.0 - c;
+        
+        return mat4(
+            oc * axis.x * axis.x + c,           
+            oc * axis.x * axis.y - axis.z * s,  
+            oc * axis.z * axis.x + axis.y * s,  
+            0.0,
+            oc * axis.x * axis.y + axis.z * s,  
+            oc * axis.y * axis.y + c,           
+            oc * axis.y * axis.z - axis.x * s,  0.0,
+            oc * axis.z * axis.x - axis.y * s,  
+            oc * axis.y * axis.z + axis.x * s,  
+            oc * axis.z * axis.z + c,           
+            0.0,
+            0.0,                                
+            0.0,                                
+            0.0,                                
+            1.0);
+        }
+    
+        vec3 rotate(vec3 v, vec3 axis, float angle) {
+            mat4 m = rotationMatrix(axis, angle);
+            return (m * vec4(v, 1.0)).xyz;
+        }
+        
+        float smin( float a, float b, float k ) {
+            float h = clamp( 0.5 + 0.5 * (b-a) / k, 0.0, 1.0 );
+            return mix( b, a, h ) - k*h*(1.0-h);
+        }
+        
+        float sdSphere(vec3 p, float s){
+            return length(p) - s;
+        }
+    
+        float sdBox(vec3 p, vec3 b){
+            vec3 q = abs(p) - b;
+            return length(max(q,0.0)) + min(max(q.x,max(q.y,q.z)),0.0);
+        }
+        
+        float sdOctahedron( vec3 p, float s) {
+            p = abs(p);
+            float m = p.x+p.y+p.z-s;
+            vec3 q;
+            if( 3.0*p.x < m ) q = p.xyz;
+            else if( 3.0*p.y < m ) q = p.yzx;
+            else if( 3.0*p.z < m ) q = p.zxy;
+            else return m*0.57735027;
+
+            float k = clamp(0.5*(q.z-q.y+s),0.0,s); 
+            return length(vec3(q.x,q.y-s+k,q.z-k)); 
+        }
+        
+        float sdf(vec3 p) {
+            vec3 p1 = rotate(p, vec3(1.0), u_time /5.);
+            float box = smin(sdBox(p1, vec3(0.3)), sdSphere(p, 0.3), 0.);
+            float sphere = sdSphere(p - vec3(u_mouse * u_resolution.zw * 5., 0.), 0.3);
+            
+            return smin(box, sphere, 0.4);
+        }
+        
+        
+        vec3 calcNormal( in vec3 p ) {
+            const float eps = 0.0001;
+            const vec2 h = vec2(eps,0);
+            return normalize( 
+                vec3(sdf(p+h.xyy) - sdf(p-h.xyy),
+                sdf(p+h.yxy) - sdf(p-h.yxy),
+                sdf(p+h.yyx) - sdf(p-h.yyx) 
+            ));
+        }
+        
+        void main() {
+        
+            float dist = length(vUv - vec2(0.5));
+            vec3 background = mix(vec3(0.2), vec3(0.0), dist);
+            vec2 newUV = (vUv - vec2(0.5)) * u_resolution.zw + vec2(0.5);
+        
+            vec3 cameraPosition = vec3(0.,0.,3.);
+            vec3 ray = normalize(vec3( (vUv - vec2(0.5)) * u_resolution.zw, -1));
+            
+            vec3 rayPosition = cameraPosition;
+            float t = 0.;
+            float tMax = 5.;
+        
+            for(int i = 0; i < 256; ++i) {
+                vec3 pos = cameraPosition + t*ray;
+                
+                float h = sdf(pos);
+                
+                if (h<0.0001 || t>tMax) break;
+                t+=h;
+            }
+        
+            vec3 color = background;
+            
+            if (t<tMax) {
+                vec3 pos = cameraPosition + t * ray;
+                color = vec3(1.);
+                
+                vec3 normal = calcNormal(pos);
+                color = normal;
+                
+                float diff = dot(vec3(1.), normal);
+                
+                float fresnel = pow(1. + dot(ray, normal), 3.);
+                color = vec3(fresnel);
+                color = mix(color, background, fresnel);    
+            }
+            gl_FragColor = vec4(color, 1.0);
+            
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/150586/OrbitControls.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script>
+        class THREEScene {
+            constructor(container = document.body) {
+                this.container = container;
+
+                this.setup();
+                this.camera();
+                this.lights();
+                this.settings();
+                this.addObjects();
+                this.eventListeners();
+                this.onWindowResize();
+                this.render();
+            }
+
+            setup() {
+                this.mouse = new THREE.Vector2(1, 1);
+                this.scene = new THREE.Scene();
+                this.renderer = new THREE.WebGLRenderer({antialias: true});
+                this.renderer.setSize(this.viewport.width, this.viewport.height);
+                this.renderer.setPixelRatio = window.devicePixelRatio;
+                this.renderer.setClearColor(0xeeeeee, 1);
+                this.renderer.outputEncoding = THREE.sRGBEncoding;
+                this.container.appendChild(this.renderer.domElement);
+            }
+
+            camera() {
+                const FOV = 50;
+                const NEAR = 0.001;
+                const FAR = 100;
+                const ASPECT_RATIO = this.viewport.aspectRatio;
+
+                //this.camera = new THREE.PerspectiveCamera(FOV, ASPECT_RATIO, NEAR, FAR);
+                this.camera = new THREE.OrthographicCamera(
+                    1 / -2,
+                    1 / 2,
+                    1 / 2,
+                    1 / -2,
+                    1,
+                    1000
+                );
+                this.camera.position.set(0, 0, 2);
+            }
+
+            lights() {
+                const ambientLight = new THREE.AmbientLight(0x404040);
+            }
+
+            settings() {
+                this.matcap = "https://assets.codepen.io/2479807/matcap6.png";
+                this.time = new THREE.Clock();
+            }
+
+            addObjects() {
+                this.geometry = new THREE.PlaneBufferGeometry(1, 1, 1, 1);
+                this.material = new THREE.ShaderMaterial({
+                    extensions: {
+                        derivatives: "#extension GL_OES_standard_derivatives : enable"
+                    },
+                    uniforms: {
+                        u_time: { value: 0 },
+                        u_resolution: { value: new THREE.Vector4() },
+                        u_mouse: { value: new THREE.Vector2(0, 0) },
+                        u_matcap: { value: new THREE.TextureLoader().load(this.matcap) }
+                    },
+                    transparent: false,
+                    wireframe: false,
+                    vertexShader: document.getElementById("vertex").textContent,
+                    fragmentShader: document.getElementById("fragment").textContent
+                });
+
+                this.mesh = new THREE.Mesh(this.geometry, this.material);
+                this.mesh.position.set(0, 0, 0);
+                this.scene.add(this.mesh);
+            }
+
+            render() {
+                this.camera.lookAt(this.scene.position);
+                this.renderer.render(this.scene, this.camera);
+
+                if (this.mouse) {
+                    this.material.uniforms.u_mouse.value = this.mouse;
+                }
+
+                this.material.uniforms.u_time.value = this.time.getElapsedTime();
+
+                requestAnimationFrame(() => {
+                    this.render();
+                });
+            }
+
+            eventListeners() {
+                window.addEventListener("resize", this.onWindowResize.bind(this));
+                this.mouse = new THREE.Vector2(0, 0);
+                window.addEventListener("mousemove", (e) => {
+                    this.mouse.x = e.pageX / this.width - 0.5;
+                    this.mouse.y = -e.pageY / this.height + 0.5;
+                });
+            }
+
+            onWindowResize() {
+                this.camera.aspect = this.viewport.aspectRatio;
+                this.camera.updateProjectionMatrix();
+                this.renderer.setSize(this.viewport.width, this.viewport.height);
+
+                let a1;
+                let a2;
+
+                this.imageAspect = 1;
+
+                if (this.height / this.width > this.imageAspect) {
+                    a1 = (this.width / this.height) * this.imageAspect;
+                    a2 = 1;
+                } else {
+                    a1 = 1;
+                    a2 = (this.height / this.width) * this.imageAspect;
+                }
+
+                this.material.uniforms.u_resolution.value.x = this.width;
+                this.material.uniforms.u_resolution.value.y = this.height;
+                this.material.uniforms.u_resolution.value.z = a1;
+                this.material.uniforms.u_resolution.value.w = a2;
+            }
+
+            get viewport() {
+                const width = this.container.clientWidth;
+                this.width = width;
+                const height = this.container.clientHeight;
+                this.height = height;
+                const aspectRatio = width / height;
+
+                this.aspectRatio = aspectRatio;
+
+                return {
+                    width,
+                    height,
+                    aspectRatio
+                };
+            }
+        }
+
+        const scene = new THREEScene(); 
+    </script>
+</body>
+
+</html>
