@@ -61,9 +61,23 @@
                 <div class="circle1"></div>
                 <div class="circle2"></div>
             </div>
-
         </section>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(".title",  {
+        scrollTrigger: ".title",
+        y: -100,
+        duration: 2,
+    }),
+    gsap.to(".title2",  {
+        scrollTrigger: ".title2",
+        y: -200,
+        duration: 2,
+    })
+</script>
 
 </html>

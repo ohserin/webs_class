@@ -80,12 +80,16 @@ body {
     color: rgb(255, 255, 255);
     line-height: 1.1;
     font-weight: 700;
+    position: absolute;
+    top: 30%;
 }
 
 .title2 {
     color: #fff;
     font-weight: 500;
     font-size: 150px;
+    position: absolute;
+    top: 70%;
 }
 
 .title span {
@@ -98,15 +102,16 @@ body {
     position: absolute;
     top: 50%;
     left: 66%;
-    background-color: rgb(167, 255, 237);
+    background-image: url(../portfolio/img/test.jpg);
+    background-size: cover;
 }
 
 .subtitle {
     color: #fff;
     font-family: 'GmarketSans';
     font-weight: 300;
-    position: relative;
-    top: 40%;
+    position: absolute;
+    top: 80%;
     left: 30%;
     font-size: 100px;
 }
