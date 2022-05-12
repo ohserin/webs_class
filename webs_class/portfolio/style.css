@@ -1,212 +1,623 @@
 /* 지마켓산스 */
 @font-face {
-    font-family: 'GmarketSans';
-    font-weight: 300;
-    font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
-    font-display: swap;
+  font-family: "GmarketSans";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf")
+      format("truetype");
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'GmarketSans';
-    font-weight: 500;
-    font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
-    font-display: swap;
+  font-family: "GmarketSans";
+  font-weight: 500;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf")
+      format("truetype");
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'GmarketSans';
-    font-weight: 700;
-    font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
-    font-display: swap;
+  font-family: "GmarketSans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf")
+      format("truetype");
+  font-display: swap;
 }
-@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
-
 
 * {
-    font-family: 'GmarketSans';
+  font-family: "GmarketSans";
 }
 
 #wrap {
-    margin: 0 auto;
-    padding: 0;
-    overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
 }
 
 body {
-    background: #fff;
-
+  background: #fff;
 }
 
 #header {
-    background: #000;
-    width: 100%;
-    height: 80.25vw;
+  background: #000;
+  width: 100%;
+  height: 80.25vw;
 }
 
 .containar {
-    width: 1700px;
-    margin: 0 auto;
+  width: 1515px;
+  margin: 0 auto;
 }
 
-.menu {}
+.menu {
+}
 
 .menu ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 30px 20px 150px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 20px 0px 20px;
+}
+.menu ul li span {
+  color: #fff;
+  font-family: "Koulen";
+  font-size: 40px;
 }
 
 .menu ul li a {
-    color: #fff;
-    font-family: "Koulen";
-    font-size: 24px;
-
+  color: #fff;
+  font-family: "Koulen";
+  font-size: 24px;
 }
 
 .title {
-    font-size: 140px;
-    color: rgb(255, 255, 255);
-    line-height: 1.1;
-    font-weight: 700;
-    position: absolute;
-    top: 30%;
+  font-size: 140px;
+  color: rgb(255, 255, 255);
+  line-height: 1;
+  font-weight: 700;
+  position: absolute;
+  top: 23%;
 }
 
 .title2 {
-    color: #fff;
-    font-weight: 500;
-    font-size: 140px;
-    position: absolute;
-    top: 70%;
+  color: #fff;
+  font-weight: 500;
+  font-size: 140px;
+  position: absolute;
+  top: 48%;
 }
 
 .title span {
-    font-weight: 300;
+  font-weight: 300;
 }
 
 .header_img {
-    width: 970px;
-    height: 1256px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background-image: url(../portfolio/img/test.jpg);
-    background-size: cover;
+  width: 970px;
+  height: 1256px;
+  position: absolute;
+  top: 51%;
+  left: 49.1%;
+  background-image: url(../portfolio/img/test.jpg);
+  background-size: cover;
 }
 
 .subtitle {
-    color: #fff;
-    font-family: 'GmarketSans';
-    font-weight: 300;
-    position: absolute;
-    top: 120%;
-    left: 22%;
-    font-size: 100px;
+  color: #fff;
+  font-family: "GmarketSans";
+  font-weight: 300;
+  position: absolute;
+  top: 120%;
+  left: 24%;
+  font-size: 100px;
 }
 
 .subtitle span {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .intro {
-    font-size: 80px;
-    font-weight: 300;
-    margin: 200px 0 200px 70px;
-    line-height: 1.4;
+  font-size: 80px;
+  font-weight: 300;
+  margin: 300px 0px 100px 200px;
+  line-height: 1.4;
 }
 
 .sec1 {
-    height: 1900px;
+  height: 1900px;
 }
 
 .sec1_img {
-    display: flex;
-    position: relative;
+  display: flex;
+  position: relative;
 }
 
 .sec1_img .img1 {
-    width: 800px;
-    height: 1000px;
-    background: rgb(191, 206, 154);
-    background-image: url(../portfolio/img/\ img1.jpg);
-    background-size: contain;
-
+  width: 822px;
+  height: 1056px;
+  background: rgb(191, 206, 154);
+  background-image: url(../portfolio/img/\ img1.jpg);
+  background-size: contain;
 }
 
 .sec1_img .img2 {
-    width: 510px;
-    height: 510px;
-    border-radius: 50%;
-    background: rgb(255, 233, 152);
-    position: absolute;
-    bottom: 60%;
-    left: 30%;
+  width: 510px;
+  height: 510px;
+  border-radius: 50%;
+  background: rgb(255, 233, 152);
+  position: absolute;
+  bottom: 65%;
+  left: 35%;
 }
 
 .sec1_img .desc {
-    font-weight: 300;
-    width: 950px;
-    height: 200px;
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    font-size: 24px;
+  font-weight: 300;
+  width: 750px;
+  height: 300px;
+  position: absolute;
+  left: 48%;
+  top: 45%;
+  font-size: 24px;
 }
 
 .Figure {
-    display: flex;
-    position: absolute;
-    top: 10%;
-    left: 75%;
+  display: flex;
+  position: absolute;
+  top: 16%;
+  left: 65%;
 }
 
 .Figure .circle1 {
-    width: 200px;
-    height: 200px;
-    background: rgb(255, 61, 61);
-    border-radius: 50%;
+  width: 254px;
+  height: 254px;
+  background: rgb(255, 61, 61);
+  border-radius: 50%;
 }
 
 .Figure .circle2 {
-    width: 100px;
-    height: 200px;
-    background-color: rgb(167, 255, 237);
-    border-radius: 0 200px 200px 0;
+  width: 134px;
+  height: 254px;
+  background-color: rgb(167, 255, 237);
+  border-radius: 0 200px 200px 0;
 }
 
 .Figure2 {
-    display: flex;
-    position: relative;
-    left: 80%;
-    bottom: 5%;
+  display: flex;
+  position: relative;
+  left: 75%;
+  bottom: 5%;
 }
 
 .Figure2 .circle1 {
-    width: 100px;
-    height: 200px;
-    background-color: #B7E8DD;
-    border-radius: 0 200px 200px 0;
+  width: 134px;
+  height: 254px;
+  background-color: #b7e8dd;
+  border-radius: 0 200px 200px 0;
 }
 
 .Figure2 .circle2 {
-    width: 200px;
-    height: 200px;
-    background: #FAC802;
-    border-radius: 50%;
+  width: 254px;
+  height: 254px;
+  background: #fac802;
+  border-radius: 50%;
 }
+
+.sec2 {
+  width: 100%;
+  height: 910px;
+  background: #0031a6;
+}
+.port1 {
+  position: relative;
+}
+.port1 p {
+  font-size: 120px;
+  color: #fff;
+  font-weight: 300;
+  width: 900px;
+  line-height: 1.1;
+  margin: 0 auto;
+}
+.port1 .box {
+  width: 893px;
+  height: 260px;
+  line-height: 260px;
+  background-image: url(../portfolio/img/port1jpg.jpg);
+  border-radius: 400px;
+  position: absolute;
+  top: 35%;
+  left: 26%;
+}
+
+.site {
+  width: 100%;
+  height: 1400px;
+  margin-top: 300px;
+}
+.site h2 {
+  font-weight: 300;
+  font-size: 80px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.site p {
+  width: 1100px;
+  font-weight: 300;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+.site .img {
+  width: 1323px;
+  height: 739px;
+  background-image: url(../portfolio/img/site1.jpg);
+  position: relative;
+}
+
+.Figure3 {
+  display: flex;
+  position: absolute;
+  left: 60%;
+  top: 80%;
+}
+
+.Figure3 .circle1 {
+  width: 304px;
+  height: 304px;
+  background-color: #ff5110;
+  border-radius: 50%;
+  padding: 100px 0;
+  text-align: center;
+}
+.Figure3 .circle1 a {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.Figure3 .circle2 {
+  width: 304px;
+  height: 304px;
+  background: #0031a6;
+  border-radius: 50%;
+  padding: 100px 0;
+  text-align: center;
+}
+.Figure3 .circle2 a {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 300;
+}
+
+/* site2 */
+.site2 {
+  width: 100%;
+  height: 1400px;
+}
+.site2 .text {
+  text-align: right;
+
+}
+.site2 h2 {
+  font-weight: 300;
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+.site2 p {
+  width: 1100px;
+  margin-left: 417px;
+  font-weight: 300;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+.site2 .img {
+  width: 1323px;
+  height: 739px;
+  background-image: url(../portfolio/img/site2.jpg);
+  position: relative;
+  float: right;
+}
+
+.Figure4 {
+  display: flex;
+  position: absolute;
+  top: 80%;
+  right: 68%;
+}
+
+.Figure4 .circle1 {
+  width: 304px;
+  height: 304px;
+  background-color: #B7E8DD;
+  border-radius: 50%;
+  padding: 100px 0;
+  text-align: center;
+}
+.Figure4 .circle1 a {
+  font-size: 40px;
+  color: #000;
+  font-weight: 300;
+}
+
+.Figure4 .circle2 {
+  width: 304px;
+  height: 304px;
+  background: #FAC802;
+  border-radius: 50%;
+  padding: 100px 0;
+  text-align: center;
+}
+.Figure4 .circle2 a {
+  font-size: 40px;
+  color: #000;
+  font-weight: 300;
+}
+
+/* site3 */
+.site3 {
+  width: 100%;
+  height: 1400px;
+  margin-top: 100px;
+}
+.site3 h2 {
+  font-weight: 300;
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+.site3 p {
+  width: 1100px;
+  font-weight: 300;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+.site3 .img {
+  width: 1323px;
+  height: 739px;
+  background-image: url(../portfolio/img/site3.jpg);
+  position: relative;
+}
+
+.Figure5 {
+  display: flex;
+  position: absolute;
+  left: 60%;
+  top: 80%;
+}
+
+.Figure5 .circle1 {
+  width: 304px;
+  height: 304px;
+  background-color: #ff5110;
+  border-radius: 50%;
+  padding: 100px 0;
+  text-align: center;
+}
+.Figure5 .circle1 a {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.Figure5 .circle2 {
+  width: 304px;
+  height: 304px;
+  background: #0031a6;
+  border-radius: 50%;
+  padding: 100px 0;
+  text-align: center;
+}
+.Figure5 .circle2 a {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.sec3 {
+  width: 100%;
+  height: 910px;
+  background: #000;
+}
+.port2 {
+  position: relative;
+}
+.port2 p {
+  font-size: 120px;
+  color: #fff;
+  font-weight: 300;
+  width: 1096px;
+  line-height: 1.1;
+  margin: 0 auto;
+}
+.port2 .box {
+  width: 1512px;
+  height: 260px;
+  line-height: 260px;
+  background-image: url(../portfolio/img/port2.jpg);
+  border-radius: 400px;
+  position: absolute;
+  top: 35%;
+  left: 10%;
+}
+
+/* refer  */
+.refer {
+  width: 100%;
+  height: 65vw;
+  margin-top: 600px;
+  position: relative;
+
+}
+.refer .tit {
+  font-size: 80px;
+  font-weight: 300;
+  width: 294px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  position: absolute;
+  top: -196px;
+  left: 200px;
+}
+
+.refer .page1 {
+  width: 1361px;
+  height: 653px;
+  background-image: url(../portfolio/img/page1.jpg);
+}
+.refer .text {
+  text-align: right;
+  width: 1360px;
+}
+
+.refer .text p {
+  font-size: 24px;
+  font-weight: 300;
+}
+.refer .text a {
+  font-size: 40px;
+  font-weight: 300;
+}
+.bg_Figure1 {
+  width: 1078px;
+  height: 1078px;
+  background: #FF5110;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 39%;
+  left: 80%;
+}
+
+
+/* refer2  */
+.refer2 {
+  width: 100%;
+  height: 47vw;
+  position: relative;
+
+}
+.refer2 .tit {
+  font-size: 80px;
+  font-weight: 300;
+  width: 294px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  position: absolute;
+  top: -196px;
+  left: 200px;
+}
+
+.refer2 .page2 {
+  width: 1361px;
+  height: 653px;
+  background-image: url(../portfolio/img/page2.jpg);
+  float: right;
+}
+.refer2 .text {
+  text-align: right;
+  margin-right: 200px;
+  clear: both;
+}
+
+.refer2 .text p {
+  font-size: 24px;
+  font-weight: 300;
+}
+.refer2 .text a {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.bg_Figure2 {
+  transform: rotate(30deg);
+  position: absolute;
+  top: 24%;
+  right: 65%;
+}
+
+/* refer3  */
+.refer3 {
+  width: 100%;
+  height: 65vw;
+  margin-top: 600px;
+  position: relative;
+
+}
+.refer3 .tit {
+  font-size: 80px;
+  font-weight: 300;
+  width: 294px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  position: absolute;
+  top: -196px;
+  left: 200px;
+}
+
+.refer3 .page3 {
+  width: 1361px;
+  height: 653px;
+  background-image: url(../portfolio/img/page3.jpg);
+}
+.refer3 .text {
+  text-align: right;
+  width: 1360px;
+}
+
+.refer3 .text p {
+  font-size: 24px;
+  font-weight: 300;
+}
+.refer3 .text a {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+/*  */
+
+.sec4 {
+  width: 100%;
+  height: 1158px;
+  background: #FAC802;
+}
+.port3 {
+  position: relative;
+}
+.port3 p {
+  font-size: 120px;
+  color: #fff;
+  font-weight: 300;
+  width: 900px;
+  line-height: 1.1;
+  margin: 0 auto;
+}
+.port3 .box {
+  width: 893px;
+  height: 260px;
+  line-height: 260px;
+  background-image: url(../portfolio/img/port1jpg.jpg);
+  border-radius: 400px;
+  position: absolute;
+  top: 35%;
+  left: 26%;
+}
+

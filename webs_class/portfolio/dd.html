@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap {
+            
+            margin: 0 auto;
+            padding: 0;
+        }
+        .bg {
+            width: 100%;
+            height: 300px;
+            margin-top: 400px;
+            margin-left: 400px;
+        }
+         #pentagon {
+      position: relative;
+      width: 304px;
+      box-sizing: content-box;
+      border-width: 100px 58px 0;
+      border-style: solid;
+      border-color: pink transparent;
+    }
+    #pentagon:before {
+      content: "";
+      position: absolute;
+      height: 0;
+      width: 0;
+      top: -305px;
+      left: -58px;
+      border-width: 0 205px 150px;
+      border-style: solid;
+      border-color: transparent transparent pink;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="bg">
+        <div id="pentagon"></div>
+    </div>
+    </div>
+
+</body>
+</html>
