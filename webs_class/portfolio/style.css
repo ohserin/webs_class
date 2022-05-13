@@ -177,7 +177,7 @@ body {
   width: 750px;
   height: 300px;
   position: absolute;
-  left: 48%;
+  left: 53%;
   top: 45%;
   font-size: 24px;
 }
@@ -487,6 +487,7 @@ body {
 .refer .text {
   text-align: right;
   width: 1360px;
+  margin-top: 40px;
 }
 
 .refer .text p {
@@ -536,6 +537,7 @@ body {
   text-align: right;
   margin-right: 200px;
   clear: both;
+  padding-top: 40px;
 }
 
 .refer2 .text p {
@@ -581,6 +583,7 @@ body {
 .refer3 .text {
   text-align: right;
   width: 1360px;
+  margin-top: 40px;
 }
 
 .refer3 .text p {
@@ -639,7 +642,7 @@ body {
 .self .pho_1 {
   width: 666px;
   height: 784px;
-  background: rgb(255, 220, 220);
+  background-image: url(../portfolio/img/self2.jpg);
   margin: 100px 0px 0 150px;
   transform: rotate(-10deg);
   
@@ -648,7 +651,7 @@ body {
 .self .pho_2 {
   width: 465px;
   height: 547px;
-  background: rgb(231, 255, 247);
+  background-image: url(../portfolio/img/self1.jpg);
   position: absolute;
   top: 45%;
   left: 28%;
