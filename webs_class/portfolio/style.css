@@ -317,7 +317,6 @@ body {
 }
 .site2 .text {
   text-align: right;
-
 }
 .site2 h2 {
   font-weight: 300;
@@ -349,7 +348,7 @@ body {
 .Figure4 .circle1 {
   width: 304px;
   height: 304px;
-  background-color: #B7E8DD;
+  background-color: #b7e8dd;
   border-radius: 50%;
   padding: 100px 0;
   text-align: center;
@@ -363,7 +362,7 @@ body {
 .Figure4 .circle2 {
   width: 304px;
   height: 304px;
-  background: #FAC802;
+  background: #fac802;
   border-radius: 50%;
   padding: 100px 0;
   text-align: center;
@@ -466,7 +465,6 @@ body {
   height: 65vw;
   margin-top: 600px;
   position: relative;
-
 }
 .refer .tit {
   font-size: 80px;
@@ -501,20 +499,18 @@ body {
 .bg_Figure1 {
   width: 1078px;
   height: 1078px;
-  background: #FF5110;
+  background: #ff5110;
   border-radius: 50%;
   position: absolute;
   bottom: 39%;
   left: 80%;
 }
 
-
 /* refer2  */
 .refer2 {
   width: 100%;
   height: 57vw;
   position: relative;
-
 }
 .refer2 .tit {
   font-size: 80px;
@@ -562,7 +558,6 @@ body {
   height: 60vw;
   margin-top: 600px;
   position: relative;
-
 }
 .refer3 .tit {
   font-size: 80px;
@@ -600,7 +595,7 @@ body {
 .sec4 {
   width: 100%;
   height: 1175px;
-  background: #FAC802;
+  background: #fac802;
 }
 .port3 {
   position: relative;
@@ -628,54 +623,82 @@ body {
 
 .contact {
   width: 100%;
-  height: 72vw;
+  height: 62vw;
   background: #f5f5f5;
   padding-top: 40px;
 }
 
-.self {
+.contact .box {
   display: flex;
-  justify-content: space-between;
   position: relative;
-}
-
-.self .pho_1 {
-  width: 666px;
-  height: 784px;
-  background-image: url(../portfolio/img/self2.jpg);
-  margin: 100px 0px 0 150px;
-  transform: rotate(-10deg);
-  
-
-}
-.self .pho_2 {
-  width: 465px;
-  height: 547px;
-  background-image: url(../portfolio/img/self1.jpg);
-  position: absolute;
-  top: 45%;
-  left: 28%;
-}
-
-.self .tit {
-  font-weight: 300;
-  font-size: 120px;
-  text-transform: uppercase;
-  position: absolute;
-  left: 40%;
   top: 20%;
 }
+.contact .box1 {
+}
+.contact .box2 {
+  width: 1000px;
+  height: 584px;
+  background-size: cover;
+  position: absolute;
+  left: 5%;
+  font-weight: 300;
+}
+.contact .box3 {
+  width: 651px;
+  height: 726px;
+  background: #ffffff;
+  background-size: contain;
+  position: absolute;
+  right: 30%;
+}
+.box2 p {
+  font-size: 120px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
 
-.self .tit span {
+.box3 .tit {
+  display: flex;
+  font-size: 80px;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: absolute;
+  top: -10%;
+}
+.box3 .tit span {
   font-weight: 500;
 }
-
-.infor {
-  width: 851px;
-  height: 726px;
-  background: rgb(255, 255, 255);
+.box .line1 {
+  width: 500px;
+  height: 2px;
+  background: #f5f5f5;
   position: relative;
-  bottom: 50%;
-  left: 56%;
+  top: 30%;
+  left: 10%;
+}
+.box .line2 {
+  width: 500px;
+  height: 2px;
+  background: #f5f5f5;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+}
+.box .line3 {
+  width: 500px;
+  height: 2px;
+  background: #f5f5f5;
+  position: absolute;
+  top: 50%;
+  left: 10%;
 }
 
+.bg_Figure3 {
+  width: 600px;
+  height: 600px;
+  background: #b7e8dd;
+  border-radius: 50%;
+  position: relative;
+  top: 10%;
+  left: -10%;
+}
