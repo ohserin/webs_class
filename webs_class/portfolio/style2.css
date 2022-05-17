@@ -127,8 +127,10 @@ body {
     left: 49.6%;
 }
 
-@media (max-width: 800px) {
-    .cir {
-  
-    }
+/* #section1 .text span {
+    opacity: 0;
+    transition: all 1s;
 }
+#section1 .text span.show {
+    opacity: 1;
+} */

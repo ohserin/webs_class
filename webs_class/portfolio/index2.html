@@ -47,11 +47,11 @@
 
 </body>
 
-<script src="js/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 <script>
 
 gsap.to(".text", {
-  y: 400
+  y: 200
 });
 
 
@@ -64,6 +64,16 @@ gsap.to(".text", {
         let splitWrap = splitText.split('').join("</span><span>");
             splitWrap ="<span>" + splitWrap + "</span>";
             text.innerHTML = splitWrap;
+
+            document.querySelectorAll(".text").forEach(div => {
+                if(scrollTop > div.offsetTop){
+                    div.querySelectorAll(".text span").forEach((span, index) => {
+                        setTimeout (() => {
+                            span.classList.add("show");
+                        },50 * (index+1))
+                    })
+                }
+            })
   
 
   
