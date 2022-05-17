@@ -53,13 +53,11 @@
 
   
   //글씨 쪼개기
-  document.querySelectorAll("#section .text.div").forEach(div =>{
-            let splitText = div.innerText;
-            let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
-                splitWrap ="<span aria-hidden='true'>" + splitWrap + "</span>";
-                div.innerHTML = splitWrap;
-                div.setAttribute("aria-label", splitText);
-        })
+ let text = document.querySelector("#section1 .text");
+        let splitText = text.innerText;
+        let splitWrap = splitText.split('').join("</span><span>");
+            splitWrap ="<span>" + splitWrap + "</span>";
+            text.innerHTML = splitWrap;
   
 
   

@@ -46,6 +46,7 @@ body {
 
 .text {
     color: #fff;
+    width: 50vw;
     font-size: 7.2vw;
     line-height: 1;
     font-family: "GmarketSans";
@@ -127,5 +128,7 @@ body {
 }
 
 @media (max-width: 800px) {
-    #section1 .text {}
+    .cir {
+  
+    }
 }
