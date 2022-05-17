@@ -24,9 +24,9 @@
   <section id="section1">
     <div class="sec1">
       <div class="text">
-        <div class="a">WELCOME</div>
-        <div class="b">TO MY</div>
-        <div class="c">PORTFOLIO</div>
+        <div>WELCOME</div>
+        <div>TO MY</div>
+        <div>PORTFOLIO</div>
       </div>
 
       <div class="cir">
@@ -53,11 +53,14 @@
 
   
   //글씨 쪼개기
-  let text = document.querySelector("#section1 .text .a");
-  let splitText = text.innerText;
-  let splitWrap = splitText.split('').join("</span><span>");
-  splitWrap = "<span>" + splitWrap + "</span>";
-  text.innerHTML = splitWrap;
+  document.querySelectorAll("#section .text div").forEach(div =>{
+            let splitText = desc.innerText;
+            let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
+                splitWrap ="<span aria-hidden='true'>" + splitWrap + "</span>";
+                desc.innerHTML = splitWrap;
+                desc.setAttribute("aria-label", splitText);
+        })
+  
 
   
 </script>
