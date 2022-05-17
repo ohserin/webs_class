@@ -70,7 +70,7 @@ gsap.to(".text", {
             text.innerHTML = splitWrap;
 
             document.querySelectorAll(".text").forEach(div => {
-                if(scrollTop > div.offsetTop){
+                if(div.offsetTop){
                     div.querySelectorAll(".text span").forEach((span, index) => {
                         setTimeout (() => {
                             span.classList.add("show");
