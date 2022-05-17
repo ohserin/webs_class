@@ -50,11 +50,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 <script>
 
-gsap.to(".text", {
+gsap.to("#section1 .text", {
   y: 100
 });
 
-gsap.to(".text", {
+gsap.to("#section1 .text", {
   duration: 0.8, y: 0, delay: 0.8
 });
 
@@ -69,15 +69,6 @@ gsap.to(".text", {
             splitWrap ="<span>" + splitWrap + "</span>";
             text.innerHTML = splitWrap;
 
-            document.querySelectorAll(".text").forEach(div => {
-                if(div.offsetTop){
-                    div.querySelectorAll(".text span").forEach((span, index) => {
-                        setTimeout (() => {
-                            span.classList.add("show");
-                        },50 * (index+1))
-                    })
-                }
-            })
   
 
   
