@@ -34,103 +34,136 @@
         url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf") format("truetype");
     font-display: swap;
 }
-
-* {
-    margin: 0 auto;
-    padding: 0;
+/* header */
+#header {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Koulen';
+    padding: 0 20px;
+}
+#header h1 {
+    padding: 10px 0;
+    font-size: 40px;
+}
+#header span {
+    font-size: 24px;
 }
 
-body {
+/* section1 */
+#section1 {
+    height: 150vh;
     background: #000;
 }
-
-.text {
+.sec1_text1 {
+    padding: 12vw 10vw;
     color: #fff;
-    width: 50vw;
-    font-size: 7.2vw;
-    line-height: 1;
-    font-family: "GmarketSans";
+    font-size: 7vw;
+    line-height: 0.9;
+    font-family: 'GmarketSans';
     z-index: 100;
-}
-
-.text>div:nth-child(1) {
-    font-weight: 700;
-
-}
-
-.text>div:nth-child(2) {
-    font-weight: 300;
-}
-
-.text>div:nth-child(3) {
-    font-weight: 500;
-}
-
-#header {}
-
-#header ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2vh;
-}
-
-#header ul li a {
-    display: flex;
-    color: #fff;
-    font-size: 2.3vh;
-    font-family: "Koulen";
-}
-
-#header ul li a span {
-    font-size: 3.2vh;
-}
-
-#section1 {
     position: relative;
-    top: 10vw;
-    padding: 0 21vh;
 }
-
-#section1 .sec1 {
-    display: flex;
+.sec1_text1 div {
+    margin-bottom: 1vw;
+    overflow: hidden;
 }
-
-.cir {
+.sec1_text1 div span {
+    display: inline-block;
+}
+.sec1_text1 > div:nth-child(1){font-weight: 700;}
+.sec1_text1 > div:nth-child(2){font-weight: 300;}
+.sec1_text1 > div:nth-child(3){font-weight: 500;}
+.sec1_cir {
     display: flex;
     position: absolute;
-    bottom: 14vw;
-    right: 10vw;
+    right: 12vw;
+    top: 8vw;
 }
-
-.circle1 {
+.sec1_cir .circle1 {
     width: 13vw;
     height: 13vw;
     background: rgb(255, 61, 61);
     border-radius: 50%;
 }
-
-.circle2 {
+.sec1_cir .circle2 {
     width: 6.5vw;
     height: 13vw;
     background-color: rgb(167, 255, 237);
     border-radius: 0 200px 200px 0;
 }
-
-.right {
-    width: 50vw;
-    height: 53vw;
-    background-image: url(../portfolio/img/test.jpg);
-    background-size: cover;
+.sec1_box1 {
     position: absolute;
-    top: 62%;
-    left: 49.6%;
+    right: 0;
+    top: 24vw;
+    width: 50vw;
+    height: 150vh;
+    background: url(https://ohserin.github.io/webs_class/webs_class/portfolio/img/test.jpg) no-repeat center center;
+    background-size: cover;
+}
+@media (max-width: 800px) {
+    .sec1_text1 {
+        font-size: 50px;
+        text-align: center;
+        padding-top: 150px;
+    }
+    .sec1_box1 {
+        width: 70vw;
+        top: 36vw;
+        height: 50vh;
+    }
+    .sec1_cir {
+        right: 10vw;
+        top: 18vw;
+        z-index: 200;
+    }
+    .sec1_cir .circle1 {
+        width: 10vw;
+        height: 10vw;
+    }
+    .sec1_cir .circle2 {
+        width: 5vw;
+        height: 10vw;
+    }
 }
 
-/* #section1 .text span {
-    opacity: 0;
-    transition: all 1s;
+@media (max-width: 670px) {
+    .sec1_text1 {
+        font-size: 50px;
+        text-align: center;
+        padding-top: 150px;
+    }
+    .sec1_box1 {
+        width: 70vw;
+        top: 36vw;
+        height: 50vh;
+    }
+    .sec1_cir {
+        right: 6vw;
+        top: 15vw;
+        z-index: 200;
+    }
+    .sec1_cir .circle1 {
+        width: 10vw;
+        height: 10vw;
+    }
+    .sec1_cir .circle2 {
+        width: 5vw;
+        height: 10vw;
+    }
 }
-#section1 .text span.show {
-    opacity: 1;
-} */
+
+
+
+/* section2 */
+#section2 {
+    background: blue;
+    height: 2000px;
+
+}
+

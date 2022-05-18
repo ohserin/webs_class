@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>port</title>
+  <title>portfolio</title>
+
   <link rel="stylesheet" href="../portfolio/reset.css" />
   <link rel="stylesheet" href="../portfolio/style2.css" />
   <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet" />
@@ -14,73 +15,135 @@
 <body>
 
   <header id="header">
-    <ul>
-      <li><a href="#">DEVELOPER</a></li>
-      <li><a href="#"><span>OH SERIN</span></a></li>
-      <li><a href="#">CONTACT</a></li>
-    </ul>
+    <span>developer</span>
+    <h1>oh serin</h1>
+    <span>contact</span>
   </header>
 
-  <section id="section1">
-    <div class="sec1">
-      <div class="text">
-        <div>WELCOME</div>
-        <div>TO MY</div>
-        <div>PORTFOLIO</div>
+  <main id="contents">
+    <section id="section1">
+      <div class="sec1_text1">
+        <div class="split">WELCOME</div>
+        <div class="split">TO MY</div>
+        <div class="split">PORTFOLIO</div>
       </div>
-
-      <div class="cir">
+      <div class="sec1_cir">
         <div class="circle1"></div>
         <div class="circle2"></div>
       </div>
-    </div>
-
-    <div class="right"></div>
-
-    <div class="box"></div>
-  </section>
-  <section id="section2"></section>
-  <section id="section3"></section>
-  <section id="section4"></section>
-  <section id="section5"></section>
-  <section id="section6"></section>
+      <div class="sec1_text2"></div>
+        <div class="sec1_box1"></div>
+    </section>
+    <!-- //section1 -->
+    <section id="section2"></section><!-- //section2 -->
+    <section id="section3"></section><!-- //section3 -->
+    <section id="section4"></section><!-- //section4 -->
+    <section id="section5"></section><!-- //section5 -->
+    <section id="section6"></section><!-- //section6 -->
+  </main>
 
 </body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+<script src="js/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 <script>
+  document.querySelectorAll(".split").forEach(desc => {
+    let splitText = desc.innerText;
+    let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
+    splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+    desc.innerHTML = splitWrap;
+    desc.setAttribute("aria-label", splitText);
+  })
 
-gsap.to("#section1 .text", {
-  y: 100
-});
-
-gsap.to("#section1 .text", {
-  duration: 0.8, y: 0, delay: 0.4
-});
-
-gsap.to("#section1 .cir", {
-  duration: 0, rotate:360, y: 0, opacity: 0,
-});
-
-
-gsap.to("#section1 .cir", {
-  duration: 0.8, rotate:0, y: 0, delay: 0.8, opacity: 1,
-});
-
-
+  gsap.to(".sec1_text1 > div:nth-child(1) span", {
+    y: 150
+  })
+  gsap.to(".sec1_text1 > div:nth-child(2) span", {
+    y: 150
+  })
+  gsap.to(".sec1_text1 > div:nth-child(3) span", {
+    y: 150
+  })
 
 
+  gsap.to(".sec1_cir > div:nth-child(1)", {
+    x: 0
+  })
+  gsap.to(".sec1_cir > div:nth-child(2)", {
+    duration: 2.5,
+    ease: "bounce.out",
+    x: 0
+  })
+
+  gsap.to(".sec1_box1", {
+    duration: 2.5,
+    ease: "bounce.out",
+  })
+
+  setTimeout(() => {
+    gsap.to(".sec1_text1 > div:nth-child(1) span", {
+      duration: 1,
+      stagger: 0.04,
+      y: 0,
+      rotation: 0,
+      ease: "power3.out"
+    })
+    gsap.to(".sec1_text1 > div:nth-child(2) span", {
+      duration: 1,
+      stagger: 0.04,
+      y: 0,
+      rotation: 0,
+      ease: "power3.out",
+      delay: 0.2
+    })
+    gsap.to(".sec1_text1 > div:nth-child(3) span", {
+      duration: 1,
+      stagger: 0.04,
+      y: 0,
+      rotation: 0,
+      ease: "power3.out",
+      delay: 0.4
+    })
+  }, 2000)
+
+  setTimeout(() => {
+    gsap.to(".sec1_cir > div:nth-child(1)", {
+      scale: 1,
+      x: 0
+    })
+    gsap.to(".sec1_cir > div:nth-child(2)", {
+      duration: 1.4,
+      stagger: 0.04,
+      y: 0,
+      rotation: 360,
+      ease: "power3.out",
+      delay: 0.5
+    })
+  })
   
-  //글씨 쪼개기
- let text = document.querySelector("#section1 .text");
-        let splitText = text.innerText;
-        let splitWrap = splitText.split('').join("</span><span>");
-            splitWrap ="<span>" + splitWrap + "</span>";
-            text.innerHTML = splitWrap;
+  function scroll(){
+             const reveal = document.querySelectorAll(".reveal");
+             reveal.forEach(elem => {
+                 let revealOffetset = elem.offsetTop + elem.parentElement.offsetTop;
+                 let revealDelay = elem.dataset.delay
 
+             
+                if(scrollTop >= revealOffetset - window.innerHeight/2){
+                    if(revealDelay == undefined){
+                        elem.classList.add("show");
+                    }else {
+                        setTimeout(() => {
+                            elem.classList.add("show");
+                        }, revealDelay)
+                    }
+                }
+             })
+
+         }
   
 
-  
+
+
 </script>
 
 </html>
