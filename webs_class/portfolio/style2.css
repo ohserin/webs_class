@@ -46,6 +46,7 @@
     justify-content: space-between;
     font-family: 'Koulen';
     padding: 0 20px;
+    z-index: 400;
 }
 #header h1 {
     padding: 10px 0;
@@ -97,6 +98,30 @@
     background-color: rgb(167, 255, 237);
     border-radius: 0 200px 200px 0;
 }
+.sec1_text2 {
+    font-size: 6vw;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    position: relative;
+    top: 0;
+    left: 20.8%;
+    z-index: 300;
+    font-family: "GmarketSans";
+}
+
+
+.sec1_text3 {
+    font-size: 6vw;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "GmarketSans";
+    font-weight: 300;
+    position: relative;
+    top: 10%;
+    left: 21%;
+}
+
 .sec1_box1 {
     position: absolute;
     right: 0;
