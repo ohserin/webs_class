@@ -67,7 +67,7 @@
     height: 150vh;
     background: #000;
     overflow: hidden;
-    width: 100%;
+    position: relative;
 }
 
 .sec1_text1 {
