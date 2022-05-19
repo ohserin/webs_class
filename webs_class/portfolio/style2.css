@@ -255,7 +255,24 @@
 
 /* section2 */
 #section2 {
-    background: rgb(186, 251, 102);
+    background: rgb(255, 255, 255);
     height: 2000px;
-
 }
+.sec2_intro {
+    /* background: rgb(126, 66, 66); */
+    width: 30vw;
+    font-size: 3.3vw;
+    font-weight: 300;
+    margin: 10vw 0 5vw 10vw;
+    line-height: 1.4;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'GmarketSans';
+  }
+  .sec2_box1 {
+    width: 822px;
+    height: 1056px;
+    background: rgb(191, 206, 154);
+    background-image: url(../portfolio/img/\ img1.jpg);
+    background-size: contain;
+  }
