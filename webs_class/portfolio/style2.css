@@ -34,10 +34,14 @@
         url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf") format("truetype");
     font-display: swap;
 }
+
+* {}
+
 /* header */
 #header {
     position: fixed;
-    left: 0; top: 0;
+    left: 0;
+    top: 0;
     width: 100%;
     background: #000;
     color: #fff;
@@ -48,10 +52,12 @@
     padding: 0 20px;
     z-index: 400;
 }
+
 #header h1 {
     padding: 10px 0;
     font-size: 40px;
 }
+
 #header span {
     font-size: 24px;
 }
@@ -61,6 +67,7 @@
     height: 150vh;
     background: #000;
 }
+
 .sec1_text1 {
     padding: 12vw 10vw;
     color: #fff;
@@ -70,34 +77,49 @@
     z-index: 100;
     position: relative;
 }
+
 .sec1_text1 div {
     margin-bottom: 1vw;
     overflow: hidden;
 }
+
 .sec1_text1 div span {
     display: inline-block;
 }
-.sec1_text1 > div:nth-child(1){font-weight: 700;}
-.sec1_text1 > div:nth-child(2){font-weight: 300;}
-.sec1_text1 > div:nth-child(3){font-weight: 500;}
+
+.sec1_text1>div:nth-child(1) {
+    font-weight: 700;
+}
+
+.sec1_text1>div:nth-child(2) {
+    font-weight: 300;
+}
+
+.sec1_text1>div:nth-child(3) {
+    font-weight: 500;
+}
+
 .sec1_cir {
     display: flex;
     position: absolute;
     right: 12vw;
     top: 8vw;
 }
+
 .sec1_cir .circle1 {
     width: 13vw;
     height: 13vw;
     background: rgb(255, 61, 61);
     border-radius: 50%;
 }
+
 .sec1_cir .circle2 {
     width: 6.5vw;
     height: 13vw;
     background-color: rgb(167, 255, 237);
     border-radius: 0 200px 200px 0;
 }
+
 .sec1_text2 {
     font-size: 6vw;
     color: #fff;
@@ -119,7 +141,7 @@
     font-weight: 300;
     position: relative;
     top: 10%;
-    left: 21%;
+    margin-left: 21vw;
 }
 
 .sec1_box1 {
@@ -131,26 +153,31 @@
     background: url(https://ohserin.github.io/webs_class/webs_class/portfolio/img/test.jpg) no-repeat center center;
     background-size: cover;
 }
+
 @media (max-width: 800px) {
     .sec1_text1 {
         font-size: 50px;
         text-align: center;
         padding-top: 150px;
     }
+
     .sec1_box1 {
         width: 70vw;
         top: 36vw;
         height: 50vh;
     }
+
     .sec1_cir {
         right: 10vw;
         top: 18vw;
         z-index: 200;
     }
+
     .sec1_cir .circle1 {
         width: 10vw;
         height: 10vw;
     }
+
     .sec1_cir .circle2 {
         width: 5vw;
         height: 10vw;
@@ -163,20 +190,24 @@
         text-align: center;
         padding-top: 150px;
     }
+
     .sec1_box1 {
         width: 70vw;
         top: 36vw;
         height: 50vh;
     }
+
     .sec1_cir {
         right: 6vw;
         top: 15vw;
         z-index: 200;
     }
+
     .sec1_cir .circle1 {
         width: 10vw;
         height: 10vw;
     }
+
     .sec1_cir .circle2 {
         width: 5vw;
         height: 10vw;
@@ -191,4 +222,3 @@
     height: 2000px;
 
 }
-
