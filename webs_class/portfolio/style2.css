@@ -54,12 +54,12 @@
 }
 
 #header h1 {
-    padding: 10px 0;
-    font-size: 40px;
+    padding: 1vw 0;
+    font-size: 3vh;
 }
 
 #header span {
-    font-size: 24px;
+    font-size: 2vh;
 }
 
 /* section1 */
@@ -192,6 +192,14 @@
 
 
 @media (max-width: 800px) {
+
+    #header h1 {
+        font-size: 25px;
+    }
+    
+    #header span {
+       font-size: 15px;
+    }
     .sec1_text1 {
         font-size: 50px;
         text-align: center;
