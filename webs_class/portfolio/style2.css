@@ -269,6 +269,7 @@
     text-transform: uppercase;
     font-weight: 300;
     font-family: 'GmarketSans';
+    margin-bottom: 5vw;
 }
 
 .sec2_cir {
@@ -276,7 +277,6 @@
     height: 25vw;
     border-radius: 50%;
     background: rgb(255, 233, 152);
-    position: relative;
     top: -8%;
     left: 35%;
     z-index: 1;
@@ -288,6 +288,4 @@
     background: rgb(191, 206, 154);
     background-image: url(../portfolio/img/\ img1.jpg);
     background-size: contain;
-    position: relative;
-    bottom: 20%;
 }
