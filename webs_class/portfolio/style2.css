@@ -271,15 +271,19 @@
     font-family: 'GmarketSans';
     margin-bottom: 5vw;
 }
+.sec2_cont {
+    position: relative;
+}
 
 .sec2_cir {
     width: 25vw;
     height: 25vw;
     border-radius: 50%;
     background: rgb(255, 233, 152);
-    top: -8%;
-    left: 35%;
     z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 35%;
 }
 
 .sec2_box1 {
@@ -288,4 +292,6 @@
     background: rgb(191, 206, 154);
     background-image: url(../portfolio/img/\ img1.jpg);
     background-size: contain;
+    position: absolute;
+    top: 0;
 }
