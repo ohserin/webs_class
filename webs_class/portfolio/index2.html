@@ -31,8 +31,8 @@
         <div class="circle1"></div>
         <div class="circle2"></div>
       </div>
-        <div class="sec1_box1"></div>
-        <div class="sec1_text3">
+      <div class="sec1_box1"></div>
+      <div class="sec1_text3">
         <div class="split">Just Like</div>
         <div class="split">me</div>
       </div>
@@ -165,10 +165,13 @@
   })
 
   setTimeout(() => {
-    gsap.to(".sec1_text3", {
-      scale: 1,
-      delay: 0.8,
-      x: 0
+    gsap.to(".sec1_text3 div span", {
+      duration: 1.5,
+      stagger: 0.04,
+      y: 0,
+      rotation: 0,
+      ease: "power3.out",
+      delay: 2.5
     })
   })
 

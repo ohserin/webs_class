@@ -66,6 +66,8 @@
 #section1 {
     height: 150vh;
     background: #000;
+    overflow: hidden;
+    width: 100%;
 }
 
 .sec1_text1 {
@@ -167,7 +169,7 @@
 
 .sec1_text3 div {
     margin-bottom: 1vw;
-    /* overflow: hidden; */
+    overflow: hidden;
     /* background: #fff;
     opacity: 0.5; */
 
@@ -185,6 +187,7 @@
     height: 150vh;
     background: url(https://ohserin.github.io/webs_class/webs_class/portfolio/img/test.jpg) no-repeat center center;
     background-size: cover;
+  
 }
 
 
