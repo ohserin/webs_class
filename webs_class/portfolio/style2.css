@@ -273,6 +273,7 @@
 }
 .sec2_cont {
     position: relative;
+    width: 100%;
 }
 
 .sec2_cir {
@@ -281,8 +282,9 @@
     border-radius: 50%;
     background: rgb(255, 233, 152);
     z-index: 1;
-    position: absolute;
+    position: relative;
     left: 35%;
+    bottom: 10vw;
 }
 
 .sec2_box1 {
@@ -293,4 +295,13 @@
     background-size: contain;
     position: absolute;
     top: 0;
+}
+.sec2_text1 {
+    position: absolute;
+    width: 44vw;
+    right: 10vw;
+    font-weight: 300;
+    font-family: 'GmarketSans';
+    font-size: 1.3vw;
+
 }
