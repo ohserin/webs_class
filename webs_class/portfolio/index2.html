@@ -31,14 +31,13 @@
         <div class="circle1"></div>
         <div class="circle2"></div>
       </div>
-      <div class="sec1_text2">
-      </div>
         <div class="sec1_box1"></div>
         <div class="sec1_text3">
         <div class="split">Just Like me</div>
       </div>
     </section>
     <!-- //section1 -->
+    
     <section id="section2"></section><!-- //section2 -->
     <section id="section3"></section><!-- //section3 -->
     <section id="section4"></section><!-- //section4 -->
@@ -69,12 +68,6 @@
     y: 150
   })
 
-  gsap.to(".sec1_text3 div span", {
-    y: 150
-  })
-
-
-
   gsap.to(".sec1_cir > div:nth-child(1)", {
     x: 0,
   })
@@ -82,6 +75,11 @@
     duration: 2.5,
     ease: "bounce.out",
     x: 0
+  })
+
+
+  gsap.to(".sec1_text3 > div", {
+    y: 150
   })
 
   gsap.to(".sec1_box1", {
@@ -170,11 +168,9 @@
 
   setTimeout(() => {
     gsap.to(".sec1_text3", {
-      duration: 1,
-      stagger: 0.04,
-      y: 0,
-      rotation: 0,
-      ease: "power3.out"
+      scale: 1,
+      delay: 0.8,
+      x: 0
     })
   })
 
