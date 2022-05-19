@@ -81,6 +81,8 @@
 .sec1_text1 div {
     margin-bottom: 1vw;
     overflow: hidden;
+    /* background: #fff;
+    opacity: 0.5; */
 }
 
 .sec1_text1 div span {
@@ -133,7 +135,7 @@
 }
 
 
-.sec1_text3 {
+/* .sec1_text3 {
     font-size: 6vw;
     color: #fff;
     text-transform: uppercase;
@@ -142,6 +144,37 @@
     position: relative;
     top: 10%;
     margin-left: 21vw;
+    display: flex;
+} */
+
+.sec1_text3 {
+    display: flex;
+    text-transform: uppercase;
+    padding: 7vw 23vw;
+    color: #fff;
+    font-size: 6vw;
+    font-weight: 300;
+    line-height: 0.9;
+    font-family: 'GmarketSans';
+    z-index: 100;
+    position: relative;
+}
+
+.sec1_text3 > div:nth-child(2) {
+    font-weight: 500;
+    margin-left: 1.5vw;
+}
+
+.sec1_text3 div {
+    margin-bottom: 1vw;
+    /* overflow: hidden; */
+    /* background: #fff;
+    opacity: 0.5; */
+
+}
+
+.sec1_text3 div span {
+    display: inline-block;
 }
 
 .sec1_box1 {
@@ -153,6 +186,7 @@
     background: url(https://ohserin.github.io/webs_class/webs_class/portfolio/img/test.jpg) no-repeat center center;
     background-size: cover;
 }
+
 
 @media (max-width: 800px) {
     .sec1_text1 {
