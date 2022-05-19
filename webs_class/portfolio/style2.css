@@ -35,8 +35,6 @@
     font-display: swap;
 }
 
-* {}
-
 /* header */
 #header {
     position: fixed;
@@ -64,10 +62,10 @@
 
 /* section1 */
 #section1 {
-    height: 150vh;
+    height: 145vh;
     background: #000;
-    overflow: hidden;
-    position: relative;
+    /* overflow: hidden;
+    position: relative; */
 }
 
 .sec1_text1 {
