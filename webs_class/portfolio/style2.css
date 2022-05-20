@@ -151,7 +151,7 @@
 .sec1_text3 {
     display: flex;
     text-transform: uppercase;
-    padding: 7vw 20vw;
+    padding: 7vw 22vw;
     color: #fff;
     font-size: 6vw;
     font-weight: 300;
@@ -161,7 +161,7 @@
     position: relative;
 }
 
-.sec1_text3>div:nth-child(2) {
+.sec1_text3 > div:nth-child(2) {
     font-weight: 500;
     margin-left: 1.5vw;
 }
@@ -212,7 +212,7 @@ body:not(.no-js) .sec1_box1 {
     transition-delay: 0.2s;
     position: relative;
     width: auto;
-    height: 120vh;
+    height: 126vh;
     overflow: hidden;
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
     visibility: hidden;
@@ -289,15 +289,18 @@ body:not(.no-js) .animating img {
     }
 
     body:not(.no-js) .sec1_box1 {
-        height: 78vh;
+        height: 60vh;
         position: relative;
-        top: 19vw;
+        top: 6vw;
     }
 
     .sec1_text3 {
         position: relative;
-        bottom: 40%;
+        bottom: 50%;
     }
+    .sec1_text1 {
+ 
+}
 }
 
 
