@@ -182,55 +182,53 @@
     place-items: center;
     height: 100vh;
     width: 100%;
+    justify-content: end;
+    position: relative;
   }
-
-  img {
-    height: 100%;
-    width: auto;
-    max-width: 75vw;
-    object-fit: contain;
-  }
-
 .sec1_box1 {
     position: absolute;
     right: 0;
     top: 24vw;
     width: 50vw;
     height: 120vh;
-
     background-size: cover;
     /* animation: fadein 3s; */
     /* -webkit-animation: fadein 3s; */
      /* Safari and Chrome */
 }
 
-body:not(.no-js) .sec1_box1 {
+img {
+    height: 100%;
+    width: auto;
+    max-width: 105vw;
+    object-fit: contain;
+  }
+  body:not(.no-js) .sec1_box1{
     transition: 1s ease-out;
     transition-delay: 0.2s;
     position: relative;
     width: auto;
-    height: 80vh;
+    height: 90vh;
     overflow: hidden;
-    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
     visibility: hidden;
   }
   
-  body:not(.no-js) .sec1_box1 img {
+  body:not(.no-js) .sec1_box1img {
     transform: scale(1.3);
     transition: 2s ease-out;
   }
   
-  body:not(.no-js) .animating .sec1_box1 {
+  body:not(.no-js) .animating .sec1_box1{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     visibility: visible;
-    transform: skewY(0);
+    transform: skewX(0);
   }
   
   body:not(.no-js) .animating img {
     transform: scale(1);
     transition: 4s ease-out;
   }
-
 
 
 

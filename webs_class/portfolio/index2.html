@@ -197,6 +197,15 @@
   //   })
   // })
 
+  document.addEventListener("DOMContentLoaded", function () {
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.4
+  };
+
+  // IMAGE ANIMATION
+
   let revealCallback = (entries) => {
     entries.forEach((entry) => {
       let container = entry.target;
@@ -218,6 +227,7 @@
   document.querySelectorAll(".reveal").forEach((reveal) => {
     revealObserver.observe(reveal);
   });
+});
 
 
   

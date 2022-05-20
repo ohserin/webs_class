@@ -11,27 +11,14 @@
   place-items: center;
   height: 100vh;
   width: 100%;
+  justify-content: end;
   position: relative;
-}
-
-
-.container:nth-child(2) {
-  background: #3c564f;
-}
-.container:nth-child(1) {
-  background: #b69187;
-}
-.container:nth-child(4) {
-  background: #bcb8ad;
-}
-.container:nth-child(3) {
-  background: #b6916d;
 }
 
 img {
   height: 100%;
   width: auto;
-  max-width: 75vw;
+  max-width: 105vw;
   object-fit: contain;
 }
 body:not(.no-js) .image-wrap {
@@ -39,9 +26,9 @@ body:not(.no-js) .image-wrap {
   transition-delay: 0.2s;
   position: relative;
   width: auto;
-  height: 80vh;
+  height: 90vh;
   overflow: hidden;
-  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   visibility: hidden;
 }
 
@@ -59,19 +46,6 @@ body:not(.no-js) .animating .image-wrap {
 body:not(.no-js) .animating img {
   transform: scale(1);
   transition: 4s ease-out;
-}
-
-body:not(.no-js) .fadeup {
-  opacity: 0;
-  transition: 0.4s ease-out;
-  transform: translateX(40px);
-}
-
-body:not(.no-js) .fading-up {
-  opacity: 1;
-  transition: 1s ease-out;
-  transform: translateX(0px);
-  transition-delay: 0.7s;
 }
     </style>
 </head>
@@ -115,30 +89,6 @@ body:not(.no-js) .fading-up {
 
   document.querySelectorAll(".reveal").forEach((reveal) => {
     revealObserver.observe(reveal);
-  });
-
-  // TEXT ANIMATION
-
-  let fadeupCallback = (entries) => {
-    entries.forEach((entry) => {
-      let container = entry.target;
-      container.classList.add("not-fading-up");
-
-      if (entry.isIntersecting) {
-        container.classList.add("fading-up");
-        return;
-      }
-
-      if (entry.boundingClientRect.top > 0) {
-        container.classList.remove("fading-up");
-      }
-    });
-  };
-
-  let fadeupObserver = new IntersectionObserver(fadeupCallback, options);
-
-  document.querySelectorAll(".fadeup").forEach((fadeup) => {
-    fadeupObserver.observe(fadeup);
   });
 });
 </script>
