@@ -151,7 +151,7 @@
 .sec1_text3 {
     display: flex;
     text-transform: uppercase;
-    padding: 7vw 23vw;
+    padding: 7vw 20vw;
     color: #fff;
     font-size: 6vw;
     font-weight: 300;
@@ -186,7 +186,8 @@
     width: 100%;
     justify-content: end;
     position: relative;
-  }
+}
+
 .sec1_box1 {
     position: absolute;
     right: 0;
@@ -196,7 +197,7 @@
     background-size: cover;
     /* animation: fadein 3s; */
     /* -webkit-animation: fadein 3s; */
-     /* Safari and Chrome */
+    /* Safari and Chrome */
 }
 
 img {
@@ -204,8 +205,9 @@ img {
     width: auto;
     max-width: 95vw;
     object-fit: contain;
-  }
-  body:not(.no-js) .sec1_box1{
+}
+
+body:not(.no-js) .sec1_box1 {
     transition: 1s ease-out;
     transition-delay: 0.2s;
     position: relative;
@@ -214,23 +216,23 @@ img {
     overflow: hidden;
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
     visibility: hidden;
-  }
-  
-  body:not(.no-js) .sec1_box1img {
+}
+
+body:not(.no-js) .sec1_box1img {
     transform: scale(1.3);
     transition: 2s ease-out;
-  }
-  
-  body:not(.no-js) .animating .sec1_box1{
+}
+
+body:not(.no-js) .animating .sec1_box1 {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     visibility: visible;
     transform: skewX(0);
-  }
-  
-  body:not(.no-js) .animating img {
+}
+
+body:not(.no-js) .animating img {
     transform: scale(1);
     transition: 4s ease-out;
-  }
+}
 
 
 
@@ -243,7 +245,7 @@ img {
 
     .sec1_box1 {
         height: 100vh;
-}
+    }
 }
 
 @media (max-width: 1200px) {
@@ -255,7 +257,20 @@ img {
 
     .sec1_box1 {
         height: 87vh;
-}
+    }
+
+    img {
+        max-width: 95vw;
+    }
+
+    body:not(.no-js) .sec1_box1 {
+        height: 94vh;
+    }
+
+    .sec1_text3 {
+        position: relative;
+        bottom: 15%;
+    }
 }
 
 @media (max-width: 900px) {
@@ -267,7 +282,22 @@ img {
 
     .sec1_box1 {
         height: 78vh;
-}
+    }
+
+    img {
+        max-width: 95vw;
+    }
+
+    body:not(.no-js) .sec1_box1 {
+        height: 78vh;
+        position: relative;
+        top: 19vw;
+    }
+
+    .sec1_text3 {
+        position: relative;
+        bottom: 40%;
+    }
 }
 
 
@@ -276,10 +306,11 @@ img {
     #header h1 {
         font-size: 25px;
     }
-    
+
     #header span {
-       font-size: 15px;
+        font-size: 15px;
     }
+
     .sec1_text1 {
         font-size: 50px;
         text-align: center;
@@ -359,6 +390,7 @@ img {
     font-family: 'GmarketSans';
     margin-bottom: 5vw;
 }
+
 .sec2_cont {
     position: relative;
     width: 100%;
@@ -384,6 +416,7 @@ img {
     position: absolute;
     top: 0;
 }
+
 .sec2_text1 {
     position: absolute;
     width: 44vw;
