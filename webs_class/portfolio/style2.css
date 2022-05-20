@@ -177,16 +177,28 @@
     display: inline-block;
 }
 
+.container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+  }
+
 .sec1_box1 {
     position: absolute;
     right: 0;
     top: 24vw;
     width: 50vw;
     height: 120vh;
-    background: url(https://ohserin.github.io/webs_class/webs_class/portfolio/img/test.jpg) no-repeat center center;
-    background-size: cover;
 
+    background-size: cover;
+    /* animation: fadein 3s; */
+    /* -webkit-animation: fadein 3s; */
+     /* Safari and Chrome */
 }
+
+
+
 
 @media (max-width: 1400px) {
 
@@ -203,12 +215,12 @@
 @media (max-width: 1200px) {
 
     #section1 {
-        height: 100vh;
+        height: 110vh;
         background: #000;
     }
 
     .sec1_box1 {
-        height: 85vh;
+        height: 87vh;
 }
 }
 
