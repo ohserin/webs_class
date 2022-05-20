@@ -184,6 +184,13 @@
     width: 100%;
   }
 
+  img {
+    height: 100%;
+    width: auto;
+    max-width: 75vw;
+    object-fit: contain;
+  }
+
 .sec1_box1 {
     position: absolute;
     right: 0;
@@ -196,6 +203,33 @@
     /* -webkit-animation: fadein 3s; */
      /* Safari and Chrome */
 }
+
+body:not(.no-js) .sec1_box1 {
+    transition: 1s ease-out;
+    transition-delay: 0.2s;
+    position: relative;
+    width: auto;
+    height: 80vh;
+    overflow: hidden;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    visibility: hidden;
+  }
+  
+  body:not(.no-js) .sec1_box1 img {
+    transform: scale(1.3);
+    transition: 2s ease-out;
+  }
+  
+  body:not(.no-js) .animating .sec1_box1 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    visibility: visible;
+    transform: skewY(0);
+  }
+  
+  body:not(.no-js) .animating img {
+    transform: scale(1);
+    transition: 4s ease-out;
+  }
 
 
 

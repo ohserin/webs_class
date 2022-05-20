@@ -196,6 +196,31 @@
   //     delay: 0.2
   //   })
   // })
+
+  let revealCallback = (entries) => {
+    entries.forEach((entry) => {
+      let container = entry.target;
+
+      if (entry.isIntersecting) {
+        console.log(container);
+        container.classList.add("animating");
+        return;
+      }
+
+      if (entry.boundingClientRect.top > 0) {
+        container.classList.remove("animating");
+      }
+    });
+  };
+
+  let revealObserver = new IntersectionObserver(revealCallback, options);
+
+  document.querySelectorAll(".reveal").forEach((reveal) => {
+    revealObserver.observe(reveal);
+  });
+
+
+  
 </script>
 
 </html>
