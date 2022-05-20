@@ -188,6 +188,42 @@
 
 }
 
+@media (max-width: 1400px) {
+
+    #section1 {
+        height: 120vh;
+        background: #000;
+    }
+
+    .sec1_box1 {
+        height: 100vh;
+}
+}
+
+@media (max-width: 1200px) {
+
+    #section1 {
+        height: 100vh;
+        background: #000;
+    }
+
+    .sec1_box1 {
+        height: 85vh;
+}
+}
+
+@media (max-width: 900px) {
+
+    #section1 {
+        height: 90vh;
+        background: #000;
+    }
+
+    .sec1_box1 {
+        height: 78vh;
+}
+}
+
 
 @media (max-width: 800px) {
 
