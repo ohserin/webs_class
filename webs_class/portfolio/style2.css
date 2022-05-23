@@ -464,7 +464,8 @@ body:not(.no-js) .animating img {
     width: 40vw;
     height: 12.7vw;
     line-height: 260px;
-    background-image: url(../portfolio/img/port1jpg.jpg); 
+    background-image: url(../portfolio/img/port1jpg.jpg) ; 
+    background-size: 109%;
     border-radius: 50vw;
     position: absolute;
     top: 35%;
@@ -499,6 +500,7 @@ body:not(.no-js) .animating img {
     width: 62vw;
     height: 35vw;
     background-image: url(../portfolio/img/site1.jpg);
+    background-size: 100%;
     position: relative;
   }
   
@@ -564,6 +566,7 @@ body:not(.no-js) .animating img {
     width: 62vw;
     height: 35vw;
     background-image: url(../portfolio/img/site2.jpg);
+    background-size: 100%;
     position: relative;
     float: right;
   }
@@ -628,6 +631,7 @@ body:not(.no-js) .animating img {
     width: 62vw;
     height: 35vw;
     background-image: url(../portfolio/img/site3.jpg);
+    background-size: 100%;
     position: relative;
   }
   
@@ -691,6 +695,7 @@ body:not(.no-js) .animating img {
     height: 12.7vw;
     line-height: 260px;
     background-image: url(../portfolio/img/port2.jpg);
+    background-size: 106%;
     border-radius: 400px;
     position: absolute;
     top: 35%;
@@ -720,6 +725,7 @@ body:not(.no-js) .animating img {
     width: 66vw;
     height: 31vw;
     background-image: url(../portfolio/img/page1.jpg);
+    background-size: 100%;
   }
   .refer .text {
     text-align: right;
@@ -735,7 +741,7 @@ body:not(.no-js) .animating img {
     font-size: 2vw;
     font-weight: 300;
   }
-  .bg_Figure1 {
+  /* .bg_Figure1 {
     width: 40vw;
     height: 40vw;
     background: #ff5110;
@@ -743,7 +749,7 @@ body:not(.no-js) .animating img {
     position: absolute;
     bottom: 39%;
     left: 80%;
-  }
+  } */
   
   /* refer2  */
   .refer2 {
@@ -767,6 +773,7 @@ body:not(.no-js) .animating img {
     width: 66vw;
     height: 31vw;
     background-image: url(../portfolio/img/page2.jpg);
+    background-size: 100%;
     float: right;
   }
   .refer2 .text {
@@ -815,6 +822,7 @@ body:not(.no-js) .animating img {
     width: 66vw;
     height: 31vw;
     background-image: url(../portfolio/img/page3.jpg);
+     background-size: 100%;
   }
   .refer3 .text {
     text-align: right;
@@ -853,6 +861,7 @@ body:not(.no-js) .animating img {
     height: 12.7vw;
     /* line-height: 15vw; */
     background-image: url(../portfolio/img/port3.jpg);
+    background-size: 105%;
     border-radius: 400px;
     position: absolute;
     top: 40%;
