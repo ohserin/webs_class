@@ -49,7 +49,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: 'Koulen';
     padding: 0 20px;
     z-index: 400;
     text-transform: uppercase;
@@ -58,10 +57,12 @@
 #header h1 {
     padding: 1vw 0;
     font-size: 3vh;
+    font-family: 'Koulen';
 }
 
 #header span {
     font-size: 2vh;
+    font-family: 'Koulen';
 }
 
 /* section1 */
@@ -833,7 +834,7 @@ body:not(.no-js) .animating img {
 
   #section7 {
     width: 100%;
-    height: 34vw;
+    height: 67vw;
     background: #fac802;
   }
   .port3 {
@@ -859,90 +860,85 @@ body:not(.no-js) .animating img {
   }
 
   /* contact */
-
-  #section8 {
+  .contact {
     width: 100%;
-    height: 60vw;
+    height: 62vw;
+    background: #f5f5f5;
+    padding-top: 10vw;
   }
-
-.contact {
-  width: 100%;
-  height: 82vw;
-  background: #f5f5f5;
-}
-
-.contact .box {
-  display: flex;
-  position: relative;
-  top: 20%;
-}
-.contact .box1 {
-}
-.contact .box2 {
-  width: 1000px;
-  height: 584px;
-  background-size: cover;
-  position: absolute;
-  left: 5%;
-  font-weight: 300;
-}
-.contact .box3 {
-  width: 651px;
-  height: 726px;
-  background: #ffffff;
-  background-size: contain;
-  position: absolute;
-  right: 30%;
-}
-.box2 p {
-  font-size: 120px;
-  text-transform: uppercase;
-  line-height: 1.2;
-}
-
-.box3 .tit {
-  display: flex;
-  font-size: 80px;
-  font-weight: 300;
-  text-transform: uppercase;
-  position: absolute;
-  top: -10%;
-}
-.box3 .tit span {
-  font-weight: 500;
-}
-.box .line1 {
-  width: 500px;
-  height: 2px;
-  background: #f5f5f5;
-  position: relative;
-  top: 30%;
-  left: 10%;
-}
-.box .line2 {
-  width: 500px;
-  height: 2px;
-  background: #f5f5f5;
-  position: absolute;
-  top: 40%;
-  left: 10%;
-}
-.box .line3 {
-  width: 500px;
-  height: 2px;
-  background: #f5f5f5;
-  position: absolute;
-  top: 50%;
-  left: 10%;
-}
-
-.bg_Figure3 {
-  width: 600px;
-  height: 600px;
-  background: #b7e8dd;
-  border-radius: 50%;
-  position: relative;
-  top: 10%;
-  left: -10%;
-}
+  
+  .contact .box {
+    display: flex;
+    position: relative;
+    top: 20%;
+  }
+  .contact .box1 {
+  }
+  .contact .box2 {
+    width: 50vw;
+    height: 26vw;
+    background-size: cover;
+    position: absolute;
+    left: 5%;
+    font-weight: 300;
+  }
+  .contact .box3 {
+    width: 32vw;
+    height: 38vw;
+    background: #ffffff;
+    background-size: contain;
+    position: absolute;
+    right: 30%;
+  }
+  .box2 p {
+    font-size: 2vw;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+  
+  .box3 .tit {
+    display: flex;
+    font-size: 80px;
+    font-weight: 300;
+    text-transform: uppercase;
+    position: absolute;
+    top: -10%;
+  }
+  .box3 .tit span {
+    font-weight: 500;
+  }
+  .box .line1 {
+    width: 26vw;
+    height: 0.1vw;
+    background: #f5f5f5;
+    position: relative;
+    top: 30%;
+    left: 10%;
+  }
+  .box .line2 {
+    width: 26vw;
+    height: 0.1vw;
+    background: #f5f5f5;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+  }
+  .box .line3 {
+    width: 26vw;
+    height: 0.1vw;
+    background: #f5f5f5;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+  }
+  
+  .bg_Figure3 {
+    width: 30vw;
+    height: 30vw;
+    background: #b7e8dd;
+    border-radius: 50%;
+    position: relative;
+    top: 10%;
+    left: -10%;
+  }
 
