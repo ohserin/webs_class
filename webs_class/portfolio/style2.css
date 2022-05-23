@@ -898,7 +898,7 @@ body:not(.no-js) .animating img {
   
   .box3 .tit {
     display: flex;
-    font-size: 80px;
+    font-size: 4.3vw;
     font-weight: 300;
     text-transform: uppercase;
     position: absolute;
