@@ -735,15 +735,15 @@ body:not(.no-js) .animating img {
     font-size: 2vw;
     font-weight: 300;
   }
-  /* .bg_Figure1 {
-    width: 1078px;
-    height: 1078px;
+  .bg_Figure1 {
+    width: 40vw;
+    height: 40vw;
     background: #ff5110;
     border-radius: 50%;
     position: absolute;
     bottom: 39%;
     left: 80%;
-  } */
+  }
   
   /* refer2  */
   .refer2 {
@@ -889,9 +889,11 @@ body:not(.no-js) .animating img {
     background-size: contain;
     position: absolute;
     right: 30%;
+    font-size: 1vw;
+    text-transform: uppercase;
+    font-weight: 300;
   }
   .box2 p {
-    font-size: 2vw;
     text-transform: uppercase;
     line-height: 1.2;
   }
@@ -914,6 +916,7 @@ body:not(.no-js) .animating img {
     position: relative;
     top: 30%;
     left: 10%;
+    font-size: 1vw;
   }
   .box .line2 {
     width: 26vw;
@@ -922,6 +925,7 @@ body:not(.no-js) .animating img {
     position: absolute;
     top: 40%;
     left: 10%;
+    font-size: 1vw;
   }
   .box .line3 {
     width: 26vw;
@@ -930,6 +934,7 @@ body:not(.no-js) .animating img {
     position: absolute;
     top: 50%;
     left: 10%;
+    font-size: 1vw;
   }
   
   .bg_Figure3 {
