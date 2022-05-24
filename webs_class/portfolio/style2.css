@@ -159,6 +159,21 @@ body {
     display: flex;
 } */
 
+.sec1_text2 {
+  font-size: 5vw;
+  line-height: 0.9;
+  font-family: 'GmarketSans';
+  color: #fff;
+  position: relative;
+  left: 20vw;
+  z-index: 100;
+  font-weight: 300;
+  padding-top: 22vh;
+}
+.sec1_text2 em {
+  font-weight: 500;
+}
+
 .sec1_text3 {
   display: flex;
   text-transform: uppercase;
@@ -170,6 +185,9 @@ body {
   font-family: 'GmarketSans';
   z-index: 100;
   position: relative;
+} 
+.sec1_text3 em {
+  font-weight: 500;
 }
 
 .sec1_text3>div:nth-child(2) {
@@ -430,8 +448,7 @@ body:not(.no-js) .animating img {
 .sec2_box1 {
   width: 40vw;
   height: 50vw;
-  background: rgb(191, 206, 154);
-  background-image: url(../portfolio/img/\ img1.jpg);
+  background-image: url(../portfolio/img/img1.jpg);
   background-size: contain;
   position: absolute;
   top: 0;
@@ -1026,11 +1043,4 @@ body:not(.no-js) .animating img {
   color: #fff;
   padding: 10px 30px;
   border-radius: 50px;
-}
-
-/*  */
-
-.hideme
-{
-    opacity:0;
 }

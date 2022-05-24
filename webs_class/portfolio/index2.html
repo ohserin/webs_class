@@ -10,10 +10,6 @@
   <link rel="stylesheet" href="../portfolio/reset.css" />
   <link rel="stylesheet" href="../portfolio/style2.css" />
   <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet" />
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -24,19 +20,19 @@
     <span>contact</span>
   </header>
 
-  <main id="contents">
+  <main id="contents" data-scroll-container>
     <section id="section1">
       <div class="container">
         <div class='reveal'>
-          <div class="sec1_box1">
+          <div class="sec1_box1" data-scroll data-scroll-speed="2">
             <img src="../portfolio/img/test.jpg" alt="sec1_img">
           </div>
         </div>
       </div>
       <div class="sec1_text1">
         <div class="split">WELCOME</div>
-        <div class="split">TO MY</div>
-        <div class="split">PORTFOLIO</div>
+        <div class="split" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">TO MY</div>
+        <div class="split" data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">PORTFOLIO</div>
       </div>
       <div class="sec1_cir">
         <div class="circle1"></div>
@@ -44,16 +40,14 @@
       </div>
 
 
-      <div class="sec1_text3">
-        <div class="split">Just Like</div>
-        <div class="split">me</div>
+      <div class="sec1_text2" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">JUSTLIKE <em>ME</em></div>
       </div>
     </section>
     <!-- //section1 -->
 
 
     <section id="section2">
-      <div class="sec2_intro">THANK YOU
+      <div class="sec2_intro" data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">THANK YOU
         FOR VISITING
         my PORTFolio
         i’m oh serin</div>
@@ -253,6 +247,7 @@
 <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 
@@ -292,34 +287,6 @@
     ease: "bounce.out",
 
   })
-
-
-  gsap.to(".sec2_intro", {
-    duration: 2,
-    ease: Power1.easeOut,
-    y: 2000,
-  })
-
-
-  const boxes = gsap.utils.toArray('.sec2_intro');
-  boxes.forEach(sec2_intro => {
-    const anim = gsap.to(sec2_intro, {
-      y: 0,
-      paused: true
-    });
-
-    ScrollTrigger.create({
-      trigger: sec2_intro,
-      start: "center 70%",
-      onEnter: () => anim.play()
-    });
-
-    ScrollTrigger.create({
-      trigger: sec2_intro,
-      start: "top bottom",
-      onLeaveBack: () => anim.pause(0)
-    });
-  });
 
   setTimeout(() => {
     gsap.to(".sec1_text1 > div:nth-child(1) span", {
@@ -432,7 +399,28 @@
     });
   });
 
+  const scroller = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true
+        });
 
+        document.querySelectorAll(".split").forEach(desc => {
+            let splitText = desc.innerText;
+            let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
+                splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+                desc.innerHTML = splitWrap;
+                desc.setAttribute("aria-label", splitText);
+        })
+
+        gsap.to(".sec1_text1 > div:nth-child(1) span", {y: 150})
+        gsap.to(".sec1_text1 > div:nth-child(2) span", {y: 150})
+        gsap.to(".sec1_text1 > div:nth-child(3) span", {y: 150})
+
+        setTimeout(() => {
+            gsap.to(".sec1_text1 > div:nth-child(1) span", {duration: 1.3, stagger: 0.04, y:0, rotation: 0, ease:"power3.out"})
+            gsap.to(".sec1_text1 > div:nth-child(2) span", {duration: 1.3, stagger: 0.04, y:0, rotation: 0, ease:"power3.out", delay: 0.3})
+            gsap.to(".sec1_text1 > div:nth-child(3) span", {duration: 1.3, stagger: 0.04, y:0, rotation: 0, ease:"power3.out", delay: 0.6})
+        }, 2000)
 
   //스크롤 값
   function scroll() {
@@ -449,23 +437,12 @@
   }
   scroll();
 
+  
 
-  // $(document).ready(function () {
-  //   /* 1 */
-  //   $(window).scroll(function () {
-  //     /* 2 */
-  //     $('.hideme').each(function (i) {
-  //       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-  //       var bottom_of_window = $(window).scrollTop() + $(window).height();
-  //       /* 3 */
-  //       if (bottom_of_window > bottom_of_object / 2) {
-  //         $(this).animate({
-  //           'opacity': '1'
-  //         }, 500);
-  //       }
-  //     });
-  //   });
-  // });
+  
+
+
+
 </script>
 
 </html>
