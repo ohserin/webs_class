@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="../portfolio/reset.css" />
   <link rel="stylesheet" href="../portfolio/style2.css" />
   <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet" />
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -22,7 +26,6 @@
 
   <main id="contents">
     <section id="section1">
-
       <div class="container">
         <div class='reveal'>
           <div class="sec1_box1">
@@ -30,7 +33,6 @@
           </div>
         </div>
       </div>
-
       <div class="sec1_text1">
         <div class="split">WELCOME</div>
         <div class="split">TO MY</div>
@@ -40,7 +42,7 @@
         <div class="circle1"></div>
         <div class="circle2"></div>
       </div>
-      
+
 
       <div class="sec1_text3">
         <div class="split">Just Like</div>
@@ -49,7 +51,6 @@
     </section>
     <!-- //section1 -->
 
-   
 
     <section id="section2">
       <div class="sec2_intro">THANK YOU
@@ -74,7 +75,7 @@
         </p>
       </div>
     </section><!-- //section3 -->
-    <section id="section4">
+    <section id="section4" class="hideme">
       <div class="site">
         <div class="containar2">
           <div class="text">
@@ -217,10 +218,10 @@
         </p>
       </div>
     </section><!-- //section7 -->
-    
+
     <section id="section8">
       <div class="contact">
-    
+
         <div class="box">
           <div class="box1"></div>
           <div class="box2">
@@ -242,10 +243,19 @@
     </section>
   </main>
 
+  <div class="scrollTop">
+    scrollTop : <span>0</span>px
+  </div>
+
 </body>
 
 <script src="js/gsap.min.js"></script>
 <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
 <script>
   document.querySelectorAll(".split").forEach(desc => {
     let splitText = desc.innerText;
@@ -282,6 +292,34 @@
     ease: "bounce.out",
 
   })
+
+
+  gsap.to(".sec2_intro", {
+    duration: 2,
+    ease: Power1.easeOut,
+    y: 2000,
+  })
+
+
+  const boxes = gsap.utils.toArray('.sec2_intro');
+  boxes.forEach(sec2_intro => {
+    const anim = gsap.to(sec2_intro, {
+      y: 0,
+      paused: true
+    });
+
+    ScrollTrigger.create({
+      trigger: sec2_intro,
+      start: "center 70%",
+      onEnter: () => anim.play()
+    });
+
+    ScrollTrigger.create({
+      trigger: sec2_intro,
+      start: "top bottom",
+      onLeaveBack: () => anim.pause(0)
+    });
+  });
 
   setTimeout(() => {
     gsap.to(".sec1_text1 > div:nth-child(1) span", {
@@ -359,40 +397,75 @@
   })
 
 
+
+
+
   document.addEventListener("DOMContentLoaded", function () {
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.4
-  };
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.4
+    };
 
-  // IMAGE ANIMATION
+    // IMAGE ANIMATION
 
-  let revealCallback = (entries) => {
-    entries.forEach((entry) => {
-      let container = entry.target;
+    let revealCallback = (entries) => {
+      entries.forEach((entry) => {
+        let container = entry.target;
 
-      if (entry.isIntersecting) {
-        console.log(container);
-        container.classList.add("animating");
-        return;
-      }
+        if (entry.isIntersecting) {
+          console.log(container);
+          container.classList.add("animating");
+          return;
+        }
 
-      if (entry.boundingClientRect.top > 0) {
-        container.classList.remove("animating");
-      }
+        if (entry.boundingClientRect.top > 0) {
+          container.classList.remove("animating");
+        }
+      });
+    };
+
+    let revealObserver = new IntersectionObserver(revealCallback, options);
+
+    document.querySelectorAll(".reveal").forEach((reveal) => {
+      revealObserver.observe(reveal);
     });
-  };
-
-  let revealObserver = new IntersectionObserver(revealCallback, options);
-
-  document.querySelectorAll(".reveal").forEach((reveal) => {
-    revealObserver.observe(reveal);
   });
-});
 
 
-  
+
+  //스크롤 값
+  function scroll() {
+    let scrollTop = window.screenY || window.pageYOffset || document.documentElement.scrollTop;
+    document.querySelector(".scrollTop span").innerText = Math.round(scrollTop);
+
+    // document.querySelectorAll(".content__item").forEach(el => {
+    //     if (scrollTop >= el.offsetTop - window.innerHeight) {
+    //         el.classList.add("show");
+    //     }
+    // })
+
+    requestAnimationFrame(scroll);
+  }
+  scroll();
+
+
+  // $(document).ready(function () {
+  //   /* 1 */
+  //   $(window).scroll(function () {
+  //     /* 2 */
+  //     $('.hideme').each(function (i) {
+  //       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+  //       var bottom_of_window = $(window).scrollTop() + $(window).height();
+  //       /* 3 */
+  //       if (bottom_of_window > bottom_of_object / 2) {
+  //         $(this).animate({
+  //           'opacity': '1'
+  //         }, 500);
+  //       }
+  //     });
+  //   });
+  // });
 </script>
 
 </html>
