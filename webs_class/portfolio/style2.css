@@ -75,6 +75,7 @@ body {
 #section1 {
   height: 145vh;
   background: #000;
+  overflow: hidden;
   /* overflow: hidden;
     position: relative; */
 }
