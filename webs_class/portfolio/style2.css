@@ -1058,3 +1058,12 @@ body:not(.no-js) .animating img {
 
 
 /*  */
+#contents > section .img {
+  opacity: 0;
+  transform: translateY(200px) rotate(30deg) skew(20deg);
+  transition: all 1s 0.6s cubic-bezier(0, 0.38, 0.21, 0.99);
+}
+#contents > section.show .img {
+  opacity: 1;
+  transform: translateY(0) rotate(0) skew(0);
+}

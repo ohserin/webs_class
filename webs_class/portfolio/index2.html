@@ -76,7 +76,7 @@
       </div>
     </section><!-- //section3 -->
 
-    <section id="section4">
+    <section id="section4" class="content__item">
       <div id="contents">
       <div class="site">
         <div class="containar2">
@@ -545,6 +545,11 @@
     //     }
     // })
 
+    document.querySelectorAll(".content__item").forEach(el => {
+                if (scrollTop >= el.offsetTop - window.innerHeight) {
+                    el.classList.add("show");
+                }
+            })
     requestAnimationFrame(scroll);
   }
   scroll();
