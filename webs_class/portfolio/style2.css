@@ -478,14 +478,14 @@ body:not(.no-js) .animating img {
   position: relative;
 }
 
-.port1 p {
+/* .port1 p {
   font-size: 7vw;
   color: #fff;
   font-weight: 300;
   width: 53vw;
   line-height: 1.1;
   margin: 0 auto;
-}
+} */
 
 .port1 .box {
   width: 40vw;
@@ -497,6 +497,15 @@ body:not(.no-js) .animating img {
   position: absolute;
   top: 35%;
   left: 30%;
+  z-index: 1000;
+}
+
+.port_text1 {
+  font-size: 7vw;
+  color: #fff;
+  font-weight: 300;
+  line-height: 1.1;
+  text-align: center;
 }
 
 /*  */
@@ -1045,3 +1054,6 @@ body:not(.no-js) .animating img {
   padding: 10px 30px;
   border-radius: 50px;
 }
+
+
+/*  */
