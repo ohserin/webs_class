@@ -438,7 +438,8 @@ body:not(.no-js) .animating img {
   width: 25vw;
   height: 25vw;
   border-radius: 50%;
-  background: rgb(255, 233, 152);
+  background: url(../portfolio/img/pro.png) no-repeat center center;
+  background-size: cover;
   z-index: 1;
   position: relative;
   left: 35%;
