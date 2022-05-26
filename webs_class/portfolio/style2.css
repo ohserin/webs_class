@@ -75,7 +75,6 @@ body {
 #section1 {
   height: 145vh;
   background: #000;
-  overflow: hidden;
   /* overflow: hidden;
     position: relative; */
 }
@@ -89,6 +88,9 @@ body {
   z-index: 100;
   position: absolute;
   top: 0%;
+  /* overflow: hidden;
+  height: 140vh;
+  width: 100%; */
 }
 
 .sec1_text1 div {
@@ -117,7 +119,7 @@ body {
 .sec1_cir {
   display: flex;
   position: absolute;
-  right: 12vw;
+  right: -20vw;
   top: 8vw;
 }
 
