@@ -980,55 +980,29 @@ body:not(.no-js) .animating img {
 .contact {
   width: 100%;
   height: 62vw;
-  background: #f5f5f5;
+  background: #000;
   padding-top: 10vw;
 }
 
 .contact .box {
-  display: flex;
   position: relative;
-  top: 20%;
+  top: 25%;
 }
 
-.contact .box1 {}
-
-.contact .box2 {
-  width: 50vw;
-  height: 26vw;
-  background-size: cover;
-  position: absolute;
-  left: 5%;
-  font-weight: 300;
-}
-
-.contact .box3 {
-  width: 32vw;
-  height: 38vw;
-  background: #ffffff;
-  background-size: contain;
-  position: absolute;
-  right: 30%;
-  font-size: 1vw;
-  text-transform: uppercase;
-  font-weight: 300;
-}
-
-.box2 p {
-  text-transform: uppercase;
-  line-height: 1.2;
-}
-
-.box3 .tit {
+.box .tit {
   display: flex;
-  font-size: 4.3vw;
+  font-size: 6.3vw;
   font-weight: 300;
   text-transform: uppercase;
   position: absolute;
   top: -10%;
+  color: #fff;
+ 
 }
 
-.box3 .tit span {
+.box .tit span {
   font-weight: 500;
+  margin-left: 1.2vw;
 }
 
 .box .line1 {
@@ -1061,15 +1035,16 @@ body:not(.no-js) .animating img {
   font-size: 1vw;
 }
 
-.bg_Figure3 {
-  width: 30vw;
-  height: 30vw;
+
+/* .bg_Figure3 {
+  width: 20vw;
+  height: 20vw;
   background: #b7e8dd;
   border-radius: 50%;
   position: relative;
-  top: 10%;
-  left: -10%;
-}
+  top: 30%;
+  left: -13%;
+} */
 
 
 /*  */
