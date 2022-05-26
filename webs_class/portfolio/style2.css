@@ -223,7 +223,7 @@ body {
 .sec1_box1 {
   position: absolute;
   right: 0;
-  top: 24vw;
+  top: 25vw;
   width: 50vw;
   height: 120vh;
   background-size: cover;
@@ -237,6 +237,27 @@ img {
   width: auto;
   max-width: 95vw;
   object-fit: contain;
+}
+
+.Figure2 {
+  display: flex;
+  position: relative;
+  left: 75%;
+  top: 23vw;
+}
+
+.Figure2 .circle1 {
+  width: 7vw;
+  height: 13vw;
+  background-color: #b7e8dd;
+  border-radius: 0 200px 200px 0;
+}
+
+.Figure2 .circle2 {
+  width: 13vw;
+  height: 13vw;
+  background: #fac802;
+  border-radius: 50%;
 }
 
 body:not(.no-js) .sec1_box1 {
@@ -419,9 +440,7 @@ body:not(.no-js) .animating img {
   height: 80vw;
 }
 
-.sec2_intro {
-  /* background: rgb(126, 66, 66); */
-  width: 30vw;
+.sec2_text {
   font-size: 3.3vw;
   font-weight: 300;
   margin: 10vw 0 5vw 10vw;
@@ -475,6 +494,7 @@ body:not(.no-js) .animating img {
   width: 100%;
   height: 55vw;
   background: #0031a6;
+  margin-top: 190px;
 }
 
 .port1 {
@@ -531,12 +551,17 @@ body:not(.no-js) .animating img {
   text-transform: uppercase;
 }
 
-.site p {
-  width: 57vw;
+.sec4_text {
   font-weight: 300;
   font-size: 1.2vw;
   margin-bottom: 1.3vw;
 }
+/* .site p {
+  width: 57vw;
+  font-weight: 300;
+  font-size: 1.2vw;
+  margin-bottom: 1.3vw;
+} */
 
 .site .img {
   width: 62vw;
@@ -735,17 +760,17 @@ body:not(.no-js) .animating img {
   background: #000;
 }
 
-.port2 {
-  position: relative;
-}
-
-.port2 p {
+.sec5_text {
   font-size: 6.8vw;
   color: #fff;
   font-weight: 300;
-  width: 62.5vw;
   line-height: 1.1;
   margin: 0 auto;
+  text-align: center;
+}
+
+.port2 {
+  position: relative;
 }
 
 .port2 .box {
@@ -758,6 +783,7 @@ body:not(.no-js) .animating img {
   position: absolute;
   top: 35%;
   left: 15%;
+  z-index: 1000;
 }
 
 /* refer  */
@@ -920,7 +946,7 @@ body:not(.no-js) .animating img {
 
 #section7 {
   width: 100%;
-  height: 67vw;
+  height: 50vw;
   background: #fac802;
 }
 
@@ -928,13 +954,13 @@ body:not(.no-js) .animating img {
   position: relative;
 }
 
-.port3 p {
+.sec7_text {
   font-size: 6.8vw;
   color: #000;
   font-weight: 300;
-  width: 89vw;
   line-height: 1.1;
   margin: 0 auto;
+  text-align: center;
 }
 
 .port3 .box {
@@ -947,6 +973,7 @@ body:not(.no-js) .animating img {
   position: absolute;
   top: 40%;
   left: 15%;
+  z-index: 1000;
 }
 
 /* contact */
@@ -1058,14 +1085,3 @@ body:not(.no-js) .animating img {
   border-radius: 50px;
 }
 
-
-/*  */
-#contents > section .img {
-  opacity: 0;
-  transform: translateY(200px) rotate(30deg) skew(20deg);
-  transition: all 1s 0.6s cubic-bezier(0, 0.38, 0.21, 0.99);
-}
-#contents > section.show .img {
-  opacity: 1;
-  transform: translateY(0) rotate(0) skew(0);
-}
