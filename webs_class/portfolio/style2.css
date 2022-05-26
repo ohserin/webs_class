@@ -977,9 +977,12 @@ body:not(.no-js) .animating img {
 }
 
 /* contact */
+#section8 {
+  display: flex;
+}
 .contact {
   width: 100%;
-  height: 62vw;
+  height: 55vw;
   background: #000;
   padding-top: 10vw;
 
@@ -1033,5 +1036,7 @@ body:not(.no-js) .animating img {
 .sec8_infor span {
   font-weight: 500;
   margin-left: 1vw;
-
+}
+.sec8_infor .email {
+ padding-bottom: 0.3vw;
 }
