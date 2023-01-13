@@ -4,13 +4,13 @@
 https://ohserin.github.io/webs_class/webs_class/
 
 ## 자바스크립트
-https://ohserin.github.io/webs_class/javascript/
+https://ohserin.github.io/webs_class/webs_class/javascript/
 
 ## HTML 레퍼런스
-https://ohserin.github.io/webs_class/refer/html.html
+https://ohserin.github.io/webs_class/webs_class/refer/html.html
 
 ## CSS 레퍼런스
-https://ohserin.github.io/webs_class/refer/css.html
+https://ohserin.github.io/webs_class/webs_class/refer/css.html
 
 ## 웹표준 사이트 제작
-https://ohserin.github.io/webs_class/site/webClass/index.html
+https://ohserin.github.io/webs_class/webs_class/site/webClass/index.html
